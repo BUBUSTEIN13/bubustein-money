@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ten_zloty_from_twenty_zloty"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_twenty_zloty": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:twenty_zloty"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_twenty_zloty"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ten_zloty_from_twenty_zloty"
+    ]
+  }
+}

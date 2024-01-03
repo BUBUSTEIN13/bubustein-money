@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "I#G",
+        "#P#",
+        "G#I"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "P": {
+            "item": "minecraft:emerald"
+        },
+        "I": {
+            "item": "minecraft:gold_nugget"
+        },
+        "G": {
+            "item": "minecraft:gold_nugget"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:cinci_lei_1900"
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:doi_lei_md"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_un_leu_md": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:un_leu_md"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_un_leu_md"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:doi_lei_md"
+    ]
+  }
+}

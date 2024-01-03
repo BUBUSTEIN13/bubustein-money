@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:hundred_adollars"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:fifty_adollars",
+        "count": 2
+    }
+}

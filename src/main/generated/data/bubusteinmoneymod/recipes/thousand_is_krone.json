@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "bubusteinmoneymod:five_hundred_is_krone"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "bubusteinmoneymod:thousand_is_krone"
+  }
+}

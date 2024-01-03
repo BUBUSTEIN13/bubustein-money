@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ten_ft_from_twenty_ft"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_twenty_ft": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:twenty_ft"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_twenty_ft"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ten_ft_from_twenty_ft"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fifty_aere_dk": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:fifty_aere_dk"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:one_dk_krone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fifty_aere_dk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:one_dk_krone"
+    ]
+  }
+}

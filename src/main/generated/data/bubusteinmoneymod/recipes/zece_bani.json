@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "bubusteinmoneymod:cinci_bani"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "bubusteinmoneymod:zece_bani"
+  }
+}

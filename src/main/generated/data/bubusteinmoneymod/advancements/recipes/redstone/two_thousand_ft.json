@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:two_thousand_ft"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thousand_ft": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:thousand_ft"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_thousand_ft"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:two_thousand_ft"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_five_hundred_se_krone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:five_hundred_se_krone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:hundred_se_krone_from_five_hundred_se_krone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_five_hundred_se_krone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:hundred_se_krone_from_five_hundred_se_krone"
+    ]
+  }
+}

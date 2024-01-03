@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_one_ecent": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:one_ecent"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:two_ecents"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_one_ecent"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:two_ecents"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_five_cn_jiao": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:five_cn_jiao"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:one_cn_yuan"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_five_cn_jiao"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:one_cn_yuan"
+    ]
+  }
+}

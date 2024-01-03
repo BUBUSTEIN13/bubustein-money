@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "NOkr",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:five_no_krone"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "bubusteinmoneymod:one_no_krone"
+  }
+}

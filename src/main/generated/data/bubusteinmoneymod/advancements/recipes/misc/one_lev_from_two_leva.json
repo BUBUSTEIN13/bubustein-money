@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:one_lev_from_two_leva"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_two_leva": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:two_leva"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_two_leva"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:one_lev_from_two_leva"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:cinci_lei"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:un_leu",
+        "count": 5
+    }
+}

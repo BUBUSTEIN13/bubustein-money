@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "bubusteinmoneymod:thousand_ft"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "bubusteinmoneymod:two_thousand_ft"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ten_euros": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:ten_euros"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:twenty_euros"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ten_euros"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:twenty_euros"
+    ]
+  }
+}

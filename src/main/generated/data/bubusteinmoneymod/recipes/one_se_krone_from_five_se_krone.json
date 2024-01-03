@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "SEkr",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:five_se_krone"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "bubusteinmoneymod:one_se_krone"
+  }
+}

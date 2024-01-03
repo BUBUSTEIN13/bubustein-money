@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "PLN",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:two_grosze"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "bubusteinmoneymod:one_grosz"
+  }
+}

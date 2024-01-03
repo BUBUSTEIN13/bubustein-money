@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "bubusteinmoneymod:item/thousand_cz_krone"
+  }
+}

@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "LIO",
+        "RPA",
+        "#GD"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:diamond"
+        },
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "R": {
+            "item": "minecraft:glass_pane"
+        },
+        "I": {
+            "item": "minecraft:emerald"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:hundred_euros"
+        },
+        "D": {
+            "item": "minecraft:purple_dye"
+        },
+        "G": {
+            "item": "minecraft:magenta_dye"
+        },
+        "A": {
+            "item": "minecraft:redstone"
+        },
+        "O": {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:hundred_pounds"
+    }
+}

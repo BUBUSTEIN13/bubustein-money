@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ten_stotinki_from_twenty_stotinki"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_twenty_stotinki": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:twenty_stotinki"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_twenty_stotinki"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ten_stotinki_from_twenty_stotinki"
+    ]
+  }
+}

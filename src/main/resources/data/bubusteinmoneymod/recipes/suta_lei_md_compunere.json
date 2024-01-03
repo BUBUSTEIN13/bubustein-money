@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "G*#",
+        "RP#",
+        "I*#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:brown_dye"
+        },
+        "*": {
+            "item": "minecraft:orange_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "I": {
+            "item": "minecraft:gold_ingot"
+        },
+        "G": {
+            "item": "minecraft:emerald"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:suta_lei_md"
+    }
+}

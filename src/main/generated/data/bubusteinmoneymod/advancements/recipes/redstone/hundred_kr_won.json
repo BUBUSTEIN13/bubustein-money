@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fifty_kr_won": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:fifty_kr_won"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:hundred_kr_won"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fifty_kr_won"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:hundred_kr_won"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:loonie"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_twentyfive_ccents": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:twentyfive_ccents"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_twentyfive_ccents"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:loonie"
+    ]
+  }
+}

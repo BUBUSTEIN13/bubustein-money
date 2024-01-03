@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "bubusteinmoneymod:block/machine_bottom",
+    "up": "bubusteinmoneymod:block/machine_top",
+    "north": "bubusteinmoneymod:block/machine_fside",
+    "east": "bubusteinmoneymod:block/machine_side",
+    "south": "bubusteinmoneymod:block/machine_fside",
+    "west": "bubusteinmoneymod:block/machine_side",
+    "particle": "bubusteinmoneymod:block/machine_bottom"
+  },
+  "render_type": "cutout_mipped"
+}

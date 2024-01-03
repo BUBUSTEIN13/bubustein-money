@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        " # ",
+        "#P#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:copper_ingot"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:douazecicinci_bani_md"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:cinci_bani"
+    }
+}

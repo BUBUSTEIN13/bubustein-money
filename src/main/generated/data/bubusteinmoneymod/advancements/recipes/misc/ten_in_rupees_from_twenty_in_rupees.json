@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ten_in_rupees_from_twenty_in_rupees"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_twenty_in_rupees": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:twenty_in_rupees"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_twenty_in_rupees"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ten_in_rupees_from_twenty_in_rupees"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "###",
+        "#R#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_nugget"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:cinci_lei_md"
+    }
+}

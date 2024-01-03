@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:one_grosz_from_two_grosze"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_two_grosze": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:two_grosze"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_two_grosze"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:one_grosz_from_two_grosze"
+    ]
+  }
+}

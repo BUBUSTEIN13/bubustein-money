@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        " DD",
+        " ND",
+        " RP"
+    ],
+    "key": {
+        "N": {
+            "item": "minecraft:diamond"
+        },
+        "D": {
+            "item": "minecraft:brown_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:two_hundred_francs"
+    }
+}

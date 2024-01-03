@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_half_franc": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:half_franc"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:one_franc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_half_franc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:one_franc"
+    ]
+  }
+}

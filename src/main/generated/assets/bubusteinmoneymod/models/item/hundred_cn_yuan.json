@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "bubusteinmoneymod:item/hundred_cn_yuan"
+  }
+}

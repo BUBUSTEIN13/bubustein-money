@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "#*#",
+        "%#%",
+        "#*#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        },
+        "%": {
+            "item": "minecraft:gold_nugget"
+        },
+        "*": {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:cincizeci_bani_md"
+    }
+}
