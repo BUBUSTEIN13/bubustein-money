@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "INr",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:five_in_rupees"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "bubusteinmoneymod:one_in_rupee"
+  }
+}

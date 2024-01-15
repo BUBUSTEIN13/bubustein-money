@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bubusteinmoneymod:block/atm"
+    },
+    "facing=east": {
+      "model": "bubusteinmoneymod:block/atm",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bubusteinmoneymod:block/atm",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bubusteinmoneymod:block/atm",
+      "y": 270
+    }
+
+  }
+}

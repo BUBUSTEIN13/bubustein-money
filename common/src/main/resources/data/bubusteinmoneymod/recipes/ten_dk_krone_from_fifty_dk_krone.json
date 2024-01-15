@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "DKkr",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:fifty_dk_krone"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "bubusteinmoneymod:ten_dk_krone"
+  }
+}

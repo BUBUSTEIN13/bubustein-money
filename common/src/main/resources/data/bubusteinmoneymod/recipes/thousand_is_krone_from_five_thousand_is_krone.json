@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ISkr",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:five_thousand_is_krone"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "bubusteinmoneymod:thousand_is_krone"
+  }
+}

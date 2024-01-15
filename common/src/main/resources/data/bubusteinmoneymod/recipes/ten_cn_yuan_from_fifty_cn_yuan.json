@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "CNYuan",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:fifty_cn_yuan"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "bubusteinmoneymod:ten_cn_yuan"
+  }
+}

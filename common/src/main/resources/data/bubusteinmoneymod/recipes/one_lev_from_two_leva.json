@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "Stotinka_Leva",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:two_leva"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "bubusteinmoneymod:one_lev"
+  }
+}
