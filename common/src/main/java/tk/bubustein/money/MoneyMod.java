@@ -1,4 +1,5 @@
 package tk.bubustein.money;
+
 import com.mojang.logging.LogUtils;
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -18,13 +19,10 @@ import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.util.JigsawHelper;
 import tk.bubustein.money.villager.ModVillagers;
 
-
 public class MoneyMod {
     public static final String MOD_ID = "bubusteinmoneymod";
     public static final Logger LOGGER = LogUtils.getLogger();
-
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(MOD_ID, Registries.CREATIVE_MODE_TAB);
-
     public static final RegistrySupplier<CreativeModeTab> BANKNOTES = TABS.register("banknotes", () ->
             CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.banknotes"),
                     () -> new ItemStack(ModItems.Euro500.get())));
@@ -56,22 +54,10 @@ public class MoneyMod {
         ResourceLocation snowyPoolLocation = new ResourceLocation("minecraft:village/snowy/houses");
         ResourceLocation taigaPoolLocation = new ResourceLocation("minecraft:village/taiga/houses");
 
-        if(MoneyExpectPlatform.generatePlainsHouses()){
-            JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 20);
-        }
-        if(MoneyExpectPlatform.generateDesertHouses()){
-            JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 7);
-        }
-        if(MoneyExpectPlatform.generateSavannaHouses()){
-            JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 20);
-        }
-        if(MoneyExpectPlatform.generateTaigaHouses()){
-            JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 20);
-        }
-        if(MoneyExpectPlatform.generateSnowyHouses()){
-            JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 7);
-        }
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 7);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 7);
     }
 }
-
-

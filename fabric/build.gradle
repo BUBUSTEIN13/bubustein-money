@@ -8,19 +8,21 @@ architectury {
     platformSetupLoomIde()
     fabric()
 }
-repositories {
-    maven {
-        name = "Modrinth"
-        url = "https://api.modrinth.com/maven"
-        content {
-            includeGroup "maven.modrinth"
+loom {
+    accessWidenerPath = project(":common").loom.accessWidenerPath
+    runs {
+        // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
+        datagen {
+            inherit server
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
+
+            runDir "build/datagen"
         }
     }
 }
-loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
-}
-
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
@@ -28,51 +30,50 @@ configurations {
     runtimeClasspath.extendsFrom common
     developmentFabric.extendsFrom common
 }
-
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
-    // Remove the next line if you don't want to depend on the API
-    modImplementation "maven.modrinth:AANobbMI:${rootProject.sodium_version}"
     modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
-
 processResources {
     inputs.property "version", project.version
-
     filesMatching("fabric.mod.json") {
         expand "version": project.version
     }
 }
-
 shadowJar {
     exclude "architectury.common.json"
-
     configurations = [project.configurations.shadowCommon]
     archiveClassifier = "dev-shadow"
 }
-
 remapJar {
     injectAccessWidener = true
-    input.set shadowJar.archiveFile
+    inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
+    archiveClassifier.set(null)
 }
-
+sourceSets {
+    main {
+        resources {
+            srcDirs += [
+                    'src/main/generated'
+            ]
+        }
+    }
+}
 sourcesJar {
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources
     from commonSources.archiveFile.map { zipTree(it) }
 }
-
 components.java {
     withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
         skip()
     }
 }
-
 publishing {
     publications {
         mavenFabric(MavenPublication) {
@@ -80,7 +81,4 @@ publishing {
             from components.java
         }
     }
-
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-
 }

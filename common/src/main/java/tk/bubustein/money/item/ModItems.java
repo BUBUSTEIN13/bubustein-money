@@ -1,10 +1,8 @@
 package tk.bubustein.money.item;
 
 import net.minecraft.world.item.Item;
-
 import tk.bubustein.money.MoneyExpectPlatform;
 import tk.bubustein.money.MoneyMod;
-
 import java.util.function.Supplier;
 
 public class ModItems {
