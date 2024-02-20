@@ -1,11 +1,12 @@
 package tk.bubustein.money.block.custom;
 
+import me.shedaniel.architectury.registry.BlockProperties;
+import me.shedaniel.architectury.registry.ToolType;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 
 public class BankMachine extends Block {
     public BankMachine() {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).strength(2.5f).requiresCorrectToolForDrops());
+        super(BlockProperties.of(Material.WOOD).tool(ToolType.AXE, 2).strength(2.5f).noOcclusion().requiresCorrectToolForDrops());
     }
 }

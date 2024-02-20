@@ -2,36 +2,39 @@ package tk.bubustein.money.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import me.shedaniel.architectury.registry.BlockProperties;
+import me.shedaniel.architectury.registry.ToolType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.material.Material;
 
-public class ATM extends Block {
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+public class ATM extends HorizontalDirectionalBlock  {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
 
     public ATM() {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).strength(6f).noOcclusion().requiresCorrectToolForDrops());
+        super(BlockProperties.of(Material.METAL).tool(ToolType.PICKAXE, 2).strength(6f).noOcclusion().requiresCorrectToolForDrops());
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HALF, DoubleBlockHalf.LOWER));
     }
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder){
         builder.add(FACING, HALF);
     }
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(HALF, DoubleBlockHalf.LOWER);
     }
+
     @Override
     public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
         if(world.getBlockState(pos.above()).getBlock() != Blocks.AIR){
@@ -83,21 +86,21 @@ public class ATM extends Block {
         }*/
         super.onRemove(state, worldIn, pos, newState, isMoving);
     }
+
     @Override
-    public BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player playerEntity) {
+    public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player playerEntity) {
         BlockPos blockpos = pos.below();
         BlockState blockState = world.getBlockState(blockpos);
         if(state.getBlock() == this && state.getValue(HALF) == DoubleBlockHalf.UPPER) {
             world.setBlock(blockpos, Blocks.AIR.defaultBlockState(), 3);
-            world.levelEvent(playerEntity, LevelEvent.PARTICLES_DESTROY_BLOCK, blockpos, Block.getId(blockState));
+            world.levelEvent(playerEntity, 2001, blockpos, Block.getId(blockState));
         } else if(state.getBlock() == this && state.getValue(HALF) == DoubleBlockHalf.LOWER) {
             blockpos = pos.above();
             blockState = world.getBlockState(blockpos);
             world.setBlock(blockpos, Blocks.AIR.defaultBlockState(), 3);
-            world.levelEvent(playerEntity, LevelEvent.PARTICLES_DESTROY_BLOCK, blockpos, Block.getId(blockState));
+            world.levelEvent(playerEntity, 2001, blockpos, Block.getId(blockState));
         }
         super.playerWillDestroy(world, pos, state, playerEntity);
-        return blockState;
     }
 /*
     @Override
@@ -108,6 +111,7 @@ public class ATM extends Block {
         }
         return blockEntity instanceof MenuProvider ? (MenuProvider)blockEntity : null;
     }
+
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

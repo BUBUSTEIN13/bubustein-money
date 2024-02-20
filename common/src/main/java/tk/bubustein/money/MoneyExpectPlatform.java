@@ -1,12 +1,16 @@
 package tk.bubustein.money;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import dev.architectury.platform.Platform;
+import me.shedaniel.architectury.platform.Platform;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+
 import java.nio.file.Path;
 import java.util.Set;
 import java.util.function.Supplier;
@@ -27,22 +31,31 @@ public class MoneyExpectPlatform {
      */
     @ExpectPlatform
     public static Path getConfigDirectory() {
+        // Just throw an error, the content should get replaced at runtime.
         throw new AssertionError();
     }
     @ExpectPlatform
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         throw new AssertionError();
     }
+
     @ExpectPlatform
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> item) {
         throw new AssertionError();
     }
+
     @ExpectPlatform
     public static Supplier<VillagerProfession> registerProfession(String name, Supplier<VillagerProfession> profession) {
         throw new AssertionError();
     }
+
     @ExpectPlatform
-    public static Supplier<PoiType> registerPoiType(String name, Supplier<Set<BlockState>> matchingStates) {
+    public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
+        throw new AssertionError();
+    }
+
+    @ExpectPlatform
+    public static CreativeModeTab registerCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
         throw new AssertionError();
     }
     @ExpectPlatform
@@ -64,6 +77,7 @@ public class MoneyExpectPlatform {
     public static boolean generateSnowyHouses() {
         throw new AssertionError();
     }
+
     @ExpectPlatform
     public static boolean generateDesertHouses() {
         throw new AssertionError();

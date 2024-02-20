@@ -1,11 +1,12 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[36,)"
+#issueTrackerURL = ""
 license = "All Rights Reserved"
 
 [[mods]]
 modId = "bubusteinmoneymod"
 version = "${version}"
-displayURL="https://modrinth.com/mod/bubustein-money"
+displayURL="https://dsc.gg/bubustein"
 credits="Made with passion by BUBUSTEIN"
 displayName = "BUBUSTEIN's Money Mod"
 authors = "BUBUSTEIN"
@@ -21,20 +22,26 @@ logoFile = "icon.png"
 [[dependencies.bubusteinmoneymod]]
 modId = "forge"
 mandatory = true
-versionRange = "[49,)"
+versionRange = "[36,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20.4,)"
+versionRange = "[1.16.5,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "architectury"
 mandatory = true
-versionRange = "[11.0.12,)"
+versionRange = "[1.32.68,)"
 ordering = "AFTER"
 side = "BOTH"
+[[dependencies.bubusteinmoneymod]]
+modId = "embeddium"
+mandatory = true
+versionRange = "[0.2.13,)"
+ordering = "AFTER"
+side = "CLIENT"

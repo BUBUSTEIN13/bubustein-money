@@ -1,15 +1,21 @@
 package tk.bubustein.money.forge;
 
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.fml.RegistryObject;
 import tk.bubustein.money.MoneyMod;
 import tk.bubustein.money.MoneyExpectPlatform;
 import net.minecraftforge.fml.loading.FMLPaths;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import tk.bubustein.money.block.ModBlocks;
+
 import java.nio.file.Path;
 import java.util.Set;
 import java.util.function.Supplier;
@@ -24,7 +30,8 @@ public class MoneyExpectPlatformImpl {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MoneyMod.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MoneyMod.MOD_ID);
     public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, MoneyMod.MOD_ID);
-    public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, MoneyMod.MOD_ID);
+    public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, MoneyMod.MOD_ID);
+
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
     }
@@ -34,8 +41,17 @@ public class MoneyExpectPlatformImpl {
     public static Supplier<VillagerProfession> registerProfession(String name, Supplier<VillagerProfession> profession) {
         return PROFESSIONS.register(name, profession);
     }
-    public static Supplier<PoiType> registerPoiType(String name, Supplier<Set<BlockState>> matchingStates) {
-        return POI_TYPES.register(name, () -> new PoiType(matchingStates.get(), 1, 1));
+
+    public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
+        return POI_TYPES.register(name, poiType);
+    }
+    public static CreativeModeTab registerCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
+        return new CreativeModeTab(name.getNamespace() + "." + name.getPath()) {
+            @Override
+            public ItemStack makeIcon() {
+                return icon.get();
+            }
+        };
     }
     public static boolean generatePlainsHouses() {
         return true;

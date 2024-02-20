@@ -1,37 +1,21 @@
 package tk.bubustein.money;
-
-import com.mojang.logging.LogUtils;
-import dev.architectury.registry.CreativeTabRegistry;
-import dev.architectury.registry.registries.DeferredRegister;
-import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.core.WritableRegistry;
+import org.apache.logging.log4j.LogManager;
 import net.minecraft.core.Registry;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
-import org.slf4j.Logger;
+import net.minecraft.world.level.levelgen.feature.structures.StructureTemplatePool;
+import org.apache.logging.log4j.Logger;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.util.JigsawHelper;
 import tk.bubustein.money.villager.ModVillagers;
 
+
 public class MoneyMod {
     public static final String MOD_ID = "bubusteinmoneymod";
-    public static final Logger LOGGER = LogUtils.getLogger();
-    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(MOD_ID, Registries.CREATIVE_MODE_TAB);
-    public static final RegistrySupplier<CreativeModeTab> BANKNOTES = TABS.register("banknotes", () ->
-            CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.banknotes"),
-                    () -> new ItemStack(ModItems.Euro500.get())));
-    public static final RegistrySupplier<CreativeModeTab> COINS = TABS.register("coins", () ->
-            CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.coins"),
-                    () -> new ItemStack(ModItems.Euro2.get())));
-    public static final RegistrySupplier<CreativeModeTab> SPECIAL = TABS.register("special", () ->
-            CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.special"),
-                    () -> new ItemStack(ModBlocks.ATM.get())));
+    public static final Logger LOGGER = LogManager.getLogger();
+
     public static void init() {
 
         LOGGER.info("[" + MOD_ID + "] Starting mod");
@@ -39,14 +23,12 @@ public class MoneyMod {
         ModItems.init();
         ModBlocks.init();
         ModVillagers.init();
-        TABS.register();
 
         LOGGER.info("[" + MOD_ID + "] COMPLETED");
     }
 
     public static void registerJigsaws(MinecraftServer server){
-        Registry<StructureTemplatePool> templatePoolRegistry = server.registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();
-        Registry<StructureProcessorList> processorListRegistry = server.registryAccess().registry(Registries.PROCESSOR_LIST).orElseThrow();
+        WritableRegistry<StructureTemplatePool> templatePoolRegistry = server.registryAccess().registry(Registry.TEMPLATE_POOL_REGISTRY).get();
 
         ResourceLocation plainsPoolLocation = new ResourceLocation("minecraft:village/plains/houses");
         ResourceLocation desertPoolLocation = new ResourceLocation("minecraft:village/desert/houses");
@@ -54,10 +36,22 @@ public class MoneyMod {
         ResourceLocation snowyPoolLocation = new ResourceLocation("minecraft:village/snowy/houses");
         ResourceLocation taigaPoolLocation = new ResourceLocation("minecraft:village/taiga/houses");
 
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 7);
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 7);
+        if(MoneyExpectPlatform.generatePlainsHouses()){
+            JigsawHelper.addBuildingToPool(templatePoolRegistry,  plainsPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 20);
+        }
+        if(MoneyExpectPlatform.generateDesertHouses()){
+            JigsawHelper.addBuildingToPool(templatePoolRegistry,  desertPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 7);
+        }
+        if(MoneyExpectPlatform.generateSavannaHouses()){
+            JigsawHelper.addBuildingToPool(templatePoolRegistry,  savannaPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 20);
+        }
+        if(MoneyExpectPlatform.generateTaigaHouses()){
+            JigsawHelper.addBuildingToPool(templatePoolRegistry,  taigaPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 20);
+        }
+        if(MoneyExpectPlatform.generateSnowyHouses()){
+            JigsawHelper.addBuildingToPool(templatePoolRegistry,  snowyPoolLocation, "bubusteinmoneymod:plains_banker_house_2", 7);
+        }
     }
 }
+
+
