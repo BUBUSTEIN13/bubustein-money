@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bubusteinmoneymod:cinci_lei_md"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "bubusteinmoneymod:zece_lei_md"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    "ABC",
+    "DPE",
+    "FCC"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:redstone"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "C": {
+      "item": "minecraft:gray_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "D": {
+      "item": "minecraft:gold_ingot"
+    },
+    "E": {
+      "item": "minecraft:purple_dye"
+    },
+    "F": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "id": "bubusteinmoneymod:fifty_dk_krone"
+  }
+}

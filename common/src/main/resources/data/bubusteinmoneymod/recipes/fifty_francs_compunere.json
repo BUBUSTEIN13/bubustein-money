@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    " DD",
+    " ND",
+    " RP"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "minecraft:lime_dye"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "id": "bubusteinmoneymod:fifty_francs"
+  }
+}

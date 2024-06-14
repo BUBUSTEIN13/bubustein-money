@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "RSD",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:fifty_rs_dinar"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "bubusteinmoneymod:ten_rs_dinar"
+  }
+}

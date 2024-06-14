@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    "L##",
+    "RP#",
+    "I##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cyan_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "id": "bubusteinmoneymod:fifty_in_rupees"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ZAR",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:twenty_za_rand"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "bubusteinmoneymod:ten_za_rand"
+  }
+}

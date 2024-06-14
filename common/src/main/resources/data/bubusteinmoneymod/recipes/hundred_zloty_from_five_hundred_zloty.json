@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "PLN",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:five_hundred_zloty"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "bubusteinmoneymod:hundred_zloty"
+  }
+}

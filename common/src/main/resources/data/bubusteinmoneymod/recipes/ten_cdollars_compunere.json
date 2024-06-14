@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    "NOB",
+    "RDG",
+    "ICC"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "D": {
+      "item": "bubusteinmoneymod:ten_dollars"
+    },
+    "O": {
+      "item": "minecraft:gold_nugget"
+    },
+    "C": {
+      "item": "minecraft:magenta_dye"
+    },
+    "G": {
+      "item": "minecraft:red_stained_glass_pane"
+    },
+    "B": {
+      "item": "minecraft:purple_dye"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "id": "bubusteinmoneymod:ten_cdollars"
+  }
+}

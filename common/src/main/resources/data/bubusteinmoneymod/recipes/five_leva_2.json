@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "B": {
+      "item": "minecraft:red_dye"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "Q": {
+      "item": "minecraft:pink_dye"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "RPB",
+    "GQQ"
+  ],
+  "result": {
+    "id": "bubusteinmoneymod:five_leva"
+  }
+}

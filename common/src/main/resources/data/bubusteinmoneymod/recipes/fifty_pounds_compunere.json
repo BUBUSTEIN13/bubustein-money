@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    "LOO",
+    "RPA",
+    "IGD"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "R": {
+      "item": "minecraft:glass_pane"
+    },
+    "I": {
+      "item": "minecraft:emerald"
+    },
+    "P": {
+      "item": "bubusteinmoneymod:fifty_euros"
+    },
+    "D": {
+      "item": "minecraft:pink_dye"
+    },
+    "G": {
+      "item": "minecraft:red_dye"
+    },
+    "A": {
+      "item": "minecraft:redstone"
+    },
+    "O": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "id": "bubusteinmoneymod:fifty_pounds"
+  }
+}

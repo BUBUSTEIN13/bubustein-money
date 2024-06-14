@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    "GDG",
+    "GCG",
+    "GGG"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "bubusteinmoneymod:card_classic"
+    }
+  },
+  "result": {
+    "id": "bubusteinmoneymod:card_gold"
+  }
+}

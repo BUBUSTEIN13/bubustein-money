@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "MXN",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:ten_mx_pesos"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "bubusteinmoneymod:five_mx_pesos"
+  }
+}

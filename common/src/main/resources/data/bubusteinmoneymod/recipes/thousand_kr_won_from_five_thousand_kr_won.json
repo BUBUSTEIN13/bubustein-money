@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "Won",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:five_thousand_kr_won"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "bubusteinmoneymod:thousand_kr_won"
+  }
+}

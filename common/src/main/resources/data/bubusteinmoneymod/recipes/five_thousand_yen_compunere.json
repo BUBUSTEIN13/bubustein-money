@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    "IGL",
+    "RPW",
+    "WWW"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:emerald"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "W": {
+      "item": "minecraft:purple_dye"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "id": "bubusteinmoneymod:five_thousand_yen"
+  }
+}

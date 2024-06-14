@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "bubusteinmoneymod:mansion",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 496982001,
+    "spacing": 45,
+    "separation": 28,
+    "type": "minecraft:random_spread"
+  }
+}

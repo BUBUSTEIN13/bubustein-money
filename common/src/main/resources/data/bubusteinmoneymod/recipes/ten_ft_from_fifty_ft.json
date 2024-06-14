@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "Forint",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:fifty_ft"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "bubusteinmoneymod:ten_ft"
+  }
+}

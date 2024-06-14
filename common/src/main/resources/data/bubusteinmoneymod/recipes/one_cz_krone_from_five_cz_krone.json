@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "CZkr",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:five_cz_krone"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "bubusteinmoneymod:one_cz_krone"
+  }
+}
