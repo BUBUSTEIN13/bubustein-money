@@ -15,7 +15,7 @@
 
 ### You now have Bubustein's Money Mod, which contains <u>US Dollars, Euros, Pound sterling, Canadian dollars, and more.</u> Even an <u>ATM</u> is available where emeralds can be converted into Currency to be used with other players. You can resume using the village's trading hall because it works in reverse.
 
-### If you have suggestions or if you found an issue, don't hesitate to send/report them to my <u>Discord</u> server!
+### If you have suggestions or if you found an issue, don't hesitate to send/report them on my <u>Github</u> repository!
 
 <a href="https://patreon.com/bubustein" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdonate%2Fpatreon-singular_vector.svg&n=-1"></a>
 <a href="https://ko-fi.com/bubustein" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdonate%2Fkofi-singular_vector.svg&n=-1"></a>
