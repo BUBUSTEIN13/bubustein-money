@@ -2,32 +2,18 @@ plugins {
     id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 allprojects {
-    archivesBaseName = "${rootProject.mod_id}-fabric-mc${rootProject.minecraft_version}"
+    archivesBaseName = "${rootProject.archives_base_name}-fabric-mc${rootProject.minecraft_version}"
 }
 architectury {
     platformSetupLoomIde()
     fabric()
 }
-repositories {
-    maven { url "<https://maven.architectury.dev/>" }
-}
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
-    runs {
-        datagen {
-            inherit server
-            name "Data Generation"
-            vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
-
-            runDir "build/datagen"
-        }
-    }
 }
 configurations {
     common
-    shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
+    shadowCommon
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentFabric.extendsFrom common
@@ -36,7 +22,6 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
     modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
-    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rootProject.rei_version}"
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
@@ -58,15 +43,6 @@ remapJar {
     inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
     archiveClassifier.set(null)
-}
-sourceSets {
-    main {
-        resources {
-            srcDirs += [
-                    'src/main/generated'
-            ]
-        }
-    }
 }
 sourcesJar {
     def commonSources = project(":common").sourcesJar

@@ -15,10 +15,8 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 
-@SuppressWarnings("deprecation")
-public class ATM extends HorizontalDirectionalBlock  {
+public class ATM extends HorizontalDirectionalBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
-
     public ATM() {
         super(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6f).noOcclusion().requiresCorrectToolForDrops());
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HALF, DoubleBlockHalf.LOWER));
@@ -31,6 +29,7 @@ public class ATM extends HorizontalDirectionalBlock  {
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(HALF, DoubleBlockHalf.LOWER);
     }
+
     @Override
     public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
         if(world.getBlockState(pos.above()).getBlock() != Blocks.AIR){
@@ -71,6 +70,7 @@ public class ATM extends HorizontalDirectionalBlock  {
         }
     }*/
 
+    @SuppressWarnings("deprecated")
     @Override
     public void onRemove(BlockState state, Level worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
        /*if(state.getValue(HALF) == DoubleBlockHalf.LOWER){

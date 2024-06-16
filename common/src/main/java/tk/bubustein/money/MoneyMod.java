@@ -1,53 +1,32 @@
 package tk.bubustein.money;
-
 import com.mojang.logging.LogUtils;
-import dev.architectury.event.CompoundEventResult;
-import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.CreativeTabRegistry;
-import dev.architectury.registry.menu.MenuRegistry;
-import dev.architectury.registry.registries.DeferredRegister;
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
 import org.slf4j.Logger;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
-import tk.bubustein.money.recipe.ModRecipes;
-import tk.bubustein.money.screen.BankMachineScreen;
-import tk.bubustein.money.screen.ModMenuTypes;
 import tk.bubustein.money.util.JigsawHelper;
 import tk.bubustein.money.villager.ModVillagers;
-
 public class MoneyMod {
     public static final String MOD_ID = "bubusteinmoneymod";
     public static final Logger LOGGER = LogUtils.getLogger();
-    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(MOD_ID, Registries.CREATIVE_MODE_TAB);
-    public static final RegistrySupplier<CreativeModeTab> BANKNOTES = TABS.register("banknotes", () ->
-            CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.banknotes"),
-                    () -> new ItemStack(ModItems.Euro500.get())));
-    public static final RegistrySupplier<CreativeModeTab> COINS = TABS.register("coins", () ->
-            CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.coins"),
-                    () -> new ItemStack(ModItems.Euro2.get())));
-    public static final RegistrySupplier<CreativeModeTab> SPECIAL = TABS.register("special", () ->
-            CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.special"),
-                    () -> new ItemStack(ModBlocks.ATM.get())));
-
+    public static CreativeTabRegistry.TabSupplier BANKNOTES = CreativeTabRegistry.create(new ResourceLocation(MOD_ID, "banknotes"),
+            () -> new ItemStack(ModItems.Euro500.get()));
+    public static CreativeTabRegistry.TabSupplier COINS = CreativeTabRegistry.create(new ResourceLocation(MOD_ID, "coins"),
+            () -> new ItemStack(ModItems.Euro2.get()));
+    public static CreativeTabRegistry.TabSupplier SPECIAL = CreativeTabRegistry.create(new ResourceLocation(MOD_ID, "special"),
+            () -> new ItemStack(ModBlocks.ATM.get()));
     public static void init() {
         LOGGER.info("[" + MOD_ID + "] Printing money. . .");
         ModItems.init();
         ModBlocks.init();
         ModVillagers.init();
-        ModMenuTypes.init();
-        ModRecipes.init();
-        TABS.register();
         LOGGER.info("[" + MOD_ID + "] The operation has been done successfully");
     }
     public static void registerJigsaws(MinecraftServer server){

@@ -1,6 +1,6 @@
 {
-    "type": "bubusteinmoneymod:bank_machine_shaped",
-
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
     "pattern": [
         "#GL",
         "SPR",

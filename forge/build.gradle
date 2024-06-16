@@ -2,17 +2,15 @@ plugins {
     id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 allprojects {
-    archivesBaseName = "${rootProject.mod_id}-forge-mc${rootProject.minecraft_version}"
+    archivesBaseName = "${rootProject.archives_base_name}-forge-mc${rootProject.minecraft_version}"
 }
 architectury {
     platformSetupLoomIde()
     forge()
 }
-repositories {
-    maven { url "<https://maven.shedaniel.me/>" }
-}
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
+
     forge {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
@@ -31,7 +29,6 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
     modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
-    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-forge:${rootProject.rei_version}"
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
@@ -59,11 +56,13 @@ sourcesJar {
     dependsOn commonSources
     from commonSources.archiveFile.map { zipTree(it) }
 }
+
 components.java {
     withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
         skip()
     }
 }
+
 publishing {
     publications {
         mavenForge(MavenPublication) {

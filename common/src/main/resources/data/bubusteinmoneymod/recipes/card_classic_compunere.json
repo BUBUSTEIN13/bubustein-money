@@ -1,5 +1,11 @@
 {
-    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "RLL",
+        "GCD",
+        "DDD"
+    ],
     "key": {
         "L": {
             "item": "minecraft:lapis_lazuli"
@@ -17,11 +23,6 @@
             "item": "minecraft:clay_ball"
         }
     },
-    "pattern": [
-        "RLL",
-        "GCD",
-        "DDD"
-    ],
     "result": {
         "item": "bubusteinmoneymod:card_classic"
     }

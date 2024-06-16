@@ -1,5 +1,6 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[44,)"
+#issueTrackerURL = ""
 license = "All Rights Reserved"
 
 [[mods]]
@@ -19,23 +20,24 @@ You can resume using the village's trading hall because it works in reverse.
 logoFile = "icon.png"
 [modproperties.bubusteinmoneymod]
 catalogueImageIcon="icon.png"
+
 [[dependencies.bubusteinmoneymod]]
 modId = "forge"
 mandatory = true
-versionRange = "[47,)"
+versionRange = "[44,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20.1,1.20.3)"
+versionRange = "[1.19.3,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "architectury"
 mandatory = true
-versionRange = "[9.1.12,)"
+versionRange = "[7.1.86,)"
 ordering = "AFTER"
 side = "BOTH"
