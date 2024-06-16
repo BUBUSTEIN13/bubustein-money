@@ -1,0 +1,29 @@
+{
+  "type": "bubusteinmoneymod:bank_machine_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:clay_ball"
+    },
+    "D": {
+      "item": "minecraft:red_dye"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "RLL",
+    "GCD",
+    "DDD"
+  ],
+  "result": {
+    "item": "bubusteinmoneymod:card_classic"
+  },
+  "show_notification": true
+}

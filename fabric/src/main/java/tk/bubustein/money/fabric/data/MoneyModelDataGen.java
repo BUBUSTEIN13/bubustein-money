@@ -1,11 +1,9 @@
-package tk.bubustein.money.fabric;
+package tk.bubustein.money.fabric.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
-import net.minecraft.data.models.model.ModelTemplates;
-import tk.bubustein.money.item.ModItems;
 
 public class MoneyModelDataGen extends FabricModelProvider {
     MoneyModelDataGen(FabricDataOutput generator) {
@@ -18,6 +16,7 @@ public class MoneyModelDataGen extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator){
 
+        /*
         itemModelGenerator.generateFlatItem(ModItems.ZACent10.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ZACent20.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ZACent50.get(), ModelTemplates.FLAT_ITEM);
@@ -31,7 +30,7 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.ZARand200.get(), ModelTemplates.FLAT_ITEM);
 
 
-        /*
+
         itemModelGenerator.generateFlatItem(ModItems.CZkr1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.CZkr2.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.CZkr5.get(), ModelTemplates.FLAT_ITEM);

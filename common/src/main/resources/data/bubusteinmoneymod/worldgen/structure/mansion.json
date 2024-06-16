@@ -1,6 +1,5 @@
 {
   "type": "minecraft:jigsaw",
-
   "start_pool": "bubusteinmoneymod:mansion/start_pool",
   "size": 2,
   "max_distance_from_center": 35,

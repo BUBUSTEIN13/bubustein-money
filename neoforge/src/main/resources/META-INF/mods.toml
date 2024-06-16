@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[2,)"
+loaderVersion = "[1,)"
 license = "All Rights Reserved"
 
 [[mods]]
@@ -24,21 +24,21 @@ config = "bubusteinmoneymod.mixins.json"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "neoforge"
-type= "required"
-versionRange = "[20.4,)"
+mandatory=true
+versionRange = "[20.2,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "minecraft"
-type = "required"
-versionRange = "[1.20.4,)"
+mandatory=true
+versionRange = "[1.20.2,1.20.3)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "architectury"
-type = "required"
-versionRange = "[11.0.12,)"
+mandatory=true
+versionRange = "[10.0.17,)"
 ordering = "NONE"
 side = "BOTH"

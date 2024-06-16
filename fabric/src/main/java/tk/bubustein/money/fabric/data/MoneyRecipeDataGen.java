@@ -1,9 +1,14 @@
-package tk.bubustein.money.fabric;
+package tk.bubustein.money.fabric.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.world.item.Items;
+import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
+import tk.bubustein.money.recipe.BankMachineRecipeShapedBuilder;
+import tk.bubustein.money.recipe.BankMachineRecipeShapelessBuilder;
 
 public class MoneyRecipeDataGen extends FabricRecipeProvider {
     public MoneyRecipeDataGen(FabricDataOutput output){
@@ -18,6 +23,11 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
         oneToOneConversionRecipe();
         */
 
+        new BankMachineRecipeShapedBuilder(RecipeCategory.MISC, ModItems.VisaClassic.get(), 1).define('R', Items.REDSTONE).define('L', Items.LAPIS_LAZULI)
+                .define('G', Items.GOLD_NUGGET).define('C',Items.CLAY_BALL)
+                .define('D', Items.RED_DYE).pattern("RLL")
+                .pattern("GCD").pattern("DDD").unlockedBy("has_atm", has(ModBlocks.ATM.get())).save(exporter);
+        new BankMachineRecipeShapelessBuilder(RecipeCategory.MISC, ModItems.ACent20.get(), 1).requires(ModItems.ACent10.get(), 2).unlockedBy("has_a", has(ModItems.ACent10.get())).save(exporter);
         /* BRAZILIAN REAL
         pressurePlate(exporter, ModItems.BRCentavo10.get(), ModItems.BRCentavo5.get());
         woodenBoat(exporter, ModItems.BRCentavo25.get(), ModItems.BRCentavo5.get());
@@ -45,6 +55,7 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
 
         */
         // ZAR
+        /*
         pressurePlate(exporter, ModItems.ZACent20.get(), ModItems.ZACent10.get());
         woodenBoat(exporter, ModItems.ZACent50.get(), ModItems.ZACent10.get());
         pressurePlate(exporter, ModItems.ZARand1.get(), ModItems.ZACent50.get());
@@ -65,6 +76,6 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
         oneToOneConversionRecipe(exporter, ModItems.ZARand10.get(), ModItems.ZARand20.get(), "ZAR", 2);
         oneToOneConversionRecipe(exporter, ModItems.ZARand10.get(), ModItems.ZARand50.get(), "ZAR", 5);
         oneToOneConversionRecipe(exporter, ModItems.ZARand50.get(), ModItems.ZARand100.get(), "ZAR", 2);
-        oneToOneConversionRecipe(exporter, ModItems.ZARand100.get(), ModItems.ZARand200.get(), "ZAR", 2);
+        oneToOneConversionRecipe(exporter, ModItems.ZARand100.get(), ModItems.ZARand200.get(), "ZAR", 2);*/
     }
 }

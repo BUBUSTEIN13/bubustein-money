@@ -1,9 +1,13 @@
 package tk.bubustein.money;
 
 import com.mojang.logging.LogUtils;
+import dev.architectury.event.CompoundEventResult;
+import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.CreativeTabRegistry;
+import dev.architectury.registry.menu.MenuRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -16,6 +20,9 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import org.slf4j.Logger;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
+import tk.bubustein.money.recipe.ModRecipes;
+import tk.bubustein.money.screen.BankMachineScreen;
+import tk.bubustein.money.screen.ModMenuTypes;
 import tk.bubustein.money.util.JigsawHelper;
 import tk.bubustein.money.villager.ModVillagers;
 
@@ -32,11 +39,14 @@ public class MoneyMod {
     public static final RegistrySupplier<CreativeModeTab> SPECIAL = TABS.register("special", () ->
             CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.special"),
                     () -> new ItemStack(ModBlocks.ATM.get())));
+
     public static void init() {
-        LOGGER.info("[" + MOD_ID + "] Printing money. . . ;)");
+        LOGGER.info("[" + MOD_ID + "] Printing money. . .");
         ModItems.init();
         ModBlocks.init();
         ModVillagers.init();
+        ModMenuTypes.init();
+        ModRecipes.init();
         TABS.register();
         LOGGER.info("[" + MOD_ID + "] The operation has been done successfully");
     }

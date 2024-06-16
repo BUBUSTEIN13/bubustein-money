@@ -1,0 +1,14 @@
+{
+  "type": "bubusteinmoneymod:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:ten_acents"
+    },
+    {
+      "item": "bubusteinmoneymod:ten_acents"
+    }
+  ],
+  "result": {
+    "item": "bubusteinmoneymod:twenty_acents"
+  }
+}

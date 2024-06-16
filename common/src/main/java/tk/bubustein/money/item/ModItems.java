@@ -6,7 +6,7 @@ import tk.bubustein.money.MoneyMod;
 import java.util.function.Supplier;
 
 public class ModItems {
-    public static void init(){};
+    public static void init(){}
     public static final Supplier<Item> Ecent1 = MoneyExpectPlatform.registerItem("one_ecent",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
     public static final Supplier<Item> Ecent2 = MoneyExpectPlatform.registerItem("two_ecents",
@@ -658,6 +658,4 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
     public static final Supplier<Item> VisaSteel = MoneyExpectPlatform.registerItem("card_steel",
             () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
-
-
 }

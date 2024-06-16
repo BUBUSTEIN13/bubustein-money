@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_atm": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bubusteinmoneymod:atm"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bubusteinmoneymod:card_classic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_atm"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bubusteinmoneymod:card_classic"
+    ]
+  },
+  "sends_telemetry_event": false
+}

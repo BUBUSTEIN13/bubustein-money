@@ -1,6 +1,7 @@
 package tk.bubustein.money.neoforge;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
 import tk.bubustein.money.MoneyMod;
@@ -14,7 +15,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.nio.file.Path;
 import java.util.Set;
 import java.util.function.Supplier;
-
 public class MoneyExpectPlatformImpl {
     /**
      * This is our actual method to {@link MoneyExpectPlatform#getConfigDirectory()}.
@@ -26,7 +26,7 @@ public class MoneyExpectPlatformImpl {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MoneyMod.MOD_ID);
     public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(BuiltInRegistries.POINT_OF_INTEREST_TYPE, MoneyMod.MOD_ID);
     public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(BuiltInRegistries.VILLAGER_PROFESSION, MoneyMod.MOD_ID);
-
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPE = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, MoneyMod.MOD_ID);
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
     }

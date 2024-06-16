@@ -9,13 +9,7 @@ architectury {
     forge()
 }
 repositories {
-    maven {
-        name = "Modrinth"
-        url = "https://api.modrinth.com/maven"
-        content {
-            includeGroup "maven.modrinth"
-        }
-    }
+    maven { url "<https://maven.shedaniel.me/>" }
 }
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
@@ -29,7 +23,7 @@ loom {
 }
 configurations {
     common
-    shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
+    shadowCommon
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentForge.extendsFrom common
@@ -37,11 +31,13 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
     modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
+    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-forge:${rootProject.rei_version}"
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
 processResources {
     inputs.property "version", project.version
+
     filesMatching("META-INF/mods.toml") {
         expand "version": project.version
     }
@@ -49,6 +45,7 @@ processResources {
 shadowJar {
     exclude "fabric.mod.json"
     exclude "architectury.common.json"
+
     configurations = [project.configurations.shadowCommon]
     archiveClassifier = "dev-shadow"
 }
