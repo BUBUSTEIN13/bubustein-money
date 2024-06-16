@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:two_pence"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:two_pence"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:one_pence",
+        "count": 2
     }
-  ],
-  "result": {
-    "count": 2,
-    "id": "bubusteinmoneymod:one_pence"
-  }
 }

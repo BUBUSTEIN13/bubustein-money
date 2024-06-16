@@ -1,38 +1,38 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "LOO",
-    "RPA",
-    "IGD"
-  ],
-  "key": {
-    "L": {
-      "item": "minecraft:lapis_lazuli"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "LOO",
+        "RPA",
+        "IGD"
+    ],
+    "key": {
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "R": {
+            "item": "minecraft:glass_pane"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:twenty_euros"
+        },
+        "D": {
+            "item": "minecraft:purple_dye"
+        },
+        "G": {
+            "item": "minecraft:blue_dye"
+        },
+        "A": {
+            "item": "minecraft:redstone"
+        },
+        "O": {
+            "item": "minecraft:gold_ingot"
+        }
     },
-    "R": {
-      "item": "minecraft:glass_pane"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "P": {
-      "item": "bubusteinmoneymod:twenty_euros"
-    },
-    "D": {
-      "item": "minecraft:purple_dye"
-    },
-    "G": {
-      "item": "minecraft:blue_dye"
-    },
-    "A": {
-      "item": "minecraft:redstone"
-    },
-    "O": {
-      "item": "minecraft:gold_ingot"
+    "result": {
+        "item": "bubusteinmoneymod:twenty_pounds"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:twenty_pounds"
-  }
 }

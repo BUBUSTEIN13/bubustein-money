@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:zece_lei"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:zece_lei"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:cinci_lei",
+        "count": 2
     }
-  ],
-  "result": {
-    "count": 2,
-    "id": "bubusteinmoneymod:cinci_lei"
-  }
 }

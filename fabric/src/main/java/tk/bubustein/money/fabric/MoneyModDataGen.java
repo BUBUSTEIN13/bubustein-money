@@ -1,4 +1,4 @@
-package tk.bubustein.money.fabric.data;
+package tk.bubustein.money.fabric;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

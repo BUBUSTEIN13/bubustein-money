@@ -1,17 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    " # ",
-    "###",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        " # ",
+        "###",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:twentyfive_cents"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:twentyfive_cents"
-  }
 }

@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:cincizeci_bani_md"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:cincizeci_bani_md"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:douazecicinci_bani_md",
+        "count": 2
     }
-  ],
-  "result": {
-    "count": 2,
-    "id": "bubusteinmoneymod:douazecicinci_bani_md"
-  }
 }

@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:half_franc"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:half_franc"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:ten_centimes",
+        "count": 5
     }
-  ],
-  "result": {
-    "count": 5,
-    "id": "bubusteinmoneymod:ten_centimes"
-  }
 }

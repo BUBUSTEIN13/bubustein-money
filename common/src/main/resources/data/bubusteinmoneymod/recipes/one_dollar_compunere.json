@@ -1,26 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "RPG",
-    "GEG",
-    "GPG"
-  ],
-  "key": {
-    "R": {
-      "item": "minecraft:redstone"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "RPG",
+        "GEG",
+        "GPG"
+    ],
+    "key": {
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "G": {
+            "item": "minecraft:green_dye"
+        },
+        "E": {
+            "item": "bubusteinmoneymod:one_euro"
+        }
     },
-    "P": {
-      "item": "minecraft:paper"
-    },
-    "G": {
-      "item": "minecraft:green_dye"
-    },
-    "E": {
-      "item": "bubusteinmoneymod:one_euro"
+    "result": {
+        "item": "bubusteinmoneymod:one_dollar"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:one_dollar"
-  }
 }

@@ -1,26 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    " DD",
-    " ND",
-    " RP"
-  ],
-  "key": {
-    "N": {
-      "item": "minecraft:iron_ingot"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        " DD",
+        " ND",
+        " RP"
+    ],
+    "key": {
+        "N": {
+            "item": "minecraft:iron_ingot"
+        },
+        "D": {
+            "item": "minecraft:red_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
     },
-    "D": {
-      "item": "minecraft:red_dye"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "P": {
-      "item": "minecraft:paper"
+    "result": {
+        "item": "bubusteinmoneymod:twenty_francs"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:twenty_francs"
-  }
 }

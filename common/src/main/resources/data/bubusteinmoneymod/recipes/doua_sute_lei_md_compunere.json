@@ -1,32 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "G*#",
-    "RP#",
-    "I*#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:brown_dye"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "G*#",
+        "RP#",
+        "I*#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:brown_dye"
+        },
+        "*": {
+            "item": "minecraft:red_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "I": {
+            "item": "minecraft:emerald"
+        },
+        "G": {
+            "item": "minecraft:diamond"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
     },
-    "*": {
-      "item": "minecraft:red_dye"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "I": {
-      "item": "minecraft:emerald"
-    },
-    "G": {
-      "item": "minecraft:diamond"
-    },
-    "P": {
-      "item": "minecraft:paper"
+    "result": {
+        "item": "bubusteinmoneymod:doua_sute_lei_md"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:doua_sute_lei_md"
-  }
 }

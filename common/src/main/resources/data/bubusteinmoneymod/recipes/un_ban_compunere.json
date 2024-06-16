@@ -1,20 +1,20 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    " # ",
-    "#P#",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_nugget"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        " # ",
+        "#P#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_nugget"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:cinci_bani_md"
+        }
     },
-    "P": {
-      "item": "bubusteinmoneymod:cinci_bani_md"
+    "result": {
+        "item": "bubusteinmoneymod:un_ban"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:un_ban"
-  }
 }

@@ -1,32 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "G*#",
-    "RP#",
-    "I*#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:green_dye"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "G*#",
+        "RP#",
+        "I*#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:green_dye"
+        },
+        "*": {
+            "item": "minecraft:lime_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "I": {
+            "item": "minecraft:iron_nugget"
+        },
+        "G": {
+            "item": "minecraft:gold_nugget"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
     },
-    "*": {
-      "item": "minecraft:lime_dye"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "I": {
-      "item": "minecraft:iron_nugget"
-    },
-    "G": {
-      "item": "minecraft:gold_nugget"
-    },
-    "P": {
-      "item": "minecraft:paper"
+    "result": {
+        "item": "bubusteinmoneymod:douazeci_lei_md"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:douazeci_lei_md"
-  }
 }

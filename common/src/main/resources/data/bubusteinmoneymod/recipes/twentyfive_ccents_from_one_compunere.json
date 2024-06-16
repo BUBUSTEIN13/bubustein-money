@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:loonie"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:loonie"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:twentyfive_ccents",
+        "count": 4
     }
-  ],
-  "result": {
-    "count": 4,
-    "id": "bubusteinmoneymod:twentyfive_ccents"
-  }
 }

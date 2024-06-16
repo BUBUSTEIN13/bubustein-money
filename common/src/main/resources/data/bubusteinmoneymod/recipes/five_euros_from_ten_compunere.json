@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:ten_euros"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:ten_euros"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:five_euros",
+        "count": 2
     }
-  ],
-  "result": {
-    "count": 2,
-    "id": "bubusteinmoneymod:five_euros"
-  }
 }

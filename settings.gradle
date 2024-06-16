@@ -9,7 +9,6 @@ pluginManagement {
 }
 include("common")
 include("fabric")
+include("forge")
 include("neoforge")
-
-
-rootProject.name = "multiloader-arch-1.20.5"
+rootProject.name = "multiloader-arch-1.20.4"

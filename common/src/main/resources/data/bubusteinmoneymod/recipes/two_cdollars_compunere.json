@@ -1,23 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "ANA",
-    "A#A",
-    "ANA"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:gold_ingot"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "ANA",
+        "A#A",
+        "ANA"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "A": {
+            "item": "minecraft:iron_ingot"
+        },
+        "N": {
+            "item": "minecraft:iron_nugget"
+        }
     },
-    "A": {
-      "item": "minecraft:iron_ingot"
-    },
-    "N": {
-      "item": "minecraft:iron_nugget"
+    "result": {
+        "item": "bubusteinmoneymod:toonie"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:toonie"
-  }
 }

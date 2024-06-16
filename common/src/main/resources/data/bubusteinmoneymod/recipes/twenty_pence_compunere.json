@@ -1,23 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "#*#",
-    "*%*",
-    "#*#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:copper_ingot"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "#*#",
+        "*%*",
+        "#*#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:copper_ingot"
+        },
+        "*": {
+            "item": "minecraft:iron_ingot"
+        },
+        "%": {
+            "item": "minecraft:iron_nugget"
+        }
     },
-    "*": {
-      "item": "minecraft:iron_ingot"
-    },
-    "%": {
-      "item": "minecraft:iron_nugget"
+    "result": {
+        "item": "bubusteinmoneymod:twenty_pence"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:twenty_pence"
-  }
 }

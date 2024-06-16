@@ -1,23 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "###",
-    "#P#",
-    "#D#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:gold_ingot"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "###",
+        "#P#",
+        "#D#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "P": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
     },
-    "P": {
-      "item": "minecraft:netherite_ingot"
-    },
-    "D": {
-      "item": "minecraft:diamond"
+    "result": {
+        "item": "bubusteinmoneymod:suta_lei_1900"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:suta_lei_1900"
-  }
 }

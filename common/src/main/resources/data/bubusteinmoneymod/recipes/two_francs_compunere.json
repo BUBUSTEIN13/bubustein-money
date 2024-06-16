@@ -1,20 +1,20 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "II ",
-    " N ",
-    " II"
-  ],
-  "key": {
-    "N": {
-      "item": "minecraft:gold_nugget"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "II ",
+        " N ",
+        " II"
+    ],
+    "key": {
+        "N": {
+            "item": "minecraft:gold_nugget"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        }
     },
-    "I": {
-      "item": "minecraft:iron_ingot"
+    "result": {
+        "item": "bubusteinmoneymod:two_francs"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:two_francs"
-  }
 }

@@ -1,29 +1,29 @@
 {
-  "type": "bubusteinmoneymod:bank_machine_shaped",
-  "category": "Misc",
-  "pattern": [
-    "RLL",
-    "GCD",
-    "DDD"
-  ],
-  "key": {
-    "L": {
-      "item": "minecraft:lapis_lazuli"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "RLL",
+        "GCD",
+        "DDD"
+    ],
+    "key": {
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "D": {
+            "item": "minecraft:red_dye"
+        },
+        "G": {
+            "item": "minecraft:gold_nugget"
+        },
+        "C": {
+            "item": "minecraft:clay_ball"
+        }
     },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "D": {
-      "item": "minecraft:red_dye"
-    },
-    "G": {
-      "item": "minecraft:gold_nugget"
-    },
-    "C": {
-      "item": "minecraft:clay_ball"
+    "result": {
+        "item": "bubusteinmoneymod:card_classic"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:card_classic"
-  }
 }

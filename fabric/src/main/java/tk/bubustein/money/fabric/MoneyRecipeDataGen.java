@@ -1,16 +1,13 @@
-package tk.bubustein.money.fabric.data;
+package tk.bubustein.money.fabric;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeOutput;
 import tk.bubustein.money.item.ModItems;
 
-import java.util.concurrent.CompletableFuture;
-
 public class MoneyRecipeDataGen extends FabricRecipeProvider {
-    public MoneyRecipeDataGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture){
-        super(output, registriesFuture);
+    public MoneyRecipeDataGen(FabricDataOutput output){
+        super(output);
     }
 
     @Override
@@ -20,6 +17,7 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
         woodenBoat();
         oneToOneConversionRecipe();
         */
+
         /* BRAZILIAN REAL
         pressurePlate(exporter, ModItems.BRCentavo10.get(), ModItems.BRCentavo5.get());
         woodenBoat(exporter, ModItems.BRCentavo25.get(), ModItems.BRCentavo5.get());
@@ -47,7 +45,6 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
 
         */
         // ZAR
-        /*
         pressurePlate(exporter, ModItems.ZACent20.get(), ModItems.ZACent10.get());
         woodenBoat(exporter, ModItems.ZACent50.get(), ModItems.ZACent10.get());
         pressurePlate(exporter, ModItems.ZARand1.get(), ModItems.ZACent50.get());
@@ -69,6 +66,5 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
         oneToOneConversionRecipe(exporter, ModItems.ZARand10.get(), ModItems.ZARand50.get(), "ZAR", 5);
         oneToOneConversionRecipe(exporter, ModItems.ZARand50.get(), ModItems.ZARand100.get(), "ZAR", 2);
         oneToOneConversionRecipe(exporter, ModItems.ZARand100.get(), ModItems.ZARand200.get(), "ZAR", 2);
-        */
     }
 }

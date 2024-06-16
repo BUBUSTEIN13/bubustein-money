@@ -1,17 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    " # ",
-    "###",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_nugget"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        " # ",
+        "###",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_nugget"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:five_cents"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:five_cents"
-  }
 }

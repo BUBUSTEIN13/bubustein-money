@@ -1,32 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "IGL",
-    "RPW",
-    "WWW"
-  ],
-  "key": {
-    "I": {
-      "item": "minecraft:diamond"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "IGL",
+        "RPW",
+        "WWW"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:diamond"
+        },
+        "G": {
+            "item": "minecraft:emerald"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "W": {
+            "item": "minecraft:brown_dye"
+        },
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
     },
-    "G": {
-      "item": "minecraft:emerald"
-    },
-    "P": {
-      "item": "minecraft:paper"
-    },
-    "W": {
-      "item": "minecraft:brown_dye"
-    },
-    "L": {
-      "item": "minecraft:lapis_lazuli"
-    },
-    "R": {
-      "item": "minecraft:redstone"
+    "result": {
+        "item": "bubusteinmoneymod:ten_thousand_yen"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:ten_thousand_yen"
-  }
 }

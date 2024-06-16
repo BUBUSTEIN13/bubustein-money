@@ -1,4 +1,4 @@
-package tk.bubustein.money.fabric.data;
+package tk.bubustein.money.fabric;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -18,31 +18,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator){
 
-        itemModelGenerator.generateFlatItem(ModItems.NZCent10.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZCent20.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZCent50.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZD1.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZD2.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZD5.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZD10.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZD20.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZD50.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.NZD100.get(), ModelTemplates.FLAT_ITEM);
-
-        /*
-        itemModelGenerator.generateFlatItem(ModItems.TRk1.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRk5.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRk10.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRk25.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRk50.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRl1.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRl5.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRl10.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRl20.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRl50.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRl100.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ModItems.TRl200.get(), ModelTemplates.FLAT_ITEM);
-
         itemModelGenerator.generateFlatItem(ModItems.ZACent10.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ZACent20.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ZACent50.get(), ModelTemplates.FLAT_ITEM);
@@ -55,6 +30,8 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.ZARand100.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ZARand200.get(), ModelTemplates.FLAT_ITEM);
 
+
+        /*
         itemModelGenerator.generateFlatItem(ModItems.CZkr1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.CZkr2.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.CZkr5.get(), ModelTemplates.FLAT_ITEM);

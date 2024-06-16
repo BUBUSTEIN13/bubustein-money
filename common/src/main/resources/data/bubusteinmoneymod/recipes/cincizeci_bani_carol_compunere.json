@@ -1,23 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "I#I",
-    "#P#",
-    "I#I"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "I#I",
+        "#P#",
+        "I#I"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        },
+        "P": {
+            "item": "minecraft:emerald"
+        },
+        "I": {
+            "item": "minecraft:gold_nugget"
+        }
     },
-    "P": {
-      "item": "minecraft:emerald"
-    },
-    "I": {
-      "item": "minecraft:gold_nugget"
+    "result": {
+        "item": "bubusteinmoneymod:cincizeci_bani_1900"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:cincizeci_bani_1900"
-  }
 }

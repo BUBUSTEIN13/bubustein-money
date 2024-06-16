@@ -1,32 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "IGL",
-    "RPW",
-    "WWW"
-  ],
-  "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "IGL",
+        "RPW",
+        "WWW"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "G": {
+            "item": "minecraft:gold_ingot"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "W": {
+            "item": "minecraft:blue_dye"
+        },
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
     },
-    "G": {
-      "item": "minecraft:gold_ingot"
-    },
-    "P": {
-      "item": "minecraft:paper"
-    },
-    "W": {
-      "item": "minecraft:blue_dye"
-    },
-    "L": {
-      "item": "minecraft:lapis_lazuli"
-    },
-    "R": {
-      "item": "minecraft:redstone"
+    "result": {
+        "item": "bubusteinmoneymod:thousand_yen"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:thousand_yen"
-  }
 }
