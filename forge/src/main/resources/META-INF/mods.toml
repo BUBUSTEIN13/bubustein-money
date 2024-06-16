@@ -1,15 +1,11 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
-<<<<<<< Updated upstream
-#issueTrackerURL = ""
-=======
->>>>>>> Stashed changes
 license = "All Rights Reserved"
 
 [[mods]]
 modId = "bubusteinmoneymod"
 version = "${version}"
-displayURL="https://dsc.gg/bubustein"
+displayURL="https://modrinth.com/mod/bubustein-money"
 credits="Made with passion by BUBUSTEIN"
 displayName = "BUBUSTEIN's Money Mod"
 authors = "BUBUSTEIN"
@@ -39,16 +35,5 @@ side = "BOTH"
 modId = "architectury"
 mandatory = true
 versionRange = "[1.32.68,)"
-<<<<<<< Updated upstream
-ordering = "AFTER"
-side = "BOTH"
-[[dependencies.bubusteinmoneymod]]
-modId = "embeddium"
-mandatory = true
-versionRange = "[0.2.13,)"
-ordering = "AFTER"
-side = "CLIENT"
-=======
 ordering = "NONE"
 side = "BOTH"
->>>>>>> Stashed changes

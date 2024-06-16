@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -18,25 +17,4 @@
     "result": {
         "item": "bubusteinmoneymod:twenty_acents"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "N  ",
-        " IN",
-        " N "
-    ],
-    "key": {
-        "N": {
-            "item": "minecraft:iron_nugget"
-        },
-        "I": {
-            "item": "minecraft:iron_ingot"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:twenty_acents"
-    }
->>>>>>> Stashed changes
 }

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shapeless",
     "category": "misc",
@@ -11,18 +10,4 @@
         "item": "bubusteinmoneymod:one_pence",
         "count": 5
     }
-=======
-{
-    "type": "minecraft:crafting_shapeless",
-    "category": "misc",
-    "ingredients": [
-        {
-            "item": "bubusteinmoneymod:five_pence"
-        }
-    ],
-    "result": {
-        "item": "bubusteinmoneymod:one_pence",
-        "count": 5
-    }
->>>>>>> Stashed changes
 }

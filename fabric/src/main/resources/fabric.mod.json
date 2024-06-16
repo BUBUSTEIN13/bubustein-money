@@ -8,11 +8,7 @@
     "BUBUSTEIN"
   ],
   "contact": {
-<<<<<<< Updated upstream
-    "homepage": "https://dsc.gg/bubustein"
-=======
     "homepage": "https://modrinth.com/mod/bubustein-money"
->>>>>>> Stashed changes
   },
   "license": "All Rights Reserved",
   "icon": "icon.png",
@@ -30,23 +26,11 @@
   "depends": {
     "fabric": "*",
     "fabricloader": ">=0.15.6",
-<<<<<<< Updated upstream
-    "minecraft": ">=1.16.5",
-    "architectury": ">=1.32.68"
-
-
-
-=======
     "minecraft": "1.16.5",
     "architectury": ">=1.32.68"
->>>>>>> Stashed changes
   },
   "recommends": {
     "emi": "*",
     "modmenu": "*"
-  },
-  "suggests": {
-    "rei": "*",
-    "jei": "*"
   }
 }

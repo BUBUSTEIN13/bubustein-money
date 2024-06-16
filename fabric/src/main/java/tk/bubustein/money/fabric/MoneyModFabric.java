@@ -12,10 +12,6 @@ public class MoneyModFabric implements ModInitializer {
         ModVillagers.fillTradeData();
         registerPOIs();
         ServerLifecycleEvents.SERVER_STARTING.register(MoneyMod::registerJigsaws);
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
         }
         void registerPOIs(){
             PoiTypesInvoker.invokeRegisterBlockStates(ModVillagers.BANKER_POI.get());

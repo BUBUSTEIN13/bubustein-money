@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -30,37 +29,4 @@
     "result": {
         "item": "bubusteinmoneymod:fifty_adollars"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "LDD",
-        "GBR",
-        "OOG"
-    ],
-    "key": {
-        "L": {
-            "item": "minecraft:lapis_lazuli"
-        },
-        "D": {
-            "item": "minecraft:yellow_dye"
-        },
-        "G": {
-            "item": "minecraft:white_stained_glass_pane"
-        },
-        "B": {
-            "item": "bubusteinmoneymod:fifty_pounds"
-        },
-        "R": {
-            "item": "minecraft:redstone"
-        },
-        "O": {
-            "item": "minecraft:yellow_dye"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:fifty_adollars"
-    }
->>>>>>> Stashed changes
 }

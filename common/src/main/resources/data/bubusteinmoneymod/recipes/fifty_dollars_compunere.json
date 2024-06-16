@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -33,40 +32,4 @@
     "result": {
         "item": "bubusteinmoneymod:fifty_dollars"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "RPB",
-        "DEG",
-        "MPM"
-    ],
-    "key": {
-        "R": {
-            "item": "minecraft:redstone"
-        },
-        "B": {
-            "item": "minecraft:lapis_lazuli"
-        },
-        "D": {
-            "item": "minecraft:yellow_dye"
-        },
-        "P": {
-            "item": "minecraft:paper"
-        },
-        "M": {
-            "item": "minecraft:pink_dye"
-        },
-        "G": {
-            "item": "minecraft:green_dye"
-        },
-        "E": {
-            "item": "bubusteinmoneymod:fifty_euros"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:fifty_dollars"
-    }
->>>>>>> Stashed changes
 }

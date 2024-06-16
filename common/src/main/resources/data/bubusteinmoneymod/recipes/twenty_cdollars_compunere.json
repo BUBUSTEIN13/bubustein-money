@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -33,40 +32,4 @@
     "result": {
         "item": "bubusteinmoneymod:twenty_cdollars"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "IOB",
-        "RDG",
-        "ICC"
-    ],
-    "key": {
-        "R": {
-            "item": "minecraft:redstone"
-        },
-        "D": {
-            "item": "bubusteinmoneymod:twenty_dollars"
-        },
-        "O": {
-            "item": "minecraft:gold_nugget"
-        },
-        "C": {
-            "item": "minecraft:lime_dye"
-        },
-        "G": {
-            "item": "minecraft:red_stained_glass_pane"
-        },
-        "B": {
-            "item": "minecraft:green_dye"
-        },
-        "I": {
-            "item": "minecraft:iron_ingot"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:twenty_cdollars"
-    }
->>>>>>> Stashed changes
 }

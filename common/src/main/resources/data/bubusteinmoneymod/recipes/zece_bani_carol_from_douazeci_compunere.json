@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shapeless",
     "category": "misc",
@@ -11,18 +10,4 @@
         "item": "bubusteinmoneymod:zece_bani_1900",
         "count": 2
     }
-=======
-{
-    "type": "minecraft:crafting_shapeless",
-    "category": "misc",
-    "ingredients": [
-        {
-            "item": "bubusteinmoneymod:douazeci_bani_1900"
-        }
-    ],
-    "result": {
-        "item": "bubusteinmoneymod:zece_bani_1900",
-        "count": 2
-    }
->>>>>>> Stashed changes
 }

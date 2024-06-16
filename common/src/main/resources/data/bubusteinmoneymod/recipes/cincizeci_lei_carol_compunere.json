@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -18,25 +17,4 @@
     "result": {
         "item": "bubusteinmoneymod:cincizeci_lei_1900"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        " # ",
-        "#P#",
-        " # "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:gold_ingot"
-        },
-        "P": {
-            "item": "minecraft:netherite_ingot"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:cincizeci_lei_1900"
-    }
->>>>>>> Stashed changes
 }

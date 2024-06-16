@@ -10,7 +10,6 @@ import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import tk.bubustein.money.MoneyExpectPlatform;
 import tk.bubustein.money.MoneyMod;
 import net.minecraftforge.eventbus.api.IEventBus;
 import tk.bubustein.money.villager.ModVillagers;
@@ -30,12 +29,10 @@ public class MoneyModForge {
         bus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
     }
-
     @SubscribeEvent
     public void onServerAboutToStartEvent(FMLServerAboutToStartEvent event) {
         MoneyMod.registerJigsaws(event.getServer());
     }
-
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModVillagers::fillTradeData);
         event.enqueueWork(this::registerPOIs);

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -21,28 +20,4 @@
     "result": {
         "item": "bubusteinmoneymod:card_steel"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "GDG",
-        "GCG",
-        "GGG"
-    ],
-    "key": {
-        "D": {
-            "item": "minecraft:netherite_ingot"
-        },
-        "G": {
-            "item": "minecraft:diamond"
-        },
-        "C": {
-            "item": "bubusteinmoneymod:card_gold"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:card_steel"
-    }
->>>>>>> Stashed changes
 }

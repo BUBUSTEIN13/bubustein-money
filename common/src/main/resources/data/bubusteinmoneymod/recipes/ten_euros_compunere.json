@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -39,46 +38,4 @@
     "result": {
         "item": "bubusteinmoneymod:ten_euros"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "L#N",
-        "RPA",
-        "IGD"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:gold_nugget"
-        },
-        "L": {
-            "item": "minecraft:lapis_lazuli"
-        },
-        "R": {
-            "item": "minecraft:redstone"
-        },
-        "I": {
-            "item": "minecraft:iron_nugget"
-        },
-        "P": {
-            "item": "minecraft:paper"
-        },
-        "D": {
-            "item": "minecraft:red_dye"
-        },
-        "G": {
-            "item": "minecraft:pink_dye"
-        },
-        "A": {
-            "item": "minecraft:white_stained_glass_pane"
-        },
-        "N": {
-            "item": "minecraft:gold_ingot"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:ten_euros"
-    }
->>>>>>> Stashed changes
 }

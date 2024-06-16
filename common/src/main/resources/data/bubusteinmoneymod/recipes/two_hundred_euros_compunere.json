@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -39,46 +38,4 @@
     "result": {
         "item": "bubusteinmoneymod:two_hundred_euros"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "LN#",
-        "RPA",
-        "IGD"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:emerald"
-        },
-        "L": {
-            "item": "minecraft:lapis_lazuli"
-        },
-        "R": {
-            "item": "minecraft:redstone"
-        },
-        "I": {
-            "item": "minecraft:diamond"
-        },
-        "P": {
-            "item": "minecraft:paper"
-        },
-        "D": {
-            "item": "minecraft:orange_dye"
-        },
-        "G": {
-            "item": "minecraft:yellow_dye"
-        },
-        "A": {
-            "item": "minecraft:white_stained_glass_pane"
-        },
-        "N": {
-            "item": "minecraft:gold_ingot"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:two_hundred_euros"
-    }
->>>>>>> Stashed changes
 }

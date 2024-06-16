@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -21,28 +20,4 @@
     "result": {
         "item": "bubusteinmoneymod:douazeci_cinci_lei_1900"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "G#G",
-        "#P#",
-        "G#G"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:gold_ingot"
-        },
-        "P": {
-            "item": "minecraft:diamond"
-        },
-        "G": {
-            "item": "minecraft:gold_ingot"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:douazeci_cinci_lei_1900"
-    }
->>>>>>> Stashed changes
 }

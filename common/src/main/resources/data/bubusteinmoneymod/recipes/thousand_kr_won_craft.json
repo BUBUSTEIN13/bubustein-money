@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
   "type": "minecraft:crafting_shaped",
   "category": "Misc",
@@ -27,34 +26,4 @@
   "result": {
     "item": "bubusteinmoneymod:thousand_kr_won"
   }
-=======
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "R##",
-    "LP#",
-    "I##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:blue_dye"
-    },
-    "P": {
-      "item": "minecraft:paper"
-    },
-    "I": {
-      "item": "minecraft:gold_nugget"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "L": {
-      "item": "minecraft:lapis_lazuli"
-    }
-  },
-  "result": {
-    "item": "bubusteinmoneymod:thousand_kr_won"
-  }
->>>>>>> Stashed changes
 }

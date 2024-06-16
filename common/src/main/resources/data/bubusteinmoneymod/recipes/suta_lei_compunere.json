@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -33,40 +32,4 @@
     "result": {
         "item": "bubusteinmoneymod:suta_lei"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "#GL",
-        "SPR",
-        "*LG"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:gold_ingot"
-        },
-        "*": {
-            "item": "minecraft:emerald"
-        },
-        "S": {
-            "item": "minecraft:white_stained_glass_pane"
-        },
-        "G": {
-            "item": "minecraft:lime_dye"
-        },
-        "L": {
-            "item": "minecraft:light_blue_dye"
-        },
-        "P": {
-            "item": "bubusteinmoneymod:cinci_sute_lei_md"
-        },
-        "R": {
-            "item": "minecraft:redstone"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:suta_lei"
-    }
->>>>>>> Stashed changes
 }

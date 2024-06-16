@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -18,25 +17,4 @@
     "result": {
         "item": "bubusteinmoneymod:douazecicinci_bani_md"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "#*#",
-        "*#*",
-        "#*#"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:iron_ingot"
-        },
-        "*": {
-            "item": "minecraft:gold_nugget"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:douazecicinci_bani_md"
-    }
->>>>>>> Stashed changes
 }

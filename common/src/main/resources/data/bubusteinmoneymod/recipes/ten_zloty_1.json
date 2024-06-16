@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
   "type": "minecraft:crafting_shaped",
   "key": {
@@ -32,39 +31,4 @@
   "result": {
     "item": "bubusteinmoneymod:ten_zloty"
   }
-=======
-{
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "minecraft:gray_dye"
-    },
-    "E": {
-      "item": "minecraft:brown_dye"
-    },
-    "P": {
-      "item": "minecraft:paper"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "I": {
-      "item": "minecraft:iron_nugget"
-    },
-    "G": {
-      "item": "minecraft:white_dye"
-    },
-    "L": {
-      "item": "minecraft:lapis_lazuli"
-    }
-  },
-  "pattern": [
-    "R#E",
-    "IPG",
-    "LE#"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:ten_zloty"
-  }
->>>>>>> Stashed changes
 }

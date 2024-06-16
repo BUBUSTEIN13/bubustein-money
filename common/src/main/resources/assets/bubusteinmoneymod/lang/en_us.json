@@ -50,7 +50,6 @@
   "item.bubusteinmoneymod.ten_pounds": "10 Pounds",
   "item.bubusteinmoneymod.twenty_pounds": "20 Pounds",
   "item.bubusteinmoneymod.fifty_pounds": "50 Pounds",
-  "item.bubusteinmoneymod.hundred_pounds": "100 Pounds",
 
   "item.bubusteinmoneymod.one_stotinka": "1 Stotinka",
   "item.bubusteinmoneymod.two_stotinki": "2 Stotinki",
@@ -276,8 +275,6 @@
   "item.bubusteinmoneymod.fifty_cn_yuan": "50 Chinese Yuan",
   "item.bubusteinmoneymod.hundred_cn_yuan": "100 Chinese Yuan",
 
-<<<<<<< Updated upstream
-=======
   "item.bubusteinmoneymod.five_br_centavos": "5 Brazilian Centavos",
   "item.bubusteinmoneymod.ten_br_centavos": "10 Brazilian Centavos",
   "item.bubusteinmoneymod.twentyfive_br_centavos": "25  Brazilian Centavos",
@@ -319,7 +316,6 @@
   "item.bubusteinmoneymod.two_hundred_za_rand": "200 Rand",
 
 
->>>>>>> Stashed changes
   "item.bubusteinmoneymod.card_classic": "Visa Classic",
   "item.bubusteinmoneymod.card_gold": "Visa Gold",
   "item.bubusteinmoneymod.card_steel": "Visa Steel",

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -27,34 +26,4 @@
     "result": {
         "item": "bubusteinmoneymod:bank_machine"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "DII",
-        "GWW",
-        "EWW"
-    ],
-    "key": {
-        "W": {
-            "tag": "minecraft:planks"
-        },
-        "I": {
-            "item": "minecraft:iron_ingot"
-        },
-        "D": {
-            "item": "minecraft:diamond"
-        },
-        "G": {
-            "item": "minecraft:gold_ingot"
-        },
-        "E": {
-            "item": "minecraft:emerald"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:bank_machine"
-    }
->>>>>>> Stashed changes
 }

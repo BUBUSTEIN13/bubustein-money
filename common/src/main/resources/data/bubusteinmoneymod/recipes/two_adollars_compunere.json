@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -18,25 +17,4 @@
     "result": {
         "item": "bubusteinmoneymod:two_adollars"
     }
-=======
-{
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "N  ",
-        " IN",
-        " N "
-    ],
-    "key": {
-        "N": {
-            "item": "minecraft:gold_nugget"
-        },
-        "I": {
-            "item": "minecraft:gold_ingot"
-        }
-    },
-    "result": {
-        "item": "bubusteinmoneymod:two_adollars"
-    }
->>>>>>> Stashed changes
 }
