@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 import java.util.List;
 
 @Mixin(StructureTemplatePool.class)
-public interface StructureTemplatePoolAccessor {
+public interface StructureTemplatePoolAcessor {
     @Accessor("rawTemplates")
     List<Pair<StructurePoolElement, Integer>> getRawTemplates();
 

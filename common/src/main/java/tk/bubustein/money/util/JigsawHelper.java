@@ -1,8 +1,7 @@
 package tk.bubustein.money.util;
 
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.core.registries.Registries;
-import tk.bubustein.money.mixin.StructureTemplatePoolAccessor;
+import tk.bubustein.money.mixin.StructureTemplatePoolAcessor;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JigsawHelper {
-    private static final ResourceKey<StructureProcessorList> EMPTY_PROCESSOR_LIST_KEY = ResourceKey.create(Registries.PROCESSOR_LIST, new ResourceLocation("minecraft", "empty"));
+    private static final ResourceKey<StructureProcessorList> EMPTY_PROCESSOR_LIST_KEY = ResourceKey.create(Registry.PROCESSOR_LIST_REGISTRY, new ResourceLocation("minecraft", "empty"));
 
     public static void addBuildingToPool(Registry<StructureTemplatePool> templatePoolRegistry, Registry<StructureProcessorList> processorListRegistry, ResourceLocation poolRL, String nbtPieceRL, int weight) {
         Holder<StructureProcessorList> emptyProcessorList = processorListRegistry.getHolderOrThrow(EMPTY_PROCESSOR_LIST_KEY);
@@ -27,11 +26,11 @@ public class JigsawHelper {
         SinglePoolElement piece = SinglePoolElement.single(nbtPieceRL, emptyProcessorList).apply(StructureTemplatePool.Projection.RIGID);
 
         for (int i = 0; i < weight; i++) {
-            ((StructureTemplatePoolAccessor) pool).getTemplates().add(piece);
+            ((StructureTemplatePoolAcessor) pool).getTemplates().add(piece);
         }
 
-        List<Pair<StructurePoolElement, Integer>> listOfPieceEntries = new ArrayList<>(((StructureTemplatePoolAccessor) pool).getRawTemplates());
+        List<Pair<StructurePoolElement, Integer>> listOfPieceEntries = new ArrayList<>(((StructureTemplatePoolAcessor) pool).getRawTemplates());
         listOfPieceEntries.add(new Pair<>(piece, weight));
-        ((StructureTemplatePoolAccessor) pool).setRawTemplates(listOfPieceEntries);
+        ((StructureTemplatePoolAcessor) pool).setRawTemplates(listOfPieceEntries);
     }
 }

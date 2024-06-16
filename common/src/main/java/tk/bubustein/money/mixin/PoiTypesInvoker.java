@@ -23,7 +23,7 @@ public interface PoiTypesInvoker {
         throw new AssertionError();
     }
     @Invoker("registerBlockStates")
-    static void invokeRegisterBlockStates(Holder<PoiType> holder, Set<BlockState> set) {
+    static void invokeRegisterBlockStates(Holder<PoiType> holder) {
         throw new AssertionError();
     }
 }

@@ -15,8 +15,9 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 
-public class ATM extends HorizontalDirectionalBlock {
+public class ATM extends HorizontalDirectionalBlock  {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
+
     public ATM() {
         super(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6f).noOcclusion().requiresCorrectToolForDrops());
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HALF, DoubleBlockHalf.LOWER));
@@ -25,6 +26,7 @@ public class ATM extends HorizontalDirectionalBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder){
         builder.add(FACING, HALF);
     }
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(HALF, DoubleBlockHalf.LOWER);

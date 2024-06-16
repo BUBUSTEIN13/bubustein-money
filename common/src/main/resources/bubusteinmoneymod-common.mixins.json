@@ -8,7 +8,7 @@
   "mixins": [
     "MixinTitleScreen",
     "PoiTypesInvoker",
-    "StructureTemplatePoolAccessor"
+    "StructureTemplatePoolAcessor"
   ],
   "injectors": {
     "defaultRequire": 1

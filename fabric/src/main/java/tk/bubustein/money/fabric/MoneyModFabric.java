@@ -10,5 +10,5 @@ public class MoneyModFabric implements ModInitializer {
         MoneyMod.init();
         ModVillagers.fillTradeData();
         ServerLifecycleEvents.SERVER_STARTING.register(MoneyMod::registerJigsaws);
+        }
     }
-}

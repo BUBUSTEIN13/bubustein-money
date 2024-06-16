@@ -9,7 +9,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tk.bubustein.money.MoneyMod;
 import net.minecraftforge.eventbus.api.IEventBus;
 import tk.bubustein.money.villager.ModVillagers;
-
 @Mod(MoneyMod.MOD_ID)
 public class MoneyModForge {
     public MoneyModForge() {

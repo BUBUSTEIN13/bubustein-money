@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.nio.file.Path;
 import java.util.Set;
 import java.util.function.Supplier;
-
 public class MoneyExpectPlatform {
     /**
      * We can use {@link Platform#getConfigFolder()} but this is just an example of {@link ExpectPlatform}.
@@ -23,6 +22,7 @@ public class MoneyExpectPlatform {
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         throw new AssertionError();
     }
+
     @ExpectPlatform
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> item) {
         throw new AssertionError();

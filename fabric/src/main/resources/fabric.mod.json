@@ -23,14 +23,18 @@
     "bubusteinmoneymod-common.mixins.json"
   ],
   "depends": {
+    "fabricloader": ">=0.15.10",
     "fabric-api": "*",
-    "fabricloader": ">=0.15.7",
-    "minecraft": ">=1.19.3",
-    "architectury": ">=7.1.86"
+    "minecraft": "1.19.2",
+    "architectury": ">=6.5.85"
   },
   "recommends": {
     "sodium": "*",
     "emi": "*",
     "modmenu": "*"
+  },
+  "suggests": {
+    "rei": "*",
+    "jei": "*"
   }
 }
