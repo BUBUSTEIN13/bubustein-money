@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -29,4 +30,40 @@
     "result": {
         "item": "bubusteinmoneymod:hundred_adollars"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "LDA",
+        "GBR",
+        "AOG"
+    ],
+    "key": {
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "D": {
+            "item": "minecraft:green_dye"
+        },
+        "G": {
+            "item": "minecraft:white_stained_glass_pane"
+        },
+        "B": {
+            "item": "bubusteinmoneymod:fifty_pounds"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "O": {
+            "item": "minecraft:green_dye"
+        },
+        "A": {
+            "item": "minecraft:gold_nugget"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:hundred_adollars"
+    }
+>>>>>>> Stashed changes
 }

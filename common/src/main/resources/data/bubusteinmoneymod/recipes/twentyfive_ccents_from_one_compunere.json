@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shapeless",
     "category": "misc",
@@ -10,4 +11,18 @@
         "item": "bubusteinmoneymod:twentyfive_ccents",
         "count": 4
     }
+=======
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:loonie"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:twentyfive_ccents",
+        "count": 4
+    }
+>>>>>>> Stashed changes
 }

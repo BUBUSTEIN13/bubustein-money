@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "type": "minecraft:crafting_shaped",
   "category": "Misc",
@@ -26,4 +27,34 @@
   "result": {
     "item": "bubusteinmoneymod:one_cn_yuan"
   }
+=======
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    "#O#",
+    "RPI",
+    "O#O"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:green_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "O": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "result": {
+    "item": "bubusteinmoneymod:one_cn_yuan"
+  }
+>>>>>>> Stashed changes
 }

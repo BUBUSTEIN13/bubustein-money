@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -20,4 +21,28 @@
     "result": {
         "item": "bubusteinmoneymod:toonie"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "ANA",
+        "A#A",
+        "ANA"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "A": {
+            "item": "minecraft:iron_ingot"
+        },
+        "N": {
+            "item": "minecraft:iron_nugget"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:toonie"
+    }
+>>>>>>> Stashed changes
 }

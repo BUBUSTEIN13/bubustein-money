@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shapeless",
     "category": "misc",
@@ -10,4 +11,18 @@
         "item": "bubusteinmoneymod:ten_centimes",
         "count": 5
     }
+=======
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:half_franc"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:ten_centimes",
+        "count": 5
+    }
+>>>>>>> Stashed changes
 }

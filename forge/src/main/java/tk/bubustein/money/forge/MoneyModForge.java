@@ -28,7 +28,6 @@ public class MoneyModForge {
         MoneyExpectPlatformImpl.POI_TYPES.register(bus);
         MoneyExpectPlatformImpl.PROFESSIONS.register(bus);
         bus.addListener(this::setup);
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 

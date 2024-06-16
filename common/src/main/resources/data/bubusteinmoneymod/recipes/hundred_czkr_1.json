@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -26,4 +27,34 @@
     "result": {
         "item": "bubusteinmoneymod:hundred_cz_krone"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "RGG",
+        "RP#",
+        "RDD"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "D": {
+            "item": "minecraft:lime_dye"
+        },
+        "G": {
+            "item": "minecraft:cyan_dye"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:hundred_cz_krone"
+    }
+>>>>>>> Stashed changes
 }

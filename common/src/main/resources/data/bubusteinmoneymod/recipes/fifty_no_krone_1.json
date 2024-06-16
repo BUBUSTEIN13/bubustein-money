@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "type": "minecraft:crafting_shaped",
   "key": {
@@ -31,4 +32,39 @@
   "result": {
     "item": "bubusteinmoneymod:fifty_no_krone"
   }
+=======
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:lime_dye"
+    },
+    "E": {
+      "item": "minecraft:green_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "pattern": [
+    "R#E",
+    "IPG",
+    "LE#"
+  ],
+  "result": {
+    "item": "bubusteinmoneymod:fifty_no_krone"
+  }
+>>>>>>> Stashed changes
 }

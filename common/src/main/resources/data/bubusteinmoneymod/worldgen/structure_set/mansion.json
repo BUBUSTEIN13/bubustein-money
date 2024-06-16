@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "structures": [
     {
@@ -11,4 +12,19 @@
     "separation": 18,
     "type": "minecraft:random_spread"
   }
+=======
+{
+  "structures": [
+    {
+      "structure": "bubusteinmoneymod:mansion",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 496982001,
+    "spacing": 30,
+    "separation": 18,
+    "type": "minecraft:random_spread"
+  }
+>>>>>>> Stashed changes
 }

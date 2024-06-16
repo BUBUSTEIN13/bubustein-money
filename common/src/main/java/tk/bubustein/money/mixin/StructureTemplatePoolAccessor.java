@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 package tk.bubustein.money.mixin;
 
 import com.mojang.datafixers.util.Pair;
@@ -25,4 +26,33 @@ public interface StructureTemplatePoolAccessor {
     @Mutable
     @Accessor("templates")
     void setTemplates(List<StructurePoolElement> elements);
+=======
+package tk.bubustein.money.mixin;
+
+import com.mojang.datafixers.util.Pair;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import net.minecraft.world.level.levelgen.feature.structures.StructurePoolElement;
+import net.minecraft.world.level.levelgen.feature.structures.StructureTemplatePool;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
+import org.spongepowered.asm.mixin.gen.Accessor;
+
+import java.util.List;
+
+@Mixin(StructureTemplatePool.class)
+public interface StructureTemplatePoolAccessor {
+    @Accessor("rawTemplates")
+    List<Pair<StructurePoolElement, Integer>> getRawTemplates();
+
+    @Mutable
+    @Accessor("rawTemplates")
+    void setRawTemplates(List<Pair<StructurePoolElement, Integer>> elementCounts);
+
+    @Accessor("templates")
+    List<StructurePoolElement> getTemplates();
+
+    @Mutable
+    @Accessor("templates")
+    void setTemplates(List<StructurePoolElement> elements);
+>>>>>>> Stashed changes
 }

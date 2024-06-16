@@ -1,7 +1,10 @@
 package tk.bubustein.money.forge;
 
+<<<<<<< Updated upstream
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.fml.RegistryObject;
+=======
+>>>>>>> Stashed changes
 import tk.bubustein.money.MoneyMod;
 import tk.bubustein.money.MoneyExpectPlatform;
 import net.minecraftforge.fml.loading.FMLPaths;
@@ -17,9 +20,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import tk.bubustein.money.block.ModBlocks;
 
 import java.nio.file.Path;
-import java.util.Set;
 import java.util.function.Supplier;
-
 public class MoneyExpectPlatformImpl {
     /**
      * This is our actual method to {@link MoneyExpectPlatform#getConfigDirectory()}.
@@ -31,7 +32,10 @@ public class MoneyExpectPlatformImpl {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MoneyMod.MOD_ID);
     public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, MoneyMod.MOD_ID);
     public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, MoneyMod.MOD_ID);
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
     }
@@ -41,6 +45,7 @@ public class MoneyExpectPlatformImpl {
     public static Supplier<VillagerProfession> registerProfession(String name, Supplier<VillagerProfession> profession) {
         return PROFESSIONS.register(name, profession);
     }
+<<<<<<< Updated upstream
 
     public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
         return POI_TYPES.register(name, poiType);
@@ -67,5 +72,9 @@ public class MoneyExpectPlatformImpl {
     }
     public static boolean generateDesertHouses() {
         return true;
+=======
+    public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
+        return POI_TYPES.register(name, poiType);
+>>>>>>> Stashed changes
     }
 }

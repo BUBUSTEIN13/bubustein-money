@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shapeless",
     "category": "misc",
@@ -10,4 +11,18 @@
         "item": "bubusteinmoneymod:cinci_lei_1900",
         "count": 4
     }
+=======
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:douazeci_lei_1900"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:cinci_lei_1900",
+        "count": 4
+    }
+>>>>>>> Stashed changes
 }

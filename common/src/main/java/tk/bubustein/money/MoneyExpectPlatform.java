@@ -2,17 +2,22 @@ package tk.bubustein.money;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import me.shedaniel.architectury.platform.Platform;
+<<<<<<< Updated upstream
 import net.minecraft.resources.ResourceLocation;
+=======
+>>>>>>> Stashed changes
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+<<<<<<< Updated upstream
 import net.minecraft.world.level.block.state.BlockState;
 
+=======
+>>>>>>> Stashed changes
 import java.nio.file.Path;
-import java.util.Set;
 import java.util.function.Supplier;
 
 public class MoneyExpectPlatform {
@@ -53,6 +58,7 @@ public class MoneyExpectPlatform {
     public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
         throw new AssertionError();
     }
+<<<<<<< Updated upstream
 
     @ExpectPlatform
     public static CreativeModeTab registerCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
@@ -82,4 +88,6 @@ public class MoneyExpectPlatform {
     public static boolean generateDesertHouses() {
         throw new AssertionError();
     }
+=======
+>>>>>>> Stashed changes
 }

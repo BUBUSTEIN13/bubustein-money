@@ -22,7 +22,10 @@ subprojects {
         // mappings "net.fabricmc:yarn:1.16.5+build.10:v2"
     }
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 allprojects {
     apply plugin: "java"
     apply plugin: "architectury-plugin"
@@ -34,6 +37,7 @@ allprojects {
 
     version = rootProject.mod_version
     group = rootProject.maven_group
+<<<<<<< Updated upstream
 
     repositories {
         // Add repositories to retrieve artifacts from in here.
@@ -41,6 +45,14 @@ allprojects {
         // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
         // See https://docs.gradle.org/current/userguide/declaring_repositories.html
         // for more information about repositories.
+=======
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+        def targetVersion = 8
+        if (JavaVersion.current().isJava9Compatible()) {
+            options.release = targetVersion
+        }
+>>>>>>> Stashed changes
     }
 
     tasks.withType(JavaCompile) {

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -32,4 +33,40 @@
     "result": {
         "item": "bubusteinmoneymod:five_cdollars"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "NOB",
+        "RDG",
+        "NCC"
+    ],
+    "key": {
+        "N": {
+            "item": "minecraft:iron_nugget"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "D": {
+            "item": "bubusteinmoneymod:five_dollars"
+        },
+        "O": {
+            "item": "minecraft:gold_nugget"
+        },
+        "C": {
+            "item": "minecraft:cyan_dye"
+        },
+        "G": {
+            "item": "minecraft:red_stained_glass_pane"
+        },
+        "B": {
+            "item": "minecraft:blue_dye"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:five_cdollars"
+    }
+>>>>>>> Stashed changes
 }

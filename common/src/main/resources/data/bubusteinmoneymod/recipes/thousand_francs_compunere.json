@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -23,4 +24,31 @@
     "result": {
         "item": "bubusteinmoneymod:thousand_francs"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        " DD",
+        " ND",
+        " RP"
+    ],
+    "key": {
+        "N": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "D": {
+            "item": "minecraft:purple_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:thousand_francs"
+    }
+>>>>>>> Stashed changes
 }

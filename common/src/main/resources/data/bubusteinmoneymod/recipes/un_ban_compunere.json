@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -17,4 +18,25 @@
     "result": {
         "item": "bubusteinmoneymod:un_ban"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        " # ",
+        "#P#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_nugget"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:cinci_bani_md"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:un_ban"
+    }
+>>>>>>> Stashed changes
 }

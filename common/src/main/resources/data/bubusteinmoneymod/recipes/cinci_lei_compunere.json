@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -29,4 +30,37 @@
     "result": {
         "item": "bubusteinmoneymod:cinci_lei"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "#GG",
+        "SPR",
+        "*GG"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_nugget"
+        },
+        "*": {
+            "item": "minecraft:iron_ingot"
+        },
+        "S": {
+            "item": "minecraft:white_stained_glass_pane"
+        },
+        "G": {
+            "item": "minecraft:magenta_dye"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:douazeci_lei_md"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:cinci_lei"
+    }
+>>>>>>> Stashed changes
 }

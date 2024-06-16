@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "BRL",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:two_br_reais"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "bubusteinmoneymod:one_br_real"
+  }
+}

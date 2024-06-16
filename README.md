@@ -17,9 +17,17 @@
 
 ### If you have suggestions or if you found an issue, don't hesitate to send/report them to my <u>Discord</u> server!
 
+<<<<<<< Updated upstream
 <a href="https://patreon.com/bubustein"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdonate%2Fpatreon-singular_vector.svg&n=-1"></a>
 <a href="https://ko-fi.com/bubustein"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdonate%2Fkofi-singular_vector.svg&n=-1"></a>
 <a href="https://dsc.gg/bubustein"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fsocial%2Fdiscord-plural_vector.svg&n=-1"></a>
+=======
+<a href="https://patreon.com/bubustein" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdonate%2Fpatreon-singular_vector.svg&n=-1"></a>
+<a href="https://ko-fi.com/bubustein" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdonate%2Fkofi-singular_vector.svg&n=-1"></a>
+<a href="https://dsc.gg/bubustein" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fsocial%2Fdiscord-plural_vector.svg&n=-1"></a>
+<a href="https://wiki.bubustein.tk" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdocumentation%2Fgitbook_vector.svg&n=-1"></a>
+<a href="https://bubustein.tk" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdocumentation%2Fwebsite_vector.svg&n=-1"></a>
+>>>>>>> Stashed changes
 
 <img src="https://cdn.modrinth.com/data/QzlWq3M9/images/d62668c3458fdf7092c8f871b87bdef151701206.png">
 

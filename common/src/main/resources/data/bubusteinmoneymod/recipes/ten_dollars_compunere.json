@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -29,4 +30,37 @@
     "result": {
         "item": "bubusteinmoneymod:ten_dollars"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "RPB",
+        "GEG",
+        "MPM"
+    ],
+    "key": {
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "B": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "M": {
+            "item": "minecraft:orange_dye"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "G": {
+            "item": "minecraft:green_dye"
+        },
+        "E": {
+            "item": "bubusteinmoneymod:ten_euros"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:ten_dollars"
+    }
+>>>>>>> Stashed changes
 }

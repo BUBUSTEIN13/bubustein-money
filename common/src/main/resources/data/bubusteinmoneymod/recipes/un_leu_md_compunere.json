@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -23,4 +24,31 @@
     "result": {
         "item": "bubusteinmoneymod:un_leu_md"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "#*#",
+        "%R%",
+        "#*#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        },
+        "%": {
+            "item": "minecraft:gold_nugget"
+        },
+        "*": {
+            "item": "minecraft:gold_ingot"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:un_leu_md"
+    }
+>>>>>>> Stashed changes
 }

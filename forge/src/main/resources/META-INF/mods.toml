@@ -1,6 +1,9 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
+<<<<<<< Updated upstream
 #issueTrackerURL = ""
+=======
+>>>>>>> Stashed changes
 license = "All Rights Reserved"
 
 [[mods]]
@@ -18,25 +21,25 @@ Even an ATM is available where emeralds can be converted into Currency to be use
 You can resume using the village's trading hall because it works in reverse.
 '''
 logoFile = "icon.png"
-
+[modproperties.bubusteinmoneymod]
+catalogueImageIcon="icon.png"
 [[dependencies.bubusteinmoneymod]]
 modId = "forge"
 mandatory = true
 versionRange = "[36,)"
 ordering = "NONE"
 side = "BOTH"
-
 [[dependencies.bubusteinmoneymod]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.16.5,)"
 ordering = "NONE"
 side = "BOTH"
-
 [[dependencies.bubusteinmoneymod]]
 modId = "architectury"
 mandatory = true
 versionRange = "[1.32.68,)"
+<<<<<<< Updated upstream
 ordering = "AFTER"
 side = "BOTH"
 [[dependencies.bubusteinmoneymod]]
@@ -45,3 +48,7 @@ mandatory = true
 versionRange = "[0.2.13,)"
 ordering = "AFTER"
 side = "CLIENT"
+=======
+ordering = "NONE"
+side = "BOTH"
+>>>>>>> Stashed changes

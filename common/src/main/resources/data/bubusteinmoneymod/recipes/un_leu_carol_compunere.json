@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -20,4 +21,28 @@
     "result": {
         "item": "bubusteinmoneymod:un_leu_1900"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "I#I",
+        "#P#",
+        "I#I"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "P": {
+            "item": "minecraft:emerald"
+        },
+        "I": {
+            "item": "minecraft:iron_nugget"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:un_leu_1900"
+    }
+>>>>>>> Stashed changes
 }

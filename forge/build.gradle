@@ -1,19 +1,16 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "8.1.1"
 }
+<<<<<<< Updated upstream
 
+=======
+allprojects {
+    archivesBaseName = "${rootProject.archives_base_name}-forge-mc${rootProject.minecraft_version}"
+}
+>>>>>>> Stashed changes
 architectury {
     platformSetupLoomIde()
     forge()
-}
-repositories {
-    maven {
-        name = "Modrinth"
-        url = "https://api.modrinth.com/maven"
-        content {
-            includeGroup "maven.modrinth"
-        }
-    }
 }
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
@@ -21,7 +18,6 @@ loom {
     forge {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
-
         mixinConfig "bubusteinmoneymod-common.mixins.json"
         mixinConfig "bubusteinmoneymod.mixins.json"
     }
@@ -29,7 +25,7 @@ loom {
 
 configurations {
     common
-    shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
+    shadowCommon
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentForge.extendsFrom common
@@ -37,9 +33,13 @@ configurations {
 
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
+<<<<<<< Updated upstream
     // Remove the next line if you don't want to depend on the API
     modApi "me.shedaniel:architectury-forge:${rootProject.architectury_version}"
 
+=======
+    modApi "me.shedaniel:architectury-forge:${rootProject.architectury_version}"
+>>>>>>> Stashed changes
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
@@ -84,7 +84,11 @@ publishing {
             from components.java
         }
     }
+<<<<<<< Updated upstream
 
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 
 }
+=======
+}
+>>>>>>> Stashed changes

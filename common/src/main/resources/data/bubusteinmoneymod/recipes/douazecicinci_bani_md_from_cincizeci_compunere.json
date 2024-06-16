@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shapeless",
     "category": "misc",
@@ -10,4 +11,18 @@
         "item": "bubusteinmoneymod:douazecicinci_bani_md",
         "count": 2
     }
+=======
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:cincizeci_bani_md"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:douazecicinci_bani_md",
+        "count": 2
+    }
+>>>>>>> Stashed changes
 }

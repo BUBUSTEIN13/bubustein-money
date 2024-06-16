@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -29,4 +30,37 @@
     "result": {
         "item": "bubusteinmoneymod:cincizeci_lei_md"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "G*#",
+        "RP#",
+        "I*#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:purple_dye"
+        },
+        "*": {
+            "item": "minecraft:orange_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "G": {
+            "item": "minecraft:gold_ingot"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:cincizeci_lei_md"
+    }
+>>>>>>> Stashed changes
 }

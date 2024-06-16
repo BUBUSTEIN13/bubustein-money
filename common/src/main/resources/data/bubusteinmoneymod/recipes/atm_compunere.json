@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "type": "minecraft:crafting_shaped",
     "category": "Misc",
@@ -29,4 +30,37 @@
     "result": {
         "item": "bubusteinmoneymod:atm"
     }
+=======
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "ION",
+        "WDW",
+        "WCW"
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:iron_block"
+        },
+        "I": {
+            "item": "minecraft:diamond"
+        },
+        "N": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "C": {
+            "item": "minecraft:comparator"
+        },
+        "D": {
+            "item": "minecraft:dispenser"
+        },
+        "O": {
+            "item": "minecraft:compass"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:atm"
+    }
+>>>>>>> Stashed changes
 }

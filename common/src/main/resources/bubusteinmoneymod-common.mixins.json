@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "required": true,
   "package": "tk.bubustein.money.mixin",
@@ -14,4 +15,22 @@
   "injectors": {
     "defaultRequire": 1
   }
+=======
+{
+  "required": true,
+  "package": "tk.bubustein.money.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "MixinTitleScreen",
+    "PoiTypesInvoker",
+    "StructureTemplatePoolAccessor",
+    "VillagerProfessionInvoker"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+>>>>>>> Stashed changes
 }

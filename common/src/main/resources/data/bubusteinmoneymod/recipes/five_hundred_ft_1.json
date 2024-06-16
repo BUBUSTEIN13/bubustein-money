@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "type": "minecraft:crafting_shaped",
   "category": "Misc",
@@ -26,4 +27,34 @@
   "result": {
     "item": "bubusteinmoneymod:five_hundred_ft"
   }
+=======
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "Misc",
+  "pattern": [
+    "CBC",
+    "RPI",
+    "CBC"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "B": {
+      "item": "minecraft:orange_dye"
+    },
+    "C": {
+      "item": "minecraft:red_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "bubusteinmoneymod:five_hundred_ft"
+  }
+>>>>>>> Stashed changes
 }

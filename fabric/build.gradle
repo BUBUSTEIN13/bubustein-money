@@ -1,11 +1,18 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "8.1.1"
 }
+<<<<<<< Updated upstream
 
+=======
+allprojects {
+    archivesBaseName = "${rootProject.archives_base_name}-fabric-mc${rootProject.minecraft_version}"
+}
+>>>>>>> Stashed changes
 architectury {
     platformSetupLoomIde()
     fabric()
 }
+<<<<<<< Updated upstream
 repositories {
     maven {
         name = "Modrinth"
@@ -14,6 +21,10 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
+=======
+loom {
+    accessWidenerPath = project(":common").loom.accessWidenerPath
+>>>>>>> Stashed changes
 }
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
@@ -21,7 +32,7 @@ loom {
 
 configurations {
     common
-    shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
+    shadowCommon
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentFabric.extendsFrom common
@@ -31,7 +42,10 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
     modApi "me.shedaniel:architectury-fabric:${rootProject.architectury_version}"
+<<<<<<< Updated upstream
     modImplementation "maven.modrinth:AANobbMI:${rootProject.sodium_version}"
+=======
+>>>>>>> Stashed changes
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
@@ -55,8 +69,13 @@ remapJar {
     injectAccessWidener = true
     input.set shadowJar.archiveFile
     dependsOn shadowJar
+<<<<<<< Updated upstream
 }
 
+=======
+    archiveClassifier.set(null)
+}
+>>>>>>> Stashed changes
 sourcesJar {
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources
@@ -76,7 +95,11 @@ publishing {
             from components.java
         }
     }
+<<<<<<< Updated upstream
 
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 
 }
+=======
+}
+>>>>>>> Stashed changes
