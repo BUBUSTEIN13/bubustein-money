@@ -1,7 +1,6 @@
 package tk.bubustein.money.mixin;
 
 import com.mojang.datafixers.util.Pair;
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,5 +19,9 @@ public interface StructureTemplatePoolAcessor {
     void setRawTemplates(List<Pair<StructurePoolElement, Integer>> elementCounts);
 
     @Accessor("templates")
-    ObjectArrayList<StructurePoolElement> getTemplates();
+    List<StructurePoolElement> getTemplates();
+
+    @Mutable
+    @Accessor("templates")
+    void setTemplates(List<StructurePoolElement> elements);
 }

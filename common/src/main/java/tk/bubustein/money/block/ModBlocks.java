@@ -7,6 +7,7 @@ import tk.bubustein.money.MoneyExpectPlatform;
 import tk.bubustein.money.block.custom.ATM;
 import tk.bubustein.money.block.custom.BankMachine;
 import tk.bubustein.money.item.ModCreativeModeTab;
+
 import java.util.function.Supplier;
 
 

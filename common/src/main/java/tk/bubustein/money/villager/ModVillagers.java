@@ -5,25 +5,36 @@ import com.google.common.collect.ImmutableSet;
 import dev.architectury.registry.level.entity.trade.SimpleTrade;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import net.minecraft.world.entity.npc.VillagerTrades;
-import tk.bubustein.money.MoneyExpectPlatform;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import tk.bubustein.money.MoneyExpectPlatform;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.mixin.PoiTypesInvoker;
+import tk.bubustein.money.mixin.VillagerProfessionInvoker;
+
+import java.util.Set;
 import java.util.function.Supplier;
 public class ModVillagers {
     public static void init(){}
-    public static final Supplier<PoiType> BANKER_POI = MoneyExpectPlatform.registerPoiType("banker_poi", () -> PoiTypesInvoker.invokeGetBlockStates(ModBlocks.BANK_MACHINE.get()));
-    public static final Supplier<PoiType> EXCHANGER_POI = MoneyExpectPlatform.registerPoiType("exchanger_poi", () -> PoiTypesInvoker.invokeGetBlockStates(ModBlocks.ATM.get()));
-    public static final Supplier<VillagerProfession> BANKER = MoneyExpectPlatform.registerProfession("banker",
-            () -> new VillagerProfession("banker", holder -> holder.value().equals(BANKER_POI.get()), holder -> holder.value().equals(BANKER_POI.get()), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LIBRARIAN));
+    public static final Supplier<PoiType> BANKER_POI = MoneyExpectPlatform.registerPoiType("banker_poi",
+            () -> PoiTypesInvoker.invokeConstructor("banker_poi", getBlockStates(ModBlocks.BANK_MACHINE), 1, 1));
+    public static final Supplier<PoiType> EXCHANGER_POI = MoneyExpectPlatform.registerPoiType("exchanger_poi",
+            () -> PoiTypesInvoker.invokeConstructor("exchanger_poi", getBlockStates(ModBlocks.ATM), 1, 1));
+    public static final Supplier<VillagerProfession> BANKER = MoneyExpectPlatform.registerProfession("banker", () ->
+            VillagerProfessionInvoker.invokeConstructor("banker", BANKER_POI.get() ,ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LIBRARIAN));
     public static final Supplier<VillagerProfession> EXCHANGER = MoneyExpectPlatform.registerProfession("exchanger",
-            () -> new VillagerProfession("exchanger", holder -> holder.value().equals(EXCHANGER_POI.get()), holder -> holder.value().equals(EXCHANGER_POI.get()), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LIBRARIAN));
+            () -> VillagerProfessionInvoker.invokeConstructor("exchanger", EXCHANGER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LIBRARIAN));
+
+    public static Set<BlockState> getBlockStates(Supplier<Block> arg) {
+        return ImmutableSet.copyOf(arg.get().getStateDefinition().getPossibleStates());
+    }
     public static void fillTradeData(){
         ItemStack stack = new ItemStack(Items.LAPIS_LAZULI,0);
         // BANKER TRADES

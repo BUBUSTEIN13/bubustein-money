@@ -12,6 +12,7 @@ import tk.bubustein.money.MoneyExpectPlatform;
 import net.fabricmc.loader.api.FabricLoader;
 import tk.bubustein.money.MoneyMod;
 import tk.bubustein.money.mixin.PoiTypesInvoker;
+
 import java.nio.file.Path;
 import java.util.Set;
 import java.util.function.Supplier;
@@ -30,10 +31,8 @@ public class MoneyExpectPlatformImpl {
         var registry = Registry.register(Registry.ITEM, new ResourceLocation(MoneyMod.MOD_ID, name), item.get());
         return () -> registry;
     }
-    public static Supplier<PoiType> registerPoiType(String name, Supplier<Set<BlockState>> matchingStates) {
-        ResourceKey<PoiType> resourceKey = ResourceKey.create(Registry.POINT_OF_INTEREST_TYPE_REGISTRY, new ResourceLocation(MoneyMod.MOD_ID, name));
-        var registry = Registry.register(Registry.POINT_OF_INTEREST_TYPE, resourceKey, new PoiType(matchingStates.get(), 1, 1));
-        PoiTypesInvoker.invokeRegisterBlockStates(Registry.POINT_OF_INTEREST_TYPE.getHolderOrThrow(resourceKey));
+    public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
+        var registry = Registry.register(Registry.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoneyMod.MOD_ID, name), poiType.get());
         return () -> registry;
     }
     public static Supplier<VillagerProfession> registerProfession(String name, Supplier<VillagerProfession> profession) {

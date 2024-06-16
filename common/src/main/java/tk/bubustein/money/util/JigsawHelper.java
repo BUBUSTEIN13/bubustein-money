@@ -1,7 +1,6 @@
 package tk.bubustein.money.util;
 
 import com.mojang.datafixers.util.Pair;
-import tk.bubustein.money.mixin.StructureTemplatePoolAcessor;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -10,6 +9,7 @@ import net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
+import tk.bubustein.money.mixin.StructureTemplatePoolAcessor;
 
 import java.util.ArrayList;
 import java.util.List;
