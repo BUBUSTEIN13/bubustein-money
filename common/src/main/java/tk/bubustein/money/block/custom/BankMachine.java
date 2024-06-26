@@ -34,6 +34,7 @@ public class BankMachine extends Block {
     }
     @Override
     public MenuProvider getMenuProvider(BlockState blockState, Level level, BlockPos blockPos) {
-        return new SimpleMenuProvider((i, inventory, player) -> new BankMachineMenu(i, inventory, ContainerLevelAccess.create(level, blockPos)), TITLE);
+        return new SimpleMenuProvider((i, inventory, player) ->
+                new BankMachineMenu(i, inventory, ContainerLevelAccess.create(level, blockPos)), TITLE);
     }
 }

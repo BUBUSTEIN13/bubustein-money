@@ -16,6 +16,12 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.jetbrains.annotations.NotNull;
 
+/*
+    ###############################
+    Some code is made by screret https://github.com/screret/VendingMachine/
+    ###############################
+ */
+
 public class ATM extends HorizontalDirectionalBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
 
@@ -24,7 +30,6 @@ public class ATM extends HorizontalDirectionalBlock {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HALF, DoubleBlockHalf.LOWER));
     }
-
     @Override
     protected @NotNull MapCodec<? extends HorizontalDirectionalBlock> codec() {
         return CODEC;
@@ -64,7 +69,7 @@ public class ATM extends HorizontalDirectionalBlock {
                 tileEntity = world.getBlockEntity(blockPos.below());
                 blockPos = blockPos.below();
             }
-            if (tileEntity instanceof VendingMachineBlockEntity finalTileEntity) {
+            if (tileEntity instanceof ATMBlockEntity finalTileEntity) {
                 BlockPos finalBlockPos = blockPos;
                 NetworkHooks.openScreen((ServerPlayer) player, finalTileEntity, buffer -> buffer.writeBlockPos(finalBlockPos));
 
@@ -82,8 +87,8 @@ public class ATM extends HorizontalDirectionalBlock {
     public void onRemove(BlockState state, Level worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
        /*if(state.getValue(HALF) == DoubleBlockHalf.LOWER){
             BlockEntity blockEntity = worldIn.getBlockEntity(pos);
-            if(worldIn instanceof ServerLevel && blockEntity instanceof VendingMachineBlockEntity venderBe){
-                venderBe.dropContents();
+            if(worldIn instanceof ServerLevel && blockEntity instanceof ATMBlockEntity atmBe){
+                atmBe.dropContents();
             }
         }*/
         super.onRemove(state, worldIn, pos, newState, isMoving);
