@@ -1,16 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:five_ccents"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "group": "boat",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:five_ccents"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "id": "bubusteinmoneymod:twentyfive_ccents"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "id": "bubusteinmoneymod:twentyfive_ccents"
-  }
 }

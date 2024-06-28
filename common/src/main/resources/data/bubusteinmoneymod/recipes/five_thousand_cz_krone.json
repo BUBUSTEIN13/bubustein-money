@@ -1,16 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:thousand_cz_krone"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "group": "boat",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:thousand_cz_krone"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "id": "bubusteinmoneymod:five_thousand_cz_krone"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "id": "bubusteinmoneymod:five_thousand_cz_krone"
-  }
 }

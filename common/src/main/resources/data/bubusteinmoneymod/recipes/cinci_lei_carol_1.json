@@ -1,0 +1,25 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "I#G",
+        "#P#",
+        "G#I"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "P": {
+            "item": "minecraft:emerald"
+        },
+        "I": {
+            "item": "minecraft:gold_nugget"
+        },
+        "G": {
+            "item": "minecraft:gold_nugget"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:cinci_lei_1900"
+    }
+}

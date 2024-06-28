@@ -9,4 +9,6 @@ public interface BankMachineRecipe extends Recipe<CraftingContainer> {
     default @NotNull RecipeType<?> getType() {
         return ModRecipes.BANK_MACHINE_RECIPE.get();
     }
+
+    boolean isShapeless();
 }

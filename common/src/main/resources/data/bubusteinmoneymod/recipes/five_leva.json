@@ -1,16 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:one_lev"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "group": "boat",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:one_lev"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "id": "bubusteinmoneymod:five_leva"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "id": "bubusteinmoneymod:five_leva"
-  }
 }

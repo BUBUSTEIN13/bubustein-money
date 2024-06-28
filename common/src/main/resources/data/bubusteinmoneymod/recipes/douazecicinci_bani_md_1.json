@@ -1,0 +1,19 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "#*#",
+        "*#*",
+        "#*#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        },
+        "*": {
+            "item": "minecraft:gold_nugget"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:douazecicinci_bani_md"
+    }
+}

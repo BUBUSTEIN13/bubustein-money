@@ -1,0 +1,16 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        " # ",
+        "###",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_nugget"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:five_cents"
+    }
+}

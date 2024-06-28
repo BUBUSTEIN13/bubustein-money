@@ -1,14 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:one_ecent"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:one_ecent"
+        }
+    },
+    "pattern": [
+        "##"
+    ],
+    "result": {
+        "id": "bubusteinmoneymod:two_ecents"
     }
-  },
-  "pattern": [
-    "##"
-  ],
-  "result": {
-    "id": "bubusteinmoneymod:two_ecents"
-  }
 }

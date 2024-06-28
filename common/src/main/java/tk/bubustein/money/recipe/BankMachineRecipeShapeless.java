@@ -39,7 +39,10 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     public CraftingBookCategory category() {
         //return this.category;
     }*/
-
+    @Override
+    public boolean isShapeless() {
+        return true;
+}
     public ItemStack getResultItem(HolderLookup.Provider provider) {
         return this.result;
     }

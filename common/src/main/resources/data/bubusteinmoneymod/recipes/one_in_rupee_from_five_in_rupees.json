@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "INr",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:five_in_rupees"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "group": "INr",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:five_in_rupees"
+        }
+    ],
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:one_in_rupee"
     }
-  ],
-  "result": {
-    "count": 5,
-    "id": "bubusteinmoneymod:one_in_rupee"
-  }
 }

@@ -1,0 +1,19 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "#A#",
+        "AAA",
+        "#A#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_ingot"
+        },
+        "A": {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:two_euros"
+    }
+}

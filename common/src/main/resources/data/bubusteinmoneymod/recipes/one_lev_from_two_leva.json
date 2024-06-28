@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "Stotinka_Leva",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:two_leva"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "group": "Stotinka_Leva",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:two_leva"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:one_lev"
     }
-  ],
-  "result": {
-    "count": 2,
-    "id": "bubusteinmoneymod:one_lev"
-  }
 }

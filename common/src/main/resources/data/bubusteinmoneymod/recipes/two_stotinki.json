@@ -1,14 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:one_stotinka"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:one_stotinka"
+        }
+    },
+    "pattern": [
+        "##"
+    ],
+    "result": {
+        "id": "bubusteinmoneymod:two_stotinki"
     }
-  },
-  "pattern": [
-    "##"
-  ],
-  "result": {
-    "id": "bubusteinmoneymod:two_stotinki"
-  }
 }

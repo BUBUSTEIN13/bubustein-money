@@ -1,0 +1,31 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "#GG",
+        "SPR",
+        "*GG"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_nugget"
+        },
+        "*": {
+            "item": "minecraft:iron_ingot"
+        },
+        "S": {
+            "item": "minecraft:white_stained_glass_pane"
+        },
+        "G": {
+            "item": "minecraft:magenta_dye"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:douazeci_lei_md"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:cinci_lei"
+    }
+}

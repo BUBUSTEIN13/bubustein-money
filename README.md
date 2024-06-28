@@ -152,8 +152,8 @@ Now you can craft for example from 5 Euro to 10 Euro using Crafting Table, <br> 
     <td>x.0.7</td>
   </tr>
    <tr>
-     <td><p>1<sup>st</sup> July 2024</p> I hope</td>
-     <td>Added the Bank Machine GUI. Now all recipes are moved into the Bank Machine. You only can craft in the CraftingTableBlock the BankMachine.(a few bugs remaining...)<br>
+     <td><p>5<sup>th</sup> July 2024</p> I hope</td>
+     <td>Added the Bank Machine GUI. Now all recipes are moved into the Bank Machine. You only can craft in the CraftingTableBlock the BankMachine.<br>
        Added New Zealand Dollar and Turkish Lira. The ATM GUI isn't implemented yet ;( <br>
      Optimized the distance between bubusteinmoneymod:mansion. Now this structure is rarer.
      <b>You need to backup your worlds before installing x.0.8!</b>

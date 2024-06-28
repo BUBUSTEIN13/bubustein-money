@@ -1,0 +1,16 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "# #",
+        " # ",
+        "# #"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:copper_ingot"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:two_pence"
+    }
+}

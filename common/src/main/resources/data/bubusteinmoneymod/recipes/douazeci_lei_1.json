@@ -1,0 +1,34 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "#GL",
+        "SPR",
+        "*LG"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "*": {
+            "item": "minecraft:iron_ingot"
+        },
+        "S": {
+            "item": "minecraft:white_stained_glass_pane"
+        },
+        "G": {
+            "item": "minecraft:gray_dye"
+        },
+        "L": {
+            "item": "minecraft:lime_dye"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:suta_lei_md"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:douazeci_lei"
+    }
+}

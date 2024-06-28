@@ -67,7 +67,10 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
     public ItemStack assemble(CraftingContainer craftingContainer, HolderLookup.Provider provider) {
         return this.getResultItem(provider).copy();
     }
-
+    @Override
+    public boolean isShapeless() {
+        return false;
+    }
     public int getWidth() {
         return this.pattern.width();
     }

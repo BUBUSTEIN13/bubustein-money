@@ -1,0 +1,37 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "NOB",
+        "RDG",
+        "ICC"
+    ],
+    "key": {
+        "N": {
+            "item": "minecraft:diamond"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "D": {
+            "item": "bubusteinmoneymod:hundred_dollars"
+        },
+        "O": {
+            "item": "minecraft:gold_ingot"
+        },
+        "C": {
+            "item": "minecraft:yellow_dye"
+        },
+        "G": {
+            "item": "minecraft:red_stained_glass_pane"
+        },
+        "B": {
+            "item": "minecraft:brown_dye"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:hundred_cdollars"
+    }
+}

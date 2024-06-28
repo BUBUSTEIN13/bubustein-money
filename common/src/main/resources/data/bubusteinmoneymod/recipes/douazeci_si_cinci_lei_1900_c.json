@@ -1,15 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:douasprezece_lei_1900"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:douasprezece_lei_1900"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:douazeci_cinci_lei_1900"
     }
-  },
-  "result": {
-    "id": "bubusteinmoneymod:douazeci_cinci_lei_1900"
-  }
 }

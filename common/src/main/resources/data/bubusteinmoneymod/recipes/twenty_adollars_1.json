@@ -1,0 +1,31 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "LDD",
+        "GBR",
+        "OOG"
+    ],
+    "key": {
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "D": {
+            "item": "minecraft:red_dye"
+        },
+        "G": {
+            "item": "minecraft:white_stained_glass_pane"
+        },
+        "B": {
+            "item": "bubusteinmoneymod:twenty_pounds"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "O": {
+            "item": "minecraft:red_dye"
+        }
+    },
+    "result": {
+        "id": "bubusteinmoneymod:twenty_adollars"
+    }
+}

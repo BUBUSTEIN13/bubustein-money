@@ -24,6 +24,7 @@ public class MoneyModNeoForge {
         modEventBus.addListener(this::setup);
         MoneyExpectPlatformImpl.register(modEventBus);
         NeoForge.EVENT_BUS.register(this);
+
     }
 
     @SubscribeEvent

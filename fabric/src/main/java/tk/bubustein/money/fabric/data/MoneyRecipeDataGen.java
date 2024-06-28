@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeOutput;
 import tk.bubustein.money.item.ModItems;
+import tk.bubustein.money.recipe.BankMachineRecipeShaped;
 
 import java.util.concurrent.CompletableFuture;
 

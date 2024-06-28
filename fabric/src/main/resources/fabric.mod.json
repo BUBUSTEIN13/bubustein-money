@@ -17,8 +17,9 @@
     "main": [
       "tk.bubustein.money.fabric.MoneyModFabric"
     ],
-    "client":[
-      "tk.bubustein.money.fabric.MoneyModClientFabric"
+    "client":["tk.bubustein.money.fabric.MoneyModClientFabric"],
+    "rei_client": [
+      "tk.bubustein.money.fabric.MoneyModREIPlugin"
     ],
     "fabric-datagen": [
       "tk.bubustein.money.fabric.data.MoneyModDataGen"
@@ -41,13 +42,12 @@
     "bubusteinmoneymod-common.mixins.json"
   ],
   "depends": {
-    "fabric-api": ">=0.99.0",
+    "fabric-api": ">=0.100.0",
     "fabricloader": ">=0.15.11",
     "minecraft": "1.20.6",
     "architectury": ">=12.1.2"
   },
   "recommends": {
-    "embeddium": "*",
     "ferritecore": "*",
     "modernfix": "*",
     "rei": "*",
