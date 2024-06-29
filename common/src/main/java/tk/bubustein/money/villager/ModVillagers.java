@@ -18,6 +18,7 @@ import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.mixin.PoiTypesInvoker;
 import java.util.Optional;
 import java.util.function.Supplier;
+
 public class ModVillagers {
     public static void init(){}
     public static final Supplier<PoiType> BANKER_POI = MoneyExpectPlatform.registerPoiType("banker_poi", () -> PoiTypesInvoker.invokeGetBlockStates(ModBlocks.BANK_MACHINE.get()));
@@ -86,9 +87,8 @@ public class ModVillagers {
                         2,30,0.9F
                 )
         };
-
-
         VillagerTrades.TRADES.put(BANKER.get(),toIntMap(ImmutableMap.of(1,bankerLevel1,2,bankerLevel2,3,bankerLevel3,4,bankerLevel4,5,bankerLevel5)));
+
 
         // EXCHANGER
         VillagerTrades.ItemListing[] exchangerLevel1 = new VillagerTrades.ItemListing[] {
@@ -152,7 +152,6 @@ public class ModVillagers {
                         new ItemStack(ModItems.INr100.get(), 4),
                         10, 2, 0.1f
                 )
-
         };
         VillagerTrades.ItemListing[] exchangerLevel2 = new VillagerTrades.ItemListing[]{
                 new SimpleTrade(

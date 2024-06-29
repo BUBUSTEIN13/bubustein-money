@@ -1,4 +1,4 @@
-package tk.bubustein.money.fabric;
+package tk.bubustein.money.compat;
 
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
 import me.shedaniel.rei.api.client.registry.category.CategoryRegistry;
@@ -10,8 +10,6 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import tk.bubustein.money.MoneyMod;
 import tk.bubustein.money.block.ModBlocks;
-import tk.bubustein.money.compat.BankMachineCategory;
-import tk.bubustein.money.compat.BankMachineDisplay;
 import tk.bubustein.money.recipe.BankMachineRecipe;
 import tk.bubustein.money.recipe.ModRecipes;
 import java.util.List;

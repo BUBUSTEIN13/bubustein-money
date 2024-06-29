@@ -8,7 +8,8 @@
     "BUBUSTEIN"
   ],
   "contact": {
-    "homepage": "https://bubustein.tk"
+    "homepage": "https://bubustein.tk",
+    "issues": "https://www.github.com/bubustein13/bubustein-money/issues"
   },
   "license": "GNU AGPL 3.0",
   "icon": "icon.png",
@@ -19,7 +20,7 @@
     ],
     "client":["tk.bubustein.money.fabric.MoneyModClientFabric"],
     "rei_client": [
-      "tk.bubustein.money.fabric.MoneyModREIPlugin"
+      "tk.bubustein.money.compat.MoneyModREIPlugin"
     ],
     "fabric-datagen": [
       "tk.bubustein.money.fabric.data.MoneyModDataGen"
