@@ -93,8 +93,8 @@
 </tr>
 <tr><td><b>1.21</b></td>
   <td>🙅🏻</td>
-  <td>❌</td>
-  <td>❌</td>
+  <td>✅</td>
+  <td>✅</td>
 </tr>
 </table> 
 

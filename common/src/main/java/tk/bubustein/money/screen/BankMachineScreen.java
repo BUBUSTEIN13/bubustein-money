@@ -15,7 +15,7 @@ import tk.bubustein.money.MoneyMod;
 
 @Environment(EnvType.CLIENT)
 public class BankMachineScreen extends AbstractContainerScreen<BankMachineMenu> {
-    private static final ResourceLocation BANK_MACHINE_LOCATION = new ResourceLocation(MoneyMod.MOD_ID,"textures/container/bank_machine.png");
+    private static final ResourceLocation BANK_MACHINE_LOCATION = ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID,"textures/container/bank_machine.png");
     private boolean widthTooNarrow;
 
     public BankMachineScreen(BankMachineMenu craftingMenu, Inventory inventory, Component component) {

@@ -25,21 +25,21 @@ config = "bubusteinmoneymod.mixins.json"
 [[dependencies.bubusteinmoneymod]]
 modId = "neoforge"
 type= "required"
-versionRange = "[20.6.115,)"
+versionRange = "[21.0.42-beta,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.20.6,)"
+versionRange = "[1.21,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "architectury"
 type = "required"
-versionRange = "[12.1.2,)"
+versionRange = "[13.0.2,)"
 ordering = "NONE"
 side = "BOTH"
 

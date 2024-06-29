@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -11,6 +12,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
@@ -60,7 +62,15 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
         }
         return i == this.ingredients.size() && stackedContents.canCraft(this, null);
     }
-    public @NotNull ItemStack assemble(CraftingContainer craftingContainer, HolderLookup.Provider provider) {
+    public boolean matches(CraftingInput craftingInput, Level level) {
+        if (craftingInput.ingredientCount() != this.ingredients.size()) {
+            return false;
+        } else {
+            return craftingInput.size() == 1 && this.ingredients.size() == 1 ? ((Ingredient)this.ingredients.getFirst()).test(craftingInput.getItem(0)) : craftingInput.stackedContents().canCraft(this, (IntList)null);
+        }
+    }
+
+    public ItemStack assemble(CraftingInput craftingInput, HolderLookup.Provider provider) {
         return this.result.copy();
     }
     public boolean canCraftInDimensions(int i, int j) {

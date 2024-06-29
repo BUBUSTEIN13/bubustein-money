@@ -53,11 +53,11 @@ public class MoneyMod {
         Registry<StructureTemplatePool> templatePoolRegistry = server.registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();
         Registry<StructureProcessorList> processorListRegistry = server.registryAccess().registry(Registries.PROCESSOR_LIST).orElseThrow();
 
-        ResourceLocation plainsPoolLocation = new ResourceLocation("minecraft:village/plains/houses");
-        ResourceLocation desertPoolLocation = new ResourceLocation("minecraft:village/desert/houses");
-        ResourceLocation savannaPoolLocation = new ResourceLocation("minecraft:village/savanna/houses");
-        ResourceLocation snowyPoolLocation = new ResourceLocation("minecraft:village/snowy/houses");
-        ResourceLocation taigaPoolLocation = new ResourceLocation("minecraft:village/taiga/houses");
+        ResourceLocation plainsPoolLocation = ResourceLocation.parse("minecraft:village/plains/houses");
+        ResourceLocation desertPoolLocation = ResourceLocation.parse("minecraft:village/desert/houses");
+        ResourceLocation savannaPoolLocation = ResourceLocation.parse("minecraft:village/savanna/houses");
+        ResourceLocation snowyPoolLocation = ResourceLocation.parse("minecraft:village/snowy/houses");
+        ResourceLocation taigaPoolLocation = ResourceLocation.parse("minecraft:village/taiga/houses");
 
         JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
         JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 7);

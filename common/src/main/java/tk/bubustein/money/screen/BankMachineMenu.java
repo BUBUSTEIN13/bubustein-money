@@ -1,6 +1,5 @@
 package tk.bubustein.money.screen;
 
-import net.minecraft.core.NonNullList;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
@@ -8,6 +7,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
@@ -57,27 +57,26 @@ public class BankMachineMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(inventory, j, 8 + j * 18, 142));
         }
     }
-    protected static void slotChangedCraftingGrid(AbstractContainerMenu abstractContainerMenu, Level level, Player player,
-                                                  CraftingContainer craftingContainer, ResultContainer resultContainer) {
+    protected static void slotChangedCraftingGrid(AbstractContainerMenu abstractContainerMenu, Level level, Player player, CraftingContainer craftingContainer, ResultContainer resultContainer) {
         if (!level.isClientSide) {
-            ServerPlayer serverPlayer = (ServerPlayer) player;
+            CraftingInput craftingInput = craftingContainer.asCraftInput();
+            ServerPlayer serverPlayer = (ServerPlayer)player;
             ItemStack itemStack = ItemStack.EMPTY;
-            Optional<RecipeHolder<BankMachineRecipe>> optional = Objects.requireNonNull(level.getServer()).getRecipeManager()
-                    .getRecipeFor(ModRecipes.BANK_MACHINE_RECIPE.get(), craftingContainer, level);
+            Optional<RecipeHolder<BankMachineRecipe>> optional = Objects.requireNonNull(level.getServer()).getRecipeManager().getRecipeFor(ModRecipes.BANK_MACHINE_RECIPE.get(), craftingInput, level);
             if (optional.isPresent()) {
-                RecipeHolder<BankMachineRecipe> recipeHolder = optional.get();
-                BankMachineRecipe craftingRecipe = recipeHolder.value();
-                if (resultContainer.setRecipeUsed(level, serverPlayer, recipeHolder)) {
-                    ItemStack itemStack2 = craftingRecipe.assemble(craftingContainer, level.registryAccess());
+                RecipeHolder<BankMachineRecipe> recipeHolder2 = optional.get();
+                BankMachineRecipe craftingRecipe = recipeHolder2.value();
+                if (resultContainer.setRecipeUsed(level, serverPlayer, recipeHolder2)) {
+                    ItemStack itemStack2 = craftingRecipe.assemble(craftingInput, level.registryAccess());
                     if (itemStack2.isItemEnabled(level.enabledFeatures())) {
-                        itemStack = itemStack2.copy();
+                        itemStack = itemStack2;
                     }
                 }
             }
+
             resultContainer.setItem(0, itemStack);
             abstractContainerMenu.setRemoteSlot(0, itemStack);
-            serverPlayer.connection.send(new ClientboundContainerSetSlotPacket(abstractContainerMenu.containerId,
-                    abstractContainerMenu.incrementStateId(), 0, itemStack));
+            serverPlayer.connection.send(new ClientboundContainerSetSlotPacket(abstractContainerMenu.containerId, abstractContainerMenu.incrementStateId(), 0, itemStack));
         }
     }
     @Override
