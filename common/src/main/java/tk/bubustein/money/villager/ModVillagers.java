@@ -151,6 +151,18 @@ public class ModVillagers {
                         Optional.of(stack),
                         new ItemStack(ModItems.INr100.get(), 4),
                         10, 2, 0.1f
+                ),
+                new SimpleTrade(
+                        new ItemCost(ModItems.Euro1.get(), 1),
+                        Optional.of(stack),
+                        new ItemStack(ModItems.TRl5.get(), 7),
+                        10,2,0.1f
+                ),
+                new SimpleTrade(
+                        new ItemCost(ModItems.TRl50.get(),1),
+                        Optional.of(new ItemCost(ModItems.TRl100.get(), 3)),
+                        new ItemStack(ModItems.Euro10.get(), 1),
+                        10,2,0.1f
                 )
         };
         VillagerTrades.ItemListing[] exchangerLevel2 = new VillagerTrades.ItemListing[]{
@@ -213,6 +225,18 @@ public class ModVillagers {
                         Optional.of(stack),
                         new ItemStack(ModItems.ISkr500.get(), 3),
                         7, 5, 0.2f
+                ),
+                new SimpleTrade(
+                        new ItemCost(ModItems.NZD2.get(), 1),
+                        Optional.of(stack),
+                        new ItemStack(ModItems.Dollar1.get(),1),
+                        7,5,0.2f
+                ),
+                new SimpleTrade(
+                        new ItemCost(ModItems.Dollar10.get(), 1),
+                        Optional.of(stack),
+                        new ItemStack(ModItems.NZD5.get(), 3),
+                        7,5,0.2f
                 )
         };
         VillagerTrades.ItemListing[] exchangerLevel3 = new VillagerTrades.ItemListing[]{
