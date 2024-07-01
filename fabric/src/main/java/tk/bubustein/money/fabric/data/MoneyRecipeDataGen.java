@@ -21,26 +21,26 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
         super(output, registriesFuture);
     }
 
-    public static void ConversionRecipe(RecipeOutput recipeOutput, ItemLike itemLike, ItemLike itemLike2, @Nullable String string) {
-        ConversionRecipe(recipeOutput, itemLike, itemLike2, string, 1);
+    public static void conversionRecipe(RecipeOutput recipeOutput, ItemLike itemLike, ItemLike itemLike2, @Nullable String string) {
+        conversionRecipe(recipeOutput, itemLike, itemLike2, string, 1);
     }
-    public static void ConversionRecipe(RecipeOutput recipeOutput, ItemLike itemLike, ItemLike itemLike2, @Nullable String string, int i) {
+    public static void conversionRecipe(RecipeOutput recipeOutput, ItemLike itemLike, ItemLike itemLike2, @Nullable String string, int i) {
         BankMachineRecipeShapelessBuilder.shapeless(RecipeCategory.MISC, itemLike, i).requires(itemLike2).group(string).unlockedBy(getHasName(itemLike2), has(itemLike2)).save(recipeOutput, getConversionRecipeName(itemLike, itemLike2));
     }
-    public static void FiveItems(RecipeOutput recipeOutput, ItemLike itemLike, ItemLike itemLike2) {
+    public static void fiveItems(RecipeOutput recipeOutput, ItemLike itemLike, ItemLike itemLike2) {
         BankMachineRecipeShapedBuilder.shaped(RecipeCategory.MISC, itemLike).define('#', itemLike2).pattern("# #").pattern("###").group("boat").save(recipeOutput);
     }
-    public static void TwoItems(RecipeOutput recipeOutput, ItemLike itemLike, ItemLike itemLike2) {
-        TwoItemsBuilder(RecipeCategory.MISC, itemLike, Ingredient.of(itemLike2)).unlockedBy(getHasName(itemLike2), has(itemLike2)).save(recipeOutput);
+    public static void twoItems(RecipeOutput recipeOutput, ItemLike itemLike, ItemLike itemLike2) {
+        twoItemsBuilder(RecipeCategory.MISC, itemLike, Ingredient.of(itemLike2)).unlockedBy(getHasName(itemLike2), has(itemLike2)).save(recipeOutput);
     }
-    public static @NotNull RecipeBuilder TwoItemsBuilder(RecipeCategory recipeCategory, ItemLike itemLike, Ingredient ingredient) {
+    public static @NotNull RecipeBuilder twoItemsBuilder(RecipeCategory recipeCategory, ItemLike itemLike, Ingredient ingredient) {
         return ShapedRecipeBuilder.shaped(recipeCategory, itemLike).define('#', ingredient).pattern("##");
     }
 
     @Override
     public void buildRecipes(RecipeOutput exporter) {
 
-        woodenBoat(exporter, ModItems.BRCentavo25.get(), ModItems.BRCentavo5.get());
+        fiveItems(exporter, ModItems.BRCentavo25.get(), ModItems.BRCentavo5.get());
         /*
         pressurePlate();
         woodenBoat();
