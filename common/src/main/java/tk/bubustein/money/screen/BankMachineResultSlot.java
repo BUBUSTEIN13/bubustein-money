@@ -8,7 +8,6 @@ import net.minecraft.world.inventory.RecipeCraftingHolder;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingInput;
-import net.minecraft.world.item.crafting.RecipeType;
 import org.jetbrains.annotations.NotNull;
 import tk.bubustein.money.recipe.ModRecipes;
 
@@ -16,7 +15,6 @@ public class BankMachineResultSlot extends Slot {
     private final CraftingContainer craftSlots;
     private final Player player;
     private int removeCount;
-
     public BankMachineResultSlot(Player player, CraftingContainer craftingContainer, Container container, int i, int j, int k) {
         super(container, i, j, k);
         this.player = player;
@@ -54,17 +52,15 @@ public class BankMachineResultSlot extends Slot {
         int i = positioned.left();
         int j = positioned.top();
         NonNullList<ItemStack> nonNullList = player.level().getRecipeManager().getRemainingItemsFor(ModRecipes.BANK_MACHINE_RECIPE.get(), craftingInput, player.level());
-
         for(int k = 0; k < craftingInput.height(); ++k) {
             for(int l = 0; l < craftingInput.width(); ++l) {
                 int m = l + i + (k + j) * this.craftSlots.getWidth();
                 ItemStack itemStack2 = this.craftSlots.getItem(m);
-                ItemStack itemStack3 = (ItemStack)nonNullList.get(l + k * craftingInput.width());
+                ItemStack itemStack3 = nonNullList.get(l + k * craftingInput.width());
                 if (!itemStack2.isEmpty()) {
                     this.craftSlots.removeItem(m, 1);
                     itemStack2 = this.craftSlots.getItem(m);
                 }
-
                 if (!itemStack3.isEmpty()) {
                     if (itemStack2.isEmpty()) {
                         this.craftSlots.setItem(m, itemStack3);
@@ -77,7 +73,6 @@ public class BankMachineResultSlot extends Slot {
                 }
             }
         }
-
     }
     public boolean isFake() {
         return true;

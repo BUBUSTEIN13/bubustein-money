@@ -14,7 +14,6 @@ import org.jetbrains.annotations.Nullable;
 import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.recipe.BankMachineRecipeShapedBuilder;
 import tk.bubustein.money.recipe.BankMachineRecipeShapelessBuilder;
-
 import java.util.concurrent.CompletableFuture;
 
 public class MoneyRecipeDataGen extends FabricRecipeProvider {
@@ -41,6 +40,7 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
     @Override
     public void buildRecipes(RecipeOutput exporter) {
 
+        woodenBoat(exporter, ModItems.BRCentavo25.get(), ModItems.BRCentavo5.get());
         /*
         pressurePlate();
         woodenBoat();
