@@ -1,4 +1,4 @@
-package tk.bubustein.money.neoforge;
+package tk.bubustein.money.forge;
 
 import me.shedaniel.rei.forge.REIPluginClient;
 import tk.bubustein.money.compat.MoneyModREIPlugin;

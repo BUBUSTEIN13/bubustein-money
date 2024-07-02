@@ -16,7 +16,6 @@ loom {
     forge {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
-
         mixinConfig "bubusteinmoneymod-common.mixins.json"
         mixinConfig "bubusteinmoneymod.mixins.json"
     }

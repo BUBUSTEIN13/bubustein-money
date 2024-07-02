@@ -1,0 +1,17 @@
+{
+  "type": "bubusteinmoneymod:bank_machine_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "bubusteinmoneymod:ten_tr_lira"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bubusteinmoneymod:fifty_tr_lira"
+  }
+}

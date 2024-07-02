@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[50,)"
 license = "GNU AGPL 3.0"
 
 [[mods]]
@@ -21,20 +21,20 @@ logoFile = "icon.png"
 [[dependencies.bubusteinmoneymod]]
 modId = "forge"
 mandatory = true
-versionRange = "[49,)"
+versionRange = "[50,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20.4,)"
+versionRange = "[1.20.6,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.bubusteinmoneymod]]
 modId = "architectury"
 mandatory = true
-versionRange = "[11.0.12,)"
+versionRange = "[12.1.2,)"
 ordering = "AFTER"
 side = "BOTH"

@@ -1,0 +1,12 @@
+{
+  "type": "bubusteinmoneymod:bank_machine_shapeless",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:fifty_tr_lira"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "bubusteinmoneymod:ten_tr_lira"
+  }
+}

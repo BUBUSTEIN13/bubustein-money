@@ -77,7 +77,7 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
         }
     }
 
-    public BankMachineRecipeShapedBuilder unlockedBy(String string, Criterion<?> criterion) {
+    public @NotNull BankMachineRecipeShapedBuilder unlockedBy(String string, Criterion<?> criterion) {
         this.criteria.put(string, criterion);
         return this;
     }
@@ -101,7 +101,7 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
         Advancement.Builder builder = recipeOutput.advancement().addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation)).rewards(Builder.recipe(resourceLocation)).requirements(Strategy.OR);
         Objects.requireNonNull(builder);
         this.criteria.forEach(builder::addCriterion);
-        BankMachineRecipeShaped shapedRecipe = new BankMachineRecipeShaped(Objects.requireNonNullElse(this.group, ""), shapedRecipePattern, new ItemStack(this.result, this.count), this.showNotification);
+        BankMachineRecipeShaped shapedRecipe = new BankMachineRecipeShaped(Objects.requireNonNullElse(this.group, ""), RecipeBuilder.determineBookCategory(this.category), shapedRecipePattern, new ItemStack(this.result, this.count), this.showNotification);
         recipeOutput.accept(resourceLocation, shapedRecipe, builder.build(resourceLocation.withPrefix("recipes/" + this.category.getFolderName() + "/")));
     }
 
