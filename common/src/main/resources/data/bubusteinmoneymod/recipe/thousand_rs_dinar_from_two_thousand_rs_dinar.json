@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "RSD",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:two_thousand_rs_dinar"

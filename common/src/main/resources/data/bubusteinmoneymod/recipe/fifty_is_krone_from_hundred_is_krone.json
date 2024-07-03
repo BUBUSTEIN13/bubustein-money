@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "ISkr",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:hundred_is_krone"

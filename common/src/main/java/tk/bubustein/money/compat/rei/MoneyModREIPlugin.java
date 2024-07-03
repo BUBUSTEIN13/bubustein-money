@@ -1,4 +1,4 @@
-package tk.bubustein.money.compat;
+package tk.bubustein.money.compat.rei;
 
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
 import me.shedaniel.rei.api.client.registry.category.CategoryRegistry;

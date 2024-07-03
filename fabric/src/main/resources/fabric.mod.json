@@ -20,7 +20,10 @@
     ],
     "client":["tk.bubustein.money.fabric.MoneyModClientFabric"],
     "rei_client": [
-      "tk.bubustein.money.compat.MoneyModREIPlugin"
+      "tk.bubustein.money.compat.rei.MoneyModREIPlugin"
+    ],
+    "jei_mod_client": [
+      "tk.bubustein.money.compat.jei.MoneyModJEIPlugin"
     ],
     "fabric-datagen": [
       "tk.bubustein.money.fabric.data.MoneyModDataGen"
@@ -53,5 +56,8 @@
     "modernfix": "*",
     "rei": "*",
     "modmenu": "*"
+  },
+  "suggests": {
+    "jei": "*"
   }
 }

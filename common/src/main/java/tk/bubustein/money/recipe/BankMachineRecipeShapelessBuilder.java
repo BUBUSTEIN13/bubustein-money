@@ -18,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class BankMachineRecipeShapelessBuilder implements RecipeBuilder {
@@ -28,63 +29,49 @@ public class BankMachineRecipeShapelessBuilder implements RecipeBuilder {
     private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
     @Nullable
     private String group;
-
     public BankMachineRecipeShapelessBuilder(RecipeCategory recipeCategory, ItemLike itemLike, int i) {
         this.category = recipeCategory;
         this.result = itemLike.asItem();
         this.count = i;
     }
-
     public static BankMachineRecipeShapelessBuilder shapeless(RecipeCategory recipeCategory, ItemLike itemLike) {
         return new BankMachineRecipeShapelessBuilder(recipeCategory, itemLike, 1);
     }
-
     public static BankMachineRecipeShapelessBuilder shapeless(RecipeCategory recipeCategory, ItemLike itemLike, int i) {
         return new BankMachineRecipeShapelessBuilder(recipeCategory, itemLike, i);
     }
-
     public BankMachineRecipeShapelessBuilder requires(TagKey<Item> tagKey) {
         return this.requires(Ingredient.of(tagKey));
     }
-
     public BankMachineRecipeShapelessBuilder requires(ItemLike itemLike) {
         return this.requires(itemLike, 1);
     }
-
     public BankMachineRecipeShapelessBuilder requires(ItemLike itemLike, int i) {
         for(int j = 0; j < i; ++j) {
             this.requires(Ingredient.of(itemLike));
         }
-
         return this;
     }
-
     public BankMachineRecipeShapelessBuilder requires(Ingredient ingredient) {
         return this.requires(ingredient, 1);
     }
-
     public BankMachineRecipeShapelessBuilder requires(Ingredient ingredient, int i) {
         for(int j = 0; j < i; ++j) {
             this.ingredients.add(ingredient);
         }
-
         return this;
     }
-
-    public BankMachineRecipeShapelessBuilder unlockedBy(String string, Criterion<?> criterion) {
+    public @NotNull BankMachineRecipeShapelessBuilder unlockedBy(String string, Criterion<?> criterion) {
         this.criteria.put(string, criterion);
         return this;
     }
-
     public BankMachineRecipeShapelessBuilder group(@Nullable String string) {
         this.group = string;
         return this;
     }
-
-    public Item getResult() {
+    public @NotNull Item getResult() {
         return this.result;
     }
-
     public void save(RecipeOutput recipeOutput, ResourceLocation resourceLocation) {
         this.ensureValid(resourceLocation);
         Advancement.Builder builder = recipeOutput.advancement().addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation)).rewards(Builder.recipe(resourceLocation)).requirements(Strategy.OR);
@@ -93,7 +80,6 @@ public class BankMachineRecipeShapelessBuilder implements RecipeBuilder {
         BankMachineRecipeShapeless shapelessRecipe = new BankMachineRecipeShapeless(Objects.requireNonNullElse(this.group, ""), new ItemStack(this.result, this.count), this.ingredients);
         recipeOutput.accept(resourceLocation, shapelessRecipe, builder.build(resourceLocation.withPrefix("recipes/" + this.category.getFolderName() + "/")));
     }
-
     private void ensureValid(ResourceLocation resourceLocation) {
         if (this.criteria.isEmpty()) {
             throw new IllegalStateException("No way of obtaining recipe " + resourceLocation);

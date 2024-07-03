@@ -1,7 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
-    "group": "BRL",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:ten_br_reais"

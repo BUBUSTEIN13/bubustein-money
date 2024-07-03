@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "CZkr",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:two_cz_krone"

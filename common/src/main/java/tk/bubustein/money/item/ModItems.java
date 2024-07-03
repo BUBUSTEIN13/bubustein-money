@@ -707,5 +707,4 @@ public class ModItems {
     public static final Supplier<Item> VisaSteel = MoneyExpectPlatform.registerItem("card_steel",
             () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
 
-
 }

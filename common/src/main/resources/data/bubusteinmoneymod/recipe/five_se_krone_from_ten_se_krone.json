@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "SEkr",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:ten_se_krone"

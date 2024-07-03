@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "group": "boat",
     "key": {
         "#": {
             "item": "bubusteinmoneymod:zece_lei"

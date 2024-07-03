@@ -1,4 +1,4 @@
-package tk.bubustein.money.compat;
+package tk.bubustein.money.compat.rei;
 
 import com.google.common.collect.Lists;
 import me.shedaniel.math.Point;
@@ -21,32 +21,25 @@ import org.jetbrains.annotations.Nullable;
 import tk.bubustein.money.MoneyMod;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.block.custom.BankMachine;
-
 import java.util.Iterator;
 import java.util.List;
 
 @Environment(EnvType.CLIENT)
 public class BankMachineCategory implements DisplayCategory<BankMachineDisplay> {
-
     public static final CategoryIdentifier<BankMachineDisplay> BANK_MACHINE_CATEGORY = CategoryIdentifier.of(MoneyMod.MOD_ID, "bank_machine");
-
-
     @Override
     public CategoryIdentifier<? extends BankMachineDisplay> getCategoryIdentifier() {
         return BANK_MACHINE_CATEGORY;
     }
-
     @Override
     public Component getTitle() {
         return BankMachine.TITLE;
     }
-
     @Override
     @NonBlocking
     public EntryStack<ItemStack> getIcon() {
         return EntryStacks.of(ModBlocks.BANK_MACHINE.get());
     }
-
     @Override
     public List<Widget> setupDisplay(BankMachineDisplay display, Rectangle bounds) {
         Point startPoint = new Point(bounds.getCenterX() - 58, bounds.getCenterY() - 27);
@@ -54,7 +47,6 @@ public class BankMachineCategory implements DisplayCategory<BankMachineDisplay> 
         widgets.add(Widgets.createRecipeBase(bounds));
         widgets.add(Widgets.createArrow(new Point(startPoint.x + 60, startPoint.y + 18)));
         widgets.add(Widgets.createResultSlotBackground(new Point(startPoint.x + 95, startPoint.y + 19)));
-
         List<EntryIngredient> input = display.getInputEntries();
         List<Slot> slots = Lists.newArrayList();
         for (int y = 0; y < 3; y++) {
@@ -77,7 +69,6 @@ public class BankMachineCategory implements DisplayCategory<BankMachineDisplay> 
         }
         return widgets;
     }
-
     @Override
     @Nullable
     public DisplayMerger<BankMachineDisplay> getDisplayMerger() {
@@ -91,12 +82,10 @@ public class BankMachineCategory implements DisplayCategory<BankMachineDisplay> 
                 if (first.getWidth() != second.getWidth()) return false;
                 return first.getHeight() == second.getHeight();
             }
-
             @Override
             public int hashOf(BankMachineDisplay display) {
                 return display.getCategoryIdentifier().hashCode() * 31 * 31 * 31 + display.getOrganisedInputEntries(3, 3).hashCode() * 31 * 31 + display.getOutputEntries().hashCode();
             }
-
             private boolean equals(List<EntryIngredient> l1, List<EntryIngredient> l2) {
                 if (l1.size() != l2.size()) return true;
                 Iterator<EntryIngredient> it1 = l1.iterator();

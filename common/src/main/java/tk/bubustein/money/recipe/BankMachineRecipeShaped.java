@@ -17,14 +17,12 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
     final ItemStack result;
     final String group;
     final boolean showNotification;
-
     public BankMachineRecipeShaped(String string, ShapedRecipePattern shapedRecipePattern, ItemStack itemStack, boolean bl) {
         this.group = string;
         this.pattern = shapedRecipePattern;
         this.result = itemStack;
         this.showNotification = bl;
     }
-
     public BankMachineRecipeShaped(String string, ShapedRecipePattern shapedRecipePattern, ItemStack itemStack) {
         this(string, shapedRecipePattern, itemStack, true);
     }

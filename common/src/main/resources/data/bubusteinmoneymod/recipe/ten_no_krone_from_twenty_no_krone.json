@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "NOkr",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:twenty_no_krone"

@@ -1,7 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
-    "group": "ZAR",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:twenty_za_rand"

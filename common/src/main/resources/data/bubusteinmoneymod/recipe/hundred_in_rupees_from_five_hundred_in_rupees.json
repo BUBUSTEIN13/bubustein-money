@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "INr",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:five_hundred_in_rupees"

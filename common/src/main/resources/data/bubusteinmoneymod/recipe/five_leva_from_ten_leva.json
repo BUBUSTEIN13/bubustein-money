@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "Stotinka_Leva",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:ten_leva"

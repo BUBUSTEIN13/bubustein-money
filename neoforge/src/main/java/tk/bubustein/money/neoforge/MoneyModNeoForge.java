@@ -14,7 +14,6 @@ import tk.bubustein.money.screen.BankMachineScreen;
 import tk.bubustein.money.screen.ModMenuTypes;
 import tk.bubustein.money.villager.ModVillagers;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-
 import java.util.HashMap;
 
 @Mod(MoneyMod.MOD_ID)
@@ -24,9 +23,7 @@ public class MoneyModNeoForge {
         modEventBus.addListener(this::setup);
         MoneyExpectPlatformImpl.register(modEventBus);
         NeoForge.EVENT_BUS.register(this);
-
     }
-
     @SubscribeEvent
     public void onServerAboutToStartEvent(ServerAboutToStartEvent event) {
         MoneyMod.registerJigsaws(event.getServer());

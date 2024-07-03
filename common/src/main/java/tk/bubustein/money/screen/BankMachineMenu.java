@@ -14,7 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.recipe.BankMachineRecipe;
 import tk.bubustein.money.recipe.ModRecipes;
-
 import java.util.Objects;
 import java.util.Optional;
 

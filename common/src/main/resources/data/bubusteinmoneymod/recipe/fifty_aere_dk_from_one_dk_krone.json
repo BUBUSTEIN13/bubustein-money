@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "DKkr",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:one_dk_krone"

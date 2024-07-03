@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "CNYuan",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:hundred_cn_yuan"

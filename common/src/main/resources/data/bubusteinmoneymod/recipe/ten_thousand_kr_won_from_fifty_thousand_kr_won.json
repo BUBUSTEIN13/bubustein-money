@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "Won",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:fifty_thousand_kr_won"
