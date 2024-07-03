@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "#*#",
-        "*#*",
-        "#*#"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:copper_ingot"
@@ -13,6 +9,11 @@
             "item": "minecraft:iron_nugget"
         }
     },
+    "pattern": [
+        "#*#",
+        "*#*",
+        "#*#"
+    ],
     "result": {
         "id": "bubusteinmoneymod:five_pence"
     }

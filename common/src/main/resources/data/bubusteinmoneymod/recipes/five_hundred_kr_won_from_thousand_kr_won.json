@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "Won",
+    "category": "misc",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:five_hundred_kr_won"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:thousand_kr_won"
         }
-    ],
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:five_hundred_kr_won"
-    }
+    ]
 }

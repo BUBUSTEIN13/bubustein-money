@@ -30,7 +30,7 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
         this.result = itemStack;
         this.ingredients = nonNullList;
     }
-    public RecipeSerializer<?> getSerializer() {
+    public @NotNull RecipeSerializer<?> getSerializer() {
         return ModRecipes.BANK_MACHINE_SHAPELESS.get();
     }
     public String getGroup() {
@@ -39,10 +39,10 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     public CraftingBookCategory category() {
         return this.category;
     }
-    public ItemStack getResultItem(HolderLookup.Provider provider) {
+    public @NotNull ItemStack getResultItem(HolderLookup.Provider provider) {
         return this.result;
     }
-    public NonNullList<Ingredient> getIngredients() {
+    public @NotNull NonNullList<Ingredient> getIngredients() {
         return this.ingredients;
     }
 

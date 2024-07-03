@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "CI ",
-        " N ",
-        " IC"
-    ],
+    "category": "misc",
     "key": {
         "C": {
             "item": "minecraft:copper_ingot"
@@ -16,6 +12,11 @@
             "item": "minecraft:iron_ingot"
         }
     },
+    "pattern": [
+        "CI ",
+        " N ",
+        " IC"
+    ],
     "result": {
         "id": "bubusteinmoneymod:twenty_centimes"
     }

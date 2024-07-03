@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:douazeci_cinci_lei_1900"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:cincizeci_lei_1900"
         }
-    ],
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:douazeci_cinci_lei_1900"
-    }
+    ]
 }

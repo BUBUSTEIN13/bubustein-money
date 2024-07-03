@@ -1,16 +1,16 @@
 {
-  "type": "bubusteinmoneymod:bank_machine_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:twenty_five_kurus"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "category": "misc",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:twenty_five_kurus"
+        }
+    },
+    "pattern": [
+        "##"
+    ],
+    "result": {
+        "count": 1,
+        "id": "bubusteinmoneymod:fifty_kurus"
     }
-  },
-  "pattern": [
-    "##"
-  ],
-  "result": {
-    "count": 1,
-    "id": "bubusteinmoneymod:fifty_kurus"
-  }
 }

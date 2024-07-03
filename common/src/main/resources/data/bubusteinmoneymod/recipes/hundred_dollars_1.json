@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "RPB",
-        "DEB",
-        "MPB"
-    ],
+    "category": "misc",
     "key": {
         "R": {
             "item": "minecraft:redstone"
@@ -25,6 +21,11 @@
             "item": "bubusteinmoneymod:hundred_euros"
         }
     },
+    "pattern": [
+        "RPB",
+        "DEB",
+        "MPB"
+    ],
     "result": {
         "id": "bubusteinmoneymod:hundred_dollars"
     }

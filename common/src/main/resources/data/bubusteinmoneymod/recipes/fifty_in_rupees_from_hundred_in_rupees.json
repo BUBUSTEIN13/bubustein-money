@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "INr",
+    "category": "misc",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:fifty_in_rupees"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:hundred_in_rupees"
         }
-    ],
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:fifty_in_rupees"
-    }
+    ]
 }

@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "R##",
-        "LP#",
-        "I##"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:blue_dye"
@@ -22,6 +18,11 @@
             "item": "minecraft:lapis_lazuli"
         }
     },
+    "pattern": [
+        "R##",
+        "LP#",
+        "I##"
+    ],
     "result": {
         "id": "bubusteinmoneymod:thousand_kr_won"
     }

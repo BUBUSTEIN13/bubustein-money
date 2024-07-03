@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "ION",
-        "WDW",
-        "WCW"
-    ],
+    "category": "misc",
     "key": {
         "W": {
             "item": "minecraft:iron_block"
@@ -25,6 +21,11 @@
             "item": "minecraft:compass"
         }
     },
+    "pattern": [
+        "ION",
+        "WDW",
+        "WCW"
+    ],
     "result": {
         "id": "bubusteinmoneymod:atm"
     }

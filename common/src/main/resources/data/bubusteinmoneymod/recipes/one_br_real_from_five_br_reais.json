@@ -1,14 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
-    "group": "BRL",
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:one_br_real"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:five_br_reais"
         }
-    ],
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:one_br_real"
-    }
+    ]
 }

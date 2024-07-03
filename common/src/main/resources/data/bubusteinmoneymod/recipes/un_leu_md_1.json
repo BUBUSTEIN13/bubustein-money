@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "#*#",
-        "%R%",
-        "#*#"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:iron_ingot"
@@ -19,6 +15,11 @@
             "item": "minecraft:redstone"
         }
     },
+    "pattern": [
+        "#*#",
+        "%R%",
+        "#*#"
+    ],
     "result": {
         "id": "bubusteinmoneymod:un_leu_md"
     }

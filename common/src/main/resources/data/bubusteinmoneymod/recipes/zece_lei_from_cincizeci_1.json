@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:zece_lei"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:cincizeci_lei"
         }
-    ],
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:zece_lei"
-    }
+    ]
 }

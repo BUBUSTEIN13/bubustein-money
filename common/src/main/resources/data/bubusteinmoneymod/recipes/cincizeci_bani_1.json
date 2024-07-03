@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        " # ",
-        "#P#",
-        " # "
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:gold_nugget"
@@ -13,6 +9,11 @@
             "item": "bubusteinmoneymod:doi_lei_md"
         }
     },
+    "pattern": [
+        " # ",
+        "#P#",
+        " # "
+    ],
     "result": {
         "id": "bubusteinmoneymod:cincizeci_bani"
     }

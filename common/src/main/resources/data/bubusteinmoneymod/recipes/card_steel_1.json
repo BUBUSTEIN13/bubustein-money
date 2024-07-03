@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "GDG",
-        "GCG",
-        "GGG"
-    ],
+    "category": "misc",
     "key": {
         "D": {
             "item": "minecraft:netherite_ingot"
@@ -16,6 +12,11 @@
             "item": "bubusteinmoneymod:card_gold"
         }
     },
+    "pattern": [
+        "GDG",
+        "GCG",
+        "GGG"
+    ],
     "result": {
         "id": "bubusteinmoneymod:card_steel"
     }

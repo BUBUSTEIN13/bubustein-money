@@ -1,7 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
     "category": "misc",
-    "group": "boat",
     "key": {
         "#": {
             "item": "bubusteinmoneymod:ten_mx_pesos"

@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "L##",
-        "RP#",
-        "I##"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:cyan_dye"
@@ -22,6 +18,11 @@
             "item": "minecraft:lapis_lazuli"
         }
     },
+    "pattern": [
+        "L##",
+        "RP#",
+        "I##"
+    ],
     "result": {
         "id": "bubusteinmoneymod:fifty_in_rupees"
     }

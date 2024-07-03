@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:ten_pounds"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:fifty_pounds"
         }
-    ],
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:ten_pounds"
-    }
+    ]
 }

@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "LOO",
-        "RPA",
-        "IGD"
-    ],
+    "category": "misc",
     "key": {
         "L": {
             "item": "minecraft:lapis_lazuli"
@@ -31,6 +27,11 @@
             "item": "minecraft:gold_ingot"
         }
     },
+    "pattern": [
+        "LOO",
+        "RPA",
+        "IGD"
+    ],
     "result": {
         "id": "bubusteinmoneymod:fifty_pounds"
     }

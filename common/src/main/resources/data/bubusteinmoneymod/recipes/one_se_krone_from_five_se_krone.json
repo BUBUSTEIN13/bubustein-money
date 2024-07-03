@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "SEkr",
+    "category": "misc",
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:one_se_krone"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:five_se_krone"
         }
-    ],
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:one_se_krone"
-    }
+    ]
 }

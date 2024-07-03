@@ -1,14 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
-    "group": "MXN",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:one_mx_peso"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:two_mx_pesos"
         }
-    ],
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:one_mx_peso"
-    }
+    ]
 }

@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "ANA",
-        "A#A",
-        "ANA"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:gold_ingot"
@@ -16,6 +12,11 @@
             "item": "minecraft:iron_nugget"
         }
     },
+    "pattern": [
+        "ANA",
+        "A#A",
+        "ANA"
+    ],
     "result": {
         "id": "bubusteinmoneymod:toonie"
     }

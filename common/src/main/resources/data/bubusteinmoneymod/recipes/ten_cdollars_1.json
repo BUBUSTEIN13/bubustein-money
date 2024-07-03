@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "NOB",
-        "RDG",
-        "ICC"
-    ],
+    "category": "misc",
     "key": {
         "N": {
             "item": "minecraft:iron_nugget"
@@ -31,6 +27,11 @@
             "item": "minecraft:iron_ingot"
         }
     },
+    "pattern": [
+        "NOB",
+        "RDG",
+        "ICC"
+    ],
     "result": {
         "id": "bubusteinmoneymod:ten_cdollars"
     }

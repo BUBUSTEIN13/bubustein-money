@@ -1,6 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "group": "boat",
+    "category": "misc",
     "key": {
         "#": {
             "item": "bubusteinmoneymod:one_in_rupee"

@@ -1,14 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
-    "group": "MXN",
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:ten_mx_centavos"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:fifty_mx_centavos"
         }
-    ],
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:ten_mx_centavos"
-    }
+    ]
 }

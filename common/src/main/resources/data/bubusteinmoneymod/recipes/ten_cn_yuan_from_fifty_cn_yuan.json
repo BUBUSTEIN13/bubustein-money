@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "CNYuan",
+    "category": "misc",
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:ten_cn_yuan"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:fifty_cn_yuan"
         }
-    ],
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:ten_cn_yuan"
-    }
+    ]
 }

@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "LN#",
-        "RPA",
-        "IGD"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:emerald"
@@ -34,6 +30,11 @@
             "item": "minecraft:diamond"
         }
     },
+    "pattern": [
+        "LN#",
+        "RPA",
+        "IGD"
+    ],
     "result": {
         "id": "bubusteinmoneymod:five_hundred_euros"
     }

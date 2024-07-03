@@ -1,4 +1,4 @@
-package tk.bubustein.money.compat;
+package tk.bubustein.money.compat.rei;
 
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.entry.EntryIngredient;

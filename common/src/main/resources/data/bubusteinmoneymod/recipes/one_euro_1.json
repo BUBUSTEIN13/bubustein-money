@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "#A#",
-        "AAA",
-        "#A#"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:gold_ingot"
@@ -13,6 +9,11 @@
             "item": "minecraft:iron_ingot"
         }
     },
+    "pattern": [
+        "#A#",
+        "AAA",
+        "#A#"
+    ],
     "result": {
         "id": "bubusteinmoneymod:one_euro"
     }

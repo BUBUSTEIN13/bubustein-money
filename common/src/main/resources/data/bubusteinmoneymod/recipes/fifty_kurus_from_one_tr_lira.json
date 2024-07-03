@@ -1,12 +1,13 @@
 {
-  "type": "bubusteinmoneymod:bank_machine_shapeless",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:one_tr_lira"
-    }
-  ],
-  "result": {
-    "count": 2,
-    "id": "bubusteinmoneymod:fifty_kurus"
-  }
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "category": "misc",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:fifty_kurus"
+    },
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:one_tr_lira"
+        }
+    ]
 }

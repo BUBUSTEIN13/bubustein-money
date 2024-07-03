@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "RGG",
-        "RP#",
-        "RDD"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:gold_ingot"
@@ -22,6 +18,11 @@
             "item": "minecraft:redstone"
         }
     },
+    "pattern": [
+        "RGG",
+        "RP#",
+        "RDD"
+    ],
     "result": {
         "id": "bubusteinmoneymod:hundred_cz_krone"
     }

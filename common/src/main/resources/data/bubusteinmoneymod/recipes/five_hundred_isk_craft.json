@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "LO#",
-        "RPI",
-        "G#O"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:red_dye"
@@ -28,6 +24,11 @@
             "item": "minecraft:gold_nugget"
         }
     },
+    "pattern": [
+        "LO#",
+        "RPI",
+        "G#O"
+    ],
     "result": {
         "id": "bubusteinmoneymod:five_hundred_is_krone"
     }

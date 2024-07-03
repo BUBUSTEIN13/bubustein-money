@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "NGD",
-        "LPL",
-        "GRD"
-    ],
+    "category": "misc",
     "key": {
         "P": {
             "item": "minecraft:paper"
@@ -25,6 +21,11 @@
             "item": "minecraft:redstone"
         }
     },
+    "pattern": [
+        "NGD",
+        "LPL",
+        "GRD"
+    ],
     "result": {
         "id": "bubusteinmoneymod:twenty_mx_pesos"
     }

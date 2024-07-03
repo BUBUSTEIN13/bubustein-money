@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "I#I",
-        "#P#",
-        "I#I"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:iron_ingot"
@@ -16,6 +12,11 @@
             "item": "minecraft:iron_nugget"
         }
     },
+    "pattern": [
+        "I#I",
+        "#P#",
+        "I#I"
+    ],
     "result": {
         "id": "bubusteinmoneymod:douazeci_bani_1900"
     }

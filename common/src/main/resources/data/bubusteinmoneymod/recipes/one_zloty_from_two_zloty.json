@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "PLN",
+    "category": "misc",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:one_zloty"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:two_zloty"
         }
-    ],
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:one_zloty"
-    }
+    ]
 }

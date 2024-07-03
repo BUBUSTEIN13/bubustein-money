@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "Stotinka_Leva",
+    "category": "misc",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:five_stotinki"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:ten_stotinki"
         }
-    ],
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:five_stotinki"
-    }
+    ]
 }

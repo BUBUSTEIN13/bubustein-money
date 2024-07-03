@@ -1,5 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "category": "misc",
     "key": {
         "#": {
             "item": "bubusteinmoneymod:suta_lei_md"

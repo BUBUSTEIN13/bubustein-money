@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "#*#",
-        "%#%",
-        "#*#"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:iron_ingot"
@@ -16,6 +12,11 @@
             "item": "minecraft:gold_ingot"
         }
     },
+    "pattern": [
+        "#*#",
+        "%#%",
+        "#*#"
+    ],
     "result": {
         "id": "bubusteinmoneymod:cincizeci_bani_md"
     }

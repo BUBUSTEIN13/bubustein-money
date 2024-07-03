@@ -1,4 +1,4 @@
-package tk.bubustein.money.compat;
+package tk.bubustein.money.compat.rei;
 
 import com.google.common.collect.Lists;
 import me.shedaniel.math.Point;

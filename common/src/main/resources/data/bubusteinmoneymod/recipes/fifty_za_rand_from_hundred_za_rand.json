@@ -1,14 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
     "category": "misc",
-    "group": "ZAR",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:fifty_za_rand"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:hundred_za_rand"
         }
-    ],
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:fifty_za_rand"
-    }
+    ]
 }

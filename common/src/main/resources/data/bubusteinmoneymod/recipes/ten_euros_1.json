@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "L#N",
-        "RPA",
-        "IGD"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:gold_nugget"
@@ -34,6 +30,11 @@
             "item": "minecraft:gold_ingot"
         }
     },
+    "pattern": [
+        "L#N",
+        "RPA",
+        "IGD"
+    ],
     "result": {
         "id": "bubusteinmoneymod:ten_euros"
     }

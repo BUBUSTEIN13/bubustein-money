@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "#GL",
-        "SPR",
-        "*LG"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:gold_ingot"
@@ -28,6 +24,11 @@
             "item": "minecraft:redstone"
         }
     },
+    "pattern": [
+        "#GL",
+        "SPR",
+        "*LG"
+    ],
     "result": {
         "id": "bubusteinmoneymod:douazeci_lei"
     }

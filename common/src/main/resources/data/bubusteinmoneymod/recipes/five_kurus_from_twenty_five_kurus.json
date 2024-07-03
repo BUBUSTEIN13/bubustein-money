@@ -1,12 +1,13 @@
 {
-  "type": "bubusteinmoneymod:bank_machine_shapeless",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:twenty_five_kurus"
-    }
-  ],
-  "result": {
-    "count": 5,
-    "id": "bubusteinmoneymod:five_kurus"
-  }
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "category": "misc",
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:five_kurus"
+    },
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:twenty_five_kurus"
+        }
+    ]
 }

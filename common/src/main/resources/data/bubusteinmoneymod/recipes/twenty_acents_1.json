@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "N  ",
-        " IN",
-        " N "
-    ],
+    "category": "misc",
     "key": {
         "N": {
             "item": "minecraft:iron_nugget"
@@ -13,6 +9,11 @@
             "item": "minecraft:iron_ingot"
         }
     },
+    "pattern": [
+        "N  ",
+        " IN",
+        " N "
+    ],
     "result": {
         "id": "bubusteinmoneymod:twenty_acents"
     }

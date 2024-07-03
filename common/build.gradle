@@ -3,6 +3,14 @@ architectury {
 }
 repositories {
     maven { url "https://maven.shedaniel.me" }
+    maven {
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
 }
 loom {
     accessWidenerPath = file("src/main/resources/bubusteinmoneymod.accesswidener")
@@ -12,6 +20,7 @@ dependencies {
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-api:${rootProject.rei_version}"
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin:${rootProject.rei_version}"
+    modCompileOnlyApi("mezz.jei:jei-${rootProject.minecraft_version}-common-api:${rootProject.jei_version}")
 }
 publishing {
     publications {

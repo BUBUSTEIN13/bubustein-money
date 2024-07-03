@@ -1,10 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "pattern": [
-        "G#G",
-        "#P#",
-        "G#G"
-    ],
+    "category": "misc",
     "key": {
         "#": {
             "item": "minecraft:gold_ingot"
@@ -16,6 +12,11 @@
             "item": "minecraft:gold_ingot"
         }
     },
+    "pattern": [
+        "G#G",
+        "#P#",
+        "G#G"
+    ],
     "result": {
         "id": "bubusteinmoneymod:douazeci_cinci_lei_1900"
     }

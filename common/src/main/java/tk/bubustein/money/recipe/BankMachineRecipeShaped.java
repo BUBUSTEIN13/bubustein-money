@@ -36,7 +36,7 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
         return ModRecipes.BANK_MACHINE_SHAPED.get();
     }
 
-    public @NotNull String getGroup() {
+    public String getGroup() {
         return this.group;
     }
 

@@ -1,13 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "group": "ISkr",
+    "category": "misc",
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:five_thousand_is_krone"
+    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:ten_thousand_is_krone"
         }
-    ],
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:five_thousand_is_krone"
-    }
+    ]
 }
