@@ -19,7 +19,6 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
     final String group;
     final CraftingBookCategory category;
     final boolean showNotification;
-
     public BankMachineRecipeShaped(String string, CraftingBookCategory craftingBookCategory, ShapedRecipePattern shapedRecipePattern, ItemStack itemStack, boolean bl) {
         this.group = string;
         this.category = craftingBookCategory;
@@ -27,67 +26,52 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
         this.result = itemStack;
         this.showNotification = bl;
     }
-
     public BankMachineRecipeShaped(String string, CraftingBookCategory craftingBookCategory, ShapedRecipePattern shapedRecipePattern, ItemStack itemStack) {
         this(string, craftingBookCategory, shapedRecipePattern, itemStack, true);
     }
-
     public @NotNull RecipeSerializer<?> getSerializer() {
         return ModRecipes.BANK_MACHINE_SHAPED.get();
     }
-
     public String getGroup() {
         return this.group;
     }
-
     public CraftingBookCategory category() {
         return this.category;
     }
-
     public @NotNull ItemStack getResultItem(HolderLookup.Provider provider) {
         return this.result;
     }
-
     public @NotNull NonNullList<Ingredient> getIngredients() {
         return this.pattern.ingredients();
     }
-
     public boolean showNotification() {
         return this.showNotification;
     }
-
     public boolean canCraftInDimensions(int i, int j) {
         return i >= this.pattern.width() && j >= this.pattern.height();
     }
-
     public boolean matches(CraftingContainer craftingContainer, Level level) {
         return this.pattern.matches(craftingContainer);
     }
-
     public @NotNull ItemStack assemble(CraftingContainer craftingContainer, HolderLookup.Provider provider) {
         return this.getResultItem(provider).copy();
     }
-
     public int getWidth() {
         return this.pattern.width();
     }
-
     public int getHeight() {
         return this.pattern.height();
     }
-
     public boolean isIncomplete() {
         NonNullList<Ingredient> nonNullList = this.getIngredients();
         return nonNullList.isEmpty() || nonNullList.stream()
                 .filter((ingredient) -> !ingredient.isEmpty())
                 .anyMatch((ingredient) -> ingredient.getItems().length == 0);
     }
-
     @Override
     public boolean isShapeless() {
         return false;
     }
-
     public static class Serializer implements RecipeSerializer<BankMachineRecipeShaped> {
         public static final Serializer INSTANCE = new Serializer();
         public static final MapCodec<BankMachineRecipeShaped> CODEC =
@@ -103,15 +87,12 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
         public static final StreamCodec<RegistryFriendlyByteBuf, BankMachineRecipeShaped> STREAM_CODEC = StreamCodec.of(BankMachineRecipeShaped.Serializer::toNetwork, BankMachineRecipeShaped.Serializer::fromNetwork);
         public Serializer() {
         }
-
         public @NotNull MapCodec<BankMachineRecipeShaped> codec() {
             return CODEC;
         }
-
         public @NotNull StreamCodec<RegistryFriendlyByteBuf, BankMachineRecipeShaped> streamCodec() {
             return STREAM_CODEC;
         }
-
         private static BankMachineRecipeShaped fromNetwork(RegistryFriendlyByteBuf registryFriendlyByteBuf) {
             String string = registryFriendlyByteBuf.readUtf();
             CraftingBookCategory craftingBookCategory = registryFriendlyByteBuf.readEnum(CraftingBookCategory.class);
@@ -120,7 +101,6 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
             boolean bl = registryFriendlyByteBuf.readBoolean();
             return new BankMachineRecipeShaped(string, craftingBookCategory, shapedRecipePattern, itemStack, bl);
         }
-
         private static void toNetwork(RegistryFriendlyByteBuf registryFriendlyByteBuf, BankMachineRecipeShaped shapedRecipe) {
             registryFriendlyByteBuf.writeUtf(shapedRecipe.group);
             registryFriendlyByteBuf.writeEnum(shapedRecipe.category);

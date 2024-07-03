@@ -17,7 +17,6 @@ import tk.bubustein.money.MoneyMod;
 public class BankMachineScreen extends AbstractContainerScreen<BankMachineMenu> {
     private static final ResourceLocation BANK_MACHINE_LOCATION = new ResourceLocation(MoneyMod.MOD_ID,"textures/container/bank_machine.png");
     private boolean widthTooNarrow;
-
     public BankMachineScreen(BankMachineMenu craftingMenu, Inventory inventory, Component component) {
         super(craftingMenu, inventory, component);
     }
@@ -26,7 +25,6 @@ public class BankMachineScreen extends AbstractContainerScreen<BankMachineMenu> 
         this.widthTooNarrow = this.width < 379;
         this.titleLabelX = 29;
     }
-
     public void containerTick() {
         super.containerTick();
     }

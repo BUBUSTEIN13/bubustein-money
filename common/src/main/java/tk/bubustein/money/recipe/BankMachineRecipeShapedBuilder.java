@@ -34,29 +34,23 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
     @Nullable
     private String group;
     private boolean showNotification = true;
-
     public BankMachineRecipeShapedBuilder(RecipeCategory recipeCategory, ItemLike itemLike, int i) {
         this.category = recipeCategory;
         this.result = itemLike.asItem();
         this.count = i;
     }
-
     public static BankMachineRecipeShapedBuilder shaped(RecipeCategory recipeCategory, ItemLike itemLike) {
         return shaped(recipeCategory, itemLike, 1);
     }
-
     public static BankMachineRecipeShapedBuilder shaped(RecipeCategory recipeCategory, ItemLike itemLike, int i) {
         return new BankMachineRecipeShapedBuilder(recipeCategory, itemLike, i);
     }
-
     public BankMachineRecipeShapedBuilder define(Character character, TagKey<Item> tagKey) {
         return this.define(character, Ingredient.of(tagKey));
     }
-
     public BankMachineRecipeShapedBuilder define(Character character, ItemLike itemLike) {
         return this.define(character, Ingredient.of(itemLike));
     }
-
     public BankMachineRecipeShapedBuilder define(Character character, Ingredient ingredient) {
         if (this.key.containsKey(character)) {
             throw new IllegalArgumentException("Symbol '" + character + "' is already defined!");
@@ -67,7 +61,6 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
             return this;
         }
     }
-
     public BankMachineRecipeShapedBuilder pattern(String string) {
         if (!this.rows.isEmpty() && string.length() != this.rows.getFirst().length()) {
             throw new IllegalArgumentException("Pattern must be the same width on every line!");
@@ -76,26 +69,21 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
             return this;
         }
     }
-
     public @NotNull BankMachineRecipeShapedBuilder unlockedBy(String string, Criterion<?> criterion) {
         this.criteria.put(string, criterion);
         return this;
     }
-
     public BankMachineRecipeShapedBuilder group(@Nullable String string) {
         this.group = string;
         return this;
     }
-
     public BankMachineRecipeShapedBuilder showNotification(boolean bl) {
         this.showNotification = bl;
         return this;
     }
-
     public @NotNull Item getResult() {
         return this.result;
     }
-
     public void save(RecipeOutput recipeOutput, ResourceLocation resourceLocation) {
         ShapedRecipePattern shapedRecipePattern = this.ensureValid(resourceLocation);
         Advancement.Builder builder = recipeOutput.advancement().addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation)).rewards(Builder.recipe(resourceLocation)).requirements(Strategy.OR);
@@ -104,7 +92,6 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
         BankMachineRecipeShaped shapedRecipe = new BankMachineRecipeShaped(Objects.requireNonNullElse(this.group, ""), RecipeBuilder.determineBookCategory(this.category), shapedRecipePattern, new ItemStack(this.result, this.count), this.showNotification);
         recipeOutput.accept(resourceLocation, shapedRecipe, builder.build(resourceLocation.withPrefix("recipes/" + this.category.getFolderName() + "/")));
     }
-
     private ShapedRecipePattern ensureValid(ResourceLocation resourceLocation) {
         if (this.criteria.isEmpty()) {
             throw new IllegalStateException("No way of obtaining recipe " + resourceLocation);

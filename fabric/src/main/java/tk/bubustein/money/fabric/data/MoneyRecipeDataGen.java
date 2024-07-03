@@ -37,7 +37,7 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(RecipeOutput exporter) {
-
+        /*
         conversionRecipe(exporter, ModItems.TRl100.get(), ModItems.TRl200.get(), "",2);
         conversionRecipe(exporter, ModItems.TRl50.get(), ModItems.TRl100.get(), "",2);
         conversionRecipe(exporter, ModItems.TRl10.get(), ModItems.TRl50.get(), "", 5);
@@ -80,7 +80,6 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
         twoItems(exporter, ModItems.NZD10.get(), ModItems.NZD5.get());
         twoItems(exporter, ModItems.NZD20.get(), ModItems.NZD10.get());
         fiveItems(exporter, ModItems.NZD50.get(), ModItems.NZD10.get());
-        twoItems(exporter, ModItems.NZD100.get(), ModItems.NZD50.get());
-
+        twoItems(exporter, ModItems.NZD100.get(), ModItems.NZD50.get());*/
     }
 }

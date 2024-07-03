@@ -29,7 +29,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.NZD50.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.NZD100.get(), ModelTemplates.FLAT_ITEM);
 
-
         itemModelGenerator.generateFlatItem(ModItems.TRk1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.TRk5.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.TRk10.get(), ModelTemplates.FLAT_ITEM);
@@ -68,7 +67,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.CZkr2000.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.CZkr5000.get(), ModelTemplates.FLAT_ITEM);
 
-
         itemModelGenerator.generateFlatItem(ModItems.DKAere50.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.DKkr1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.DKkr2.get(), ModelTemplates.FLAT_ITEM);
@@ -80,7 +78,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.DKkr200.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.DKkr500.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.DKkr1000.get(), ModelTemplates.FLAT_ITEM);
-
 
         itemModelGenerator.generateFlatItem(ModItems.Ft5.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.Ft10.get(), ModelTemplates.FLAT_ITEM);
@@ -106,7 +103,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.NOkr500.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.NOkr1000.get(), ModelTemplates.FLAT_ITEM);
 
-
         itemModelGenerator.generateFlatItem(ModItems.Grosz1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.Grosz2.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.Grosz5.get(), ModelTemplates.FLAT_ITEM);
@@ -123,7 +119,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.Zloty200.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.Zloty500.get(), ModelTemplates.FLAT_ITEM);
 
-
         itemModelGenerator.generateFlatItem(ModItems.RSD1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.RSD2.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.RSD5.get(), ModelTemplates.FLAT_ITEM);
@@ -137,7 +132,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.RSD2000.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.RSD5000.get(), ModelTemplates.FLAT_ITEM);
 
-
         itemModelGenerator.generateFlatItem(ModItems.SEkr1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.SEkr2.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.SEkr5.get(), ModelTemplates.FLAT_ITEM);
@@ -149,7 +143,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.SEkr500.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.SEkr1000.get(), ModelTemplates.FLAT_ITEM);
 
-
         itemModelGenerator.generateFlatItem(ModItems.ISkr1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ISkr5.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ISkr10.get(), ModelTemplates.FLAT_ITEM);
@@ -160,7 +153,6 @@ public class MoneyModelDataGen extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.ISkr2000.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ISkr5000.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ISkr10000.get(), ModelTemplates.FLAT_ITEM);
-
 
         itemModelGenerator.generateFlatItem(ModItems.INr1.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.INr2.get(), ModelTemplates.FLAT_ITEM);

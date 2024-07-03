@@ -24,9 +24,7 @@ public class MoneyModNeoForge {
         modEventBus.addListener(this::setup);
         MoneyExpectPlatformImpl.register(modEventBus);
         NeoForge.EVENT_BUS.register(this);
-
     }
-
     @SubscribeEvent
     public void onServerAboutToStartEvent(ServerAboutToStartEvent event) {
         MoneyMod.registerJigsaws(event.getServer());

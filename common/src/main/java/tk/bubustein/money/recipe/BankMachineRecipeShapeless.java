@@ -23,7 +23,6 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     final CraftingBookCategory category;
     final ItemStack result;
     final NonNullList<Ingredient> ingredients;
-
     public BankMachineRecipeShapeless(String string, CraftingBookCategory craftingBookCategory, ItemStack itemStack, NonNullList<Ingredient> nonNullList) {
         this.group = string;
         this.category = craftingBookCategory;
