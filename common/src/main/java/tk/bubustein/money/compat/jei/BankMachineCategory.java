@@ -69,22 +69,4 @@ public class BankMachineCategory implements IRecipeCategory<BankMachineRecipe> {
         builder.addSlot(RecipeIngredientRole.OUTPUT, 95, 18)
                 .addItemStack(recipe.getResultItem(null));
     }
-    /*
-    @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, BankMachineRecipe recipe, IFocusGroup focuses) {
-        List<Ingredient> ingredients = recipe.getIngredients();
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 3; col++) {
-                int index = row * 3 + col;
-                if (index < ingredients.size() && !ingredients.get(index).isEmpty()) {
-                    builder.addSlot(RecipeIngredientRole.INPUT, 1 + col * 18, 1 + row * 18)
-                            .addIngredients(ingredients.get(index));
-                } else {
-                    builder.addSlot(RecipeIngredientRole.INPUT, 1 + col * 18, 1 + row * 18)
-                            .addItemStack(ItemStack.EMPTY);
-                }
-            }
-        }
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 95, 18).addItemStack(recipe.getResultItem(null));
-    }*/
 }
