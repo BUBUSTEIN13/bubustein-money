@@ -6,7 +6,7 @@ import tk.bubustein.money.MoneyMod;
 import java.util.function.Supplier;
 
 public class ModItems {
-    public static void init(){}
+    public static void init(){};
     public static final Supplier<Item> Ecent1 = MoneyExpectPlatform.registerItem("one_ecent",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
     public static final Supplier<Item> Ecent2 = MoneyExpectPlatform.registerItem("two_ecents",
@@ -312,6 +312,30 @@ public class ModItems {
     public static final Supplier<Item> ZARand2 = MoneyExpectPlatform.registerItem("two_za_rand",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
     public static final Supplier<Item> ZARand5 = MoneyExpectPlatform.registerItem("five_za_rand",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+
+    public static final Supplier<Item> TRk1 = MoneyExpectPlatform.registerItem("one_kurus",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> TRk5 = MoneyExpectPlatform.registerItem("five_kurus",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> TRk10 = MoneyExpectPlatform.registerItem("ten_kurus",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> TRk25 = MoneyExpectPlatform.registerItem("twenty_five_kurus",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> TRk50 = MoneyExpectPlatform.registerItem("fifty_kurus",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> TRl1 = MoneyExpectPlatform.registerItem("one_tr_lira",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+
+    public static final Supplier<Item> NZCent10 = MoneyExpectPlatform.registerItem("ten_nz_cents",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> NZCent20 = MoneyExpectPlatform.registerItem("twenty_nz_cents",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> NZCent50 = MoneyExpectPlatform.registerItem("fifty_nz_cents",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> NZD1 = MoneyExpectPlatform.registerItem("one_nz_dollar",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> NZD2 = MoneyExpectPlatform.registerItem("two_nz_dollars",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
 
     public static final Supplier<Item> Euro5 = MoneyExpectPlatform.registerItem("five_euros",
@@ -621,6 +645,30 @@ public class ModItems {
     public static final Supplier<Item> ZARand100 = MoneyExpectPlatform.registerItem("hundred_za_rand",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> ZARand200 = MoneyExpectPlatform.registerItem("two_hundred_za_rand",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+
+    public static final Supplier<Item> TRl5 = MoneyExpectPlatform.registerItem("five_tr_lira",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> TRl10 = MoneyExpectPlatform.registerItem("ten_tr_lira",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> TRl20 = MoneyExpectPlatform.registerItem("twenty_tr_lira",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> TRl50 = MoneyExpectPlatform.registerItem("fifty_tr_lira",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> TRl100 = MoneyExpectPlatform.registerItem("hundred_tr_lira",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> TRl200 = MoneyExpectPlatform.registerItem("two_hundred_tr_lira",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+
+    public static final Supplier<Item> NZD5 = MoneyExpectPlatform.registerItem("five_nz_dollars",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> NZD10 = MoneyExpectPlatform.registerItem("ten_nz_dollars",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> NZD20 = MoneyExpectPlatform.registerItem("twenty_nz_dollars",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> NZD50 = MoneyExpectPlatform.registerItem("fifty_nz_dollars",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> NZD100 = MoneyExpectPlatform.registerItem("hundred_nz_dollars",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
 
     public static final Supplier<Item> B1 = MoneyExpectPlatform.registerItem("un_ban_1900",

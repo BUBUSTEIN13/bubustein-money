@@ -3,7 +3,8 @@ package tk.bubustein.money.recipe;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import tk.bubustein.money.MoneyMod;
 
 public class ModRecipes {
@@ -20,8 +21,7 @@ public class ModRecipes {
         }
     });
     public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShaped>> BANK_MACHINE_SHAPED = SERIALIZERS.register("bank_machine_shaped", () -> BankMachineRecipeShaped.Serializer.INSTANCE);
-    public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShapeless>> BANK_MACHINE_SHAPELESS = SERIALIZERS.register("crafting_shapeless", () -> BankMachineRecipeShapeless.Serializer.INSTANCE);
-
+    public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShapeless>> BANK_MACHINE_SHAPELESS = SERIALIZERS.register("bank_machine_shapeless", () -> BankMachineRecipeShapeless.Serializer.INSTANCE);
     public static void init(){
         SERIALIZERS.register();
         RECIPE_TYPES.register();

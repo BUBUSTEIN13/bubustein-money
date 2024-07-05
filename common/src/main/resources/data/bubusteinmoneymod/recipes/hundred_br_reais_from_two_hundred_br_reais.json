@@ -1,14 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "group": "BRL",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:two_hundred_br_reais"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:two_hundred_br_reais"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "item": "bubusteinmoneymod:hundred_br_reais"
     }
-  ],
-  "result": {
-    "count": 2,
-    "item": "bubusteinmoneymod:hundred_br_reais"
-  }
 }

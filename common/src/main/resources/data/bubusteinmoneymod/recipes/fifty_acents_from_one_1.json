@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:one_adollar"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:fifty_acents",
+        "count": 2
+    }
+}

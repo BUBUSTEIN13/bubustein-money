@@ -1,16 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:zece_bani"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:zece_bani"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:cincizeci_bani"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:cincizeci_bani"
-  }
 }

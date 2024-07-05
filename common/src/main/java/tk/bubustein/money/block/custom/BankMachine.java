@@ -26,7 +26,7 @@ public class BankMachine extends Block {
         super(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).strength(2.5f).requiresCorrectToolForDrops());
     }
     @Override
-    public @NotNull InteractionResult use(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult){
+    public @NotNull InteractionResult use(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult){
         if (!level.isClientSide) {
             MenuRegistry.openExtendedMenu((ServerPlayer) player, blockState.getMenuProvider(level, pos), friendlyByteBuf -> {});
             return InteractionResult.CONSUME;
@@ -35,6 +35,7 @@ public class BankMachine extends Block {
     }
     @Override
     public MenuProvider getMenuProvider(BlockState blockState, Level level, BlockPos blockPos) {
-        return new SimpleMenuProvider((i, inventory, player) -> new BankMachineMenu(i, inventory, ContainerLevelAccess.create(level, blockPos)), TITLE);
+        return new SimpleMenuProvider((i, inventory, player) ->
+                new BankMachineMenu(i, inventory, ContainerLevelAccess.create(level, blockPos)), TITLE);
     }
 }

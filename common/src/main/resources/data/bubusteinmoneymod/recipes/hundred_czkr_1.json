@@ -1,6 +1,5 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "category": "Misc",
+    "type": "bubusteinmoneymod:bank_machine_shaped",
     "pattern": [
         "RGG",
         "RP#",

@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:two_francs"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:one_franc",
+        "count": 2
+    }
+}

@@ -1,17 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:one_br_real"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:one_br_real"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:five_br_reais"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:five_br_reais"
-  }
 }

@@ -9,7 +9,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import tk.bubustein.money.block.ModBlocks;
@@ -32,15 +31,13 @@ public class BankMachineMenu extends AbstractContainerMenu {
     public BankMachineMenu(int i, Inventory inventory) {
         this(i, inventory, ContainerLevelAccess.NULL);
     }
-
     public BankMachineMenu(int i, Inventory inventory, ContainerLevelAccess containerLevelAccess) {
         super(ModMenuTypes.BANK_MACHINE_MENU.get(), i);
         this.craftSlots = new TransientCraftingContainer(this, 3, 3);
         this.resultSlots = new ResultContainer();
         this.access = containerLevelAccess;
         this.player = inventory.player;
-        this.addSlot(new ResultSlot(inventory.player, this.craftSlots, this.resultSlots, 0, 124, 35));
-
+        this.addSlot(new BankMachineResultSlot(inventory.player, this.craftSlots, this.resultSlots, 0, 124, 35));
         int j;
         int k;
         for(j = 0; j < 3; ++j) {
@@ -48,35 +45,29 @@ public class BankMachineMenu extends AbstractContainerMenu {
                 this.addSlot(new Slot(this.craftSlots, k + j * 3, 30 + k * 18, 17 + j * 18));
             }
         }
-
         for(j = 0; j < 3; ++j) {
             for(k = 0; k < 9; ++k) {
                 this.addSlot(new Slot(inventory, k + j * 9 + 9, 8 + k * 18, 84 + j * 18));
             }
         }
-
         for(j = 0; j < 9; ++j) {
             this.addSlot(new Slot(inventory, j, 8 + j * 18, 142));
         }
-
     }
-
     protected static void slotChangedCraftingGrid(AbstractContainerMenu abstractContainerMenu, Level level, Player player, CraftingContainer craftingContainer, ResultContainer resultContainer) {
         if (!level.isClientSide) {
             ServerPlayer serverPlayer = (ServerPlayer)player;
             ItemStack itemStack = ItemStack.EMPTY;
-            Optional<RecipeHolder<BankMachineRecipe>> optional = Objects.requireNonNull(level.getServer()).getRecipeManager().getRecipeFor(ModRecipes.BANK_MACHINE_RECIPE.get(), craftingContainer, level);
+            Optional<BankMachineRecipe> optional = Objects.requireNonNull(level.getServer()).getRecipeManager().getRecipeFor(ModRecipes.BANK_MACHINE_RECIPE.get(), craftingContainer, level);
             if (optional.isPresent()) {
-                RecipeHolder<BankMachineRecipe> recipeHolder = optional.get();
-                BankMachineRecipe craftingRecipe = recipeHolder.value();
-                if (resultContainer.setRecipeUsed(level, serverPlayer, recipeHolder)) {
+                BankMachineRecipe craftingRecipe = optional.get();
+                if (resultContainer.setRecipeUsed(level, serverPlayer, craftingRecipe)) {
                     ItemStack itemStack2 = craftingRecipe.assemble(craftingContainer, level.registryAccess());
                     if (itemStack2.isItemEnabled(level.enabledFeatures())) {
                         itemStack = itemStack2;
                     }
                 }
             }
-
             resultContainer.setItem(0, itemStack);
             abstractContainerMenu.setRemoteSlot(0, itemStack);
             serverPlayer.connection.send(new ClientboundContainerSetSlotPacket(abstractContainerMenu.containerId, abstractContainerMenu.incrementStateId(), 0, itemStack));
@@ -84,22 +75,17 @@ public class BankMachineMenu extends AbstractContainerMenu {
     }
 
     public void slotsChanged(Container container) {
-        this.access.execute((level, blockPos) -> {
-            slotChangedCraftingGrid(this, level, this.player, this.craftSlots, this.resultSlots);
-        });
+        this.access.execute((level, blockPos) -> slotChangedCraftingGrid(this, level, this.player, this.craftSlots, this.resultSlots));
     }
-
     public void removed(Player player) {
         super.removed(player);
         this.access.execute((level, blockPos) -> {
             this.clearContainer(player, this.craftSlots);
         });
     }
-
     public boolean stillValid(Player player) {
         return stillValid(this.access, player, ModBlocks.BANK_MACHINE.get());
     }
-
     public @NotNull ItemStack quickMoveStack(Player player, int i) {
         ItemStack itemStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(i);
@@ -113,7 +99,6 @@ public class BankMachineMenu extends AbstractContainerMenu {
                 if (!this.moveItemStackTo(itemStack2, 10, 46, true)) {
                     return ItemStack.EMPTY;
                 }
-
                 slot.onQuickCraft(itemStack2, itemStack);
             } else if (i >= 10 && i < 46) {
                 if (!this.moveItemStackTo(itemStack2, 1, 10, false)) {
@@ -128,35 +113,22 @@ public class BankMachineMenu extends AbstractContainerMenu {
             } else if (!this.moveItemStackTo(itemStack2, 10, 46, false)) {
                 return ItemStack.EMPTY;
             }
-
             if (itemStack2.isEmpty()) {
                 slot.setByPlayer(ItemStack.EMPTY);
             } else {
                 slot.setChanged();
             }
-
             if (itemStack2.getCount() == itemStack.getCount()) {
                 return ItemStack.EMPTY;
             }
-
             slot.onTake(player, itemStack2);
             if (i == 0) {
                 player.drop(itemStack2, false);
             }
         }
-
         return itemStack;
     }
-
     public boolean canTakeItemForPickAll(ItemStack itemStack, Slot slot) {
         return slot.container != this.resultSlots && super.canTakeItemForPickAll(itemStack, slot);
     }
-
-    public int getResultSlotIndex() {
-        return 0;
-    }
-    public boolean shouldMoveToInventory(int i) {
-        return i != this.getResultSlotIndex();
-    }
-
 }

@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:un_leu"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:cincizeci_bani",
+        "count": 2
+    }
+}

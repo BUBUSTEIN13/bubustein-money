@@ -1,29 +1,28 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "Misc",
-  "pattern": [
-    "CBC",
-    "RPI",
-    "CBC"
-  ],
-  "key": {
-    "R": {
-      "item": "minecraft:redstone"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "CBC",
+        "RPI",
+        "CBC"
+    ],
+    "key": {
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "B": {
+            "item": "minecraft:orange_dye"
+        },
+        "C": {
+            "item": "minecraft:red_dye"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "I": {
+            "item": "minecraft:iron_nugget"
+        }
     },
-    "B": {
-      "item": "minecraft:orange_dye"
-    },
-    "C": {
-      "item": "minecraft:red_dye"
-    },
-    "P": {
-      "item": "minecraft:paper"
-    },
-    "I": {
-      "item": "minecraft:iron_nugget"
+    "result": {
+        "item": "bubusteinmoneymod:five_hundred_ft"
     }
-  },
-  "result": {
-    "item": "bubusteinmoneymod:five_hundred_ft"
-  }
 }

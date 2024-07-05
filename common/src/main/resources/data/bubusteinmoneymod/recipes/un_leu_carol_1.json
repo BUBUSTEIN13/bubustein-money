@@ -1,0 +1,22 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "I#I",
+        "#P#",
+        "I#I"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:gold_ingot"
+        },
+        "P": {
+            "item": "minecraft:emerald"
+        },
+        "I": {
+            "item": "minecraft:iron_nugget"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:un_leu_1900"
+    }
+}

@@ -1,17 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:ten_za_rand"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:ten_za_rand"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:fifty_za_rand"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:fifty_za_rand"
-  }
 }

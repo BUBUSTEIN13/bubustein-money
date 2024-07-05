@@ -1,14 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:hundred_in_rupees"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:hundred_in_rupees"
+        }
+    },
+    "pattern": [
+        "##"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:two_hundred_in_rupees"
     }
-  },
-  "pattern": [
-    "##"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:two_hundred_in_rupees"
-  }
 }
