@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "category": "misc",
     "key": {
         "#": {
             "item": "bubusteinmoneymod:hundred_in_rupees"

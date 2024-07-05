@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeBuilder;
-import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -23,16 +22,16 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
         conversionRecipe(recipeOutput, output, input, string, 1);
     }
     public static void conversionRecipe(RecipeOutput recipeOutput, ItemLike output, ItemLike input, @Nullable String string, int i) {
-        BankMachineRecipeShapelessBuilder.shapeless(RecipeCategory.MISC, output, i).requires(input).group(string).unlockedBy(getHasName(input), has(input)).save(recipeOutput, getConversionRecipeName(output, input));
+        BankMachineRecipeShapelessBuilder.shapeless(output, i).requires(input).group(string).unlockedBy(getHasName(input), has(input)).save(recipeOutput, getConversionRecipeName(output, input));
     }
     public static void fiveItems(RecipeOutput recipeOutput, ItemLike output, ItemLike input) {
-        BankMachineRecipeShapedBuilder.shaped(RecipeCategory.MISC, output).define('#', input).pattern("# #").pattern("###").unlockedBy(getHasName(input), has(input)).save(recipeOutput);
+        BankMachineRecipeShapedBuilder.shaped(output).define('#', input).pattern("# #").pattern("###").unlockedBy(getHasName(input), has(input)).save(recipeOutput);
     }
     public static void twoItems(RecipeOutput recipeOutput, ItemLike output, ItemLike input) {
-        twoItemsBuilder(RecipeCategory.MISC, output, Ingredient.of(input)).unlockedBy(getHasName(input), has(input)).save(recipeOutput);
+        twoItemsBuilder(output, Ingredient.of(input)).unlockedBy(getHasName(input), has(input)).save(recipeOutput);
     }
-    public static @NotNull RecipeBuilder twoItemsBuilder(RecipeCategory recipeCategory, ItemLike output, Ingredient ingredient) {
-        return BankMachineRecipeShapedBuilder.shaped(recipeCategory, output).define('#', ingredient).pattern("##");
+    public static @NotNull RecipeBuilder twoItemsBuilder(ItemLike output, Ingredient ingredient) {
+        return BankMachineRecipeShapedBuilder.shaped(output).define('#', ingredient).pattern("##");
     }
 
     @Override

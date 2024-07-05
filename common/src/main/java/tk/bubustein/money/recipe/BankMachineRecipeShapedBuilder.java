@@ -12,7 +12,6 @@ import net.minecraft.advancements.AdvancementRequirements.Strategy;
 import net.minecraft.advancements.AdvancementRewards.Builder;
 import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
 import net.minecraft.data.recipes.RecipeBuilder;
-import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -25,7 +24,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
-    private final RecipeCategory category;
     private final Item result;
     private final int count;
     private final List<String> rows = Lists.newArrayList();
@@ -34,16 +32,15 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
     @Nullable
     private String group;
     private boolean showNotification = true;
-    public BankMachineRecipeShapedBuilder(RecipeCategory recipeCategory, ItemLike itemLike, int i) {
-        this.category = recipeCategory;
+    public BankMachineRecipeShapedBuilder(ItemLike itemLike, int i) {
         this.result = itemLike.asItem();
         this.count = i;
     }
-    public static BankMachineRecipeShapedBuilder shaped(RecipeCategory recipeCategory, ItemLike itemLike) {
-        return shaped(recipeCategory, itemLike, 1);
+    public static BankMachineRecipeShapedBuilder shaped(ItemLike itemLike) {
+        return shaped(itemLike, 1);
     }
-    public static BankMachineRecipeShapedBuilder shaped(RecipeCategory recipeCategory, ItemLike itemLike, int i) {
-        return new BankMachineRecipeShapedBuilder(recipeCategory, itemLike, i);
+    public static BankMachineRecipeShapedBuilder shaped(ItemLike itemLike, int i) {
+        return new BankMachineRecipeShapedBuilder(itemLike, i);
     }
     public BankMachineRecipeShapedBuilder define(Character character, TagKey<Item> tagKey) {
         return this.define(character, Ingredient.of(tagKey));
@@ -89,8 +86,8 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
         Advancement.Builder builder = recipeOutput.advancement().addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation)).rewards(Builder.recipe(resourceLocation)).requirements(Strategy.OR);
         Objects.requireNonNull(builder);
         this.criteria.forEach(builder::addCriterion);
-        BankMachineRecipeShaped shapedRecipe = new BankMachineRecipeShaped(Objects.requireNonNullElse(this.group, ""), RecipeBuilder.determineBookCategory(this.category), shapedRecipePattern, new ItemStack(this.result, this.count), this.showNotification);
-        recipeOutput.accept(resourceLocation, shapedRecipe, builder.build(resourceLocation.withPrefix("recipes/" + this.category.getFolderName() + "/")));
+        BankMachineRecipeShaped shapedRecipe = new BankMachineRecipeShaped(Objects.requireNonNullElse(this.group, ""), shapedRecipePattern, new ItemStack(this.result, this.count), this.showNotification);
+        recipeOutput.accept(resourceLocation, shapedRecipe, builder.build(resourceLocation.withPrefix("recipes/")));
     }
     private ShapedRecipePattern ensureValid(ResourceLocation resourceLocation) {
         if (this.criteria.isEmpty()) {

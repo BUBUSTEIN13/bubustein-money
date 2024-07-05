@@ -17,26 +17,21 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
     final ShapedRecipePattern pattern;
     final ItemStack result;
     final String group;
-    final CraftingBookCategory category;
     final boolean showNotification;
-    public BankMachineRecipeShaped(String string, CraftingBookCategory craftingBookCategory, ShapedRecipePattern shapedRecipePattern, ItemStack itemStack, boolean bl) {
+    public BankMachineRecipeShaped(String string, ShapedRecipePattern shapedRecipePattern, ItemStack itemStack, boolean bl) {
         this.group = string;
-        this.category = craftingBookCategory;
         this.pattern = shapedRecipePattern;
         this.result = itemStack;
         this.showNotification = bl;
     }
-    public BankMachineRecipeShaped(String string, CraftingBookCategory craftingBookCategory, ShapedRecipePattern shapedRecipePattern, ItemStack itemStack) {
-        this(string, craftingBookCategory, shapedRecipePattern, itemStack, true);
+    public BankMachineRecipeShaped(String string,  ShapedRecipePattern shapedRecipePattern, ItemStack itemStack) {
+        this(string, shapedRecipePattern, itemStack, true);
     }
     public @NotNull RecipeSerializer<?> getSerializer() {
         return ModRecipes.BANK_MACHINE_SHAPED.get();
     }
     public String getGroup() {
         return this.group;
-    }
-    public CraftingBookCategory category() {
-        return this.category;
     }
     public @NotNull ItemStack getResultItem(HolderLookup.Provider provider) {
         return this.result;
@@ -77,9 +72,6 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
         public static final MapCodec<BankMachineRecipeShaped> CODEC =
                 RecordCodecBuilder.mapCodec((instance) -> instance.group(Codec.STRING.optionalFieldOf("group", "")
                         .forGetter((BankMachineRecipeShaped) -> BankMachineRecipeShaped.group),
-                        CraftingBookCategory.CODEC.fieldOf("category")
-                                .orElse(CraftingBookCategory.MISC)
-                                .forGetter((BankMachineRecipeShaped) -> BankMachineRecipeShaped.category),
                         ShapedRecipePattern.MAP_CODEC.forGetter((BankMachineRecipeShaped) -> BankMachineRecipeShaped.pattern),
                         ItemStack.STRICT_CODEC.fieldOf("result").forGetter((BankMachineRecipeShaped) -> BankMachineRecipeShaped.result),
                         Codec.BOOL.optionalFieldOf("show_notification", true).forGetter((BankMachineRecipeShaped) -> BankMachineRecipeShaped.showNotification))
@@ -95,15 +87,13 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
         }
         private static BankMachineRecipeShaped fromNetwork(RegistryFriendlyByteBuf registryFriendlyByteBuf) {
             String string = registryFriendlyByteBuf.readUtf();
-            CraftingBookCategory craftingBookCategory = registryFriendlyByteBuf.readEnum(CraftingBookCategory.class);
             ShapedRecipePattern shapedRecipePattern = ShapedRecipePattern.STREAM_CODEC.decode(registryFriendlyByteBuf);
             ItemStack itemStack = ItemStack.STREAM_CODEC.decode(registryFriendlyByteBuf);
             boolean bl = registryFriendlyByteBuf.readBoolean();
-            return new BankMachineRecipeShaped(string, craftingBookCategory, shapedRecipePattern, itemStack, bl);
+            return new BankMachineRecipeShaped(string, shapedRecipePattern, itemStack, bl);
         }
         private static void toNetwork(RegistryFriendlyByteBuf registryFriendlyByteBuf, BankMachineRecipeShaped shapedRecipe) {
             registryFriendlyByteBuf.writeUtf(shapedRecipe.group);
-            registryFriendlyByteBuf.writeEnum(shapedRecipe.category);
             ShapedRecipePattern.STREAM_CODEC.encode(registryFriendlyByteBuf, shapedRecipe.pattern);
             ItemStack.STREAM_CODEC.encode(registryFriendlyByteBuf, shapedRecipe.result);
             registryFriendlyByteBuf.writeBoolean(shapedRecipe.showNotification);

@@ -20,12 +20,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class BankMachineRecipeShapeless implements BankMachineRecipe {
     final String group;
-    final CraftingBookCategory category;
     final ItemStack result;
     final NonNullList<Ingredient> ingredients;
-    public BankMachineRecipeShapeless(String string, CraftingBookCategory craftingBookCategory, ItemStack itemStack, NonNullList<Ingredient> nonNullList) {
+    public BankMachineRecipeShapeless(String string, ItemStack itemStack, NonNullList<Ingredient> nonNullList) {
         this.group = string;
-        this.category = craftingBookCategory;
         this.result = itemStack;
         this.ingredients = nonNullList;
     }
@@ -34,9 +32,6 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     }
     public String getGroup() {
         return this.group;
-    }
-    public CraftingBookCategory category() {
-        return this.category;
     }
     public @NotNull ItemStack getResultItem(HolderLookup.Provider provider) {
         return this.result;
@@ -71,8 +66,7 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
         public static final Serializer INSTANCE = new Serializer();
         private static final MapCodec<BankMachineRecipeShapeless> CODEC = RecordCodecBuilder.mapCodec((instance) ->
                 instance.group(Codec.STRING.optionalFieldOf("group", "").forGetter((shapelessRecipe) ->
-                        shapelessRecipe.group), CraftingBookCategory.CODEC.fieldOf("category").orElse(CraftingBookCategory.MISC)
-                        .forGetter((shapelessRecipe) -> shapelessRecipe.category),
+                        shapelessRecipe.group),
                         ItemStack.STRICT_CODEC.fieldOf("result").forGetter((shapelessRecipe) -> shapelessRecipe.result),
                         Ingredient.CODEC_NONEMPTY.listOf().fieldOf("ingredients").flatXmap((list) -> {
             Ingredient[] ingredients = list.stream().filter((ingredient) -> !ingredient.isEmpty()).toArray(Ingredient[]::new);
@@ -93,16 +87,14 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
         }
         private static BankMachineRecipeShapeless fromNetwork(RegistryFriendlyByteBuf registryFriendlyByteBuf) {
             String string = registryFriendlyByteBuf.readUtf();
-            CraftingBookCategory craftingBookCategory = registryFriendlyByteBuf.readEnum(CraftingBookCategory.class);
             int i = registryFriendlyByteBuf.readVarInt();
             NonNullList<Ingredient> nonNullList = NonNullList.withSize(i, Ingredient.EMPTY);
             nonNullList.replaceAll((ingredient) -> Ingredient.CONTENTS_STREAM_CODEC.decode(registryFriendlyByteBuf));
             ItemStack itemStack = ItemStack.STREAM_CODEC.decode(registryFriendlyByteBuf);
-            return new BankMachineRecipeShapeless(string, craftingBookCategory, itemStack, nonNullList);
+            return new BankMachineRecipeShapeless(string, itemStack, nonNullList);
         }
         private static void toNetwork(RegistryFriendlyByteBuf registryFriendlyByteBuf, BankMachineRecipeShapeless shapelessRecipe) {
             registryFriendlyByteBuf.writeUtf(shapelessRecipe.group);
-            registryFriendlyByteBuf.writeEnum(shapelessRecipe.category);
             registryFriendlyByteBuf.writeVarInt(shapelessRecipe.ingredients.size());
             for (Ingredient ingredient : shapelessRecipe.ingredients) {
                 Ingredient.CONTENTS_STREAM_CODEC.encode(registryFriendlyByteBuf, ingredient);

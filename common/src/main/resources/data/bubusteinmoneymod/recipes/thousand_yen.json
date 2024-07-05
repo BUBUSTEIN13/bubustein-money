@@ -1,6 +1,5 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
-    "category": "misc",
     "key": {
         "#": {
             "item": "bubusteinmoneymod:five_hundred_yen"
