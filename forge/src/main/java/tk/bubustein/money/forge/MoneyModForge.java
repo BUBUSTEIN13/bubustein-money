@@ -29,7 +29,7 @@ public class MoneyModForge {
     @Mod.EventBusSubscriber(modid = MoneyMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents{
         @SubscribeEvent
-        private static void onClientSetup(FMLClientSetupEvent event){
+        public static void onClientSetup(FMLClientSetupEvent event){
             MenuScreens.register(ModMenuTypes.BANK_MACHINE_MENU.get(), BankMachineScreen::new);
         }
     }
