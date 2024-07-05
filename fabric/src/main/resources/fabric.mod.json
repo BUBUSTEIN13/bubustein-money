@@ -59,5 +59,9 @@
   },
   "suggests": {
     "jei": "*"
+  },
+  "breaks": {
+    "entityculling": "*",
+    "moreculling": "*"
   }
 }
