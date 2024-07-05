@@ -8,18 +8,38 @@
     "BUBUSTEIN"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/bubustein-money"
+    "homepage": "https://bubustein.tk",
+    "issues": "https://www.github.com/bubustein13/bubustein-money/issues"
   },
-  "license": "All Rights Reserved",
+  "license": "GNU AGPL 3.0",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
       "tk.bubustein.money.fabric.MoneyModFabric"
     ],
+    "client":["tk.bubustein.money.fabric.MoneyModClientFabric"],
+    "rei_client": [
+      "tk.bubustein.money.compat.rei.MoneyModREIPlugin"
+    ],
+    "jei_mod_plugin": [
+      "tk.bubustein.money.compat.jei.MoneyModJEIPlugin"
+    ],
     "fabric-datagen": [
-      "tk.bubustein.money.fabric.MoneyModDataGen"
+      "tk.bubustein.money.fabric.data.MoneyModDataGen"
     ]
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.wiki": "https://wiki.bubustein.tk",
+        "modmenu.discord": "https://discord.gg/PrKgF9gNfW",
+        "modmenu.modrinth": "https://modrinth.com/mod/bubustein-money",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/bubustein-money",
+        "modmenu.patreon": "https://patreon.com/bubustein",
+        "modmenu.kofi": "https://ko-fi.com/bubustein"
+      }
+    }
   },
   "mixins": [
     "bubusteinmoneymod.mixins.json",
@@ -27,15 +47,17 @@
   ],
   "depends": {
     "fabric-api": "*",
-    "fabricloader": ">=0.15.10",
+    "fabricloader": ">=0.15.11",
     "minecraft": "1.20.4",
     "architectury": ">=11.1.13"
   },
   "recommends": {
-    "embeddium": "*",
     "ferritecore": "*",
     "modernfix": "*",
     "rei": "*",
     "modmenu": "*"
+  },
+  "suggests": {
+    "jei": "*"
   }
 }

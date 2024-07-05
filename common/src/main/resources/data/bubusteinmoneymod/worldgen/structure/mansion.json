@@ -1,9 +1,8 @@
 {
   "type": "minecraft:jigsaw",
-
   "start_pool": "bubusteinmoneymod:mansion/start_pool",
   "size": 2,
-  "max_distance_from_center": 35,
+  "max_distance_from_center": 100,
   "biomes": "#bubusteinmoneymod:has_structure/mansion",
   "step": "surface_structures",
   "start_height": {
@@ -18,14 +17,14 @@
         {
           "type": "minecraft:pillager",
           "weight": 1,
-          "minCount": 6,
-          "maxCount": 20
+          "minCount": 8,
+          "maxCount": 50
         },
         {
           "type": "minecraft:witch",
           "weight": 1,
-          "minCount": 6,
-          "maxCount": 20
+          "minCount": 8,
+          "maxCount": 50
         }
       ]
     }

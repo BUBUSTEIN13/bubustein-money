@@ -1,6 +1,7 @@
 package tk.bubustein.money.forge;
 
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.eventbus.api.IEventBus;
 import tk.bubustein.money.MoneyMod;
 import tk.bubustein.money.MoneyExpectPlatform;
 import net.minecraftforge.fml.loading.FMLPaths;
@@ -36,5 +37,11 @@ public class MoneyExpectPlatformImpl {
     }
     public static Supplier<PoiType> registerPoiType(String name, Supplier<Set<BlockState>> matchingStates) {
         return POI_TYPES.register(name, () -> new PoiType(matchingStates.get(), 1, 1));
+    }
+    public static void register(IEventBus eventBus){
+        ITEMS.register(eventBus);
+        BLOCKS.register(eventBus);
+        POI_TYPES.register(eventBus);
+        PROFESSIONS.register(eventBus);
     }
 }

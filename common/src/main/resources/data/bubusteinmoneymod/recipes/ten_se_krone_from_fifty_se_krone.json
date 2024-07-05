@@ -1,13 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "SEkr",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:fifty_se_krone"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:fifty_se_krone"
+        }
+    ],
+    "result": {
+        "count": 5,
+        "item": "bubusteinmoneymod:ten_se_krone"
     }
-  ],
-  "result": {
-    "count": 5,
-    "item": "bubusteinmoneymod:ten_se_krone"
-  }
 }

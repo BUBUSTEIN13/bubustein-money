@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:suta_lei_1900"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:cincizeci_lei_1900",
+        "count": 2
+    }
+}

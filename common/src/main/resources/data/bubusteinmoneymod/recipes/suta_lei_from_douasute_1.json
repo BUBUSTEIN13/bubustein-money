@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:doua_sute_lei"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:suta_lei",
+        "count": 2
+    }
+}

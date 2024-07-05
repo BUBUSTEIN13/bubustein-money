@@ -16,6 +16,8 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import org.slf4j.Logger;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
+import tk.bubustein.money.recipe.ModRecipes;
+import tk.bubustein.money.screen.ModMenuTypes;
 import tk.bubustein.money.util.JigsawHelper;
 import tk.bubustein.money.villager.ModVillagers;
 
@@ -35,10 +37,17 @@ public class MoneyMod {
     public static void init() {
         LOGGER.info("[" + MOD_ID + "] Printing money. . . ;)");
         ModItems.init();
+        LOGGER.info("[" + MOD_ID + "] Crafting ATM. . .");
         ModBlocks.init();
+        LOGGER.info("[" + MOD_ID + "] Registering Bank Machine GUI. . .");
+        ModMenuTypes.init();
+        LOGGER.info("[" + MOD_ID + "] Registering Bank Machine Recipes. . .");
+        ModRecipes.init();
+        LOGGER.info("[" + MOD_ID + "] Making new jobs. . .");
         ModVillagers.init();
+        LOGGER.info("[" + MOD_ID + "] Creating Tabs. . .");
         TABS.register();
-        LOGGER.info("[" + MOD_ID + "] The operation has been done successfully");
+        LOGGER.info("[" + MOD_ID + "] The Mod has been loaded successfully");
     }
     public static void registerJigsaws(MinecraftServer server){
         Registry<StructureTemplatePool> templatePoolRegistry = server.registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();

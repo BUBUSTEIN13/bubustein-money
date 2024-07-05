@@ -13,4 +13,3 @@ public class MoneyModFabric implements ModInitializer {
         ServerLifecycleEvents.SERVER_STARTING.register(MoneyMod::registerJigsaws);
     }
 }
-
