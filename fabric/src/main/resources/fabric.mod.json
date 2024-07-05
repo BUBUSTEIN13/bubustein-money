@@ -22,7 +22,7 @@
     "rei_client": [
       "tk.bubustein.money.compat.rei.MoneyModREIPlugin"
     ],
-    "jei_mod_client": [
+    "jei_mod_plugin": [
       "tk.bubustein.money.compat.jei.MoneyModJEIPlugin"
     ],
     "fabric-datagen": [
