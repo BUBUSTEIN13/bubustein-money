@@ -1,13 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "CNYuan",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:hundred_cn_yuan"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:hundred_cn_yuan"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "item": "bubusteinmoneymod:fifty_cn_yuan"
     }
-  ],
-  "result": {
-    "count": 2,
-    "item": "bubusteinmoneymod:fifty_cn_yuan"
-  }
 }

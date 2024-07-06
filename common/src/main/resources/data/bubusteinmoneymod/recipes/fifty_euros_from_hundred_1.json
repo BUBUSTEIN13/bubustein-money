@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:hundred_euros"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:fifty_euros",
+        "count": 2
+    }
+}

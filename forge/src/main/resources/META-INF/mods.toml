@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[40,)"
-license = "All Rights Reserved"
+license = "GNU AGPL 3.0"
 
 [[mods]]
 modId = "bubusteinmoneymod"

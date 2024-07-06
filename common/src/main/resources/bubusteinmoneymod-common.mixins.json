@@ -6,7 +6,7 @@
   "client": [
     "MixinTitleScreen",
     "VillagerProfessionInvoker",
-    "StructureTemplatePoolAcessor",
+    "StructureTemplatePoolAccessor",
     "PoiTypesInvoker"
   ],
   "mixins": [

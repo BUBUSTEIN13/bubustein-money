@@ -1,0 +1,22 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "GDG",
+        "GCG",
+        "GGG"
+    ],
+    "key": {
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "G": {
+            "item": "minecraft:gold_ingot"
+        },
+        "C": {
+            "item": "bubusteinmoneymod:card_classic"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:card_gold"
+    }
+}

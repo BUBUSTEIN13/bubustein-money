@@ -1,13 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "PLN",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:two_hundred_zloty"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:two_hundred_zloty"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "item": "bubusteinmoneymod:hundred_zloty"
     }
-  ],
-  "result": {
-    "count": 2,
-    "item": "bubusteinmoneymod:hundred_zloty"
-  }
 }

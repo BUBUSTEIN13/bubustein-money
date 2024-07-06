@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:half_franc"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:ten_centimes",
+        "count": 5
+    }
+}
