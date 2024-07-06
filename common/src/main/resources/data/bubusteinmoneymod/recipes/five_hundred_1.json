@@ -1,0 +1,40 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "LN#",
+        "RPA",
+        "IGD"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:emerald"
+        },
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "I": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "D": {
+            "item": "minecraft:purple_dye"
+        },
+        "G": {
+            "item": "minecraft:magenta_dye"
+        },
+        "A": {
+            "item": "minecraft:white_stained_glass_pane"
+        },
+        "N": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:five_hundred_euros"
+    }
+}

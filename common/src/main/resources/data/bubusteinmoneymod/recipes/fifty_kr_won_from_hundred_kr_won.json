@@ -1,13 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "Won",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:hundred_kr_won"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:hundred_kr_won"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "item": "bubusteinmoneymod:fifty_kr_won"
     }
-  ],
-  "result": {
-    "count": 2,
-    "item": "bubusteinmoneymod:fifty_kr_won"
-  }
 }

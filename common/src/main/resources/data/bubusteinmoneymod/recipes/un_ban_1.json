@@ -1,0 +1,19 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        " # ",
+        "#P#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_nugget"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:cinci_bani_md"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:un_ban"
+    }
+}

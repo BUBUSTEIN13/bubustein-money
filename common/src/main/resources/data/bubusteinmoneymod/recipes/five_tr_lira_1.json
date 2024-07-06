@@ -1,0 +1,34 @@
+{
+  "type": "bubusteinmoneymod:bank_machine_shaped",
+  "key": {
+    "D": {
+      "item": "minecraft:light_gray_dye"
+    },
+    "G": {
+      "item": "minecraft:gray_dye"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "O": {
+      "item": "minecraft:orange_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "LGG",
+    "OPR",
+    "NDG"
+  ],
+  "result": {
+    "item": "bubusteinmoneymod:five_tr_lira"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:cinci_bani_1900"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:un_ban_1900",
+        "count": 5
+    }
+}

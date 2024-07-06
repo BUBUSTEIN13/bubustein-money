@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:douazeci_lei"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:zece_lei",
+        "count": 2
+    }
+}

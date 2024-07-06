@@ -1,13 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "DKkr",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:five_dk_krone"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:five_dk_krone"
+        }
+    ],
+    "result": {
+        "count": 5,
+        "item": "bubusteinmoneymod:one_dk_krone"
     }
-  ],
-  "result": {
-    "count": 5,
-    "item": "bubusteinmoneymod:one_dk_krone"
-  }
 }

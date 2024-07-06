@@ -1,14 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "group": "MXN",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:fifty_mx_centavos"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:fifty_mx_centavos"
+        }
+    ],
+    "result": {
+        "count": 5,
+        "item": "bubusteinmoneymod:ten_mx_centavos"
     }
-  ],
-  "result": {
-    "count": 5,
-    "item": "bubusteinmoneymod:ten_mx_centavos"
-  }
 }

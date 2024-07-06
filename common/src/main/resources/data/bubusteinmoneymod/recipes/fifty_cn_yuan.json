@@ -1,16 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:ten_cn_yuan"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:ten_cn_yuan"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:fifty_cn_yuan"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:fifty_cn_yuan"
-  }
 }

@@ -1,0 +1,31 @@
+{
+  "type": "bubusteinmoneymod:bank_machine_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:cyan_dye"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "O": {
+      "item": "minecraft:orange_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "OCO",
+    "OPR",
+    "LGO"
+  ],
+  "result": {
+    "item": "bubusteinmoneymod:five_nz_dollars"
+  }
+}

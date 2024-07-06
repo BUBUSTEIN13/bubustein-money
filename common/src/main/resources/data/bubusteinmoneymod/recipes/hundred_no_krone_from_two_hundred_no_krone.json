@@ -1,13 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "NOkr",
-  "ingredients": [
-    {
-      "item": "bubusteinmoneymod:two_hundred_no_krone"
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:two_hundred_no_krone"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "item": "bubusteinmoneymod:hundred_no_krone"
     }
-  ],
-  "result": {
-    "count": 2,
-    "item": "bubusteinmoneymod:hundred_no_krone"
-  }
 }

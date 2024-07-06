@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:two_adollars"
+        }
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:one_adollar",
+        "count": 2
+    }
+}
