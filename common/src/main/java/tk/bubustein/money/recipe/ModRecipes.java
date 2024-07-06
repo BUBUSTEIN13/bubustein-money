@@ -3,6 +3,7 @@ package tk.bubustein.money.recipe;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.Registry;
+import tk.bubustein.money.MoneyExpectPlatform;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import tk.bubustein.money.MoneyMod;
@@ -20,9 +21,12 @@ public class ModRecipes {
             return super.toString();
         }
     });
-    public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShaped>> BANK_MACHINE_SHAPED = SERIALIZERS.register("bank_machine_shaped", () -> BankMachineRecipeShaped.Serializer.INSTANCE);
-    public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShapeless>> BANK_MACHINE_SHAPELESS = SERIALIZERS.register("bank_machine_shapeless", () -> BankMachineRecipeShapeless.Serializer.INSTANCE);
-    public static void init(){
+
+    public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShaped>> BANK_MACHINE_SHAPED = SERIALIZERS.register("bank_machine_shaped", MoneyExpectPlatform::getBankMachineShapedSerializer);
+
+    public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShapeless>> BANK_MACHINE_SHAPELESS = SERIALIZERS.register("bank_machine_shapeless", MoneyExpectPlatform::getBankMachineShapelessSerializer);
+
+    public static void init() {
         SERIALIZERS.register();
         RECIPE_TYPES.register();
     }

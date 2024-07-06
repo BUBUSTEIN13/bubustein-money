@@ -99,7 +99,7 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
     public int getHeight() {
         return this.height;
     }
-    static NonNullList<Ingredient> dissolvePattern(String[] strings, Map<String, Ingredient> map, int i, int j) {
+    protected static NonNullList<Ingredient> dissolvePattern(String[] strings, Map<String, Ingredient> map, int i, int j) {
         NonNullList<Ingredient> nonNullList = NonNullList.withSize(i * j, Ingredient.EMPTY);
         Set<String> set = Sets.newHashSet(map.keySet());
         set.remove(" ");
@@ -121,7 +121,7 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
         }
     }
     @VisibleForTesting
-    static String[] shrink(String... strings) {
+    protected static String[] shrink(String... strings) {
         int i = Integer.MAX_VALUE;
         int j = 0;
         int k = 0;
@@ -167,7 +167,7 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
         }
         return i;
     }
-    static String[] patternFromJson(JsonArray jsonArray) {
+    protected static String[] patternFromJson(JsonArray jsonArray) {
         String[] strings = new String[jsonArray.size()];
         if (strings.length > 3) {
             throw new JsonSyntaxException("Invalid pattern: too many rows, 3 is maximum");
@@ -187,7 +187,7 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
             return strings;
         }
     }
-    static Map<String, Ingredient> keyFromJson(JsonObject jsonObject) {
+    protected static Map<String, Ingredient> keyFromJson(JsonObject jsonObject) {
         Map<String, Ingredient> map = Maps.newHashMap();
 
         for (Map.Entry<String, JsonElement> entry : jsonObject.entrySet()) {
@@ -260,5 +260,6 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
             }
             friendlyByteBuf.writeItem(shapedRecipe.result);
         }
+
     }
 }

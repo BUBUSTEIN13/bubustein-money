@@ -16,6 +16,7 @@ import tk.bubustein.money.recipe.ModRecipes;
 import tk.bubustein.money.screen.ModMenuTypes;
 import tk.bubustein.money.util.JigsawHelper;
 import tk.bubustein.money.villager.ModVillagers;
+
 public class MoneyMod {
     public static final String MOD_ID = "bubusteinmoneymod";
     public static final Logger LOGGER = LogUtils.getLogger();

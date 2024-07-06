@@ -3,6 +3,7 @@ package tk.bubustein.money.forge;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.loading.FMLPaths;
@@ -34,6 +35,12 @@ public class MoneyExpectPlatformImpl {
     }
     public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
         return POI_TYPES.register(name, poiType);
+    }
+    public static RecipeSerializer<ForgeBankMachineRecipeShaped> getBankMachineShapedSerializer() {
+        return ForgeBankMachineRecipeShaped.Serializer.INSTANCE;
+    }
+    public static RecipeSerializer<ForgeBankMachineRecipeShapeless> getBankMachineShapelessSerializer() {
+        return ForgeBankMachineRecipeShapeless.Serializer.INSTANCE;
     }
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

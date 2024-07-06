@@ -34,6 +34,7 @@ public class MoneyModForge {
     public void onServerAboutToStartEvent(ServerAboutToStartEvent event) {
         MoneyMod.registerJigsaws(event.getServer());
     }
+
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ModVillagers.fillTradeData();
