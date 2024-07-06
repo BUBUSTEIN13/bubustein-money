@@ -78,7 +78,7 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
             } else if (nonNullList.size() > 9) {
                 throw new JsonParseException("Too many ingredients for shapeless recipe");
             } else {
-                ItemStack itemStack = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "result"));
+                ItemStack itemStack = BankMachineRecipeShaped.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "result"));
                 return new BankMachineRecipeShapeless(resourceLocation, string, itemStack, nonNullList);
             }
         }
