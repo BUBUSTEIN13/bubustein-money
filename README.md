@@ -35,7 +35,7 @@
 
 ### P.S. The Dark GUI isn't included in this mod ;)
 
-### 💶 All Currencies: EUR, USD, GBP, CAD, RON, ROL(1900-1906), MDL, CHF, AUD, JPY, BGN, CZK, NOK, DKK, SEK, HUF, PLN, RSD, ISK, CNY, INR, KRW, BRL, MXN, ZAR.
+### 💶 All Currencies: EUR, USD, GBP, CAD, RON, ROL(1900-1906), MDL, CHF, AUD, JPY, BGN, CZK, NOK, DKK, SEK, HUF, PLN, RSD, ISK, CNY, INR, KRW, BRL, MXN, ZAR, TRY, NZD.
 
 ## Compatible Versions
 ### ✅-> is available <br>

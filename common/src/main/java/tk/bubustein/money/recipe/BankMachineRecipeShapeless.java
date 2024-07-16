@@ -22,21 +22,17 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     final String group;
     final ItemStack result;
     final NonNullList<Ingredient> ingredients;
-
     public BankMachineRecipeShapeless(String string, ItemStack itemStack, NonNullList<Ingredient> nonNullList) {
         this.group = string;
         this.result = itemStack;
         this.ingredients = nonNullList;
     }
-
     public @NotNull RecipeSerializer<?> getSerializer() {
         return ModRecipes.BANK_MACHINE_SHAPELESS.get();
     }
-
     public @NotNull String getGroup() {
         return this.group;
     }
-
     @Override
     public boolean isShapeless() {
         return true;
@@ -44,15 +40,12 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     public @NotNull ItemStack getResultItem(HolderLookup.Provider provider) {
         return this.result;
     }
-
     public @NotNull NonNullList<Ingredient> getIngredients() {
         return this.ingredients;
     }
-
     public boolean matches(CraftingContainer craftingContainer, Level level) {
         StackedContents stackedContents = new StackedContents();
         int i = 0;
-
         for(int j = 0; j < craftingContainer.getContainerSize(); ++j) {
             ItemStack itemStack = craftingContainer.getItem(j);
             if (!itemStack.isEmpty()) {
@@ -69,14 +62,12 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
             return craftingInput.size() == 1 && this.ingredients.size() == 1 ? ((Ingredient)this.ingredients.getFirst()).test(craftingInput.getItem(0)) : craftingInput.stackedContents().canCraft(this, (IntList)null);
         }
     }
-
     public ItemStack assemble(CraftingInput craftingInput, HolderLookup.Provider provider) {
         return this.result.copy();
     }
     public boolean canCraftInDimensions(int i, int j) {
         return i * j >= this.ingredients.size();
     }
-
     public static class Serializer implements RecipeSerializer<BankMachineRecipeShapeless> {
         public static final Serializer INSTANCE = new Serializer();
         private static final MapCodec<BankMachineRecipeShapeless> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(Codec.STRING.optionalFieldOf("group", "").forGetter((shapelessRecipe) -> shapelessRecipe.group),
@@ -92,15 +83,12 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
 
         public Serializer() {
         }
-
         public @NotNull MapCodec<BankMachineRecipeShapeless> codec() {
             return CODEC;
         }
-
-        public StreamCodec<RegistryFriendlyByteBuf, BankMachineRecipeShapeless> streamCodec() {
+        public @NotNull StreamCodec<RegistryFriendlyByteBuf, BankMachineRecipeShapeless> streamCodec() {
             return STREAM_CODEC;
         }
-
         private static BankMachineRecipeShapeless fromNetwork(RegistryFriendlyByteBuf registryFriendlyByteBuf) {
             String string = registryFriendlyByteBuf.readUtf();
             int i = registryFriendlyByteBuf.readVarInt();
