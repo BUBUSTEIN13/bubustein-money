@@ -9,7 +9,7 @@ public class MoneyModFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         MoneyMod.init();
-        ModVillagers.fillTradeData();
+        ServerLifecycleEvents.SERVER_STARTING.register(ModVillagers::fillTradeData);
         ServerLifecycleEvents.SERVER_STARTING.register(MoneyMod::registerJigsaws);
     }
 }

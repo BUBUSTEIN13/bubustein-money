@@ -4,7 +4,14 @@ import com.google.common.collect.ImmutableSet;
 import dev.architectury.registry.level.entity.trade.SimpleTrade;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.level.block.Blocks;
 import tk.bubustein.money.MoneyExpectPlatform;
@@ -16,8 +23,12 @@ import net.minecraft.world.item.Items;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.mixin.PoiTypesInvoker;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class ModVillagers {
     public static void init(){}
@@ -28,7 +39,13 @@ public class ModVillagers {
     public static final Supplier<VillagerProfession> EXCHANGER = MoneyExpectPlatform.registerProfession("exchanger",
             () -> new VillagerProfession("exchanger", holder -> holder.value().equals(EXCHANGER_POI.get()), holder -> holder.value().equals(EXCHANGER_POI.get()), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LIBRARIAN));
 
-    public static void fillTradeData() {
+    public static void fillTradeData(MinecraftServer server) {
+            RegistryAccess registryAccess = server.registryAccess();
+            Registry<Enchantment> enchantmentRegistry = registryAccess.registryOrThrow(Registries.ENCHANTMENT);
+            Holder<Enchantment> unbreakingEnchantmentHolder = enchantmentRegistry.getHolderOrThrow(Enchantments.UNBREAKING);
+            ItemStack enchantedPickaxe = new ItemStack(Items.NETHERITE_PICKAXE);
+            enchantedPickaxe.enchant(unbreakingEnchantmentHolder, 3);
+
         VillagerTrades.ItemListing[][] bankerTrades = {
                 // Level 1
                 {
@@ -51,6 +68,7 @@ public class ModVillagers {
                 },
                 // Level 5
                 {
+                        new SimpleTrade(new ItemCost(ModItems.L12.get(), 1), Optional.empty(), enchantedPickaxe,2,23,0.92f),
                         new SimpleTrade(new ItemCost(Items.EMERALD, 26), Optional.of(new ItemCost(Blocks.EMERALD_BLOCK, 7)), new ItemStack(ModItems.L50.get(), 1), 2, 30, 0.9f)
                 }
         };
