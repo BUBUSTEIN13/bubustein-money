@@ -8,13 +8,11 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
-import net.neoforged.neoforge.event.server.ServerLifecycleEvent;
 import tk.bubustein.money.MoneyMod;
 import net.neoforged.bus.api.IEventBus;
 import tk.bubustein.money.screen.BankMachineScreen;
 import tk.bubustein.money.screen.ModMenuTypes;
 import tk.bubustein.money.villager.ModVillagers;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import java.util.HashMap;
 
 @Mod(MoneyMod.MOD_ID)
@@ -40,5 +38,4 @@ public class MoneyModNeoForge {
             event.register(ModMenuTypes.BANK_MACHINE_MENU.get(), BankMachineScreen::new);
         }
     }
-
 }

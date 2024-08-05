@@ -2,7 +2,7 @@ plugins {
     id "io.github.goooler.shadow" version "8.1.8"
 }
 allprojects {
-    archivesBaseName = "${rootProject.mod_id}-fabric-mc${rootProject.minecraft_version}"
+   archivesBaseName = "${rootProject.mod_id}-fabric-mc${rootProject.minecraft_version}"
 }
 architectury {
     platformSetupLoomIde()
@@ -87,7 +87,7 @@ components.java {
 publishing {
     publications {
         mavenFabric(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
+            artifactId = rootProject.mod_id + "-" + project.name
             from components.java
         }
     }
