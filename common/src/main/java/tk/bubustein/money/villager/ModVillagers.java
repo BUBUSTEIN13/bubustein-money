@@ -108,15 +108,15 @@ public class ModVillagers {
         VillagerTrades.ItemListing[][] bankerTrades = {
                 // Level 1
                 {
-                    new SimpleTrade(new ItemCost(ModItems.Euro5.get(), 10), Optional.of(new ItemCost(Items.LAPIS_LAZULI, 1)), new ItemStack(Items.EMERALD, 1), 12, 3, 0.1f),
-                    new SimpleTrade(new ItemCost(ModItems.Pound5.get(), 10), Optional.empty(), new ItemStack(Items.EMERALD, 1), 12, 3, 0.1f),
-                    new SimpleTrade(new ItemCost(ModItems.Dollar5.get(), 10), Optional.of(new ItemCost(Items.LAPIS_LAZULI, 1)), new ItemStack(Items.EMERALD, 1), 12, 3, 0.1f)
+                    new SimpleTrade(new ItemCost(ModItems.Euro5.get(), 10), Optional.of(new ItemCost(Items.LAPIS_LAZULI, 1)), new ItemStack(Items.EMERALD, 1), 12, 2, 0.1f),
+                    new SimpleTrade(new ItemCost(ModItems.Pound5.get(), 10), Optional.empty(), new ItemStack(Items.EMERALD, 1), 12, 2, 0.1f),
+                    new SimpleTrade(new ItemCost(ModItems.Dollar5.get(), 10), Optional.of(new ItemCost(Items.LAPIS_LAZULI, 1)), new ItemStack(Items.EMERALD, 1), 12, 2, 0.1f)
                 },
                 // Level 2
                 {
-                    new SimpleTrade(new ItemCost(Items.EMERALD, 10), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Pound50.get(), 2), 8, 5, 0.2f),
-                    new SimpleTrade(new ItemCost(Items.EMERALD, 10), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Dollar100.get(), 1), 8, 6, 0.2f),
-                    new SimpleTrade(new ItemCost(Items.EMERALD, 26), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Euro50.get(), 5), 8, 7, 0.2f)
+                    new SimpleTrade(new ItemCost(Items.EMERALD, 10), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Pound50.get(), 2), 8, 4, 0.2f),
+                    new SimpleTrade(new ItemCost(Items.EMERALD, 10), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Dollar100.get(), 1), 8, 4, 0.2f),
+                    new SimpleTrade(new ItemCost(Items.EMERALD, 26), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Euro50.get(), 5), 8, 4, 0.2f)
                 },
                 // Level 3
                 {
