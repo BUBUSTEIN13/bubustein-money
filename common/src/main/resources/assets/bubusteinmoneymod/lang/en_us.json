@@ -344,6 +344,7 @@
   "item.bubusteinmoneymod.card_classic": "Visa Classic",
   "item.bubusteinmoneymod.card_gold": "Visa Gold",
   "item.bubusteinmoneymod.card_steel": "Visa Steel",
+  "item.bubusteinmoneymod.special_paper":"Special Paper",
 
   "block.bubusteinmoneymod.atm": "ATM | Bancomat",
   "block.bubusteinmoneymod.bank_machine": "Bank Machine",

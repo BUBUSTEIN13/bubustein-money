@@ -18,6 +18,8 @@ public class MoneyModelDataGen extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator){
         /*
+        itemModelGenerator.generateFlatItem(ModItems.SpecialPaper.get(), ModelTemplates.FLAT_ITEM);
+
         itemModelGenerator.generateFlatItem(ModItems.NZCent10.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.NZCent20.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.NZCent50.get(), ModelTemplates.FLAT_ITEM);

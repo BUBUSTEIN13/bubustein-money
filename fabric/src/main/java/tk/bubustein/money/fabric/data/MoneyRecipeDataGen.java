@@ -37,6 +37,32 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(RecipeOutput exporter) {
+        BankMachineRecipeShapedBuilder.shaped(ModItems.SpecialPaper.get(),1)
+                .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
+                .pattern("RLG")
+                .pattern("APG")
+                .pattern("WWG")
+                .define('P', Items.PAPER)
+                .define('G', Items.GOLD_NUGGET)
+                .define('R', Items.REDSTONE)
+                .define('L', Items.LAPIS_LAZULI)
+                .define('A', Items.LIGHT_GRAY_DYE)
+                .define('W', Items.WHITE_DYE)
+                .save(exporter);
+/*
+        BankMachineRecipeShapedBuilder.shaped(ModItems.L12.get(),1)
+                .pattern("GH")
+                .pattern("##")
+                .define('#', ModItems.L5.get())
+                .define('G', ModItems.L2.get())
+                .define('H', ModItems.B50.get())
+                .unlockedBy(getHasName(ModItems.L5.get()), has(ModItems.L5.get()))
+                .save(exporter);
+        BankMachineRecipeShapedBuilder.shaped(ModItems.L5.get(),5).pattern("#G")
+                .define('#', ModItems.L25.get())
+                .define('G', Items.STICK)
+                .unlockedBy(getHasName(ModItems.L25.get()), has(ModItems.L25.get()))
+                .save(exporter);
 
         BankMachineRecipeShapedBuilder.shaped(ModItems.TRl5.get(), 1)
                 .pattern("LGG")
@@ -63,7 +89,6 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
                 .define('R', Items.REDSTONE)
                 .define('G', Items.GOLD_NUGGET)
                 .save(exporter);
-        /*
         conversionRecipe(exporter, ModItems.TRl100.get(), ModItems.TRl200.get(), "",2);
         conversionRecipe(exporter, ModItems.TRl50.get(), ModItems.TRl100.get(), "",2);
         conversionRecipe(exporter, ModItems.TRl10.get(), ModItems.TRl50.get(), "", 5);
