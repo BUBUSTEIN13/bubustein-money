@@ -486,7 +486,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> DKkr500 = MoneyExpectPlatform.registerItem("five_hundred_dk_krone",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
-
     public static final Supplier<Item> DKkr1000 = MoneyExpectPlatform.registerItem("thousand_dk_krone",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
 
