@@ -38,6 +38,6 @@ side = "BOTH"
 [[dependencies.bubusteinmoneymod]]
 modId = "architectury"
 type = "required"
-versionRange = "[13.0.2,)"
+versionRange = "[13.0.3,)"
 ordering = "NONE"
 side = "BOTH"
