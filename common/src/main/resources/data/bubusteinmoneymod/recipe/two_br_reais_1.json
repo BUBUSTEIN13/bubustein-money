@@ -7,7 +7,7 @@
     ],
     "key": {
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "G": {
             "item": "minecraft:gold_ingot"
