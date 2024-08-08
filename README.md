@@ -2,7 +2,7 @@
 [![Roleplay](https://wsrv.nl/?url=https%3A%2F%2Fus-east-1.tixte.net%2Fuploads%2Fbubustein.tixte.co%2Froleplay_vector.svg&n=-1)](https://modrinth.com/modpack/bubustein)
 [![Vanilla +](https://wsrv.nl/?url=https%3A%2F%2Fus-east-1.tixte.net%2Fuploads%2Fbubustein.tixte.co%2Fvanilla1_vector.svg&n=-1)](https://modrinth.com/modpack/bubusteins-vanilla)
 
-# Bubustein's Money Mod 
+# Bubustein's Money Mod
 
 ### Ever wish Minecraft had a money mod? Search no further!
 
@@ -13,7 +13,7 @@
 <a href="https://modrinth.com/mod/bubustein-money"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Favailable%2Fmodrinth_vector.svg&n=-1"></a>
 
 
-### You now have Bubustein's Money Mod, which contains <u>US Dollars, Euros, Pound sterling, Canadian dollars, and more.</u> Even an <u>ATM</u> is available where emeralds can be converted into Currency to be used with other players. You can resume using the village's trading hall because it works in reverse.
+**You now have Bubustein's Money Mod, which contains <u>US Dollars, Euros, Pound sterling, Canadian dollars, and more.</u> Even an <u>ATM</u> (soon) is available where you can deposit your cash into a bank account. It works in reverse! <u>Banker and Exchanger villager professions</u> are also important where emeralds can be converted into Currency to be used with other players. You can resume using the village's trading hall because it works in reverse. Also, you can get some OP items from Banker since x.0.9!**
 
 ### If you have suggestions or if you found an issue, don't hesitate to send/report them on my <u>Github</u> repository!
 
@@ -33,7 +33,8 @@
 
 ![](https://cdn.modrinth.com/data/QzlWq3M9/images/14433fa779767c43b99a1937a75664a069ebb526.png)
 
-### P.S. The Dark GUI isn't included in this mod ;)
+**P.S. The Dark GUI isn't included in this mod, you have to download the resource pack
+-> [https://modrinth.com/resourcepack/bubustein-dark-textures](https://modrinth.com/resourcepack/bubustein-dark-textures)**
 
 ### 💶 All Currencies: EUR, USD, GBP, CAD, RON, ROL(1900-1906), MDL, CHF, AUD, JPY, BGN, CZK, NOK, DKK, SEK, HUF, PLN, RSD, ISK, CNY, INR, KRW, BRL, MXN, ZAR, TRY, NZD.
 
@@ -160,9 +161,22 @@ Now you can craft for example from 5 Euro to 10 Euro using Crafting Table, <br> 
      </td>
      <td>x.0.8</td>
    </tr>
+    <tr>
+    <td><p>???<sup>th</sup> September 2024</p></td>
+    <td>Removed some recipes. Added Special Paper. The bank machine recipe of first banknote of every currency has changed,<br>
+        from now you need Special Paper. Restructured villager trades. The Banker has new trades USD for diamond and netherite ingot,<br>
+        and ROL (1900) for enchanted armor and tools. The Exchanger trades are now restructured. <br>
+        Level 1 - every European currency + USD change for EUR, Level 2 - reverse, Level 3 - every non-european currency change for USD/GBP<br>
+        Level 4 - reverse, Level 5 - ROL (1900) change for EUR and reverse. The mansion has more witches and pillagers than in the<br> previous
+        version. <b>You need to backup your worlds before installing x.0.9!</b>
+</td>
+    <td>x.0.9</td>
+</tr>
 </table> 
 
-### Your feedback counts. Send your feedback about this mod here: [https://forms.gle/H3Q71W7YJdocQrSh7](https://forms.gle/H3Q71W7YJdocQrSh7)
+### Be our HERO! Apply for Beta-Tester and help us to beat the "dragons".
+**here** [https://forms.gle/nkQWZdhY35XHMFWU9](https://forms.gle/nkQWZdhY35XHMFWU9)
+You must join on my discord server before applying.
 
 ## <b>MODPACKS</b>
 ### You may use BUBUSTEIN's Money Mod in your modpack only if you upload your modpack only on Modrinth and give credit. You AREN'T ALLOWED to upload your modpack to any site other than MODRINTH.
