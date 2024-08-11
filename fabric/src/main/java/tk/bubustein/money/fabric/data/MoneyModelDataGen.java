@@ -17,7 +17,20 @@ public class MoneyModelDataGen extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator){
-        /*
+         /*
+        itemModelGenerator.generateFlatItem(ModItems.PHS1.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHS5.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHS25.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP1.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP5.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP10.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP20.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP50.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP100.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP200.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP500.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.PHP1000.get(), ModelTemplates.FLAT_ITEM);
+
         itemModelGenerator.generateFlatItem(ModItems.SpecialPaper.get(), ModelTemplates.FLAT_ITEM);
 
         itemModelGenerator.generateFlatItem(ModItems.NZCent10.get(), ModelTemplates.FLAT_ITEM);

@@ -37,6 +37,36 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(RecipeOutput exporter) {
+        /*
+        conversionRecipe(exporter, ModItems.PHP500.get(), ModItems.PHP1000.get(), "", 2);
+        conversionRecipe(exporter, ModItems.PHP100.get(), ModItems.PHP500.get(), "",5);
+        conversionRecipe(exporter, ModItems.PHP100.get(), ModItems.PHP200.get(), "", 2);
+        conversionRecipe(exporter, ModItems.PHP50.get(), ModItems.PHP100.get(), "", 2);
+        conversionRecipe(exporter, ModItems.PHP10.get(), ModItems.PHP50.get(), "", 5);
+        conversionRecipe(exporter, ModItems.PHP10.get(), ModItems.PHP20.get(), "", 2);
+        conversionRecipe(exporter, ModItems.PHP5.get(), ModItems.PHP10.get(), "", 2);
+        conversionRecipe(exporter, ModItems.PHP1.get(), ModItems.PHP5.get(), "", 5);
+        conversionRecipe(exporter, ModItems.PHS25.get(), ModItems.PHP1.get(), "", 4);
+        conversionRecipe(exporter, ModItems.PHS5.get(), ModItems.PHS25.get(), "", 5);
+        conversionRecipe(exporter, ModItems.PHS1.get(), ModItems.PHS5.get(), "", 5);
+
+        fiveItems(exporter, ModItems.PHS5.get(), ModItems.PHS1.get());
+        fiveItems(exporter, ModItems.PHS25.get(), ModItems.PHS5.get());
+        BankMachineRecipeShapedBuilder.shaped(ModItems.PHP1.get())
+                .define('#', ModItems.PHS25.get())
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy(getHasName(ModItems.PHS25.get()), has(ModItems.PHS25.get()))
+                .save(exporter);
+        fiveItems(exporter, ModItems.PHP5.get(), ModItems.PHP1.get());
+        twoItems(exporter, ModItems.PHP10.get(), ModItems.PHP5.get());
+        twoItems(exporter, ModItems.PHP20.get(), ModItems.PHP10.get());
+        fiveItems(exporter, ModItems.PHP50.get(), ModItems.PHP10.get());
+        twoItems(exporter, ModItems.PHP100.get(), ModItems.PHP50.get());
+        twoItems(exporter, ModItems.PHP200.get(), ModItems.PHP100.get());
+        fiveItems(exporter, ModItems.PHP500.get(), ModItems.PHP100.get());
+        twoItems(exporter, ModItems.PHP1000.get(), ModItems.PHP500.get());
+
         BankMachineRecipeShapedBuilder.shaped(ModItems.SpecialPaper.get(),1)
                 .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
                 .pattern("RLG")
@@ -49,7 +79,7 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
                 .define('A', Items.LIGHT_GRAY_DYE)
                 .define('W', Items.WHITE_DYE)
                 .save(exporter);
-/*
+
         BankMachineRecipeShapedBuilder.shaped(ModItems.L12.get(),1)
                 .pattern("GH")
                 .pattern("##")

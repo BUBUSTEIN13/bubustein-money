@@ -1,0 +1,12 @@
+{
+  "type": "bubusteinmoneymod:bank_machine_shapeless",
+  "ingredients": [
+    {
+      "item": "bubusteinmoneymod:twenty_five_ph_sentimo"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "bubusteinmoneymod:five_ph_sentimo"
+  }
+}

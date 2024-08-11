@@ -6,6 +6,13 @@ import tk.bubustein.money.MoneyMod;
 import java.util.function.Supplier;
 public class ModItems {
     public static void init(){};
+    /*
+     * ////////////////////////////////////////////////////
+     * //////////////// COINS TAB ///////////////////////
+     * /////////////// BUBUSTEIN's MONEY MOD //////////////
+     * ////////////////////////////////////////////////////
+     * ////////////////////////////////////////////////////
+     * */
     public static final Supplier<Item> Ecent1 = MoneyExpectPlatform.registerItem("one_ecent",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
     public static final Supplier<Item> Ecent2 = MoneyExpectPlatform.registerItem("two_ecents",
@@ -330,7 +337,25 @@ public class ModItems {
     public static final Supplier<Item> NZD2 = MoneyExpectPlatform.registerItem("two_nz_dollars",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
 
-
+    public static final Supplier<Item> PHS1 = MoneyExpectPlatform.registerItem("one_ph_sentimo",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHS5 = MoneyExpectPlatform.registerItem("five_ph_sentimo",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHS25 = MoneyExpectPlatform.registerItem("twenty_five_ph_sentimo",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHP1 = MoneyExpectPlatform.registerItem("one_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHP5 = MoneyExpectPlatform.registerItem("five_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHP10 = MoneyExpectPlatform.registerItem("ten_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.COINS)));
+    /*
+     * ////////////////////////////////////////////////////
+     * //////////////// BANKNOTES TAB ///////////////////////
+     * /////////////// BUBUSTEIN's MONEY MOD //////////////
+     * ////////////////////////////////////////////////////
+     * ////////////////////////////////////////////////////
+     * */
     public static final Supplier<Item> Euro5 = MoneyExpectPlatform.registerItem("five_euros",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> Euro10 = MoneyExpectPlatform.registerItem("ten_euros",
@@ -649,6 +674,25 @@ public class ModItems {
     public static final Supplier<Item> NZD100 = MoneyExpectPlatform.registerItem("hundred_nz_dollars",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
 
+    public static final Supplier<Item> PHP20 = MoneyExpectPlatform.registerItem("twenty_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP50 = MoneyExpectPlatform.registerItem("fifty_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP100 = MoneyExpectPlatform.registerItem("hundred_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP200 = MoneyExpectPlatform.registerItem("two_hundred_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP500 = MoneyExpectPlatform.registerItem("five_hundred_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP1000 = MoneyExpectPlatform.registerItem("thousand_ph_piso",
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.BANKNOTES)));
+    /*
+    * ////////////////////////////////////////////////////
+    * //////////////// SPECIAL TAB ///////////////////////
+    * /////////////// BUBUSTEIN's MONEY MOD //////////////
+    * ////////////////////////////////////////////////////
+    * ////////////////////////////////////////////////////
+    * */
     public static final Supplier<Item> B1 = MoneyExpectPlatform.registerItem("un_ban_1900",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
     public static final Supplier<Item> B2 = MoneyExpectPlatform.registerItem("doi_bani_1900",
@@ -686,5 +730,4 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
     public static final Supplier<Item> SpecialPaper = MoneyExpectPlatform.registerItem("special_paper",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
-
 }
