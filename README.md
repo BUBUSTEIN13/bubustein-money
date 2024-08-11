@@ -168,7 +168,8 @@ Now you can craft for example from 5 Euro to 10 Euro using Crafting Table, <br> 
         and ROL (1900) for enchanted armor and tools. The Exchanger trades are now restructured. <br>
         Level 1 - every European currency + USD change for EUR, Level 2 - reverse, Level 3 - every non-european currency change for USD/GBP<br>
         Level 4 - reverse, Level 5 - ROL (1900) change for EUR and reverse. The mansion has more witches and pillagers than in the<br> previous
-        version. <b>You need to backup your worlds before installing x.0.9!</b>
+        version. Added Philippines Piso. Modified some textures.<br>
+        <b>You need to backup your worlds before installing x.0.9!</b>
 </td>
     <td>x.0.9</td>
 </tr>
