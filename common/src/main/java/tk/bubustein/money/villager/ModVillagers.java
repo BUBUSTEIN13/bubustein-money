@@ -114,9 +114,9 @@ public class ModVillagers {
                 },
                 // Level 2
                 {
-                    new SimpleTrade(new ItemCost(Items.EMERALD, 10), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Pound50.get(), 2), 8, 4, 0.2f),
-                    new SimpleTrade(new ItemCost(Items.EMERALD, 10), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Dollar100.get(), 1), 8, 4, 0.2f),
-                    new SimpleTrade(new ItemCost(Items.EMERALD, 26), Optional.of(new ItemCost(Items.PAPER, 1)), new ItemStack(ModItems.Euro50.get(), 5), 8, 4, 0.2f)
+                    new SimpleTrade(new ItemCost(Items.EMERALD, 10), Optional.of(new ItemCost(ModItems.SpecialPaper.get(), 1)), new ItemStack(ModItems.Pound50.get(), 2), 8, 4, 0.2f),
+                    new SimpleTrade(new ItemCost(Items.EMERALD, 10), Optional.of(new ItemCost(ModItems.SpecialPaper.get(), 1)), new ItemStack(ModItems.Dollar100.get(), 1), 8, 4, 0.2f),
+                    new SimpleTrade(new ItemCost(Items.EMERALD, 26), Optional.of(new ItemCost(ModItems.SpecialPaper.get(), 1)), new ItemStack(ModItems.Euro50.get(), 5), 8, 4, 0.2f)
                 },
                 // Level 3
                 {
