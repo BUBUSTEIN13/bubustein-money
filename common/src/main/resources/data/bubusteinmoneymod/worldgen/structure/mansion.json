@@ -17,14 +17,14 @@
         {
           "type": "minecraft:pillager",
           "weight": 1,
-          "minCount": 8,
-          "maxCount": 50
+          "minCount": 30,
+          "maxCount": 100
         },
         {
           "type": "minecraft:witch",
           "weight": 1,
-          "minCount": 8,
-          "maxCount": 50
+          "minCount": 30,
+          "maxCount": 55
         }
       ]
     }
