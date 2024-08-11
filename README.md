@@ -36,7 +36,7 @@
 **P.S. The Dark GUI isn't included in this mod, you have to download the resource pack
 -> [https://modrinth.com/resourcepack/bubustein-dark-textures](https://modrinth.com/resourcepack/bubustein-dark-textures)**
 
-### 💶 All Currencies: EUR, USD, GBP, CAD, RON, ROL(1900-1906), MDL, CHF, AUD, JPY, BGN, CZK, NOK, DKK, SEK, HUF, PLN, RSD, ISK, CNY, INR, KRW, BRL, MXN, ZAR, TRY, NZD.
+### 💶 All Currencies: EUR, USD, GBP, CAD, RON, ROL(1900-1906), MDL, CHF, AUD, JPY, BGN, CZK, NOK, DKK, SEK, HUF, PLN, RSD, ISK, CNY, INR, KRW, BRL, MXN, ZAR, TRY, NZD, PHP.
 
 ## Compatible Versions
 ### ✅-> is available <br>
