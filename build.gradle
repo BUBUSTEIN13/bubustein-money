@@ -15,14 +15,18 @@ subprojects {
         mappings loom.officialMojangMappings()
     }
 }
+def isSnapshot = rootProject.mod_version.toString().contains("SNAPSHOT")
+def isPreRelease = rootProject.mod_version.toString().contains("PRE")
+def isReleaseCandidate = rootProject.mod_version.toString().contains("RC")
 allprojects {
     apply plugin: "java"
     apply plugin: "architectury-plugin"
     apply plugin: "maven-publish"
     base {
-        archivesName = rootProject.archives_base_name
+        archivesName = rootProject.mod_id
     }
-    version = rootProject.mod_version
+    if(isSnapshot || isPreRelease || isReleaseCandidate) version = "${rootProject.mod_version}-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
+    else version = rootProject.mod_version
     group = rootProject.maven_group
     tasks.withType(JavaCompile).configureEach {
         options.encoding = "UTF-8"

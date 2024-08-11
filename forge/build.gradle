@@ -1,5 +1,5 @@
 plugins {
-    id "io.github.goooler.shadow" version "8.1.8"
+    id 'com.gradleup.shadow' version '8.3.0'
 }
 allprojects {
     archivesBaseName = "${rootProject.mod_id}-forge-mc${rootProject.minecraft_version}"
@@ -9,7 +9,7 @@ architectury {
     forge()
 }
 repositories {
-    maven { url "https://maven.shedaniel.me" }
+    maven { url = "https://maven.shedaniel.me" }
     maven {
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
@@ -76,7 +76,7 @@ components.java {
 publishing {
     publications {
         mavenForge(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
+            artifactId = rootProject.mod_id + "-" + project.name
             from components.java
         }
     }
