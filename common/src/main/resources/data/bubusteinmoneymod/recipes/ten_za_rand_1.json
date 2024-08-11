@@ -1,8 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "DDN",
+        "LPG",
+        "LRN"
+    ],
     "key": {
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "G": {
             "item": "minecraft:gold_nugget"
@@ -20,11 +25,6 @@
             "item": "minecraft:redstone"
         }
     },
-    "pattern": [
-        "DDN",
-        "LPG",
-        "LRN"
-    ],
     "result": {
         "id": "bubusteinmoneymod:ten_za_rand"
     }

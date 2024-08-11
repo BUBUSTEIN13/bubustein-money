@@ -1,5 +1,10 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "ABC",
+        "DPE",
+        "FCC"
+    ],
     "key": {
         "A": {
             "item": "minecraft:redstone"
@@ -11,7 +16,7 @@
             "item": "minecraft:gray_dye"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "D": {
             "item": "minecraft:gold_ingot"
@@ -23,11 +28,6 @@
             "item": "minecraft:lapis_lazuli"
         }
     },
-    "pattern": [
-        "ABC",
-        "DPE",
-        "FCC"
-    ],
     "result": {
         "id": "bubusteinmoneymod:fifty_dk_krone"
     }

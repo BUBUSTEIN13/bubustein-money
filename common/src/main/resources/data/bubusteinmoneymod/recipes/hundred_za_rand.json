@@ -1,5 +1,6 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "category": "redstone",
     "key": {
         "#": {
             "item": "bubusteinmoneymod:fifty_za_rand"

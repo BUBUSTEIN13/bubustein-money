@@ -1,12 +1,12 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:five_hundred_rs_dinar"
-    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:thousand_rs_dinar"
         }
-    ]
+    ],
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:five_hundred_rs_dinar"
+    }
 }

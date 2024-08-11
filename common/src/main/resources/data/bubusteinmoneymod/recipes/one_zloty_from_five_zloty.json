@@ -1,12 +1,12 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:one_zloty"
-    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:five_zloty"
         }
-    ]
+    ],
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:one_zloty"
+    }
 }

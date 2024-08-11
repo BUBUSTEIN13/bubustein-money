@@ -1,12 +1,12 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:thousand_is_krone"
-    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:five_thousand_is_krone"
         }
-    ]
+    ],
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:thousand_is_krone"
+    }
 }

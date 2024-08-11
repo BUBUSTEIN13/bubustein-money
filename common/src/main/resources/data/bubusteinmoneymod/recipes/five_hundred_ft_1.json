@@ -1,5 +1,10 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "CBC",
+        "RPI",
+        "CBC"
+    ],
     "key": {
         "R": {
             "item": "minecraft:redstone"
@@ -11,17 +16,12 @@
             "item": "minecraft:red_dye"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "I": {
             "item": "minecraft:iron_nugget"
         }
     },
-    "pattern": [
-        "CBC",
-        "RPI",
-        "CBC"
-    ],
     "result": {
         "id": "bubusteinmoneymod:five_hundred_ft"
     }

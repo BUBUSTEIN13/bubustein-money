@@ -1,12 +1,12 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:five_leva"
-    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:ten_leva"
         }
-    ]
+    ],
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:five_leva"
+    }
 }

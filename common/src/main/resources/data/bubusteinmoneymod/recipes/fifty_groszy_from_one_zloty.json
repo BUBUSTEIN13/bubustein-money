@@ -1,12 +1,12 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:fifty_groszy"
-    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:one_zloty"
         }
-    ]
+    ],
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:fifty_groszy"
+    }
 }

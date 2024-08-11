@@ -1,5 +1,10 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "LDD",
+        "GBR",
+        "OCC"
+    ],
     "key": {
         "L": {
             "item": "minecraft:lapis_lazuli"
@@ -11,20 +16,18 @@
             "item": "minecraft:white_stained_glass_pane"
         },
         "B": {
-            "item": "bubusteinmoneymod:five_pounds"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "R": {
             "item": "minecraft:redstone"
         },
         "O": {
             "item": "minecraft:orange_dye"
+        },
+        "C": {
+            "item": "minecraft:gold_nugget"
         }
     },
-    "pattern": [
-        "LDD",
-        "GBR",
-        "OOG"
-    ],
     "result": {
         "id": "bubusteinmoneymod:five_adollars"
     }

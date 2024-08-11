@@ -1,5 +1,10 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        " DD",
+        " ND",
+        " RP"
+    ],
     "key": {
         "N": {
             "item": "minecraft:copper_ingot"
@@ -11,14 +16,9 @@
             "item": "minecraft:redstone"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         }
     },
-    "pattern": [
-        " DD",
-        " ND",
-        " RP"
-    ],
     "result": {
         "id": "bubusteinmoneymod:ten_francs"
     }

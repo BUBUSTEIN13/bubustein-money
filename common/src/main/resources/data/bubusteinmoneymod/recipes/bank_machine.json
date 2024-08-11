@@ -1,5 +1,11 @@
 {
     "type": "minecraft:crafting_shaped",
+    "category": "Misc",
+    "pattern": [
+        "DII",
+        "GWW",
+        "EWW"
+    ],
     "key": {
         "W": {
             "tag": "minecraft:planks"
@@ -17,11 +23,6 @@
             "item": "minecraft:emerald"
         }
     },
-    "pattern": [
-        "DII",
-        "GWW",
-        "EWW"
-    ],
     "result": {
         "id": "bubusteinmoneymod:bank_machine"
     }

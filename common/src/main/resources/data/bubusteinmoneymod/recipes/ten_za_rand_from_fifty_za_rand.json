@@ -1,12 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:ten_za_rand"
-    },
+    "category": "misc",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:fifty_za_rand"
         }
-    ]
+    ],
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:ten_za_rand"
+    }
 }

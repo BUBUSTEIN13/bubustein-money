@@ -1,15 +1,15 @@
 {
-    "type": "bubusteinmoneymod:bank_machine_shaped",
-    "key": {
-        "#": {
-            "item": "bubusteinmoneymod:one_nz_dollar"
-        }
-    },
-    "pattern": [
-        "##"
-    ],
-    "result": {
-        "count": 1,
-        "id": "bubusteinmoneymod:two_nz_dollars"
+  "type": "bubusteinmoneymod:bank_machine_shaped",
+  "key": {
+    "#": {
+      "item": "bubusteinmoneymod:one_nz_dollar"
     }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bubusteinmoneymod:two_nz_dollars"
+  }
 }

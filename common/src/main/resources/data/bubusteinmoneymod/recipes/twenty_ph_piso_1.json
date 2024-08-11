@@ -1,0 +1,32 @@
+{
+  "type": "bubusteinmoneymod:bank_machine_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:orange_dye"
+    },
+    "G": {
+      "item": "minecraft:light_gray_dye"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "P": {
+      "item": "bubusteinmoneymod:special_paper"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "RLC",
+    "CPC",
+    "NGC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bubusteinmoneymod:twenty_ph_piso"
+  }
+}

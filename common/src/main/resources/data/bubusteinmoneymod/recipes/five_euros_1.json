@@ -1,5 +1,10 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "L##",
+        "RPA",
+        "IGD"
+    ],
     "key": {
         "#": {
             "item": "minecraft:gold_nugget"
@@ -14,7 +19,7 @@
             "item": "minecraft:iron_nugget"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "D": {
             "item": "minecraft:light_gray_dye"
@@ -26,11 +31,6 @@
             "item": "minecraft:glass_pane"
         }
     },
-    "pattern": [
-        "L##",
-        "RPA",
-        "IGD"
-    ],
     "result": {
         "id": "bubusteinmoneymod:five_euros"
     }

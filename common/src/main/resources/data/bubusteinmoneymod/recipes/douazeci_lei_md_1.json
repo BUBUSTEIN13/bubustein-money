@@ -1,5 +1,10 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "G*#",
+        "RPG",
+        "I*#"
+    ],
     "key": {
         "#": {
             "item": "minecraft:green_dye"
@@ -17,14 +22,9 @@
             "item": "minecraft:gold_nugget"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         }
     },
-    "pattern": [
-        "G*#",
-        "RP#",
-        "I*#"
-    ],
     "result": {
         "id": "bubusteinmoneymod:douazeci_lei_md"
     }

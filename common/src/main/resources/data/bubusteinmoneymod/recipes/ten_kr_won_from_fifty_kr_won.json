@@ -1,12 +1,12 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:ten_kr_won"
-    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:fifty_kr_won"
         }
-    ]
+    ],
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:ten_kr_won"
+    }
 }

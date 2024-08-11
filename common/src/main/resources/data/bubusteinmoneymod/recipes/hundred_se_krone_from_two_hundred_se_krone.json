@@ -1,12 +1,12 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 2,
-        "id": "bubusteinmoneymod:hundred_se_krone"
-    },
     "ingredients": [
         {
             "item": "bubusteinmoneymod:two_hundred_se_krone"
         }
-    ]
+    ],
+    "result": {
+        "count": 2,
+        "id": "bubusteinmoneymod:hundred_se_krone"
+    }
 }

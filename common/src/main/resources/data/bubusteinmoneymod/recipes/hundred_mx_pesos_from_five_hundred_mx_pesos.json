@@ -1,12 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:hundred_mx_pesos"
-    },
+    "category": "misc",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:five_hundred_mx_pesos"
         }
-    ]
+    ],
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:hundred_mx_pesos"
+    }
 }

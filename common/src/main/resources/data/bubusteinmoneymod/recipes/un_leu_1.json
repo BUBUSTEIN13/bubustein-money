@@ -1,5 +1,10 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "#GG",
+        "SPR",
+        "*GG"
+    ],
     "key": {
         "#": {
             "item": "minecraft:gold_nugget"
@@ -14,17 +19,12 @@
             "item": "minecraft:lime_dye"
         },
         "P": {
-            "item": "bubusteinmoneymod:cinci_lei_md"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "R": {
             "item": "minecraft:redstone"
         }
     },
-    "pattern": [
-        "#GG",
-        "SPR",
-        "*GG"
-    ],
     "result": {
         "id": "bubusteinmoneymod:un_leu"
     }

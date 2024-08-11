@@ -1,5 +1,10 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "IGL",
+        "RPW",
+        "WWW"
+    ],
     "key": {
         "I": {
             "item": "minecraft:iron_ingot"
@@ -8,7 +13,7 @@
             "item": "minecraft:gold_ingot"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "W": {
             "item": "minecraft:blue_dye"
@@ -20,11 +25,6 @@
             "item": "minecraft:redstone"
         }
     },
-    "pattern": [
-        "IGL",
-        "RPW",
-        "WWW"
-    ],
     "result": {
         "id": "bubusteinmoneymod:thousand_yen"
     }

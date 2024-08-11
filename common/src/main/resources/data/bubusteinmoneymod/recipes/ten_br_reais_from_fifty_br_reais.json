@@ -1,12 +1,13 @@
 {
     "type": "bubusteinmoneymod:bank_machine_shapeless",
-    "result": {
-        "count": 5,
-        "id": "bubusteinmoneymod:ten_br_reais"
-    },
+    "category": "misc",
     "ingredients": [
         {
             "item": "bubusteinmoneymod:fifty_br_reais"
         }
-    ]
+    ],
+    "result": {
+        "count": 5,
+        "id": "bubusteinmoneymod:ten_br_reais"
+    }
 }
