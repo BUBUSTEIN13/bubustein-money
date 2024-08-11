@@ -188,10 +188,12 @@ public class ModVillagers {
                     new SimpleTrade(new ItemCost(ModItems.MXPeso100.get(), 1), Optional.empty(), new ItemStack(ModItems.Dollar5.get(), 1), 5, 7, 0.2f),
                     new SimpleTrade(new ItemCost(ModItems.ZARand50.get(), 1), Optional.empty(), new ItemStack(ModItems.Pound2.get(), 1), 5, 7, 0.2f),
                     new SimpleTrade(new ItemCost(ModItems.DollarA10.get(), 1), Optional.empty(), new ItemStack(ModItems.Pound5.get(), 1), 5, 7, 0.2f),
+                    new SimpleTrade(new ItemCost(ModItems.PHP100.get(), 1), Optional.of(new ItemCost(ModItems.PHP5.get(), 3)), new ItemStack(ModItems.Dollar1.get(), 2), 5, 7, 0.2f),
                     new SimpleTrade(new ItemCost(ModItems.INr100.get(), 1), Optional.empty(), new ItemStack(ModItems.Dollar1.get(), 1), 5, 7, 0.2f),
                 },
                 // Level 4
                 {
+                    new SimpleTrade(new ItemCost(ModItems.Dollar5.get(), 1), Optional.empty(), new ItemStack(ModItems.PHP50.get(), 5), 5, 8, 0.2f),
                     new SimpleTrade(new ItemCost(ModItems.Dollar10.get(), 1), Optional.empty(), new ItemStack(ModItems.DollarC10.get(),1),5,8,0.2f),
                     new SimpleTrade(new ItemCost(ModItems.Dollar10.get(), 1), Optional.empty(), new ItemStack(ModItems.NZD5.get(), 3), 5, 8, 0.2f),
                     new SimpleTrade(new ItemCost(ModItems.Dollar5.get(), 1), Optional.empty(), new ItemStack(ModItems.CNYuan5.get(), 7), 5, 8, 0.2f),
