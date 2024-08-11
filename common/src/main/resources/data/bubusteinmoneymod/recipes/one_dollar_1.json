@@ -10,13 +10,13 @@
             "item": "minecraft:redstone"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "minecraft:gold_nugget"
         },
         "G": {
             "item": "minecraft:green_dye"
         },
         "E": {
-            "item": "bubusteinmoneymod:one_euro"
+            "item": "bubusteinmoneymod:special_paper"
         }
     },
     "result": {

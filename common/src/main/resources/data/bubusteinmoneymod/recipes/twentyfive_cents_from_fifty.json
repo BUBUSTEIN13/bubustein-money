@@ -1,0 +1,13 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:fifty_cents"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "item": "bubusteinmoneymod:twentyfive_cents"
+    }
+}
