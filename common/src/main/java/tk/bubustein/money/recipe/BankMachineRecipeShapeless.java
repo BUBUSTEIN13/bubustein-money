@@ -38,7 +38,6 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     public @NotNull NonNullList<Ingredient> getIngredients() {
         return this.ingredients;
     }
-
     public boolean matches(CraftingContainer craftingContainer, Level level) {
         StackedContents stackedContents = new StackedContents();
         int i = 0;
@@ -61,7 +60,6 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     public boolean isShapeless() {
         return true;
     }
-
     public static class Serializer implements RecipeSerializer<BankMachineRecipeShapeless> {
         public static final Serializer INSTANCE = new Serializer();
         private static final Codec<BankMachineRecipeShapeless> CODEC = RecordCodecBuilder.create((instance) -> {
@@ -95,15 +93,10 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
             String string = friendlyByteBuf.readUtf();
             int i = friendlyByteBuf.readVarInt();
             NonNullList<Ingredient> nonNullList = NonNullList.withSize(i, Ingredient.EMPTY);
-
-            for(int j = 0; j < nonNullList.size(); ++j) {
-                nonNullList.set(j, Ingredient.fromNetwork(friendlyByteBuf));
-            }
-
+            nonNullList.replaceAll(ignored -> Ingredient.fromNetwork(friendlyByteBuf));
             ItemStack itemStack = friendlyByteBuf.readItem();
             return new BankMachineRecipeShapeless(string, itemStack, nonNullList);
         }
-
         public void toNetwork(FriendlyByteBuf friendlyByteBuf, BankMachineRecipeShapeless shapelessRecipe) {
             friendlyByteBuf.writeUtf(shapelessRecipe.group);
             friendlyByteBuf.writeVarInt(shapelessRecipe.ingredients.size());

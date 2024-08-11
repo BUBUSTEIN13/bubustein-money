@@ -14,7 +14,6 @@ public class BankMachineResultSlot extends Slot {
     private final CraftingContainer craftSlots;
     private final Player player;
     private int removeCount;
-
     public BankMachineResultSlot(Player player, CraftingContainer craftingContainer, Container container, int i, int j, int k) {
         super(container, i, j, k);
         this.player = player;
@@ -48,7 +47,6 @@ public class BankMachineResultSlot extends Slot {
     public void onTake(Player player, ItemStack itemStack) {
         this.checkTakeAchievements(itemStack);
         NonNullList<ItemStack> nonNullList = player.level().getRecipeManager().getRemainingItemsFor(ModRecipes.BANK_MACHINE_RECIPE.get(), this.craftSlots, player.level());
-
         for(int i = 0; i < nonNullList.size(); ++i) {
             ItemStack itemStack2 = this.craftSlots.getItem(i);
             ItemStack itemStack3 = nonNullList.get(i);

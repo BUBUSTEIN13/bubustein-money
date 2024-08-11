@@ -35,27 +35,21 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
     public @NotNull ItemStack getResultItem(RegistryAccess registryAccess) {
         return this.result;
     }
-
     public @NotNull NonNullList<Ingredient> getIngredients() {
         return this.pattern.ingredients();
     }
-
     public boolean showNotification() {
         return this.showNotification;
     }
-
     public boolean canCraftInDimensions(int i, int j) {
         return i >= this.pattern.width() && j >= this.pattern.height();
     }
-
     public boolean matches(CraftingContainer craftingContainer, Level level) {
         return this.pattern.matches(craftingContainer);
     }
-
     public @NotNull ItemStack assemble(CraftingContainer craftingContainer, RegistryAccess registryAccess) {
         return this.getResultItem(registryAccess).copy();
     }
-
     public int getWidth() {
         return this.pattern.width();
     }
@@ -84,14 +78,11 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
                 return shapedRecipe.showNotification;
             })).apply(instance, BankMachineRecipeShaped::new);
         });
-
         public Serializer() {
         }
-
         public Codec<BankMachineRecipeShaped> codec() {
             return CODEC;
         }
-
         public BankMachineRecipeShaped fromNetwork(FriendlyByteBuf friendlyByteBuf) {
             String string = friendlyByteBuf.readUtf();
             ShapedRecipePattern shapedRecipePattern = ShapedRecipePattern.fromNetwork(friendlyByteBuf);
@@ -99,7 +90,6 @@ public class BankMachineRecipeShaped implements BankMachineRecipe {
             boolean bl = friendlyByteBuf.readBoolean();
             return new BankMachineRecipeShaped(string, shapedRecipePattern, itemStack, bl);
         }
-
         public void toNetwork(FriendlyByteBuf friendlyByteBuf, BankMachineRecipeShaped shapedRecipe) {
             friendlyByteBuf.writeUtf(shapedRecipe.group);
             shapedRecipe.pattern.toNetwork(friendlyByteBuf);

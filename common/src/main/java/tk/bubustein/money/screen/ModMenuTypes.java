@@ -8,7 +8,6 @@ import net.minecraft.world.inventory.MenuType;
 import tk.bubustein.money.MoneyMod;
 
 public class ModMenuTypes {
-
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(MoneyMod.MOD_ID, Registries.MENU);
     public static final RegistrySupplier<MenuType<BankMachineMenu>> BANK_MACHINE_MENU = MENUS.register("bank_machine_menu",
             () -> MenuRegistry.ofExtended((id, inventory, buf) -> new BankMachineMenu(id, inventory)));
