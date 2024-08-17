@@ -3,7 +3,7 @@ plugins {
 }
 allprojects {
     base {
-        archivesName.set("${rootProject.mod_id}-forge-mc${rootProject.minecraft_version}")
+        archivesName.set("${rootProject.mod_id}-MinecraftForge-mc${rootProject.minecraft_version}")
     }
 }
 architectury {
