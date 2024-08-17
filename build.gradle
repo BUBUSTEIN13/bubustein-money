@@ -15,9 +15,7 @@ subprojects {
         mappings loom.officialMojangMappings()
     }
 }
-def isSnapshot = rootProject.mod_version.toString().contains("SNAPSHOT")
-def isPreRelease = rootProject.mod_version.toString().contains("PRE")
-def isReleaseCandidate = rootProject.mod_version.toString().contains("RC")
+def isDev = rootProject.mod_version.toString().contains("SNAPSHOT") || rootProject.mod_version.toString().contains("PRE") || rootProject.mod_version.toString().contains("RC")
 allprojects {
     apply plugin: "java"
     apply plugin: "architectury-plugin"
@@ -25,7 +23,8 @@ allprojects {
     base {
         archivesName = rootProject.mod_id
     }
-    if(isSnapshot || isPreRelease || isReleaseCandidate) version = "${rootProject.mod_version}-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
+    if(isDev)
+        version = "${rootProject.mod_version}-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
     else version = rootProject.mod_version
     group = rootProject.maven_group
     tasks.withType(JavaCompile).configureEach {
