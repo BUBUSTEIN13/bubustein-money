@@ -1,29 +1,30 @@
 {
     "type": "minecraft:crafting_shaped",
-    "category": "Misc",
-    "pattern": [
-        "DII",
-        "GWW",
-        "EWW"
-    ],
+    "category": "misc",
     "key": {
-        "W": {
-            "tag": "minecraft:planks"
-        },
-        "I": {
-            "item": "minecraft:iron_ingot"
-        },
         "D": {
             "item": "minecraft:diamond"
+        },
+        "E": {
+            "item": "minecraft:emerald"
         },
         "G": {
             "item": "minecraft:gold_ingot"
         },
-        "E": {
-            "item": "minecraft:emerald"
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "P": {
+            "tag": "minecraft:planks"
         }
     },
+    "pattern": [
+        "DII",
+        "GPP",
+        "EPP"
+    ],
     "result": {
+        "count": 1,
         "id": "bubusteinmoneymod:bank_machine"
     }
 }

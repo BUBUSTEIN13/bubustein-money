@@ -4,12 +4,16 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeBuilder;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.recipe.BankMachineRecipeShapedBuilder;
 import tk.bubustein.money.recipe.BankMachineRecipeShapelessBuilder;
@@ -38,6 +42,18 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
     @Override
     public void buildRecipes(RecipeOutput exporter) {
         /*
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BANK_MACHINE.get())
+                .pattern("DII")
+                .pattern("GPP")
+                .pattern("EPP")
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .define('D', Items.DIAMOND)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Items.GOLD_INGOT)
+                .define('E', Items.EMERALD)
+                .define('P', ItemTags.PLANKS)
+                .save(exporter);
+
         BankMachineRecipeShapedBuilder.shaped(ModItems.PHP20.get())
                 .unlockedBy(getHasName(ModItems.SpecialPaper.get()), has(ModItems.SpecialPaper.get()))
                 .pattern("RLC").pattern("CPC").pattern("NGC")
