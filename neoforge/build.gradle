@@ -3,7 +3,7 @@ plugins {
 }
 allprojects {
     base {
-        archivesName.set("${rootProject.mod_id}-fabric-mc${rootProject.minecraft_version}")
+        archivesName.set("${rootProject.mod_id}-neoforge-mc${rootProject.minecraft_version}")
     }
 }
 architectury {
