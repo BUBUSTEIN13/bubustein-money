@@ -149,7 +149,7 @@ Now you can craft for example from 5 Euro to 10 Euro using Crafting Table, <br> 
   </tr>
 <tr>
   <td><p>29<sup>th</sup> February 2024</p></td>
-    <td>Moved all to Architectury. From now you need Architectury API when you install my mod. <br> Fixed ATM Block. Now ATM is a DoubleBlockBase <br> Added a new Custom Structure, The Mansion <b>(You need to backup your worlds before installing x.0.7!)</b> <br> However the ATM Entity is not implemented yet. :( <br> Added Mexican Peso, Brazilian Real, and South African Rand <br> Removed 100 Pounds Banknote because that was from Gibraltar. Modified the recipe of 100 Australian dollars. The mansion isn't available for 1.16.5</td>
+    <td>Moved all to Architectury. From now, you need Architectury API when you install my mod. <br> Fixed ATM Block. Now ATM is a DoubleBlockBase <br> Added a new Custom Structure, The Mansion <b>(You need to backup your worlds before installing x.0.7!)</b> <br> However the ATM Entity is not implemented yet. :( <br> Added Mexican Peso, Brazilian Real, and South African Rand <br> Removed 100 Pounds Banknote because that was from Gibraltar. Modified the recipe of 100 Australian dollars. The mansion isn't available for 1.16.5</td>
     <td>x.0.7</td>
   </tr>
    <tr>
