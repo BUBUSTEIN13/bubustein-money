@@ -104,19 +104,19 @@ unifiedPublishing {
         gameLoaders = ["fabric", "quilt"]
         mainPublication remapJar
         relations {
-            depends{
+            depends {
                 curseforge = "fabric-api"
                 modrinth = "fabric-api"
             }
-            depends{
+            depends {
                 curseforge = "architectury-api"
                 modrinth = "architectury-api"
             }
-            optional{
+            optional {
                 curseforge = "rei"
                 modrinth = "rei"
             }
-            optional{
+            optional {
                 curseforge = "jei"
                 modrinth = "jei"
             }
