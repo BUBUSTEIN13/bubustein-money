@@ -55,6 +55,8 @@ jobs:
     name: "Check isDev Status"
     runs-on: ubuntu-22.04
     needs: build
+    outputs:
+      isDev: ${{ steps.check-isdev.outputs.isDev }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -67,14 +69,10 @@ jobs:
           echo "::set-output name=isDev::$isDev"
 
   publish:
-    name: "Publish to Maven, CurseForge, and Modrinth"
+    name: "Publish to CurseForge and Modrinth"
     runs-on: ubuntu-22.04
     needs: check-isdev
-    if: |
-      steps.check-isdev.outputs.isDev == 'false' &&
-      !contains(github.event.head_commit.message, '[norelease]') &&
-      !contains(github.event.head_commit.message, '[ci skip]') &&
-      github.event.inputs.norelease != 'true'
+    if: ${{ needs.check-isdev.outputs.isDev == 'false' && !contains(github.event.head_commit.message, '[norelease]') && !contains(github.event.head_commit.message, '[ci skip]') && github.event.inputs.norelease != 'true' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
