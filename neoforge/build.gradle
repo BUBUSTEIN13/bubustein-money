@@ -1,5 +1,6 @@
 plugins {
     id 'com.gradleup.shadow' version '8.3.0'
+    id "me.shedaniel.unified-publishing"
 }
 allprojects {
     base {
@@ -59,7 +60,7 @@ shadowJar {
 remapJar {
     inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
-    archiveClassifier.set(null)
+    archiveClassifier.set("neoforge")
 }
 sourcesJar {
     def commonSources = project(":common").sourcesJar
@@ -76,6 +77,58 @@ publishing {
         mavenForge(MavenPublication) {
             artifactId = rootProject.mod_id + "-" + project.name
             from components.java
+        }
+    }
+}
+unifiedPublishing {
+    project {
+        displayName = "[Neoforge $rootProject.minecraft_version] v$rootProject.mod_version"
+        releaseType = "$rootProject.artifact_type"
+        changelog = releaseChangelog()
+        gameVersions = ["1.21", "1.21.1"]
+        gameLoaders = ["neoforge"]
+        mainPublication remapJar
+        relations {
+            depends {
+                curseforge = "architectury-api"
+                modrinth = "architectury-api"
+            }
+            optional {
+                curseforge = "rei"
+                modrinth = "rei"
+            }
+            optional {
+                curseforge = "jei"
+                modrinth = "jei"
+            }
+            conflicts {
+                curseforge = "entityculling"
+                modrinth = "entityculling"
+            }
+            conflicts {
+                curseforge = "moreculling"
+                modrinth = "moreculling"
+            }
+        }
+        def isDev = project.findProperty("isDev")?.toBoolean() ?: false
+        if (!isDev) {
+            def CURSE_API_KEY = project.findProperty("CURSE_API_KEY") ?: System.getenv("CURSE_API_KEY")
+            if (CURSE_API_KEY != null) {
+                curseforge {
+                    token = CURSE_API_KEY
+                    id = rootProject.curseforge_id
+                    gameVersions.addAll "Java 21", project.minecraft_version
+                }
+            }
+            def MODRINTH_TOKEN = project.findProperty("MODRINTH_TOKEN") ?: System.getenv("MODRINTH_TOKEN")
+            if (MODRINTH_TOKEN != null) {
+                modrinth {
+                    token = MODRINTH_TOKEN
+                    id = rootProject.modrinth_id
+                    version = "$project.version+$project.name"
+                    gameVersions.addAll project.minecraft_version
+                }
+            }
         }
     }
 }
