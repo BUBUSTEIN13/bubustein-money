@@ -36,7 +36,7 @@
 ![](https://cdn.modrinth.com/data/QzlWq3M9/images/14433fa779767c43b99a1937a75664a069ebb526.png)
 
 **P.S. The Dark GUI isn't included in this mod, you have to download the resource pack
--> [https://modrinth.com/resourcepack/bubustein-dark-textures](https://modrinth.com/resourcepack/bubustein-dark-textures)**
+-> [Bubustein's Dark Textures](https://modrinth.com/resourcepack/bubustein-dark-textures)**
 
 ### 💶 All Currencies: EUR, USD, GBP, CAD, RON, ROL(1900-1906), MDL, CHF, AUD, JPY, BGN, CZK, NOK, DKK, SEK, HUF, PLN, RSD, ISK, CNY, INR, KRW, BRL, MXN, ZAR, TRY, NZD, PHP.
 
@@ -99,7 +99,7 @@
   <td>✅</td>
   <td>✅</td>
 </tr>
-</table>
+</table> 
 
 ## <b>Requirements</b>
 - For Fabric/Quilt -> <a href="https://modrinth.com/mod/fabric-api">Fabric API</a>, [Architectury-API](https://modrinth.com/mod/architectury-api)
@@ -175,10 +175,10 @@ Now you can craft for example from 5 Euro to 10 Euro using Crafting Table, <br> 
 </td>
     <td>x.0.9</td>
 </tr>
-</table>
+</table> 
 
 ### Be our HERO! Apply for Beta-Tester and help us to beat the "dragons".
-**here** [https://forms.gle/nkQWZdhY35XHMFWU9](https://forms.gle/nkQWZdhY35XHMFWU9)
+**here** [Google Forms](https://forms.gle/nkQWZdhY35XHMFWU9)
 You must join on my discord server before applying.
 
 ## <b>MODPACKS</b>
