@@ -25,9 +25,11 @@
 <a href="https://bubustein.tk" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdocumentation%2Fwebsite_vector.svg&n=-1"></a>
 
 
-![](https://cdn.modrinth.com/data/QzlWq3M9/images/0bd76b615b4bf2919d247a2b4b36e5a74079bcb8.png)
+![](https://cdn.modrinth.com/data/QzlWq3M9/images/8dd5f180e341a1777cfab40dfefc7fdd94025f54.png)
 
 ![](https://cdn.modrinth.com/data/QzlWq3M9/images/ab8e1e84682685f55246101421ab97ae328188f3.png)
+
+![](https://cdn.modrinth.com/data/BTj95UST/images/b9769bebc91784b0b01b92f123b5a0365a9d953c.png)
 
 ![](https://cdn.modrinth.com/data/QzlWq3M9/images/8707128220dcba47a5537aec6c8affeea1e1d074.png)
 
