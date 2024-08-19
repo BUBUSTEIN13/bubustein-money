@@ -25,7 +25,7 @@
 <a href="https://bubustein.tk" target="_blank"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40intergrav%2Fdevins-badges%403%2Fassets%2Fcozy%2Fdocumentation%2Fwebsite_vector.svg&n=-1"></a>
 
 
-![](https://cdn.modrinth.com/data/QzlWq3M9/images/8dd5f180e341a1777cfab40dfefc7fdd94025f54.png)
+![](https://cdn.modrinth.com/data/QzlWq3M9/images/0bd76b615b4bf2919d247a2b4b36e5a74079bcb8.png)
 
 ![](https://cdn.modrinth.com/data/QzlWq3M9/images/ab8e1e84682685f55246101421ab97ae328188f3.png)
 
@@ -48,6 +48,7 @@
 ### ⭕ -> These versions will be retired soon.
 
 ### Note that from 1.20.6 and up I will update the mod for Forge only if will be a version for Architectury API, or/and will have more downloads than Neoforge.
+
 <table>
   <tr>
     <th><b>Minecraft Version</b></th>
@@ -101,7 +102,7 @@
   <td>✅</td>
   <td>✅</td>
 </tr>
-</table> 
+</table>
 
 ## <b>Requirements</b>
 - For Fabric/Quilt -> <a href="https://modrinth.com/mod/fabric-api">Fabric API</a>, [Architectury-API](https://modrinth.com/mod/architectury-api)
@@ -177,7 +178,7 @@ Now you can craft for example from 5 Euro to 10 Euro using Crafting Table, <br> 
 </td>
     <td>x.0.9</td>
 </tr>
-</table> 
+</table>
 
 ### Be our HERO! Apply for Beta-Tester and help us to beat the "dragons".
 **here** [Google Forms](https://forms.gle/nkQWZdhY35XHMFWU9)
