@@ -3,12 +3,16 @@ package tk.bubustein.money.fabric.data;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipes.RecipeBuilder;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.recipe.BankMachineRecipeShapedBuilder;
 import tk.bubustein.money.recipe.BankMachineRecipeShapelessBuilder;
@@ -35,7 +39,18 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(RecipeOutput exporter) {
-
+        /*
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BANK_MACHINE.get())
+                .pattern("DII")
+                .pattern("GPP")
+                .pattern("EPP")
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .define('D', Items.DIAMOND)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Items.GOLD_INGOT)
+                .define('E', Items.EMERALD)
+                .define('P', ItemTags.PLANKS)
+                .save(exporter);
         BankMachineRecipeShapedBuilder.shaped(ModItems.TRl5.get(), 1)
                 .pattern("LGG")
                 .pattern("OPR")
@@ -61,7 +76,7 @@ public class MoneyRecipeDataGen extends FabricRecipeProvider {
                 .define('R', Items.REDSTONE)
                 .define('G', Items.GOLD_NUGGET)
                 .save(exporter);
-/*
+
         conversionRecipe(exporter, ModItems.TRl100.get(), ModItems.TRl200.get(), "",2);
         conversionRecipe(exporter, ModItems.TRl50.get(), ModItems.TRl100.get(), "",2);
         conversionRecipe(exporter, ModItems.TRl10.get(), ModItems.TRl50.get(), "", 5);
