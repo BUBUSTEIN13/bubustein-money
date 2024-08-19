@@ -3,7 +3,9 @@ plugins {
     id "me.shedaniel.unified-publishing"
 }
 allprojects {
-    archivesBaseName = "${rootProject.mod_id}-forge-mc${rootProject.minecraft_version}"
+    base {
+        archivesName.set("${rootProject.mod_id}-Forge-mc${rootProject.minecraft_version}")
+    }
 }
 architectury {
     platformSetupLoomIde()
