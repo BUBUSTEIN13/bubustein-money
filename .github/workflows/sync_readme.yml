@@ -3,11 +3,11 @@ name: Sync Readme Files
 on:
   push:
     branches:
-      - 21.x  # Ramura principală
+      - 21.x
     paths:
       - 'README.md'
       - 'README_CURSEFORGE.md'
-  workflow_dispatch:  # Permite rularea manuală
+  workflow_dispatch:
 
 jobs:
   sync-readme:
@@ -17,7 +17,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch all history to ensure branches are available
+          fetch-depth: 0
+          token: ${{ secrets.GIT_TOKEN }}
 
       - name: Set up Git
         run: |
@@ -27,27 +28,16 @@ jobs:
       - name: Get all branches
         id: get-branches
         run: |
-          # Fetch all remote branches
           git fetch --all
-
-          # Get a list of all branches except the main branch
           branches=$(git branch -r | grep -v 'origin/21.x' | sed 's/origin\///' | grep -v 'HEAD' | awk '{print $1}')
-
-          # Check if we have branches
           if [ -z "$branches" ]; then
             echo "No branches to sync"
             exit 0
           fi
-
-          # Print branches to the output
-          echo "Branches to sync: $branches"
-
-          # Create a file with the list of branches
           echo "$branches" > branches.txt
 
       - name: Sync README files
         run: |
-          # Read branches from the file
           while IFS= read -r branch; do
             echo "Syncing to branch: $branch"
             git checkout $branch
@@ -56,3 +46,5 @@ jobs:
             git commit -m "Sync README files from 21.x" || echo "No changes to commit"
             git push origin $branch
           done < branches.txt
+        env:
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
