@@ -63,7 +63,7 @@
 ⭕ -> These versions will be retired soon.
 
 
-### Note that from 1.20.6 and up I will update the mod for Forge only if will be a version for Architectury API, or/and will have more downloads than Neoforge.
+### Note that from 1.20.6 onwards I will only update the mod for Forge if there will be a version for the Architectury API, and/or it will have more downloads than Neoforge.
 
 | Minecraft Version | Forge | Fabric/Quilt | Neoforge |
 |-------------------|-------|--------------|----------|
