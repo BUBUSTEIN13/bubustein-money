@@ -46,6 +46,8 @@
 ### 🙅🏻 -> There are <u>NO</u> plans for this version<br>/ Retired versions.
 ### ⛔ -> These versions don't exist for this loader.<br>
 ### ⭕ -> These versions will be retired soon.
+
+### Note that from 1.20.6 and up I will update the mod for Forge only if will be a version for Architectury API, or/and will have more downloads than Neoforge.
 <table>
   <tr>
     <th><b>Minecraft Version</b></th>
