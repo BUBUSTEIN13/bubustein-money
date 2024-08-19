@@ -27,16 +27,29 @@ jobs:
       - name: Get all branches
         id: get-branches
         run: |
-          branches=$(git branch -r | grep -v '\->' | grep -v '21.x' | sed 's/origin\///')
+          # Fetch all remote branches
+          git fetch --all
+
+          # Get a list of all branches except the main branch
+          branches=$(git branch -r | grep -v '21.x' | sed 's/origin\///' | grep -v 'HEAD' | awk '{print $1}')
+
+          # Check if we have branches
+          if [ -z "$branches" ]; then
+            echo "No branches to sync"
+            exit 0
+          fi
+
           echo "BRANCHES=$branches" >> $GITHUB_ENV
 
       - name: Sync README files
         run: |
+          # Loop through all branches and sync files
           for branch in $BRANCHES; do
+            echo "Syncing to branch: $branch"
             git checkout $branch
             git checkout 21.x -- README.md README_CURSEFORGE.md
             git add README.md README_CURSEFORGE.md
-            git commit -m "Sync README files from 21.x"
+            git commit -m "Sync README files from 21.x" || echo "No changes to commit"
             git push origin $branch
           done
         env:
