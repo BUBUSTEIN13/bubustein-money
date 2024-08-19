@@ -28,13 +28,13 @@
 [![Wiki](https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/documentation/gitbook_vector.svg&n=-1)](https://wiki.bubustein.tk/)
 [![Website](https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/documentation/website_vector.svg&n=-1)](https://bubustein.tk/)
 
-![Image 1](https://cdn.modrinth.com/data/QzlWq3M9/images/8dd5f180e341a1777cfab40dfefc7fdd94025f54.png)
+![](https://cdn.modrinth.com/data/QzlWq3M9/images/0bd76b615b4bf2919d247a2b4b36e5a74079bcb8.png)
 
-![Image 2](https://cdn.modrinth.com/data/QzlWq3M9/images/ab8e1e84682685f55246101421ab97ae328188f3.png)
+![](https://cdn.modrinth.com/data/QzlWq3M9/images/ab8e1e84682685f55246101421ab97ae328188f3.png)
 
-![Image 3](https://cdn.modrinth.com/data/QzlWq3M9/images/8707128220dcba47a5537aec6c8affeea1e1d074.png)
+![](https://cdn.modrinth.com/data/QzlWq3M9/images/8707128220dcba47a5537aec6c8affeea1e1d074.png)
 
-![Image 4](https://cdn.modrinth.com/data/QzlWq3M9/images/14433fa779767c43b99a1937a75664a069ebb526.png)
+![](https://cdn.modrinth.com/data/QzlWq3M9/images/14433fa779767c43b99a1937a75664a069ebb526.png)
 
 ### P.S. The Dark GUI isn't included in this mod ;) If you want the dark version of Bank Machine GUI -> [Bubustein's Dark Textures](https://www.curseforge.com/minecraft/texture-packs/bubustein-dark-textures)
 
