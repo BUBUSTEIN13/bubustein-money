@@ -31,7 +31,7 @@ jobs:
           git fetch --all
 
           # Get a list of all branches except the main branch
-          branches=$(git branch -r | grep -v '21.x' | sed 's/origin\///' | grep -v 'HEAD' | awk '{print $1}')
+          branches=$(git branch -r | grep -v 'origin/21.x' | sed 's/origin\///' | grep -v 'HEAD' | awk '{print $1}')
 
           # Check if we have branches
           if [ -z "$branches" ]; then
@@ -39,6 +39,7 @@ jobs:
             exit 0
           fi
 
+          # Export branches as environment variable
           echo "BRANCHES=$branches" >> $GITHUB_ENV
 
       - name: Sync README files
