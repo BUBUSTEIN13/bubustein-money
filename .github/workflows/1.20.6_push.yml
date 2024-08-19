@@ -66,7 +66,7 @@ jobs:
         run: |
           isDev=$(grep -E '^isDev=' gradle.properties | cut -d'=' -f2)
           echo "isDev=$isDev"
-          echo "::set-output name=isDev::$isDev"
+          echo "isDev=$isDev" >> $GITHUB_OUTPUT
 
   publish:
     name: "Publish to CurseForge and Modrinth"
