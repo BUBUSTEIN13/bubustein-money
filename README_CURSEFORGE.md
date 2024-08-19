@@ -38,14 +38,26 @@
 
 ### P.S. The Dark GUI isn't included in this mod ;) If you want the dark version of Bank Machine GUI -> [Bubustein's Dark Textures](https://www.curseforge.com/minecraft/texture-packs/bubustein-dark-textures)
 
+
+### 💶 All Currencies: EUR, USD, GBP, CAD, RON, ROL(1900-1906), MDL, CHF, AUD, JPY, BGN, CZK, NOK, DKK, SEK, HUF, PLN, RSD, ISK, CNY, INR, KRW, BRL, MXN, ZAR, TRY, NZD, PHP.
+
+
 ## Compatible Versions
 
 ---
 
 ✅ -> is available
+
+
 ❌ -> not available yet
+
+
 🙅🏻 -> There are NO plans for this version/These versions are already retired.
+
+
 ⛔ -> These versions don't exist for this loader.
+
+
 ⭕ -> These versions will be retired soon.
 
 | Minecraft Version | Forge | Fabric/Quilt | Neoforge |
