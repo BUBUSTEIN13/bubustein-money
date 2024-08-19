@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
     Some code is made by screret https://github.com/screret/VendingMachine/
     ###############################
  */
-
+@SuppressWarnings("deprecation")
 public class ATM extends HorizontalDirectionalBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
 
