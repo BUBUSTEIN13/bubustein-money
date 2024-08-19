@@ -29,12 +29,14 @@
 
 ![](https://cdn.modrinth.com/data/QzlWq3M9/images/ab8e1e84682685f55246101421ab97ae328188f3.png)
 
+![](https://cdn.modrinth.com/data/BTj95UST/images/b9769bebc91784b0b01b92f123b5a0365a9d953c.png)
+
 ![](https://cdn.modrinth.com/data/QzlWq3M9/images/8707128220dcba47a5537aec6c8affeea1e1d074.png)
 
 ![](https://cdn.modrinth.com/data/QzlWq3M9/images/14433fa779767c43b99a1937a75664a069ebb526.png)
 
 **P.S. The Dark GUI isn't included in this mod, you have to download the resource pack
--> [https://modrinth.com/resourcepack/bubustein-dark-textures](https://modrinth.com/resourcepack/bubustein-dark-textures)**
+-> [Bubustein's Dark Textures](https://modrinth.com/resourcepack/bubustein-dark-textures)**
 
 ### 💶 All Currencies: EUR, USD, GBP, CAD, RON, ROL(1900-1906), MDL, CHF, AUD, JPY, BGN, CZK, NOK, DKK, SEK, HUF, PLN, RSD, ISK, CNY, INR, KRW, BRL, MXN, ZAR, TRY, NZD, PHP.
 
@@ -44,6 +46,8 @@
 ### 🙅🏻 -> There are <u>NO</u> plans for this version<br>/ Retired versions.
 ### ⛔ -> These versions don't exist for this loader.<br>
 ### ⭕ -> These versions will be retired soon.
+
+### Note that from 1.20.6 and up I will update the mod for Forge only if will be a version for Architectury API, or/and will have more downloads than Neoforge.
 <table>
   <tr>
     <th><b>Minecraft Version</b></th>
@@ -176,7 +180,7 @@ Now you can craft for example from 5 Euro to 10 Euro using Crafting Table, <br> 
 </table> 
 
 ### Be our HERO! Apply for Beta-Tester and help us to beat the "dragons".
-**here** [https://forms.gle/nkQWZdhY35XHMFWU9](https://forms.gle/nkQWZdhY35XHMFWU9)
+**here** [Google Forms](https://forms.gle/nkQWZdhY35XHMFWU9)
 You must join on my discord server before applying.
 
 ## <b>MODPACKS</b>
