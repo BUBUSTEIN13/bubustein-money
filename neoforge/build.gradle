@@ -60,7 +60,7 @@ shadowJar {
 remapJar {
     inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
-    archiveClassifier.set("neoforge")
+    archiveClassifier.set(null)
 }
 sourcesJar {
     def commonSources = project(":common").sourcesJar
