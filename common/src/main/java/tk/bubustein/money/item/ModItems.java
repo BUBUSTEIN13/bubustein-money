@@ -1,6 +1,7 @@
 package tk.bubustein.money.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import tk.bubustein.money.MoneyExpectPlatform;
 import tk.bubustein.money.MoneyMod;
 import java.util.function.Supplier;
@@ -694,33 +695,33 @@ public class ModItems {
     * ////////////////////////////////////////////////////
     * */
     public static final Supplier<Item> B1 = MoneyExpectPlatform.registerItem("un_ban_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B2 = MoneyExpectPlatform.registerItem("doi_bani_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B5 = MoneyExpectPlatform.registerItem("cinci_bani_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B10 = MoneyExpectPlatform.registerItem("zece_bani_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B20 = MoneyExpectPlatform.registerItem("douazeci_bani_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B50 = MoneyExpectPlatform.registerItem("cincizeci_bani_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> L1 = MoneyExpectPlatform.registerItem("un_leu_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> L2 = MoneyExpectPlatform.registerItem("doi_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> L5 = MoneyExpectPlatform.registerItem("cinci_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L12 = MoneyExpectPlatform.registerItem("douasprezece_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L20 = MoneyExpectPlatform.registerItem("douazeci_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L25 = MoneyExpectPlatform.registerItem("douazeci_cinci_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L50 = MoneyExpectPlatform.registerItem("cincizeci_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
     public static final Supplier<Item> L100 = MoneyExpectPlatform.registerItem("suta_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
 
     public static final Supplier<Item> VisaClassic = MoneyExpectPlatform.registerItem("card_classic",
             () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
