@@ -8,5 +8,6 @@ public class MoneyModDataGen implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = generator.createPack();
         pack.addProvider(MoneyModelDataGen::new);
         pack.addProvider(MoneyRecipeDataGen::new);
+        pack.addProvider(MoneyLootTableDataGen::new);
     }
 }

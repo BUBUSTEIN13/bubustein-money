@@ -7,12 +7,14 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
+import net.minecraft.world.level.storage.loot.LootTable;
 import org.slf4j.Logger;
 import tk.bubustein.money.block.ModBlocks;
 import tk.bubustein.money.item.ModItems;
@@ -34,6 +36,9 @@ public class MoneyMod {
     public static final RegistrySupplier<CreativeModeTab> SPECIAL = TABS.register("special", () ->
             CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.special"),
                     () -> new ItemStack(ModBlocks.ATM.get())));
+    public static final ResourceKey<LootTable> BANKER_HOUSE_CHEST = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/banker_house_chest"));
+    public static final ResourceKey<LootTable> MANSION_CHEST = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/mansion_chest"));
+    public static final ResourceKey<LootTable> MANSION_CHEST_1 = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/mansion_chest_1"));
     public static void init() {
         LOGGER.info("[" + MOD_ID + "] Printing money. . . ;)");
         ModItems.init();
@@ -59,10 +64,10 @@ public class MoneyMod {
         ResourceLocation snowyPoolLocation = ResourceLocation.parse("minecraft:village/snowy/houses");
         ResourceLocation taigaPoolLocation = ResourceLocation.parse("minecraft:village/taiga/houses");
 
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 7);
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 20);
-        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "bubusteinmoneymod:plains_banker_house_3", 7);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, plainsPoolLocation, "bubusteinmoneymod:banker_house", 20);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, desertPoolLocation, "bubusteinmoneymod:banker_house", 7);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "bubusteinmoneymod:banker_house", 20);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "bubusteinmoneymod:banker_house", 20);
+        JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "bubusteinmoneymod:banker_house", 7);
     }
 }
