@@ -37,8 +37,8 @@ public class MoneyMod {
             CreativeTabRegistry.create(Component.translatable("itemGroup.bubusteinmoneymod.special"),
                     () -> new ItemStack(ModBlocks.ATM.get())));
     public static final ResourceKey<LootTable> BANKER_HOUSE_CHEST = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/banker_house_chest"));
+    public static final ResourceKey<LootTable> MANSION_DOUBLE_CHEST = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/mansion_double_chest"));
     public static final ResourceKey<LootTable> MANSION_CHEST = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/mansion_chest"));
-    public static final ResourceKey<LootTable> MANSION_CHEST_1 = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/mansion_chest_1"));
     public static void init() {
         LOGGER.info("[" + MOD_ID + "] Printing money. . . ;)");
         ModItems.init();
