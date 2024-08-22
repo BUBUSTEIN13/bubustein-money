@@ -1,5 +1,6 @@
 package tk.bubustein.money.item;
 
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import tk.bubustein.money.MoneyExpectPlatform;
@@ -717,11 +718,11 @@ public class ModItems {
     public static final Supplier<Item> L20 = MoneyExpectPlatform.registerItem("douazeci_lei_1900",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L25 = MoneyExpectPlatform.registerItem("douazeci_cinci_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE,true)));
     public static final Supplier<Item> L50 = MoneyExpectPlatform.registerItem("cincizeci_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final Supplier<Item> L100 = MoneyExpectPlatform.registerItem("suta_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
+            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
     public static final Supplier<Item> VisaClassic = MoneyExpectPlatform.registerItem("card_classic",
             () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
