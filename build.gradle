@@ -24,11 +24,11 @@ allprojects {
     base {
         archivesName = rootProject.mod_id
     }
-    if(project.isDev.toBoolean() == true && rootProject.dev_type != null)
-        version = "${rootProject.mod_version}-${rootProject.dev_type}-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
-    else if(project.isDev.toBoolean() == true && rootProject.dev_type == null)
-        version = "${rootProject.mod_version}-SNAPSHOT-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
-    else version = rootProject.mod_version
+    if(project.isDev.toBoolean() == true){
+        if(project.dev_type != "")
+            version = "${rootProject.mod_version}-${rootProject.dev_type}-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
+        else version = "${rootProject.mod_version}-SNAPSHOT-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
+    }else version = rootProject.mod_version
     group = rootProject.maven_group
     tasks.withType(JavaCompile).configureEach {
         options.encoding = "UTF-8"
