@@ -6,7 +6,7 @@
     "minecraft:savanna",
     "minecraft:snowy_plains",
     "minecraft:taiga",
-    "#minecraft:is_mountain",
+    "minecraft:sunflower_plains",
     "minecraft:grove"
   ]
 }
