@@ -1,14 +1,15 @@
 {
-  "type": "bubusteinmoneymod:bank_machine_shaped",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:ten_nz_cents"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:ten_nz_cents"
+        }
+    },
+    "pattern": [
+        "##"
+    ],
+    "result": {
+        "count": 1,
+        "item": "bubusteinmoneymod:twenty_nz_cents"
     }
-  },
-  "pattern": [
-    "##"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:twenty_nz_cents"
-  }
 }

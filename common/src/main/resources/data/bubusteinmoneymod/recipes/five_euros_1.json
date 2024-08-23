@@ -19,7 +19,7 @@
             "item": "minecraft:iron_nugget"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "D": {
             "item": "minecraft:light_gray_dye"

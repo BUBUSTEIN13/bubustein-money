@@ -16,7 +16,7 @@
             "item": "minecraft:gray_dye"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "D": {
             "item": "minecraft:gold_ingot"
