@@ -74,7 +74,7 @@ components.java {
 }
 publishing {
     publications {
-        mavenForge(MavenPublication) {
+        mavenNeoForge(MavenPublication) {
             artifactId = rootProject.mod_id + "-" + project.name
             from components.java
         }
