@@ -8,7 +8,7 @@
     "BUBUSTEIN"
   ],
   "contact": {
-    "homepage": "https://bubustein.tk",
+    "homepage": "https://modrinth.com/mod/bubustein-money",
     "issues": "https://www.github.com/bubustein13/bubustein-money/issues"
   },
   "license": "GNU AGPL 3.0",
@@ -34,7 +34,6 @@
       "links": {
         "modmenu.wiki": "https://wiki.bubustein.tk",
         "modmenu.discord": "https://discord.gg/PrKgF9gNfW",
-        "modmenu.modrinth": "https://modrinth.com/mod/bubustein-money",
         "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/bubustein-money",
         "modmenu.patreon": "https://patreon.com/bubustein",
         "modmenu.kofi": "https://ko-fi.com/bubustein"
@@ -48,7 +47,7 @@
   "depends": {
     "fabric-api": "*",
     "fabricloader": ">=0.15.11",
-    "minecraft": ">=1.20.1",
+    "minecraft": "1.20.1",
     "architectury": ">=9.1.12"
   },
   "recommends": {
