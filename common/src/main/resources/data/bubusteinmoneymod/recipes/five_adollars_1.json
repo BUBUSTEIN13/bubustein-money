@@ -3,7 +3,7 @@
     "pattern": [
         "LDD",
         "GBR",
-        "OOG"
+        "OCC"
     ],
     "key": {
         "L": {
@@ -16,13 +16,16 @@
             "item": "minecraft:white_stained_glass_pane"
         },
         "B": {
-            "item": "bubusteinmoneymod:five_pounds"
+            "item": "bubusteinmoneymod:special_paper"
         },
         "R": {
             "item": "minecraft:redstone"
         },
         "O": {
             "item": "minecraft:orange_dye"
+        },
+        "C": {
+            "item": "minecraft:gold_nugget"
         }
     },
     "result": {
