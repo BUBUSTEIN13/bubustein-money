@@ -717,11 +717,11 @@ public class ModItems {
     public static final Supplier<Item> L20 = MoneyExpectPlatform.registerItem("douazeci_lei_1900",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L25 = MoneyExpectPlatform.registerItem("douazeci_cinci_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
+            () -> new ItemWithGlint(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L50 = MoneyExpectPlatform.registerItem("cincizeci_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
+            () -> new ItemWithGlint(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
     public static final Supplier<Item> L100 = MoneyExpectPlatform.registerItem("suta_lei_1900",
-            () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
+            () -> new ItemWithGlint(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
 
     public static final Supplier<Item> VisaClassic = MoneyExpectPlatform.registerItem("card_classic",
             () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
