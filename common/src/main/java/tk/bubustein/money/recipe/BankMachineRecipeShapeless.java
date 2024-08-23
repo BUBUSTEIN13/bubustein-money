@@ -21,14 +21,12 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     final String group;
     final ItemStack result;
     final NonNullList<Ingredient> ingredients;
-
     public BankMachineRecipeShapeless(ResourceLocation resourceLocation, String string, ItemStack itemStack, NonNullList<Ingredient> nonNullList) {
         this.id = resourceLocation;
         this.group = string;
         this.result = itemStack;
         this.ingredients = nonNullList;
     }
-
     public @NotNull ResourceLocation getId() {
         return this.id;
     }
@@ -47,7 +45,6 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     public boolean matches(CraftingContainer craftingContainer, Level level) {
         StackedContents stackedContents = new StackedContents();
         int i = 0;
-
         for(int j = 0; j < craftingContainer.getContainerSize(); ++j) {
             ItemStack itemStack = craftingContainer.getItem(j);
             if (!itemStack.isEmpty()) {
@@ -71,7 +68,6 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
         public static final Serializer INSTANCE = new Serializer();
         public Serializer() {
         }
-
         public BankMachineRecipeShapeless fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
             String string = GsonHelper.getAsString(jsonObject, "group", "");
             NonNullList<Ingredient> nonNullList = itemsFromJson(GsonHelper.getAsJsonArray(jsonObject, "ingredients"));
@@ -103,7 +99,6 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
             ItemStack itemStack = friendlyByteBuf.readItem();
             return new BankMachineRecipeShapeless(resourceLocation, string, itemStack, nonNullList);
         }
-
         public void toNetwork(FriendlyByteBuf friendlyByteBuf, BankMachineRecipeShapeless shapelessRecipe) {
             friendlyByteBuf.writeUtf(shapelessRecipe.group);
             friendlyByteBuf.writeVarInt(shapelessRecipe.ingredients.size());

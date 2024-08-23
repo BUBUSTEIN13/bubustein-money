@@ -5,7 +5,6 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -16,14 +15,11 @@ import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.Advancement.Builder;
 import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.recipes.CraftingRecipeBuilder;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeBuilder;
-import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
@@ -39,28 +35,22 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
     @Nullable
     private String group;
     private boolean showNotification = true;
-
     public BankMachineRecipeShapedBuilder(ItemLike itemLike, int i) {
         this.result = itemLike.asItem();
         this.count = i;
     }
-
     public static BankMachineRecipeShapedBuilder shaped(ItemLike itemLike) {
         return shaped(itemLike, 1);
     }
-
     public static BankMachineRecipeShapedBuilder shaped(ItemLike itemLike, int i) {
         return new BankMachineRecipeShapedBuilder(itemLike, i);
     }
-
     public BankMachineRecipeShapedBuilder define(Character character, TagKey<Item> tagKey) {
         return this.define(character, Ingredient.of(tagKey));
     }
-
     public BankMachineRecipeShapedBuilder define(Character character, ItemLike itemLike) {
         return this.define(character, Ingredient.of(itemLike));
     }
-
     public BankMachineRecipeShapedBuilder define(Character character, Ingredient ingredient) {
         if (this.key.containsKey(character)) {
             throw new IllegalArgumentException("Symbol '" + character + "' is already defined!");
@@ -71,7 +61,6 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
             return this;
         }
     }
-
     public BankMachineRecipeShapedBuilder pattern(String string) {
         if (!this.rows.isEmpty() && string.length() != this.rows.get(0).length()) {
             throw new IllegalArgumentException("Pattern must be the same width on every line!");
@@ -80,26 +69,21 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
             return this;
         }
     }
-
     public @NotNull BankMachineRecipeShapedBuilder unlockedBy(String string, CriterionTriggerInstance criterionTriggerInstance) {
         this.advancement.addCriterion(string, criterionTriggerInstance);
         return this;
     }
-
     public BankMachineRecipeShapedBuilder group(@Nullable String string) {
         this.group = string;
         return this;
     }
-
     public BankMachineRecipeShapedBuilder showNotification(boolean bl) {
         this.showNotification = bl;
         return this;
     }
-
     public @NotNull Item getResult() {
         return this.result;
     }
-
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation resourceLocation) {
         this.ensureValid(resourceLocation);
         this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation)).rewards(net.minecraft.advancements.AdvancementRewards.Builder.recipe(resourceLocation)).requirements(RequirementsStrategy.OR);
@@ -117,7 +101,6 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
                     if (!this.key.containsKey(c) && c != ' ') {
                         throw new IllegalStateException("Pattern in recipe " + resourceLocation + " uses undefined symbol '" + c + "'");
                     }
-
                     set.remove(c);
                 }
             }
@@ -140,7 +123,6 @@ public class BankMachineRecipeShapedBuilder implements RecipeBuilder {
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
         private final boolean showNotification;
-
         public Result(ResourceLocation resourceLocation, Item item, int i, String string, List<String> list, Map<Character, Ingredient> map, Advancement.Builder builder, ResourceLocation resourceLocation2, boolean bl) {
             this.id = resourceLocation;
             this.result = item;
