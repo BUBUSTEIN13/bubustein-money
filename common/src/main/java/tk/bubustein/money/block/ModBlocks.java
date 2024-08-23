@@ -9,7 +9,6 @@ import tk.bubustein.money.block.custom.ATM;
 import tk.bubustein.money.block.custom.BankMachine;
 import java.util.function.Supplier;
 
-
 public class ModBlocks {
     public static void init(){};
     public static final Supplier<Block> BANK_MACHINE = registerBlock("bank_machine", BankMachine::new);
