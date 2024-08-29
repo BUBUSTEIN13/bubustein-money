@@ -1,4 +1,5 @@
 package tk.bubustein.money.block.custom;
+
 import dev.architectury.registry.menu.MenuRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

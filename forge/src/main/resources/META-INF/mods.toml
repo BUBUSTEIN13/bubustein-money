@@ -13,8 +13,7 @@ description='''
 Ever wish Minecraft had a money mod? Search no further!
 
 You now have Bubustein's Money Mod, which contains US Dollars, Euros, Pound sterling, Canadian dollars, and more.
-Even an ATM is available where emeralds can be converted into Currency to be used with other players.
-You can resume using the village's trading hall because it works in reverse.
+Even an ATM is available.
 '''
 logoFile = "icon.png"
 [modproperties.bubusteinmoneymod]

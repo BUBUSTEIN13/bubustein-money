@@ -1,0 +1,28 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        "R##",
+        "LP#",
+        "I##"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:blue_dye"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:special_paper"
+        },
+        "I": {
+            "item": "minecraft:gold_nugget"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:thousand_kr_won"
+    }
+}

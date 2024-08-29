@@ -1,0 +1,13 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:zece_bani_md"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "item": "bubusteinmoneymod:cinci_bani_md"
+    }
+}

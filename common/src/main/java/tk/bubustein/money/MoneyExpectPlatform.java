@@ -9,7 +9,6 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
 import tk.bubustein.money.recipe.BankMachineRecipeShaped;
 import tk.bubustein.money.recipe.BankMachineRecipeShapeless;
-
 import java.nio.file.Path;
 import java.util.function.Supplier;
 public class MoneyExpectPlatform {

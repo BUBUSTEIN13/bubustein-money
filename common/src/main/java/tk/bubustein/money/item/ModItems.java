@@ -1,12 +1,19 @@
 package tk.bubustein.money.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import tk.bubustein.money.MoneyExpectPlatform;
 import tk.bubustein.money.MoneyMod;
 import java.util.function.Supplier;
-
 public class ModItems {
     public static void init(){};
+    /*
+     * ////////////////////////////////////////////////////
+     * //////////////// COINS TAB ///////////////////////
+     * /////////////// BUBUSTEIN's MONEY MOD //////////////
+     * ////////////////////////////////////////////////////
+     * ////////////////////////////////////////////////////
+     * */
     public static final Supplier<Item> Ecent1 = MoneyExpectPlatform.registerItem("one_ecent",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
     public static final Supplier<Item> Ecent2 = MoneyExpectPlatform.registerItem("two_ecents",
@@ -41,7 +48,6 @@ public class ModItems {
     public static final Supplier<Item> Pound2 = MoneyExpectPlatform.registerItem("two_pounds",
             ()-> new Item(new Item.Properties().tab(MoneyMod.COINS)));
 
-
     public static final Supplier<Item> Cent1 = MoneyExpectPlatform.registerItem("one_cent",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
     public static final Supplier<Item> Cent5 = MoneyExpectPlatform.registerItem("five_cents",
@@ -52,7 +58,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
     public static final Supplier<Item> Cent50 = MoneyExpectPlatform.registerItem("fifty_cents",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
-
 
     public static final Supplier<Item> CCent5 = MoneyExpectPlatform.registerItem("five_ccents",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
@@ -65,7 +70,6 @@ public class ModItems {
     public static final Supplier<Item> Toonie = MoneyExpectPlatform.registerItem("toonie",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
 
-
     public static final Supplier<Item> Ban1 = MoneyExpectPlatform.registerItem("un_ban",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
     public static final Supplier<Item> Bani5 = MoneyExpectPlatform.registerItem("cinci_bani",
@@ -74,7 +78,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
     public static final Supplier<Item> Bani50 = MoneyExpectPlatform.registerItem("cincizeci_bani",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
-
 
     public static final Supplier<Item> BanMD5 = MoneyExpectPlatform.registerItem("cinci_bani_md",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
@@ -92,7 +95,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
     public static final Supplier<Item> LeiMD10 = MoneyExpectPlatform.registerItem("zece_lei_md",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
-
 
     public static final Supplier<Item> Centimes5 = MoneyExpectPlatform.registerItem("five_centimes",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
@@ -134,7 +136,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
     public static final Supplier<Item> Yen500 = MoneyExpectPlatform.registerItem("five_hundred_yen",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
-
 
     public static final Supplier<Item> Stotinka1 = MoneyExpectPlatform.registerItem("one_stotinka",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
@@ -235,7 +236,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
     public static final Supplier<Item> SEkr10 = MoneyExpectPlatform.registerItem("ten_se_krone",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
-
 
     public static final Supplier<Item> ISkr1 = MoneyExpectPlatform.registerItem("one_is_krone",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
@@ -338,6 +338,25 @@ public class ModItems {
     public static final Supplier<Item> NZD2 = MoneyExpectPlatform.registerItem("two_nz_dollars",
             () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
 
+    public static final Supplier<Item> PHS1 = MoneyExpectPlatform.registerItem("one_ph_sentimo",
+            () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHS5 = MoneyExpectPlatform.registerItem("five_ph_sentimo",
+            () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHS25 = MoneyExpectPlatform.registerItem("twenty_five_ph_sentimo",
+            () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHP1 = MoneyExpectPlatform.registerItem("one_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHP5 = MoneyExpectPlatform.registerItem("five_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
+    public static final Supplier<Item> PHP10 = MoneyExpectPlatform.registerItem("ten_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.COINS)));
+    /*
+     * ////////////////////////////////////////////////////
+     * //////////////// BANKNOTES TAB ///////////////////////
+     * /////////////// BUBUSTEIN's MONEY MOD //////////////
+     * ////////////////////////////////////////////////////
+     * ////////////////////////////////////////////////////
+     * */
     public static final Supplier<Item> Euro5 = MoneyExpectPlatform.registerItem("five_euros",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> Euro10 = MoneyExpectPlatform.registerItem("ten_euros",
@@ -362,7 +381,6 @@ public class ModItems {
     public static final Supplier<Item> Pound50 = MoneyExpectPlatform.registerItem("fifty_pounds",
             ()->   new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
 
-
     public static final Supplier<Item> Dollar1 = MoneyExpectPlatform.registerItem("one_dollar",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> Dollar5 = MoneyExpectPlatform.registerItem("five_dollars",
@@ -376,7 +394,6 @@ public class ModItems {
     public static final Supplier<Item> Dollar100 = MoneyExpectPlatform.registerItem("hundred_dollars",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
 
-
     public static final Supplier<Item> DollarC5 = MoneyExpectPlatform.registerItem("five_cdollars",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> DollarC10 = MoneyExpectPlatform.registerItem("ten_cdollars",
@@ -387,7 +404,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> DollarC100 = MoneyExpectPlatform.registerItem("hundred_cdollars",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
-
 
     public static final Supplier<Item> Leu1 = MoneyExpectPlatform.registerItem("un_leu",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
@@ -405,7 +421,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> Lei500 = MoneyExpectPlatform.registerItem("cinci_sute_lei",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
-
 
     public static final Supplier<Item> LeiMD20 = MoneyExpectPlatform.registerItem("douazeci_lei_md",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
@@ -451,9 +466,6 @@ public class ModItems {
     public static final Supplier<Item> Yen10000 = MoneyExpectPlatform.registerItem("ten_thousand_yen",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
 
-
-
-
     public static final Supplier<Item> Leva5 = MoneyExpectPlatform.registerItem("five_leva",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> Leva10 = MoneyExpectPlatform.registerItem("ten_leva",
@@ -486,10 +498,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> DKkr500 = MoneyExpectPlatform.registerItem("five_hundred_dk_krone",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
-
     public static final Supplier<Item> DKkr1000 = MoneyExpectPlatform.registerItem("thousand_dk_krone",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
-
 
     public static final Supplier<Item> Ft500 = MoneyExpectPlatform.registerItem("five_hundred_ft",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
@@ -504,7 +514,6 @@ public class ModItems {
     public static final Supplier<Item> Ft20000 = MoneyExpectPlatform.registerItem("twenty_thousand_ft",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
 
-
     public static final Supplier<Item> NOkr50 = MoneyExpectPlatform.registerItem("fifty_no_krone",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> NOkr100 = MoneyExpectPlatform.registerItem("hundred_no_krone",
@@ -515,9 +524,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> NOkr1000 = MoneyExpectPlatform.registerItem("thousand_no_krone",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
-
-
-
 
     public static final Supplier<Item> Zloty10 = MoneyExpectPlatform.registerItem("ten_zloty",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
@@ -531,7 +537,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> Zloty500 = MoneyExpectPlatform.registerItem("five_hundred_zloty",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
-
 
     public static final Supplier<Item> RSD10 = MoneyExpectPlatform.registerItem("ten_rs_dinar",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
@@ -551,7 +556,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
     public static final Supplier<Item> RSD5000 = MoneyExpectPlatform.registerItem("five_thousand_rs_dinar",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
-
 
     public static final Supplier<Item> SEkr20 = MoneyExpectPlatform.registerItem("twenty_se_krone",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
@@ -671,34 +675,53 @@ public class ModItems {
     public static final Supplier<Item> NZD100 = MoneyExpectPlatform.registerItem("hundred_nz_dollars",
             () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
 
+    public static final Supplier<Item> PHP20 = MoneyExpectPlatform.registerItem("twenty_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP50 = MoneyExpectPlatform.registerItem("fifty_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP100 = MoneyExpectPlatform.registerItem("hundred_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP200 = MoneyExpectPlatform.registerItem("two_hundred_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP500 = MoneyExpectPlatform.registerItem("five_hundred_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
+    public static final Supplier<Item> PHP1000 = MoneyExpectPlatform.registerItem("thousand_ph_piso",
+            () -> new Item(new Item.Properties().tab(MoneyMod.BANKNOTES)));
+    /*
+     * ////////////////////////////////////////////////////
+     * //////////////// SPECIAL TAB ///////////////////////
+     * /////////////// BUBUSTEIN's MONEY MOD //////////////
+     * ////////////////////////////////////////////////////
+     * ////////////////////////////////////////////////////
+     * */
     public static final Supplier<Item> B1 = MoneyExpectPlatform.registerItem("un_ban_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B2 = MoneyExpectPlatform.registerItem("doi_bani_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B5 = MoneyExpectPlatform.registerItem("cinci_bani_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B10 = MoneyExpectPlatform.registerItem("zece_bani_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B20 = MoneyExpectPlatform.registerItem("douazeci_bani_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> B50 = MoneyExpectPlatform.registerItem("cincizeci_bani_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> L1 = MoneyExpectPlatform.registerItem("un_leu_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> L2 = MoneyExpectPlatform.registerItem("doi_lei_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.UNCOMMON)));
     public static final Supplier<Item> L5 = MoneyExpectPlatform.registerItem("cinci_lei_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L12 = MoneyExpectPlatform.registerItem("douasprezece_lei_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L20 = MoneyExpectPlatform.registerItem("douazeci_lei_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L25 = MoneyExpectPlatform.registerItem("douazeci_cinci_lei_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new ItemWithGlint(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.RARE)));
     public static final Supplier<Item> L50 = MoneyExpectPlatform.registerItem("cincizeci_lei_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new ItemWithGlint(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
     public static final Supplier<Item> L100 = MoneyExpectPlatform.registerItem("suta_lei_1900",
-            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
+            () -> new ItemWithGlint(new Item.Properties().tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC)));
 
     public static final Supplier<Item> VisaClassic = MoneyExpectPlatform.registerItem("card_classic",
             () -> new Item(new Item.Properties().stacksTo(1).tab(MoneyMod.SPECIAL)));
@@ -706,4 +729,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(1).tab(MoneyMod.SPECIAL)));
     public static final Supplier<Item> VisaSteel = MoneyExpectPlatform.registerItem("card_steel",
             () -> new Item(new Item.Properties().stacksTo(1).tab(MoneyMod.SPECIAL)));
+    public static final Supplier<Item> SpecialPaper = MoneyExpectPlatform.registerItem("special_paper",
+            () -> new Item(new Item.Properties().tab(MoneyMod.SPECIAL)));
 }

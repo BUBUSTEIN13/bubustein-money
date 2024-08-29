@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "bubusteinmoneymod:item/twenty_five_kurus"
-  }
-}

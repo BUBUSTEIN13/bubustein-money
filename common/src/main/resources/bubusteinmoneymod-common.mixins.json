@@ -5,11 +5,9 @@
   "minVersion": "0.8",
   "client": [
     "MixinTitleScreen",
-    "VillagerProfessionInvoker",
+    "PoiTypesInvoker",
     "StructureTemplatePoolAccessor",
-    "PoiTypesInvoker"
-  ],
-  "mixins": [
+    "VillagerProfessionInvoker"
   ],
   "injectors": {
     "defaultRequire": 1

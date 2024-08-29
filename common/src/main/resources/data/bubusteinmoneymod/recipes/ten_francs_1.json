@@ -16,7 +16,7 @@
             "item": "minecraft:redstone"
         },
         "P": {
-            "item": "minecraft:paper"
+            "item": "bubusteinmoneymod:special_paper"
         }
     },
     "result": {

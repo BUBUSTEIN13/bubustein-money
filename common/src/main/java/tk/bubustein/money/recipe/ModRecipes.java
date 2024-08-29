@@ -21,11 +21,8 @@ public class ModRecipes {
             return super.toString();
         }
     });
-
     public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShaped>> BANK_MACHINE_SHAPED = SERIALIZERS.register("bank_machine_shaped", MoneyExpectPlatform::getBankMachineShapedSerializer);
-
     public static final RegistrySupplier<RecipeSerializer<BankMachineRecipeShapeless>> BANK_MACHINE_SHAPELESS = SERIALIZERS.register("bank_machine_shapeless", MoneyExpectPlatform::getBankMachineShapelessSerializer);
-
     public static void init() {
         SERIALIZERS.register();
         RECIPE_TYPES.register();

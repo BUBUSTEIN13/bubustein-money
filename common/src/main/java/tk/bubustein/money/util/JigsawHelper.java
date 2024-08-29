@@ -10,7 +10,6 @@ import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
 import tk.bubustein.money.mixin.StructureTemplatePoolAccessor;
-
 import java.util.ArrayList;
 import java.util.List;
 

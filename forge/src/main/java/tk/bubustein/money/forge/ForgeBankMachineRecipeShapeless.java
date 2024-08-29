@@ -26,7 +26,6 @@ public class ForgeBankMachineRecipeShapeless extends BankMachineRecipeShapeless 
         this.result = itemStack;
         this.ingredients = nonNullList;
     }
-
     public static class Serializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<ForgeBankMachineRecipeShapeless> {
         public static final Serializer INSTANCE = new Serializer();
 
@@ -43,7 +42,6 @@ public class ForgeBankMachineRecipeShapeless extends BankMachineRecipeShapeless 
             ItemStack result = BankMachineRecipeShaped.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "result"));
             return new ForgeBankMachineRecipeShapeless(resourceLocation, group, result, ingredients);
         }
-
         @Override
         public ForgeBankMachineRecipeShapeless fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf buffer) {
             String group = buffer.readUtf();
@@ -55,7 +53,6 @@ public class ForgeBankMachineRecipeShapeless extends BankMachineRecipeShapeless 
             ItemStack result = buffer.readItem();
             return new ForgeBankMachineRecipeShapeless(resourceLocation, group, result, ingredients);
         }
-
         @Override
         public void toNetwork(FriendlyByteBuf buffer, ForgeBankMachineRecipeShapeless recipe) {
             buffer.writeUtf(recipe.group);

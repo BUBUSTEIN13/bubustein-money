@@ -21,7 +21,6 @@ public class BankMachineRecipeShapeless implements BankMachineRecipe {
     final String group;
     final ItemStack result;
     final NonNullList<Ingredient> ingredients;
-
     public BankMachineRecipeShapeless(ResourceLocation resourceLocation, String string, ItemStack itemStack, NonNullList<Ingredient> nonNullList) {
         this.id = resourceLocation;
         this.group = string;

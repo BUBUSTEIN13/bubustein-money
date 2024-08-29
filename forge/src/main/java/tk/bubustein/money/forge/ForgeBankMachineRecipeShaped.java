@@ -31,7 +31,6 @@ public class ForgeBankMachineRecipeShaped extends BankMachineRecipeShaped {
     }
     public static class Serializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<ForgeBankMachineRecipeShaped> {
         public static final Serializer INSTANCE = new Serializer();
-
         @Override
         public @NotNull ForgeBankMachineRecipeShaped fromJson(@NotNull ResourceLocation resourceLocation, @NotNull JsonObject jsonObject) {
             String group = GsonHelper.getAsString(jsonObject, "group", "");

@@ -28,12 +28,10 @@ public class ATM extends HorizontalDirectionalBlock  {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder){
         builder.add(FACING, HALF);
     }
-
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(HALF, DoubleBlockHalf.LOWER);
     }
-
     @Override
     public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
         if(world.getBlockState(pos.above()).getBlock() != Blocks.AIR){

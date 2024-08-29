@@ -14,7 +14,6 @@ public class BankMachineResultSlot extends Slot {
     private final CraftingContainer craftSlots;
     private final Player player;
     private int removeCount;
-
     public BankMachineResultSlot(Player player, CraftingContainer craftingContainer, Container container, int i, int j, int k) {
         super(container, i, j, k);
         this.player = player;
