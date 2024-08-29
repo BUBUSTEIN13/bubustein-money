@@ -1,14 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:cincizeci_lei"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:cincizeci_lei"
+        }
+    },
+    "pattern": [
+        "##"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:suta_lei"
     }
-  },
-  "pattern": [
-    "##"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:suta_lei"
-  }
 }

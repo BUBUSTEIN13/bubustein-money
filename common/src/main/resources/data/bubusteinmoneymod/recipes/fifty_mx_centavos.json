@@ -1,17 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:ten_mx_centavos"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "category": "misc",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:ten_mx_centavos"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:fifty_mx_centavos"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:fifty_mx_centavos"
-  }
 }

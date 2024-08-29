@@ -1,0 +1,12 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shapeless",
+    "ingredients": [
+        {
+            "item": "bubusteinmoneymod:two_nz_dollars"
+        }
+    ],
+    "result": {
+        "count": 2,
+        "item": "bubusteinmoneymod:one_nz_dollar"
+    }
+}

@@ -1,15 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "redstone",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:ten_mx_pesos"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "category": "redstone",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:ten_mx_pesos"
+        }
+    },
+    "pattern": [
+        "##"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:twenty_mx_pesos"
     }
-  },
-  "pattern": [
-    "##"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:twenty_mx_pesos"
-  }
 }

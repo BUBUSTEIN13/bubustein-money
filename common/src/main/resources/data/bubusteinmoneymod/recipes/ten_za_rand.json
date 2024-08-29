@@ -1,15 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "redstone",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:five_za_rand"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "category": "redstone",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:five_za_rand"
+        }
+    },
+    "pattern": [
+        "##"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:ten_za_rand"
     }
-  },
-  "pattern": [
-    "##"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:ten_za_rand"
-  }
 }

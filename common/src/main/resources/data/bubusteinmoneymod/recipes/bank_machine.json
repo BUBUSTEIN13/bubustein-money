@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "E": {
+            "item": "minecraft:emerald"
+        },
+        "G": {
+            "item": "minecraft:gold_ingot"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "P": {
+            "tag": "minecraft:planks"
+        }
+    },
+    "pattern": [
+        "DII",
+        "GPP",
+        "EPP"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:bank_machine"
+    }
+}

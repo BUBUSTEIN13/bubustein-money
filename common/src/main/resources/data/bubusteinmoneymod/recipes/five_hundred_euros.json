@@ -1,16 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "key": {
-    "#": {
-      "item": "bubusteinmoneymod:hundred_euros"
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "key": {
+        "#": {
+            "item": "bubusteinmoneymod:hundred_euros"
+        }
+    },
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "result": {
+        "item": "bubusteinmoneymod:five_hundred_euros"
     }
-  },
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "result": {
-    "item": "bubusteinmoneymod:five_hundred_euros"
-  }
 }

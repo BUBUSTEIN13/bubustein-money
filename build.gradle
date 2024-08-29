@@ -1,6 +1,8 @@
+import java.text.SimpleDateFormat
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.5-SNAPSHOT" apply false
+    id "dev.architectury.loom" version "1.7-SNAPSHOT" apply false
+    id "me.shedaniel.unified-publishing" version "0.1.+" apply false
 }
 architectury {
     minecraft = rootProject.minecraft_version
@@ -20,15 +22,44 @@ allprojects {
     apply plugin: "architectury-plugin"
     apply plugin: "maven-publish"
     base {
-        archivesName = rootProject.archives_base_name
+        archivesName = rootProject.mod_id
     }
-    version = rootProject.mod_version
+    if(project.isDev.toBoolean() == true){
+        if(project.dev_type != "")
+            version = "${rootProject.mod_version}-${rootProject.dev_type}-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
+        else version = "${rootProject.mod_version}-SNAPSHOT-${(new Date()).format('yyyyMMdd.HHmm', TimeZone.getTimeZone('EET'))}"
+    }else version = rootProject.mod_version
     group = rootProject.maven_group
-    tasks.withType(JavaCompile) {
+    tasks.withType(JavaCompile).configureEach {
         options.encoding = "UTF-8"
-        def targetVersion = 8
-        if (JavaVersion.current().isJava9Compatible()) {
-            options.release = targetVersion
+        options.release = 8
+    }
+    ext {
+        releaseChangelog = {
+            def dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm")
+            dateFormat.setTimeZone(TimeZone.getTimeZone("EET"))
+            def branch
+            if (System.env.BRANCH_NAME) {
+                branch = System.env.BRANCH_NAME
+                branch = branch.substring(branch.lastIndexOf("/") + 1)
+            } else {
+                branch = "git rev-parse --abbrev-ref HEAD".execute().in.text.trim()
+            }
+            if (branch == "HEAD") {
+                branch = "git rev-parse --short HEAD".execute().in.text.trim()
+            }
+            def time = dateFormat.format(new Date())
+            def changes = new StringBuilder()
+            changes << "## Bubustein's Money Mod v$project.mod_version for $project.minecraft_version\nUpdated at **$time**.\n[Click here for changelog](https://www.github.com/bubustein13/bubustein-money/commits/$branch)"
+            def proc = "git log --max-count=200 --pretty=format:%s".execute()
+            proc.in.eachLine { line ->
+                def processedLine = line.toString()
+                if (!processedLine.contains("New translations") && !processedLine.contains("Merge") && !processedLine.contains("branch")) {
+                    changes << "\n- ${processedLine.capitalize()}"
+                }
+            }
+            proc.waitFor()
+            return changes.toString()
         }
     }
     java {

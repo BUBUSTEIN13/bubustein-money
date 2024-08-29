@@ -1,0 +1,25 @@
+{
+    "type": "bubusteinmoneymod:bank_machine_shaped",
+    "pattern": [
+        " DD",
+        " ND",
+        " RP"
+    ],
+    "key": {
+        "N": {
+            "item": "minecraft:copper_ingot"
+        },
+        "D": {
+            "item": "minecraft:orange_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "P": {
+            "item": "bubusteinmoneymod:special_paper"
+        }
+    },
+    "result": {
+        "item": "bubusteinmoneymod:ten_francs"
+    }
+}

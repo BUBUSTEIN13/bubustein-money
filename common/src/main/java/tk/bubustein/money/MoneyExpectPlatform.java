@@ -5,7 +5,12 @@ import me.shedaniel.architectury.platform.Platform;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.feature.StructureFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import tk.bubustein.money.recipe.BankMachineRecipeShaped;
+import tk.bubustein.money.recipe.BankMachineRecipeShapeless;
 import java.nio.file.Path;
 import java.util.function.Supplier;
 
@@ -15,7 +20,6 @@ public class MoneyExpectPlatform {
      */
     @ExpectPlatform
     public static Path getConfigDirectory() {
-        // Just throw an error, the content should get replaced at runtime.
         throw new AssertionError();
     }
     @ExpectPlatform
@@ -32,6 +36,18 @@ public class MoneyExpectPlatform {
     }
     @ExpectPlatform
     public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
+        throw new AssertionError();
+    }
+    @ExpectPlatform
+    public static Supplier<StructureFeature<NoneFeatureConfiguration>> registerStructures(String name, StructureFeature<NoneFeatureConfiguration> c){
+        throw new AssertionError();
+    }
+    @ExpectPlatform
+    public static RecipeSerializer<BankMachineRecipeShaped> getBankMachineShapedSerializer() {
+        throw new AssertionError();
+    }
+    @ExpectPlatform
+    public static RecipeSerializer<BankMachineRecipeShapeless> getBankMachineShapelessSerializer() {
         throw new AssertionError();
     }
 }
