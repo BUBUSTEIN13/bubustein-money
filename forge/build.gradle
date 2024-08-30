@@ -98,20 +98,12 @@ unifiedPublishing {
                 modrinth = "architectury-api"
             }
             optional {
-                curseforge = "rei"
-                modrinth = "rei"
-            }
-            optional {
                 curseforge = "jei"
                 modrinth = "jei"
             }
             conflicts {
                 curseforge = "entityculling"
                 modrinth = "entityculling"
-            }
-            conflicts {
-                curseforge = "moreculling"
-                modrinth = "moreculling"
             }
         }
         def isDev = project.findProperty("isDev")?.toBoolean() ?: false

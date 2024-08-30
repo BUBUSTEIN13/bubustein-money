@@ -1,6 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
 license = "GNU AGPL 3.0"
+issueTrackerURL="https://github.com/bubustein13/bubustein-money"
 
 [[mods]]
 modId = "bubusteinmoneymod"
@@ -27,7 +28,7 @@ side = "BOTH"
 [[dependencies.bubusteinmoneymod]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.16.5,)"
+versionRange = "[1.16.5,1.17)"
 ordering = "NONE"
 side = "BOTH"
 [[dependencies.bubusteinmoneymod]]
