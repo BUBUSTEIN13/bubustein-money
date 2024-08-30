@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
 license = "GNU AGPL 3.0"
-issueTrackerURL="https://github.com/bubustein13/bubustein-money"
+issueTrackerURL="https://github.com/bubustein13/bubustein-money/issues"
 
 [[mods]]
 modId = "bubusteinmoneymod"
