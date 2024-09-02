@@ -103,7 +103,7 @@ unifiedPublishing {
                 modrinth = "architectury-api"
             }
             optional {
-                curseforge = "rei"
+                curseforge = "roughly-enough-items"
                 modrinth = "rei"
             }
             optional {
