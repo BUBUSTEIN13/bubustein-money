@@ -63,8 +63,8 @@
     <td>⛔</td></tr><tr>
   <tr>
     <td><b> 1.16.5</b></td>
-    <td>🙅🏻</td>
-    <td>🙅🏻</td>
+    <td>✅</td>
+    <td>✅</td>
     <td>⛔</td></tr><tr>
 <td><b> 1.17.1</b></td>
     <td>🙅🏻</td>
@@ -167,7 +167,7 @@ Now you can craft for example from 5 Euro to 10 Euro using Crafting Table, <br> 
      <td>x.0.8</td>
    </tr>
     <tr>
-    <td><p>???<sup>th</sup> September 2024</p></td>
+    <td><p>2<sup>nd</sup> September 2024</p></td>
     <td>Removed some recipes. Added Special Paper. The bank machine recipe of first banknote of every currency has changed,<br>
         from now you need Special Paper. Restructured villager trades. The Banker has new trades USD for diamond and netherite ingot,<br>
         and ROL (1900) for enchanted armor and tools. The Exchanger trades are now restructured. <br>
