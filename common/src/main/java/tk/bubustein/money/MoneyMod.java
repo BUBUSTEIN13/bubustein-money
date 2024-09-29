@@ -17,6 +17,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import net.minecraft.world.level.storage.loot.LootTable;
 import org.slf4j.Logger;
 import tk.bubustein.money.block.ModBlocks;
+import tk.bubustein.money.item.CardItem;
 import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.recipe.ModRecipes;
 import tk.bubustein.money.screen.ModMenuTypes;
@@ -52,6 +53,7 @@ public class MoneyMod {
         ModVillagers.init();
         LOGGER.info("[" + MOD_ID + "] Creating Tabs. . .");
         TABS.register();
+        CardItem.COMPONENTS.register();
         LOGGER.info("[" + MOD_ID + "] The Mod has been loaded successfully");
     }
     public static void registerJigsaws(MinecraftServer server){

@@ -725,11 +725,11 @@ public class ModItems {
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL).rarity(Rarity.EPIC).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
     public static final Supplier<Item> VisaClassic = MoneyExpectPlatform.registerItem("card_classic",
-            () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
+            () -> new CardItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON).arch$tab(MoneyMod.SPECIAL)));
     public static final Supplier<Item> VisaGold = MoneyExpectPlatform.registerItem("card_gold",
-            () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
+            () -> new CardItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).arch$tab(MoneyMod.SPECIAL)));
     public static final Supplier<Item> VisaSteel = MoneyExpectPlatform.registerItem("card_steel",
-            () -> new Item(new Item.Properties().stacksTo(1).arch$tab(MoneyMod.SPECIAL)));
+            () -> new CardItem(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).arch$tab(MoneyMod.SPECIAL)));
     public static final Supplier<Item> SpecialPaper = MoneyExpectPlatform.registerItem("special_paper",
             () -> new Item(new Item.Properties().arch$tab(MoneyMod.SPECIAL)));
 }
