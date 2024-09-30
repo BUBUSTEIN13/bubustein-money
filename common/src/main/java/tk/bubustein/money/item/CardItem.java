@@ -13,7 +13,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.item.TooltipFlag;
 import tk.bubustein.money.MoneyMod;
-
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.function.Supplier;
@@ -21,12 +20,10 @@ import java.util.function.UnaryOperator;
 
 public class CardItem extends Item {
     public static final DeferredRegister<DataComponentType<?>> COMPONENTS = DeferredRegister.create(MoneyMod.MOD_ID, Registries.DATA_COMPONENT_TYPE);
-
     public static final Supplier<DataComponentType<Double>> MONEY_COMPONENT = COMPONENTS.register("money", () -> DataComponentType.<Double>builder()
             .persistent(Codec.DOUBLE)
             .networkSynchronized(ByteBufCodecs.DOUBLE)
             .build());
-
     private static final double GLOW_THRESHOLD = 20000.0;
     public CardItem(Properties properties) {
         super(properties);
@@ -44,7 +41,7 @@ public class CardItem extends Item {
         stack.update(MONEY_COMPONENT.get(), 0.0, addMoney);
     }
     public double getMoney(ItemStack stack) {
-        return Math.round(stack.getOrDefault(MONEY_COMPONENT.get(), 0.0) * 1000.0) / 1000.0;
+        return Math.round(stack.getOrDefault(MONEY_COMPONENT.get(), 0.0) * 100.0) / 100.0;
     }
 
     public void setMoney(ItemStack stack, double amount) {
@@ -55,7 +52,7 @@ public class CardItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         double money = getMoney(stack);
-        DecimalFormat df = new DecimalFormat("#.###");
+        DecimalFormat df = new DecimalFormat("#.##");
         String formattedMoney = df.format(money);
         tooltip.add(Component.literal("Money: " + formattedMoney).withStyle(style -> style.withColor(TextColor.fromRgb(0xFFD700))));
         if (stack.getItem() == ModItems.VisaClassic.get())
@@ -65,5 +62,4 @@ public class CardItem extends Item {
         else if (stack.getItem() == ModItems.VisaSteel.get())
             tooltip.add(Component.literal("Withdraw Fee: 0.5%").withStyle(style -> style.withColor(TextColor.fromRgb(0xFF0000))));
     }
-
 }

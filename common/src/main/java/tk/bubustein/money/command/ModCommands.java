@@ -225,7 +225,6 @@ public class ModCommands {
         }
         return 0; // Default case, no fee
     }
-
     private static void giveMoneyToPlayer(Player player, double amount, boolean isVisaSteel) {
         double remainingAmount = amount;
         for (Double denomination : CURRENCY_ITEMS.keySet()) {
@@ -238,7 +237,7 @@ public class ModCommands {
             if (remainingAmount == 0) break;
         }
         if (remainingAmount > 0) {
-            player.sendSystemMessage(Component.literal(String.format("Nu s-a putut returna suma exactă. Diferența: %.2f", remainingAmount)));
+            player.sendSystemMessage(Component.literal(String.format("Nu s-a putut returna suma exactă. Diferența: %s", formatMoney(remainingAmount))));
         }
     }
     private static String formatMoney(double amount) {
@@ -248,7 +247,6 @@ public class ModCommands {
             return String.format("%.2f", amount); // Cu 2 zecimale
         }
     }
-
     private static double getItemValue(Item item) {
         return CURRENCY_ITEMS.entrySet()
                 .stream()

@@ -53,6 +53,7 @@ public class MoneyMod {
         ModVillagers.init();
         LOGGER.info("[" + MOD_ID + "] Creating Tabs. . .");
         TABS.register();
+        LOGGER.info("[" + MOD_ID + "] Registering Cards. . .");
         CardItem.COMPONENTS.register();
         LOGGER.info("[" + MOD_ID + "] The Mod has been loaded successfully");
     }
