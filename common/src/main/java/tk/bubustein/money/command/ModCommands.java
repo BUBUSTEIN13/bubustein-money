@@ -4,216 +4,355 @@ import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import tk.bubustein.money.item.CardItem;
 import tk.bubustein.money.item.ModItems;
-import java.util.Comparator;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.UUID;
+import java.util.*;
 
 public class ModCommands {
-    private static final TreeMap<Double, Item> CURRENCY_ITEMS = new TreeMap<>(Comparator.reverseOrder());
-
-    static {
-        CURRENCY_ITEMS.put(500.0, ModItems.Euro500.get());
-        CURRENCY_ITEMS.put(200.0, ModItems.Euro200.get());
-        CURRENCY_ITEMS.put(100.0, ModItems.Euro100.get());
-        CURRENCY_ITEMS.put(50.0, ModItems.Euro50.get());
-        CURRENCY_ITEMS.put(20.0, ModItems.Euro20.get());
-        CURRENCY_ITEMS.put(10.0, ModItems.Euro10.get());
-        CURRENCY_ITEMS.put(5.0, ModItems.Euro5.get());
-        CURRENCY_ITEMS.put(2.0, ModItems.Euro2.get());
-        CURRENCY_ITEMS.put(1.0, ModItems.Euro1.get());
-        CURRENCY_ITEMS.put(0.5, ModItems.Ecent50.get());
-        CURRENCY_ITEMS.put(0.2, ModItems.Ecent20.get());
-        CURRENCY_ITEMS.put(0.1, ModItems.Ecent10.get());
-        CURRENCY_ITEMS.put(0.05, ModItems.Ecent5.get());
-        CURRENCY_ITEMS.put(0.02, ModItems.Ecent2.get());
-        CURRENCY_ITEMS.put(0.01, ModItems.Ecent1.get());
-    }
-
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("bubustein")
+                .then(Commands.literal("help")
+                        .executes(context -> showHelp(context.getSource())))
+                .then(Commands.literal("setcurrency")
+                        .then(Commands.argument("currency", StringArgumentType.word())
+                                .executes(context -> setCurrency(context.getSource(), StringArgumentType.getString(context, "currency")))))
+                .then(Commands.literal("setdefaultcurrency")
+                        .requires(source -> source.hasPermission(2)) // Require permission level 2 (default for ops)
+                        .then(Commands.argument("currency", StringArgumentType.word())
+                                .executes(context -> setDefaultCurrency(context.getSource(), StringArgumentType.getString(context, "currency")))))
+                .then(Commands.literal("deposit")
+                        .then(Commands.argument("amount", DoubleArgumentType.doubleArg(0))
+                                .executes(context -> deposit(context.getSource(), DoubleArgumentType.getDouble(context, "amount"), null))
+                                .then(Commands.argument("currency", StringArgumentType.word())
+                                        .executes(context -> deposit(context.getSource(), DoubleArgumentType.getDouble(context, "amount"), StringArgumentType.getString(context, "currency"))))))
+                .then(Commands.literal("withdraw")
+                        .then(Commands.argument("amount", DoubleArgumentType.doubleArg(0))
+                                .executes(context -> withdraw(context.getSource(), DoubleArgumentType.getDouble(context, "amount")))))
+                .then(Commands.literal("defaultCurrency")
+                        .executes(context -> showDefaultCurrency(context.getSource())))
                 .then(Commands.literal("ecoAddMoney")
+                        .requires(source -> source.hasPermission(2))
                         .then(Commands.argument("amount", DoubleArgumentType.doubleArg(0))
-                                .executes(context -> {
-                                    Player player = context.getSource().getPlayerOrException();
-                                    ItemStack stack = player.getMainHandItem();
-
-                                    if (stack.getItem() instanceof CardItem) {
-                                        double amount = DoubleArgumentType.getDouble(context, "amount");
-                                        ((CardItem) stack.getItem()).addMoney(stack, amount);
-                                        player.sendSystemMessage(Component.literal("Ai adăugat " + formatMoney(amount) + " bani în card."));
-                                    } else {
-                                        player.sendSystemMessage(Component.literal("Trebuie să ții un card în mână."));
-                                    }
-                                    return Command.SINGLE_SUCCESS;
-                                })))
+                                .executes(context -> ecoAddMoney(context.getSource(), DoubleArgumentType.getDouble(context, "amount"), null))
+                                .then(Commands.argument("currency", StringArgumentType.word())
+                                        .executes(context -> ecoAddMoney(context.getSource(), DoubleArgumentType.getDouble(context, "amount"), StringArgumentType.getString(context, "currency"))))))
                 .then(Commands.literal("ecoSetMoney")
+                        .requires(source -> source.hasPermission(2))
                         .then(Commands.argument("amount", DoubleArgumentType.doubleArg(0))
-                                .executes(context -> {
-                                    Player player = context.getSource().getPlayerOrException();
-                                    ItemStack stack = player.getMainHandItem();
-
-                                    if (stack.getItem() instanceof CardItem) {
-                                        double amount = DoubleArgumentType.getDouble(context, "amount");
-                                        ((CardItem) stack.getItem()).setMoney(stack, amount);
-                                        player.sendSystemMessage(Component.literal("Ai setat suma la " + formatMoney(amount) + " bani pe card."));
-                                    } else {
-                                        player.sendSystemMessage(Component.literal("Trebuie să ții un card în mână."));
-                                    }
-                                    return Command.SINGLE_SUCCESS;
-                                })))
+                                .executes(context -> ecoSetMoney(context.getSource(), DoubleArgumentType.getDouble(context, "amount"), null))
+                                .then(Commands.argument("currency", StringArgumentType.word())
+                                        .executes(context -> ecoSetMoney(context.getSource(), DoubleArgumentType.getDouble(context, "amount"), StringArgumentType.getString(context, "currency"))))))
                 .then(Commands.literal("resetMoney")
-                        .executes(context -> {
-                            Player player = context.getSource().getPlayerOrException();
-                            ItemStack stack = player.getMainHandItem();
-
-                            if (stack.getItem() instanceof CardItem) {
-                                ((CardItem) stack.getItem()).setMoney(stack, 0);
-                                player.sendSystemMessage(Component.literal("Ai resetat suma pe card la 0."));
-                            } else {
-                                player.sendSystemMessage(Component.literal("Trebuie să ții un card în mână."));
-                            }
-                            return Command.SINGLE_SUCCESS;
-                        }))
+                        .executes(context -> resetMoney(context.getSource())))
                 .then(Commands.literal("pay")
                         .then(Commands.argument("player", StringArgumentType.word())
                                 .then(Commands.argument("amount", DoubleArgumentType.doubleArg(0))
-                                        .executes(context -> {
-                                            Player player = context.getSource().getPlayerOrException();
-                                            ItemStack stack = player.getMainHandItem();
-                                            String targetPlayerName = StringArgumentType.getString(context, "player");
-                                            double amount = DoubleArgumentType.getDouble(context, "amount");
-
-                                            if (stack.getItem() instanceof CardItem) {
-                                                if (amount <= 0) {
-                                                    player.sendSystemMessage(Component.literal("Suma trebuie să fie mai mare decât 0."));
-                                                    return Command.SINGLE_SUCCESS;
-                                                }
-
-                                                // Obține jucătorul țintă
-                                                ServerPlayer targetPlayer = context.getSource().getServer().getPlayerList().getPlayer(UUID.fromString(targetPlayerName));
-                                                if (targetPlayer == null) {
-                                                    player.sendSystemMessage(Component.literal("Jucătorul " + targetPlayerName + " nu este online."));
-                                                    return Command.SINGLE_SUCCESS;
-                                                }
-
-                                                // Verifică dacă jucătorul țintă are un card în inventar
-                                                boolean hasCard = false;
-                                                for (ItemStack itemStack : targetPlayer.getInventory().items) {
-                                                    if (itemStack.getItem() instanceof CardItem) {
-                                                        hasCard = true;
-                                                        break;
-                                                    }
-                                                }
-
-                                                if (!hasCard) {
-                                                    player.sendSystemMessage(Component.literal("Jucătorul " + targetPlayerName + " nu are un card în inventar."));
-                                                    return Command.SINGLE_SUCCESS;
-                                                }
-
-                                                // Verifică dacă jucătorul are suficienți bani
-                                                double existingMoney = ((CardItem) stack.getItem()).getMoney(stack);
-                                                if (existingMoney < amount) {
-                                                    player.sendSystemMessage(Component.literal("Nu ai suficienți bani pe card."));
-                                                    return Command.SINGLE_SUCCESS;
-                                                }
-
-                                                // Transferă banii
-                                                ((CardItem) stack.getItem()).setMoney(stack, existingMoney - amount);
-                                                // Adaugă banii jucătorului țintă la cardul său (presupunând că are un card în mână)
-                                                for (ItemStack itemStack : targetPlayer.getInventory().items) {
-                                                    if (itemStack.getItem() instanceof CardItem) {
-                                                        ((CardItem) itemStack.getItem()).addMoney(itemStack, amount);
-                                                        break; // Oprire după ce a găsit primul card
-                                                    }
-                                                }
-
-                                                player.sendSystemMessage(Component.literal("Ai transferat " + formatMoney(amount) + " către " + targetPlayerName + "."));
-                                                targetPlayer.sendSystemMessage(Component.literal("Ai primit " + formatMoney(amount) + " de la " + player.getName() + "."));
-                                            } else {
-                                                player.sendSystemMessage(Component.literal("Trebuie să ții un card în mână."));
-                                            }
-                                            return Command.SINGLE_SUCCESS;
-                                        }))))
-                .then(Commands.literal("defaultCurrency")
-                        .executes(context -> {
-                            Player player = context.getSource().getPlayerOrException();
-                            player.sendSystemMessage(Component.literal("Valuta cardului este Euro (EUR)"));
-                            return Command.SINGLE_SUCCESS;
-                        }))
-                .then(Commands.literal("deposit")
-                        .then(Commands.argument("amount", DoubleArgumentType.doubleArg(0))
-                                .executes(context -> {
-                                    Player player = context.getSource().getPlayerOrException();
-                                    ItemStack stack = player.getMainHandItem();
-                                    double amountToDeposit = DoubleArgumentType.getDouble(context, "amount");
-
-                                    if (stack.getItem() instanceof CardItem) {
-                                        double remainingToDeposit = amountToDeposit;
-                                        double totalDeposited = 0;
-
-                                        for (ItemStack itemStack : player.getInventory().items) {
-                                            if (remainingToDeposit <= 0) break;
-                                            if (itemStack.isEmpty()) continue;
-
-                                            Item item = itemStack.getItem();
-                                            int count = itemStack.getCount();
-                                            double itemValue = getItemValue(item);
-
-                                            if (itemValue > 0) {
-                                                int itemsToRemove = Math.min(count, (int) (remainingToDeposit / itemValue));
-                                                double amountRemoved = itemsToRemove * itemValue;
-
-                                                itemStack.shrink(itemsToRemove);
-                                                remainingToDeposit -= amountRemoved;
-                                                totalDeposited += amountRemoved;
-                                            }
-                                        }
-
-                                        if (totalDeposited > 0) {
-                                            ((CardItem) stack.getItem()).addMoney(stack, totalDeposited);
-                                            player.sendSystemMessage(Component.literal("Ai depus " + formatMoney(totalDeposited) + " în card."));
-                                        } else {
-                                            player.sendSystemMessage(Component.literal("Nu ai suficiente bancnote sau monede pentru a depune suma specificată."));
-                                        }
-                                    } else {
-                                        player.sendSystemMessage(Component.literal("Trebuie să ții un card în mână."));
-                                    }
-                                    return Command.SINGLE_SUCCESS;
-                                })))
-                .then(Commands.literal("withdraw")
-                        .then(Commands.argument("amount", DoubleArgumentType.doubleArg(0))
-                                .executes(context -> {
-                                    Player player = context.getSource().getPlayerOrException();
-                                    ItemStack stack = player.getMainHandItem();
-                                    double amountToWithdraw = DoubleArgumentType.getDouble(context, "amount");
-                                    if (stack.getItem() instanceof CardItem cardItem) {
-                                        double currentBalance = cardItem.getMoney(stack);
-                                        double fee = calculateWithdrawFee(stack, amountToWithdraw);
-                                        double totalWithdraw = amountToWithdraw + fee;
-
-                                        if (currentBalance >= totalWithdraw) {
-                                            cardItem.setMoney(stack, currentBalance - totalWithdraw);
-                                            giveMoneyToPlayer(player, amountToWithdraw, stack.getItem() == ModItems.VisaSteel.get());
-                                            player.sendSystemMessage(Component.literal(String.format("Ai retras %s bani. Taxa de retragere: %s", formatMoney(amountToWithdraw), formatMoney(fee))));
-                                        } else {
-                                            player.sendSystemMessage(Component.literal("Nu ai suficiente fonduri pentru această retragere."));
-                                        }
-                                    } else {
-                                        player.sendSystemMessage(Component.literal("Trebuie să ții un card în mână."));
-                                    }
-                                    return Command.SINGLE_SUCCESS;
-                                })))
+                                        .executes(context -> pay(context.getSource(), StringArgumentType.getString(context, "player"), DoubleArgumentType.getDouble(context, "amount"))))))
         );
+    }
+    private static int showHelp(CommandSourceStack source) {
+        Player player = source.getPlayer();
+        if (player != null) {
+            player.sendSystemMessage(Component.literal("====== Bubustein Commands ======").withStyle(style -> style.withColor(ChatFormatting.GOLD).withBold(true)));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein help", "Display this list of commands."));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein setcurrency <currency>", "Change the currency of the card in hand."));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein setdefaultcurrency <currency>", "Set the default currency for all new cards.", true));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein deposit <amount> [currency]", "Deposit money into the card in hand."));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein withdraw <amount>", "Withdraw money from the card in hand."));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein defaultCurrency", "Display the current default currency."));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein ecoAddMoney <amount> [currency]", "Add money to the card in hand.", true));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein ecoSetMoney <amount> [currency]", "Set the amount of money on the card in hand.", true));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein resetMoney", "Reset the amount of money on the card in hand to 0."));
+            player.sendSystemMessage(createStyledHelpMessage("/bubustein pay <player> <amount>", "Transfer money to another player."));
+            player.sendSystemMessage(Component.literal("=======================================================================").withStyle(ChatFormatting.GOLD));
+        }
+        return Command.SINGLE_SUCCESS;
+    }
+
+    private static MutableComponent createStyledHelpMessage(String command, String description) {
+        return createStyledHelpMessage(command, description, false);
+    }
+
+    private static MutableComponent createStyledHelpMessage(String command, String description, boolean requiresOp) {
+        MutableComponent styledCommand = Component.literal(command).withStyle(ChatFormatting.AQUA);
+        MutableComponent styledDescription = Component.literal(": " + description).withStyle(ChatFormatting.GRAY);
+        MutableComponent fullMessage = styledCommand.append(styledDescription);
+
+        if (requiresOp) {
+            fullMessage.append(Component.literal(" (Requires OP)")
+                    .withStyle(style -> style.withColor(ChatFormatting.RED).withBold(true)));
+        }
+
+        return fullMessage;
+    }
+    private static int ecoAddMoney(CommandSourceStack source, double amount, String specifiedCurrency) throws CommandSyntaxException {
+        Player player = source.getPlayerOrException();
+        ItemStack stack = player.getMainHandItem();
+        if (!(stack.getItem() instanceof CardItem cardItem)) {
+            player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        String cardCurrency = cardItem.getCurrency(stack);
+        String addCurrency = (specifiedCurrency != null) ? specifiedCurrency : cardCurrency;
+        if (!ModItems.EXCHANGE_RATES.containsKey(addCurrency)) {
+            player.sendSystemMessage(Component.literal("Invalid currency. Available currencies are: " + String.join(", ", ModItems.EXCHANGE_RATES.keySet())).withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        double amountInCardCurrency = convertCurrency(amount, addCurrency, cardCurrency);
+        cardItem.addMoney(stack, amountInCardCurrency);
+        player.sendSystemMessage(Component.literal("You added " + formatMoney(amount) + " " + addCurrency +
+                " to the card. New balance: " + formatMoney(cardItem.getMoney(stack)) + " " + cardCurrency).withStyle(ChatFormatting.GREEN));
+        return Command.SINGLE_SUCCESS;
+    }
+
+    private static int ecoSetMoney(CommandSourceStack source, double amount, String specifiedCurrency) throws CommandSyntaxException {
+        Player player = source.getPlayerOrException();
+        ItemStack stack = player.getMainHandItem();
+        if (!(stack.getItem() instanceof CardItem cardItem)) {
+            player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        String cardCurrency = cardItem.getCurrency(stack);
+        String setCurrency = (specifiedCurrency != null) ? specifiedCurrency : cardCurrency;
+        if (!ModItems.EXCHANGE_RATES.containsKey(setCurrency)) {
+            player.sendSystemMessage(Component.literal("Invalid currency. Available currencies are: " + String.join(", ", ModItems.EXCHANGE_RATES.keySet())).withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        double amountInCardCurrency = convertCurrency(amount, setCurrency, cardCurrency);
+        cardItem.setMoney(stack, amountInCardCurrency);
+        player.sendSystemMessage(Component.literal("You set the amount to " + formatMoney(amount) + " " + setCurrency +
+                " on the card. New balance: " + formatMoney(cardItem.getMoney(stack)) + " " + cardCurrency).withStyle(ChatFormatting.GREEN));
+        return Command.SINGLE_SUCCESS;
+    }
+
+    private static int resetMoney(CommandSourceStack source) throws CommandSyntaxException {
+        Player player = source.getPlayerOrException();
+        ItemStack stack = player.getMainHandItem();
+        if (!(stack.getItem() instanceof CardItem cardItem)) {
+            player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        String cardCurrency = cardItem.getCurrency(stack);
+        cardItem.setMoney(stack, 0);
+        player.sendSystemMessage(Component.literal("You reset the amount on the card to 0 " + cardCurrency + ".").withStyle(ChatFormatting.GREEN));
+        return Command.SINGLE_SUCCESS;
+    }
+
+    private static int pay(CommandSourceStack source, String targetPlayerName, double amount) throws CommandSyntaxException {
+        Player player = source.getPlayerOrException();
+        ItemStack stack = player.getMainHandItem();
+        if (!(stack.getItem() instanceof CardItem cardItem)) {
+            player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        String cardCurrency = cardItem.getCurrency(stack);
+        if (amount <= 0) {
+            player.sendSystemMessage(Component.literal("The amount must be greater than 0.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        ServerPlayer targetPlayer = source.getServer().getPlayerList().getPlayer(UUID.fromString(targetPlayerName));
+        if (targetPlayer == null) {
+            player.sendSystemMessage(Component.literal("Player " + targetPlayerName + " is not online.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        boolean hasCard = false;
+        for (ItemStack itemStack : targetPlayer.getInventory().items) {
+            if (itemStack.getItem() instanceof CardItem) {
+                hasCard = true;
+                break;
+            }
+        }
+        if (!hasCard) {
+            player.sendSystemMessage(Component.literal("Player " + targetPlayerName + " does not have a card in their inventory.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        double existingMoney = cardItem.getMoney(stack);
+        if (existingMoney < amount) {
+            player.sendSystemMessage(Component.literal("You don't have enough money on your card.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+
+        cardItem.setMoney(stack, existingMoney - amount);
+        for (ItemStack itemStack : targetPlayer.getInventory().items) {
+            if (itemStack.getItem() instanceof CardItem) {
+                ((CardItem) itemStack.getItem()).addMoney(itemStack, amount);
+                break;
+            }
+        }
+
+        player.sendSystemMessage(Component.literal("You transferred " + formatMoney(amount) + " " + cardCurrency + " to " + targetPlayerName + ".").withStyle(ChatFormatting.GREEN));
+        targetPlayer.sendSystemMessage(Component.literal("You received " + formatMoney(amount) + " " + cardCurrency + " from " + player.getName() + ".").withStyle(ChatFormatting.GREEN));
+        return Command.SINGLE_SUCCESS;
+    }
+    private static int setCurrency(CommandSourceStack source, String currency) throws CommandSyntaxException {
+        if (ModItems.EXCHANGE_RATES.containsKey(currency)) {
+            Player player = source.getPlayerOrException();
+            ItemStack stack = player.getMainHandItem();
+            if (stack.getItem() instanceof CardItem) {
+                String oldCurrency = ((CardItem) stack.getItem()).getCurrency(stack);
+                ((CardItem) stack.getItem()).setCurrency(stack, currency);
+                ((CardItem) stack.getItem()).convertMoney(stack, oldCurrency, currency);
+                player.sendSystemMessage(Component.literal("The currency of the card in hand has been changed to " + currency +
+                        ". New balance: " + formatMoney(((CardItem) stack.getItem()).getMoney(stack)) + " " + currency).withStyle(ChatFormatting.GREEN));
+            } else {
+                source.sendFailure(Component.literal("You must hold a card in your hand to execute this command.").withStyle(ChatFormatting.RED));
+            }
+        } else {
+            source.sendFailure(Component.literal("Invalid currency. Available currencies are: " + String.join(", ", ModItems.EXCHANGE_RATES.keySet())).withStyle(ChatFormatting.RED));
+        }
+        return Command.SINGLE_SUCCESS;
+    }
+
+    private static int setDefaultCurrency(CommandSourceStack source, String currency) {
+        if (ModItems.EXCHANGE_RATES.containsKey(currency)) {
+            String oldCurrency = CardItem.getDefaultCurrency();
+            CardItem.setDefaultCurrency(currency);
+            source.sendSuccess(() -> Component.literal("The default currency has been set to " + currency).withStyle(ChatFormatting.GREEN), true);
+            // Convert money for all players' cards
+            for (ServerPlayer player : source.getServer().getPlayerList().getPlayers()) {
+                for (ItemStack stack : player.getInventory().items) {
+                    if (stack.getItem() instanceof CardItem) {
+                        ((CardItem) stack.getItem()).convertMoney(stack, oldCurrency, currency);
+                        ((CardItem) stack.getItem()).setCurrency(stack, currency);
+                        player.sendSystemMessage(Component.literal("Your card has been converted to " + currency + ": " +
+                                formatMoney(((CardItem) stack.getItem()).getMoney(stack)) + " " + currency).withStyle(ChatFormatting.GREEN));
+                    }
+                }
+            }
+        } else {
+            source.sendFailure(Component.literal("Invalid currency. Available currencies are: " + String.join(", ", ModItems.EXCHANGE_RATES.keySet())).withStyle(ChatFormatting.RED));
+        }
+        return Command.SINGLE_SUCCESS;
+    }
+
+    private static int showDefaultCurrency(CommandSourceStack source) {
+        source.sendSuccess(() -> Component.literal("The current default currency is: " + CardItem.getDefaultCurrency()).withStyle(ChatFormatting.GREEN), false);
+        return Command.SINGLE_SUCCESS;
+    }
+
+    private static int deposit(CommandSourceStack source, double amount, String specifiedCurrency) throws CommandSyntaxException {
+        Player player = source.getPlayerOrException();
+        ItemStack stack = player.getMainHandItem();
+        if (stack.getItem() instanceof CardItem cardItem) {
+            String cardCurrency = cardItem.getCurrency(stack);
+            String depositCurrency = (specifiedCurrency != null) ? specifiedCurrency : cardCurrency;
+            if (!ModItems.EXCHANGE_RATES.containsKey(depositCurrency)) {
+                player.sendSystemMessage(Component.literal("Invalid currency. Available currencies are: " + String.join(", ", ModItems.EXCHANGE_RATES.keySet())).withStyle(ChatFormatting.RED));
+                return 0;
+            }
+            double amountInCardCurrency = convertCurrency(amount, depositCurrency, cardCurrency);
+            double totalDeposited = 0;
+            TreeMap<Double, Item> items = ModItems.CURRENCY_ITEMS.get(depositCurrency);
+            if (items == null) {
+                player.sendSystemMessage(Component.literal("We don't have banknotes/coins for the currency " + depositCurrency).withStyle(ChatFormatting.RED));
+                return 0;
+            }
+            for (Map.Entry<Double, Item> entry : items.descendingMap().entrySet()) {
+                double denomination = entry.getKey();
+                Item item = entry.getValue();
+                int countNeeded = (int) (amount / denomination);
+                if (countNeeded > 0) {
+                    int countAvailable = player.getInventory().countItem(item);
+                    int countToRemove = Math.min(countNeeded, countAvailable);
+                    if (countToRemove > 0) {
+                        double depositedAmount = denomination * countToRemove;
+                        totalDeposited += depositedAmount;
+                        removeItemsFromInventory(player, item, countToRemove);
+                        amount -= depositedAmount;
+                    }
+                }
+            }
+            if (totalDeposited > 0) {
+                cardItem.addMoney(stack, amountInCardCurrency);
+                player.sendSystemMessage(Component.literal(String.format("You deposited %.2f %s into the card (%.2f %s). New balance: " + formatMoney(cardItem.getMoney(stack)) + " " + cardCurrency, totalDeposited, depositCurrency, amountInCardCurrency, cardCurrency)).withStyle(ChatFormatting.GREEN));
+                if (amount > 0) {
+                    player.sendSystemMessage(Component.literal(String.format("The exact amount couldn't be deposited. Uncovered difference: %.2f %s", amount, depositCurrency)).withStyle(ChatFormatting.YELLOW));
+                }
+            } else {
+                player.sendSystemMessage(Component.literal("You don't have enough banknotes/coins to make the deposit.").withStyle(ChatFormatting.RED));
+            }
+            player.inventoryMenu.broadcastChanges();
+        } else {
+            player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
+        }
+        return Command.SINGLE_SUCCESS;
+    }
+
+    private static void removeItemsFromInventory(Player player, Item item, int count) {
+        int removedCount = 0;
+        for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+            ItemStack stack = player.getInventory().getItem(i);
+            if (stack.getItem() == item) {
+                int toRemove = Math.min(stack.getCount(), count - removedCount);
+                stack.shrink(toRemove);
+                removedCount += toRemove;
+                if (stack.isEmpty()) {
+                    player.getInventory().setItem(i, ItemStack.EMPTY);
+                }
+                if (removedCount >= count) {
+                    break;
+                }
+            }
+        }
+    }
+    private static int withdraw(CommandSourceStack source, double amount) throws CommandSyntaxException {
+        Player player = source.getPlayerOrException();
+        ItemStack stack = player.getMainHandItem();
+        if (stack.getItem() instanceof CardItem cardItem) {
+            String cardCurrency = cardItem.getCurrency(stack);
+            double currentBalance = cardItem.getMoney(stack);
+            // Calculate the fee in the card's currency
+            double feeInCardCurrency = calculateWithdrawFee(stack, amount);
+            double totalWithdrawInCardCurrency = amount + feeInCardCurrency;
+            if (currentBalance >= totalWithdrawInCardCurrency) {
+                cardItem.setMoney(stack, currentBalance - totalWithdrawInCardCurrency);
+                Map<String, Double> withdrawnAmounts = new HashMap<>();
+                double remainingAmount = amount;
+                // Try to provide banknotes in the card's currency
+                if (ModItems.CURRENCY_ITEMS.containsKey(cardCurrency)) {
+                    remainingAmount = withdrawCurrency(player, amount, cardCurrency, withdrawnAmounts);
+                }
+                // If there's still an amount to withdraw, we go through other currencies
+                if (remainingAmount > 0.01) {
+                    for (String currency : ModItems.CURRENCY_ITEMS.keySet()) {
+                        if (!currency.equals(cardCurrency)) {
+                            double amountInOtherCurrency = convertCurrency(remainingAmount, cardCurrency, currency);
+                            double withdrawnInOtherCurrency = withdrawCurrency(player, amountInOtherCurrency, currency, withdrawnAmounts);
+                            remainingAmount = convertCurrency(withdrawnInOtherCurrency, currency, cardCurrency);
+                            if (remainingAmount < 0.01) break;
+                        }
+                    }
+                }
+                player.sendSystemMessage(Component.literal(String.format("You withdrew %.2f %s. Withdrawal fee: %.2f %s. New balance: " + formatMoney(cardItem.getMoney(stack)) + " " + cardCurrency, amount, cardCurrency, feeInCardCurrency, cardCurrency)).withStyle(ChatFormatting.GREEN));
+                if (remainingAmount >= 0.01) {
+                    player.sendSystemMessage(Component.literal(String.format("The exact amount couldn't be returned. Difference left on the card: %.2f %s", remainingAmount, cardCurrency)).withStyle(ChatFormatting.YELLOW));
+                }
+            } else {
+                player.sendSystemMessage(Component.literal("You don't have enough funds for this withdrawal.").withStyle(ChatFormatting.RED));
+            }
+        } else {
+            player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
+        }
+        return Command.SINGLE_SUCCESS;
     }
     private static double calculateWithdrawFee(ItemStack stack, double amount) {
         if (stack.getItem() == ModItems.VisaClassic.get()) {
@@ -221,38 +360,34 @@ public class ModCommands {
         } else if (stack.getItem() == ModItems.VisaGold.get()) {
             return amount * 0.02; // 2% fee
         } else if (stack.getItem() == ModItems.VisaSteel.get()) {
-            return 0.005; // 0.5% fee
+            return amount * 0.005; // 0.5% fee
         }
         return 0; // Default case, no fee
     }
-    private static void giveMoneyToPlayer(Player player, double amount, boolean isVisaSteel) {
+    private static double withdrawCurrency(Player player, double amount, String currency, Map<String, Double> withdrawnAmounts) {
+        TreeMap<Double, Item> items = ModItems.CURRENCY_ITEMS.get(currency);
         double remainingAmount = amount;
-        for (Double denomination : CURRENCY_ITEMS.keySet()) {
-            Item currencyItem = CURRENCY_ITEMS.get(denomination);
-            while (remainingAmount >= denomination || (isVisaSteel && remainingAmount == denomination)) {
+        for (Map.Entry<Double, Item> entry : items.entrySet()) {
+            double denomination = entry.getKey();
+            Item currencyItem = entry.getValue();
+            while (remainingAmount >= denomination) {
                 player.getInventory().add(new ItemStack(currencyItem));
                 remainingAmount -= denomination;
-                remainingAmount = Math.round(remainingAmount * 100.0) / 100.0; // Rotunjire la 2 zecimale
+                withdrawnAmounts.merge(currency, denomination, Double::sum);
             }
-            if (remainingAmount == 0) break;
         }
-        if (remainingAmount > 0) {
-            player.sendSystemMessage(Component.literal(String.format("Nu s-a putut returna suma exactă. Diferența: %s", formatMoney(remainingAmount))));
+        return remainingAmount;
+    }
+    public static double convertCurrency(double amount, String fromCurrency, String toCurrency) {
+        if (fromCurrency.equals(toCurrency)) {
+            return amount;
         }
+        double fromRate = ModItems.EXCHANGE_RATES.get(fromCurrency);
+        double toRate = ModItems.EXCHANGE_RATES.get(toCurrency);
+        double amountInEUR = amount / fromRate;
+        return amountInEUR * toRate;
     }
     private static String formatMoney(double amount) {
-        if (Math.floor(amount) == amount) {
-            return String.format("%.0f", amount); // Fără zecimale
-        } else {
-            return String.format("%.2f", amount); // Cu 2 zecimale
-        }
-    }
-    private static double getItemValue(Item item) {
-        return CURRENCY_ITEMS.entrySet()
-                .stream()
-                .filter(entry -> entry.getValue() == item)
-                .mapToDouble(Map.Entry::getKey)
-                .findFirst()
-                .orElse(0.0);
+        return String.format("%.2f", amount);
     }
 }
