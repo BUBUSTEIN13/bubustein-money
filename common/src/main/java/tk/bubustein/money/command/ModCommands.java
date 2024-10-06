@@ -11,9 +11,11 @@ import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.phys.Vec3;
 import tk.bubustein.money.item.CardItem;
 import tk.bubustein.money.item.ModItems;
 import java.util.*;
@@ -78,21 +80,17 @@ public class ModCommands {
         }
         return Command.SINGLE_SUCCESS;
     }
-
     private static MutableComponent createStyledHelpMessage(String command, String description) {
         return createStyledHelpMessage(command, description, false);
     }
-
     private static MutableComponent createStyledHelpMessage(String command, String description, boolean requiresOp) {
         MutableComponent styledCommand = Component.literal(command).withStyle(ChatFormatting.AQUA);
         MutableComponent styledDescription = Component.literal(": " + description).withStyle(ChatFormatting.GRAY);
         MutableComponent fullMessage = styledCommand.append(styledDescription);
-
         if (requiresOp) {
             fullMessage.append(Component.literal(" (Requires OP)")
                     .withStyle(style -> style.withColor(ChatFormatting.RED).withBold(true)));
         }
-
         return fullMessage;
     }
     private static int ecoAddMoney(CommandSourceStack source, double amount, String specifiedCurrency) throws CommandSyntaxException {
@@ -102,21 +100,18 @@ public class ModCommands {
             player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
             return 0;
         }
-
         String cardCurrency = cardItem.getCurrency(stack);
         String addCurrency = (specifiedCurrency != null) ? specifiedCurrency : cardCurrency;
         if (!ModItems.EXCHANGE_RATES.containsKey(addCurrency)) {
             player.sendSystemMessage(Component.literal("Invalid currency. Available currencies are: " + String.join(", ", ModItems.EXCHANGE_RATES.keySet())).withStyle(ChatFormatting.RED));
             return 0;
         }
-
         double amountInCardCurrency = convertCurrency(amount, addCurrency, cardCurrency);
         cardItem.addMoney(stack, amountInCardCurrency);
         player.sendSystemMessage(Component.literal("You added " + formatMoney(amount) + " " + addCurrency +
                 " to the card. New balance: " + formatMoney(cardItem.getMoney(stack)) + " " + cardCurrency).withStyle(ChatFormatting.GREEN));
         return Command.SINGLE_SUCCESS;
     }
-
     private static int ecoSetMoney(CommandSourceStack source, double amount, String specifiedCurrency) throws CommandSyntaxException {
         Player player = source.getPlayerOrException();
         ItemStack stack = player.getMainHandItem();
@@ -124,21 +119,18 @@ public class ModCommands {
             player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
             return 0;
         }
-
         String cardCurrency = cardItem.getCurrency(stack);
         String setCurrency = (specifiedCurrency != null) ? specifiedCurrency : cardCurrency;
         if (!ModItems.EXCHANGE_RATES.containsKey(setCurrency)) {
             player.sendSystemMessage(Component.literal("Invalid currency. Available currencies are: " + String.join(", ", ModItems.EXCHANGE_RATES.keySet())).withStyle(ChatFormatting.RED));
             return 0;
         }
-
         double amountInCardCurrency = convertCurrency(amount, setCurrency, cardCurrency);
         cardItem.setMoney(stack, amountInCardCurrency);
         player.sendSystemMessage(Component.literal("You set the amount to " + formatMoney(amount) + " " + setCurrency +
                 " on the card. New balance: " + formatMoney(cardItem.getMoney(stack)) + " " + cardCurrency).withStyle(ChatFormatting.GREEN));
         return Command.SINGLE_SUCCESS;
     }
-
     private static int resetMoney(CommandSourceStack source) throws CommandSyntaxException {
         Player player = source.getPlayerOrException();
         ItemStack stack = player.getMainHandItem();
@@ -146,13 +138,11 @@ public class ModCommands {
             player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
             return 0;
         }
-
         String cardCurrency = cardItem.getCurrency(stack);
         cardItem.setMoney(stack, 0);
         player.sendSystemMessage(Component.literal("You reset the amount on the card to 0 " + cardCurrency + ".").withStyle(ChatFormatting.GREEN));
         return Command.SINGLE_SUCCESS;
     }
-
     private static int pay(CommandSourceStack source, String targetPlayerName, double amount) throws CommandSyntaxException {
         Player player = source.getPlayerOrException();
         ItemStack stack = player.getMainHandItem();
@@ -160,19 +150,16 @@ public class ModCommands {
             player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
             return 0;
         }
-
         String cardCurrency = cardItem.getCurrency(stack);
         if (amount <= 0) {
             player.sendSystemMessage(Component.literal("The amount must be greater than 0.").withStyle(ChatFormatting.RED));
             return 0;
         }
-
         ServerPlayer targetPlayer = source.getServer().getPlayerList().getPlayer(UUID.fromString(targetPlayerName));
         if (targetPlayer == null) {
             player.sendSystemMessage(Component.literal("Player " + targetPlayerName + " is not online.").withStyle(ChatFormatting.RED));
             return 0;
         }
-
         boolean hasCard = false;
         for (ItemStack itemStack : targetPlayer.getInventory().items) {
             if (itemStack.getItem() instanceof CardItem) {
@@ -184,13 +171,11 @@ public class ModCommands {
             player.sendSystemMessage(Component.literal("Player " + targetPlayerName + " does not have a card in their inventory.").withStyle(ChatFormatting.RED));
             return 0;
         }
-
         double existingMoney = cardItem.getMoney(stack);
         if (existingMoney < amount) {
             player.sendSystemMessage(Component.literal("You don't have enough money on your card.").withStyle(ChatFormatting.RED));
             return 0;
         }
-
         cardItem.setMoney(stack, existingMoney - amount);
         for (ItemStack itemStack : targetPlayer.getInventory().items) {
             if (itemStack.getItem() instanceof CardItem) {
@@ -198,7 +183,6 @@ public class ModCommands {
                 break;
             }
         }
-
         player.sendSystemMessage(Component.literal("You transferred " + formatMoney(amount) + " " + cardCurrency + " to " + targetPlayerName + ".").withStyle(ChatFormatting.GREEN));
         targetPlayer.sendSystemMessage(Component.literal("You received " + formatMoney(amount) + " " + cardCurrency + " from " + player.getName() + ".").withStyle(ChatFormatting.GREEN));
         return Command.SINGLE_SUCCESS;
@@ -371,12 +355,27 @@ public class ModCommands {
             double denomination = entry.getKey();
             Item currencyItem = entry.getValue();
             while (remainingAmount >= denomination) {
-                player.getInventory().add(new ItemStack(currencyItem));
+                ItemStack currencyStack = new ItemStack(currencyItem);
+                if (!player.getInventory().add(currencyStack)) {
+                    // If inventory is full, drop the item near the player
+                    dropItemNearPlayer(player, currencyStack);
+                }
                 remainingAmount -= denomination;
                 withdrawnAmounts.merge(currency, denomination, Double::sum);
             }
         }
         return remainingAmount;
+    }
+    private static void dropItemNearPlayer(Player player, ItemStack stack) {
+        Vec3 playerPos = player.position();
+        double offsetX = player.getRandom().nextDouble() * 0.5 - 0.25;
+        double offsetZ = player.getRandom().nextDouble() * 0.5 - 0.25;
+        ItemEntity itemEntity = new ItemEntity(player.level(),
+                playerPos.x + offsetX,
+                playerPos.y + 0.5,
+                playerPos.z + offsetZ,
+                stack);
+        player.level().addFreshEntity(itemEntity);
     }
     public static double convertCurrency(double amount, String fromCurrency, String toCurrency) {
         if (fromCurrency.equals(toCurrency)) {
