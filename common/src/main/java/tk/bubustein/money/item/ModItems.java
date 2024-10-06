@@ -12,7 +12,7 @@ import java.util.TreeMap;
 import java.util.function.Supplier;
 @SuppressWarnings("UnstableApiUsage")
 public class ModItems {
-    public static void init(){};
+    public static void init(){}
     /*
      * ////////////////////////////////////////////////////
      * //////////////// COINS TAB ///////////////////////
@@ -740,7 +740,7 @@ public class ModItems {
 
     public static final Map<String, Double> EXCHANGE_RATES = new HashMap<>();
     static {
-        // EXCHANGE RATES FROM EUR TO OTHER
+        // EXCHANGE RATES FROM EUR TO OTHER - LAST UPDATED ON 5th OCTOBER
         EXCHANGE_RATES.put("EUR", 1.0);
         EXCHANGE_RATES.put("USD", 1.1);
         EXCHANGE_RATES.put("GBP", 0.84);
@@ -749,6 +749,25 @@ public class ModItems {
         EXCHANGE_RATES.put("MDL", 19.17);
         EXCHANGE_RATES.put("CHF", 0.94);
         EXCHANGE_RATES.put("AUD", 1.61);
+        EXCHANGE_RATES.put("JPY", 163.26);
+        EXCHANGE_RATES.put("BGN", 1.96);
+        EXCHANGE_RATES.put("CZK", 25.35);
+        EXCHANGE_RATES.put("NOK", 11.7);
+        EXCHANGE_RATES.put("DKK", 7.46);
+        EXCHANGE_RATES.put("SEK", 11.38);
+        EXCHANGE_RATES.put("HUF", 401.51);
+        EXCHANGE_RATES.put("PLN", 4.32);
+        EXCHANGE_RATES.put("RSD", 117.04);
+        EXCHANGE_RATES.put("ISK", 148.93);
+        EXCHANGE_RATES.put("CNY", 7.74);
+        EXCHANGE_RATES.put("INR",92.25);
+        EXCHANGE_RATES.put("KRW", 1478.6);
+        EXCHANGE_RATES.put("BRL", 5.99);
+        EXCHANGE_RATES.put("MXN", 21.17);
+        EXCHANGE_RATES.put("ZAR", 19.19);
+        EXCHANGE_RATES.put("TRY", 37.61);
+        EXCHANGE_RATES.put("NZD", 1.78);
+        EXCHANGE_RATES.put("PHP", 62.06);
     }
     public static final Map<String, TreeMap<Double, Item>> CURRENCY_ITEMS = new HashMap<>();
     static {
@@ -874,5 +893,271 @@ public class ModItems {
         audItems.put(0.1, ACent10.get());
         audItems.put(0.05, ACent5.get());
         CURRENCY_ITEMS.put("AUD", audItems);
+        // JPY
+        TreeMap<Double, Item> jpyItems = new TreeMap<>(Comparator.reverseOrder());
+        jpyItems.put(10000.0, Yen10000.get());
+        jpyItems.put(5000.0, Yen5000.get());
+        jpyItems.put(1000.0, Yen1000.get());
+        jpyItems.put(500.0, Yen500.get());
+        jpyItems.put(100.0, Yen100.get());
+        jpyItems.put(50.0, Yen50.get());
+        jpyItems.put(10.0, Yen10.get());
+        jpyItems.put(5.0, Yen5.get());
+        jpyItems.put(1.0, Yen1.get());
+        CURRENCY_ITEMS.put("JPY", jpyItems);
+        // BGN
+        TreeMap<Double, Item> bgnItems = new TreeMap<>(Comparator.reverseOrder());
+        bgnItems.put(100.0, Leva100.get());
+        bgnItems.put(50.0, Leva50.get());
+        bgnItems.put(20.0, Leva20.get());
+        bgnItems.put(10.0, Leva10.get());
+        bgnItems.put(5.0, Leva5.get());
+        bgnItems.put(2.0, Leva2.get());
+        bgnItems.put(1.0, Leva1.get());
+        bgnItems.put(0.5, Stotinka50.get());
+        bgnItems.put(0.2, Stotinka20.get());
+        bgnItems.put(0.1, Stotinka10.get());
+        bgnItems.put(0.05, Stotinka5.get());
+        bgnItems.put(0.02, Stotinka2.get());
+        bgnItems.put(0.01, Stotinka1.get());
+        CURRENCY_ITEMS.put("BGN", bgnItems);
+        // CZK
+        TreeMap<Double, Item> czkItems = new TreeMap<>(Comparator.reverseOrder());
+        czkItems.put(5000.0, CZkr5000.get());
+        czkItems.put(2000.0, CZkr2000.get());
+        czkItems.put(1000.0, CZkr1000.get());
+        czkItems.put(500.0, CZkr500.get());
+        czkItems.put(200.0, CZkr200.get());
+        czkItems.put(100.0, CZkr100.get());
+        czkItems.put(50.0, CZkr50.get());
+        czkItems.put(20.0, CZkr20.get());
+        czkItems.put(10.0, CZkr10.get());
+        czkItems.put(5.0, CZkr5.get());
+        czkItems.put(2.0, CZkr2.get());
+        czkItems.put(1.0, CZkr1.get());
+        CURRENCY_ITEMS.put("CZK", czkItems);
+        // NOK
+        TreeMap<Double, Item> nokItems = new TreeMap<>(Comparator.reverseOrder());
+        nokItems.put(1000.0, NOkr1000.get());
+        nokItems.put(500.0, NOkr500.get());
+        nokItems.put(200.0, NOkr200.get());
+        nokItems.put(100.0, NOkr100.get());
+        nokItems.put(50.0, NOkr50.get());
+        nokItems.put(20.0, NOkr20.get());
+        nokItems.put(10.0, NOkr10.get());
+        nokItems.put(5.0, NOkr5.get());
+        nokItems.put(1.0, NOkr1.get());
+        CURRENCY_ITEMS.put("NOK", nokItems);
+        // DKK
+        TreeMap<Double, Item> dkkItems = new TreeMap<>(Comparator.reverseOrder());
+        dkkItems.put(1000.0, DKkr1000.get());
+        dkkItems.put(500.0, DKkr500.get());
+        dkkItems.put(200.0, DKkr200.get());
+        dkkItems.put(100.0, DKkr100.get());
+        dkkItems.put(50.0, DKkr50.get());
+        dkkItems.put(20.0, DKkr20.get());
+        dkkItems.put(10.0, DKkr10.get());
+        dkkItems.put(5.0, DKkr5.get());
+        dkkItems.put(2.0, DKkr2.get());
+        dkkItems.put(1.0, DKkr1.get());
+        dkkItems.put(0.5, DKAere50.get());
+        CURRENCY_ITEMS.put("DKK", dkkItems);
+        // HUF
+        TreeMap<Double, Item> hufItems = new TreeMap<>(Comparator.reverseOrder());
+        hufItems.put(20000.0, Ft20000.get());
+        hufItems.put(10000.0, Ft10000.get());
+        hufItems.put(5000.0, Ft5000.get());
+        hufItems.put(2000.0, Ft2000.get());
+        hufItems.put(1000.0, Ft1000.get());
+        hufItems.put(500.0, Ft500.get());
+        hufItems.put(200.0, Ft200.get());
+        hufItems.put(100.0, Ft100.get());
+        hufItems.put(50.0, Ft50.get());
+        hufItems.put(20.0, Ft20.get());
+        hufItems.put(10.0, Ft10.get());
+        hufItems.put(5.0, Ft5.get());
+        CURRENCY_ITEMS.put("HUF", hufItems);
+        // PLN
+        TreeMap<Double, Item> plnItems = new TreeMap<>(Comparator.reverseOrder());
+        plnItems.put(500.0, Zloty500.get());
+        plnItems.put(200.0, Zloty200.get());
+        plnItems.put(100.0, Zloty100.get());
+        plnItems.put(50.0, Zloty50.get());
+        plnItems.put(20.0, Zloty20.get());
+        plnItems.put(10.0, Zloty10.get());
+        plnItems.put(5.0, Zloty5.get());
+        plnItems.put(2.0, Zloty2.get());
+        plnItems.put(1.0, Zloty1.get());
+        plnItems.put(0.5, Grosz50.get());
+        plnItems.put(0.2, Grosz20.get());
+        plnItems.put(0.1, Grosz10.get());
+        plnItems.put(0.05, Grosz5.get());
+        plnItems.put(0.02, Grosz2.get());
+        plnItems.put(0.01, Grosz1.get());
+        CURRENCY_ITEMS.put("PLN", plnItems);
+        // RSD
+        TreeMap<Double, Item> rsdItems = new TreeMap<>(Comparator.reverseOrder());
+        rsdItems.put(5000.0, RSD5000.get());
+        rsdItems.put(2000.0, RSD2000.get());
+        rsdItems.put(1000.0, RSD1000.get());
+        rsdItems.put(500.0, RSD500.get());
+        rsdItems.put(200.0, RSD200.get());
+        rsdItems.put(100.0, RSD100.get());
+        rsdItems.put(50.0, RSD50.get());
+        rsdItems.put(20.0, RSD20.get());
+        rsdItems.put(10.0, RSD10.get());
+        rsdItems.put(5.0, RSD5.get());
+        rsdItems.put(2.0, RSD2.get());
+        rsdItems.put(1.0, RSD1.get());
+        CURRENCY_ITEMS.put("RSD", rsdItems);
+        // SEK
+        TreeMap<Double, Item> sekItems = new TreeMap<>(Comparator.reverseOrder());
+        sekItems.put(1000.0, SEkr1000.get());
+        sekItems.put(500.0, SEkr500.get());
+        sekItems.put(200.0, SEkr200.get());
+        sekItems.put(100.0, SEkr100.get());
+        sekItems.put(50.0, SEkr50.get());
+        sekItems.put(20.0, SEkr20.get());
+        sekItems.put(10.0, SEkr10.get());
+        sekItems.put(5.0, SEkr5.get());
+        sekItems.put(2.0, SEkr2.get());
+        sekItems.put(1.0, SEkr1.get());
+        CURRENCY_ITEMS.put("SEK", sekItems);
+        // ISK
+        TreeMap<Double, Item> iskItems = new TreeMap<>(Comparator.reverseOrder());
+        iskItems.put(10000.0, ISkr10000.get());
+        iskItems.put(5000.0, ISkr5000.get());
+        iskItems.put(2000.0, ISkr2000.get());
+        iskItems.put(1000.0, ISkr1000.get());
+        iskItems.put(500.0, ISkr500.get());
+        iskItems.put(100.0, ISkr100.get());
+        iskItems.put(50.0, ISkr50.get());
+        iskItems.put(10.0, ISkr10.get());
+        iskItems.put(5.0, ISkr5.get());
+        iskItems.put(1.0, ISkr1.get());
+        CURRENCY_ITEMS.put("ISK", iskItems);
+        // INR
+        TreeMap<Double, Item> inrItems = new TreeMap<>(Comparator.reverseOrder());
+        inrItems.put(500.0, INr500.get());
+        inrItems.put(200.0, INr200.get());
+        inrItems.put(100.0, INr100.get());
+        inrItems.put(50.0, INr50.get());
+        inrItems.put(20.0, INr20.get());
+        inrItems.put(10.0, INr10.get());
+        inrItems.put(5.0, INr5.get());
+        inrItems.put(2.0, INr2.get());
+        inrItems.put(1.0, INr1.get());
+        CURRENCY_ITEMS.put("INR", inrItems);
+        // KRW
+        TreeMap<Double, Item> krwItems = new TreeMap<>(Comparator.reverseOrder());
+        krwItems.put(50000.0, Won50000.get());
+        krwItems.put(10000.0, Won10000.get());
+        krwItems.put(5000.0, Won5000.get());
+        krwItems.put(1000.0, Won1000.get());
+        krwItems.put(500.0, Won500.get());
+        krwItems.put(100.0, Won100.get());
+        krwItems.put(50.0, Won50.get());
+        krwItems.put(10.0, Won10.get());
+        CURRENCY_ITEMS.put("KRW", krwItems);
+        // CNY
+        TreeMap<Double, Item> cnyItems = new TreeMap<>(Comparator.reverseOrder());
+        cnyItems.put(100.0, CNYuan100.get());
+        cnyItems.put(50.0, CNYuan50.get());
+        cnyItems.put(20.0, CNYuan20.get());
+        cnyItems.put(10.0, CNYuan10.get());
+        cnyItems.put(5.0, CNYuan5.get());
+        cnyItems.put(1.0, CNYuan1.get());
+        cnyItems.put(0.5, CNJiao5.get());
+        cnyItems.put(0.1, CNJiao1.get());
+        CURRENCY_ITEMS.put("CNY", cnyItems);
+        // BRL
+        TreeMap<Double, Item> brlItems = new TreeMap<>(Comparator.reverseOrder());
+        brlItems.put(200.0, BRReal200.get());
+        brlItems.put(100.0, BRReal100.get());
+        brlItems.put(50.0, BRReal50.get());
+        brlItems.put(20.0, BRReal20.get());
+        brlItems.put(10.0, BRReal10.get());
+        brlItems.put(5.0, BRReal5.get());
+        brlItems.put(2.0, BRReal2.get());
+        brlItems.put(1.0, BRReal1.get());
+        brlItems.put(0.5, BRCentavo50.get());
+        brlItems.put(0.25, BRCentavo25.get());
+        brlItems.put(0.1, BRCentavo10.get());
+        brlItems.put(0.05, BRCentavo5.get());
+        CURRENCY_ITEMS.put("BRL", brlItems);
+        // MXN
+        TreeMap<Double, Item> mxnItems = new TreeMap<>(Comparator.reverseOrder());
+        mxnItems.put(1000.0, MXPeso1000.get());
+        mxnItems.put(500.0, MXPeso500.get());
+        mxnItems.put(200.0, MXPeso200.get());
+        mxnItems.put(100.0, MXPeso100.get());
+        mxnItems.put(50.0, MXPeso50.get());
+        mxnItems.put(20.0, MXPeso20.get());
+        mxnItems.put(10.0, MXPeso10.get());
+        mxnItems.put(5.0, MXPeso5.get());
+        mxnItems.put(2.0, MXPeso2.get());
+        mxnItems.put(1.0, MXPeso1.get());
+        mxnItems.put(0.5, MXCentavo50.get());
+        mxnItems.put(0.2, MXCentavo20.get());
+        mxnItems.put(0.1, MXCentavo10.get());
+        mxnItems.put(0.05, MXCentavo5.get());
+        CURRENCY_ITEMS.put("MXN", mxnItems);
+        // ZAR
+        TreeMap<Double, Item> zarItems = new TreeMap<>(Comparator.reverseOrder());
+        zarItems.put(200.0, ZARand200.get());
+        zarItems.put(100.0, ZARand100.get());
+        zarItems.put(50.0, ZARand50.get());
+        zarItems.put(20.0, ZARand20.get());
+        zarItems.put(10.0, ZARand10.get());
+        zarItems.put(5.0, ZARand5.get());
+        zarItems.put(2.0, ZARand2.get());
+        zarItems.put(1.0, ZARand1.get());
+        zarItems.put(0.5, ZACent50.get());
+        zarItems.put(0.2, ZACent20.get());
+        zarItems.put(0.1, ZACent10.get());
+        CURRENCY_ITEMS.put("ZAR", zarItems);
+        // TRY
+        TreeMap<Double, Item> tryItems = new TreeMap<>(Comparator.reverseOrder());
+        tryItems.put(200.0, TRl200.get());
+        tryItems.put(100.0, TRl100.get());
+        tryItems.put(50.0, TRl50.get());
+        tryItems.put(20.0, TRl20.get());
+        tryItems.put(10.0, TRl10.get());
+        tryItems.put(5.0, TRl5.get());
+        tryItems.put(1.0, TRl1.get());
+        tryItems.put(0.5, TRk50.get());
+        tryItems.put(0.25, TRk25.get());
+        tryItems.put(0.1, TRk10.get());
+        tryItems.put(0.05, TRk5.get());
+        tryItems.put(0.01, TRk1.get());
+        CURRENCY_ITEMS.put("TRY", tryItems);
+        // NZD
+        TreeMap<Double, Item> nzdItems = new TreeMap<>(Comparator.reverseOrder());
+        nzdItems.put(100.0, NZD100.get());
+        nzdItems.put(50.0, NZD50.get());
+        nzdItems.put(20.0, NZD20.get());
+        nzdItems.put(10.0, NZD10.get());
+        nzdItems.put(5.0, NZD5.get());
+        nzdItems.put(2.0, NZD2.get());
+        nzdItems.put(1.0, NZD1.get());
+        nzdItems.put(0.5, NZCent50.get());
+        nzdItems.put(0.2, NZCent20.get());
+        nzdItems.put(0.1, NZCent10.get());
+        CURRENCY_ITEMS.put("NZD", nzdItems);
+        // PHP
+        TreeMap<Double, Item> phpItems = new TreeMap<>(Comparator.reverseOrder());
+        phpItems.put(1000.0, PHP1000.get());
+        phpItems.put(500.0, PHP500.get());
+        phpItems.put(200.0, PHP200.get());
+        phpItems.put(100.0, PHP100.get());
+        phpItems.put(50.0, PHP50.get());
+        phpItems.put(20.0, PHP20.get());
+        phpItems.put(10.0, PHP10.get());
+        phpItems.put(5.0, PHP5.get());
+        phpItems.put(1.0, PHP1.get());
+        phpItems.put(0.25, PHS25.get());
+        phpItems.put(0.05, PHS5.get());
+        phpItems.put(0.01, PHS1.get());
+        CURRENCY_ITEMS.put("PHP", phpItems);
     }
 }
