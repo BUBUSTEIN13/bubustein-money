@@ -16,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
+import tk.bubustein.money.MoneyMod;
 import tk.bubustein.money.item.CardItem;
 import tk.bubustein.money.item.ModItems;
 import java.util.*;
@@ -205,13 +206,12 @@ public class ModCommands {
         }
         return Command.SINGLE_SUCCESS;
     }
-
     private static int setDefaultCurrency(CommandSourceStack source, String currency) {
         if (ModItems.EXCHANGE_RATES.containsKey(currency)) {
-            String oldCurrency = CardItem.getDefaultCurrency();
-            CardItem.setDefaultCurrency(currency);
+            String oldCurrency = MoneyMod.getDefaultCurrency();
+            MoneyMod.setDefaultCurrency(currency);
+            MoneyMod.saveConfig(source.getServer());
             source.sendSuccess(() -> Component.literal("The default currency has been set to " + currency).withStyle(ChatFormatting.GREEN), true);
-            // Convert money for all players' cards
             for (ServerPlayer player : source.getServer().getPlayerList().getPlayers()) {
                 for (ItemStack stack : player.getInventory().items) {
                     if (stack.getItem() instanceof CardItem) {
@@ -227,12 +227,10 @@ public class ModCommands {
         }
         return Command.SINGLE_SUCCESS;
     }
-
     private static int showDefaultCurrency(CommandSourceStack source) {
-        source.sendSuccess(() -> Component.literal("The current default currency is: " + CardItem.getDefaultCurrency()).withStyle(ChatFormatting.GREEN), false);
+        source.sendSuccess(() -> Component.literal("The current default currency is: " + MoneyMod.getDefaultCurrency()).withStyle(ChatFormatting.GREEN), false);
         return Command.SINGLE_SUCCESS;
     }
-
     private static int deposit(CommandSourceStack source, double amount, String specifiedCurrency) throws CommandSyntaxException {
         Player player = source.getPlayerOrException();
         ItemStack stack = player.getMainHandItem();
@@ -280,7 +278,6 @@ public class ModCommands {
         }
         return Command.SINGLE_SUCCESS;
     }
-
     private static void removeItemsFromInventory(Player player, Item item, int count) {
         int removedCount = 0;
         for (int i = 0; i < player.getInventory().getContainerSize(); i++) {

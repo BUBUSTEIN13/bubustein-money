@@ -17,6 +17,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import net.minecraft.world.level.storage.loot.LootTable;
 import org.slf4j.Logger;
 import tk.bubustein.money.block.ModBlocks;
+import tk.bubustein.money.config.ModConfig;
 import tk.bubustein.money.item.CardItem;
 import tk.bubustein.money.item.ModItems;
 import tk.bubustein.money.recipe.ModRecipes;
@@ -40,8 +41,10 @@ public class MoneyMod {
     public static final ResourceKey<LootTable> BANKER_HOUSE_CHEST = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/banker_house_chest"));
     public static final ResourceKey<LootTable> MANSION_DOUBLE_CHEST = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/mansion_double_chest"));
     public static final ResourceKey<LootTable> MANSION_CHEST = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(MoneyMod.MOD_ID, "chests/mansion_chest"));
+    private static ModConfig config;
     public static void init() {
         LOGGER.info("[" + MOD_ID + "] Printing money. . . ;)");
+        config = ModConfig.getInstance();
         ModItems.init();
         LOGGER.info("[" + MOD_ID + "] Crafting ATM. . .");
         ModBlocks.init();
@@ -72,5 +75,18 @@ public class MoneyMod {
         JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, savannaPoolLocation, "bubusteinmoneymod:banker_house", 20);
         JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, taigaPoolLocation, "bubusteinmoneymod:banker_house", 20);
         JigsawHelper.addBuildingToPool(templatePoolRegistry, processorListRegistry, snowyPoolLocation, "bubusteinmoneymod:banker_house", 7);
+    }
+    public static void onServerStarting(MinecraftServer server) {
+        config.load(server);
+        setDefaultCurrency(config.getDefaultCurrency());
+    }
+    public static void setDefaultCurrency(String currency) {
+        config.setDefaultCurrency(currency);
+    }
+    public static String getDefaultCurrency() {
+        return config.getDefaultCurrency();
+    }
+    public static void saveConfig(MinecraftServer server) {
+        config.save(server);
     }
 }

@@ -20,7 +20,6 @@ import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
 public class CardItem extends Item {
-    private static String defaultCurrency = "EUR";
     public static final DeferredRegister<DataComponentType<?>> COMPONENTS = DeferredRegister.create(MoneyMod.MOD_ID, Registries.DATA_COMPONENT_TYPE);
     public static final Supplier<DataComponentType<Double>> MONEY_COMPONENT = COMPONENTS.register("money", () -> DataComponentType.<Double>builder()
             .persistent(Codec.DOUBLE)
@@ -37,7 +36,7 @@ public class CardItem extends Item {
     @Override
     public void onCraftedBy(ItemStack stack, Level level, Player player) {
         stack.set(MONEY_COMPONENT.get(), 0.0);
-        stack.set(CURRENCY_COMPONENT.get(), defaultCurrency);
+        stack.set(CURRENCY_COMPONENT.get(), MoneyMod.getDefaultCurrency());
     }
     @Override
     public boolean isFoil(ItemStack stack) {
@@ -47,9 +46,6 @@ public class CardItem extends Item {
             money = ModCommands.convertCurrency(money, currency, "EUR");
         }
         return money >= GLOW_THRESHOLD_EUR;
-    }
-    public static void setDefaultCurrency(String currency) {
-        defaultCurrency = currency;
     }
     public void addMoney(ItemStack stack, double amount) {
         UnaryOperator<Double> addMoney = existingMoney -> existingMoney + amount;
@@ -69,7 +65,7 @@ public class CardItem extends Item {
         setMoney(stack, convertedAmount);
     }
     public String getCurrency(ItemStack stack) {
-        return stack.getOrDefault(CURRENCY_COMPONENT.get(), defaultCurrency);
+        return stack.getOrDefault(CURRENCY_COMPONENT.get(), MoneyMod.getDefaultCurrency());
     }
     public void setCurrency(ItemStack stack, String currency) {
         stack.set(CURRENCY_COMPONENT.get(), currency);
@@ -87,8 +83,5 @@ public class CardItem extends Item {
             tooltip.add(Component.literal("Withdrawal Fee: 2%").withStyle(style -> style.withColor(TextColor.fromRgb(0xFF0000))));
         else if (stack.getItem() == ModItems.VisaSteel.get())
             tooltip.add(Component.literal("Withdrawal Fee: 0.5%").withStyle(style -> style.withColor(TextColor.fromRgb(0xFF0000))));
-    }
-    public static String getDefaultCurrency() {
-        return defaultCurrency;
     }
 }

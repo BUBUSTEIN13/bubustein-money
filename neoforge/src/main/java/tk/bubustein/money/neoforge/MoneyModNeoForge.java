@@ -11,6 +11,7 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import tk.bubustein.money.MoneyMod;
 import net.neoforged.bus.api.IEventBus;
 import tk.bubustein.money.command.ModCommands;
@@ -30,6 +31,11 @@ public class MoneyModNeoForge {
     public void onServerAboutToStartEvent(ServerAboutToStartEvent event) {
         MoneyMod.registerJigsaws(event.getServer());
         ModVillagers.fillTradeData(event.getServer());
+        MoneyMod.onServerStarting(event.getServer());
+    }
+    @SubscribeEvent
+    public void ServerStopping(ServerStoppingEvent event){
+        MoneyMod.saveConfig(event.getServer());
     }
     @SubscribeEvent
     public void onRegisterCommands(RegisterCommandsEvent event) {
