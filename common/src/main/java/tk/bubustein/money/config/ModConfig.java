@@ -52,7 +52,7 @@ public class ModConfig {
                 GSON.toJson(this, writer);
             }
         } catch (IOException e) {
-            MoneyMod.LOGGER.error("Failed to save config file", e);
+            throw new RuntimeException("Failed to save config file ", e);
         }
     }
     private static Path getConfigPath(MinecraftServer server) {
