@@ -11,6 +11,7 @@ import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.display.DisplayMerger;
 import me.shedaniel.rei.api.common.entry.EntryIngredient;
 import me.shedaniel.rei.api.common.entry.EntryStack;
+import me.shedaniel.rei.api.common.entry.InputIngredient;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -47,23 +48,16 @@ public class BankMachineCategory implements DisplayCategory<BankMachineDisplay> 
         widgets.add(Widgets.createRecipeBase(bounds));
         widgets.add(Widgets.createArrow(new Point(startPoint.x + 60, startPoint.y + 18)));
         widgets.add(Widgets.createResultSlotBackground(new Point(startPoint.x + 95, startPoint.y + 19)));
-        List<EntryIngredient> input = display.getInputEntries();
+        List<InputIngredient<EntryStack<?>>> input = display.getInputIngredients(3, 3);
         List<Slot> slots = Lists.newArrayList();
-        for (int y = 0; y < 3; y++) {
-            for (int x = 0; x < 3; x++) {
-                Slot slot = Widgets.createSlot(new Point(startPoint.x + 1 + x * 18, startPoint.y + 1 + y * 18)).markInput();
-                slots.add(slot);
-                widgets.add(slot);
-            }
+        for (int y = 0; y < 3; y++)
+            for (int x = 0; x < 3; x++)
+                slots.add(Widgets.createSlot(new Point(startPoint.x + 1 + x * 18, startPoint.y + 1 + y * 18)).markInput());
+        for (InputIngredient<EntryStack<?>> ingredient : input) {
+            slots.get(ingredient.getIndex()).entries(ingredient.get());
         }
-        if (display.isShapeless()) {
-            slots.get(4).entries(input.getFirst());
-        } else {
-            for (int i = 0; i < input.size(); i++) {
-                slots.get(i).entries(input.get(i));
-            }
-        }
-        widgets.add(Widgets.createSlot(new Point(startPoint.x + 95, startPoint.y + 19)).entries(display.getOutputEntries().getFirst()).disableBackground().markOutput());
+        widgets.addAll(slots);
+        widgets.add(Widgets.createSlot(new Point(startPoint.x + 95, startPoint.y + 19)).entries(display.getOutputEntries().get(0)).disableBackground().markOutput());
         if (display.isShapeless()) {
             widgets.add(Widgets.createShapelessIcon(bounds));
         }

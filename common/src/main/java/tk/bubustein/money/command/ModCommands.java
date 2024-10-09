@@ -146,46 +146,41 @@ public class ModCommands {
     }
     private static int pay(CommandSourceStack source, String targetPlayerName, double amount) throws CommandSyntaxException {
         Player player = source.getPlayerOrException();
-        ItemStack stack = player.getMainHandItem();
-        if (!(stack.getItem() instanceof CardItem cardItem)) {
-            player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
-            return 0;
-        }
-        String cardCurrency = cardItem.getCurrency(stack);
-        if (amount <= 0) {
-            player.sendSystemMessage(Component.literal("The amount must be greater than 0.").withStyle(ChatFormatting.RED));
-            return 0;
-        }
-        ServerPlayer targetPlayer = source.getServer().getPlayerList().getPlayer(UUID.fromString(targetPlayerName));
+        ServerPlayer targetPlayer = source.getServer().getPlayerList().getPlayerByName(targetPlayerName);
         if (targetPlayer == null) {
             player.sendSystemMessage(Component.literal("Player " + targetPlayerName + " is not online.").withStyle(ChatFormatting.RED));
             return 0;
         }
-        boolean hasCard = false;
-        for (ItemStack itemStack : targetPlayer.getInventory().items) {
-            if (itemStack.getItem() instanceof CardItem) {
-                hasCard = true;
-                break;
-            }
-        }
-        if (!hasCard) {
-            player.sendSystemMessage(Component.literal("Player " + targetPlayerName + " does not have a card in their inventory.").withStyle(ChatFormatting.RED));
+        ItemStack playerStack = player.getMainHandItem();
+        ItemStack targetStack = targetPlayer.getMainHandItem();
+        if (!(playerStack.getItem() instanceof CardItem playerCard)) {
+            player.sendSystemMessage(Component.literal("You must hold a card in your hand.").withStyle(ChatFormatting.RED));
             return 0;
         }
-        double existingMoney = cardItem.getMoney(stack);
-        if (existingMoney < amount) {
+        if (!(targetStack.getItem() instanceof CardItem targetCard)) {
+            player.sendSystemMessage(Component.literal(targetPlayerName + " doesn't hold a card in their hand.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+        String playerCurrency = playerCard.getCurrency(playerStack);
+        String targetCurrency = targetCard.getCurrency(targetStack);
+        if (amount <= 0) {
+            player.sendSystemMessage(Component.literal("The amount must be greater than 0.").withStyle(ChatFormatting.RED));
+            return 0;
+        }
+        double playerBalance = playerCard.getMoney(playerStack);
+        if (playerBalance < amount) {
             player.sendSystemMessage(Component.literal("You don't have enough money on your card.").withStyle(ChatFormatting.RED));
             return 0;
         }
-        cardItem.setMoney(stack, existingMoney - amount);
-        for (ItemStack itemStack : targetPlayer.getInventory().items) {
-            if (itemStack.getItem() instanceof CardItem) {
-                ((CardItem) itemStack.getItem()).addMoney(itemStack, amount);
-                break;
-            }
+        // Convert amount if currencies are different
+        double amountInTargetCurrency = amount;
+        if (!playerCurrency.equals(targetCurrency)) {
+            amountInTargetCurrency = convertCurrency(amount, playerCurrency, targetCurrency);
         }
-        player.sendSystemMessage(Component.literal("You transferred " + formatMoney(amount) + " " + cardCurrency + " to " + targetPlayerName + ".").withStyle(ChatFormatting.GREEN));
-        targetPlayer.sendSystemMessage(Component.literal("You received " + formatMoney(amount) + " " + cardCurrency + " from " + player.getName() + ".").withStyle(ChatFormatting.GREEN));
+        playerCard.setMoney(playerStack, playerBalance - amount);
+        targetCard.addMoney(targetStack, amountInTargetCurrency);
+        player.sendSystemMessage(Component.literal("You transferred " + formatMoney(amount) + " " + playerCurrency + " to " + targetPlayerName + ".").withStyle(ChatFormatting.GREEN));
+        targetPlayer.sendSystemMessage(Component.literal("You received " + formatMoney(amountInTargetCurrency) + " " + targetCurrency + " from " + player.getName().getString() + ".").withStyle(ChatFormatting.GREEN));
         return Command.SINGLE_SUCCESS;
     }
     private static int setCurrency(CommandSourceStack source, String currency) throws CommandSyntaxException {
