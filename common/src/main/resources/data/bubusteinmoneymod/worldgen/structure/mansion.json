@@ -17,30 +17,30 @@
         {
           "type": "minecraft:pillager",
           "weight": 10,
-          "minCount": 20,
+          "minCount": 30,
           "maxCount": 70
         },
         {
           "type": "minecraft:witch",
-          "weight": 8,
+          "weight": 9,
           "minCount": 10,
           "maxCount": 30
         },
         {
           "type": "minecraft:evoker",
-          "weight": 5,
-          "minCount": 5,
+          "weight": 7,
+          "minCount": 7,
           "maxCount": 15
         },
         {
           "type": "minecraft:vindicator",
-          "weight": 10,
+          "weight": 12,
           "minCount": 20,
           "maxCount": 50
         },
         {
           "type": "minecraft:illusioner",
-          "weight": 1,
+          "weight": 4,
           "minCount": 1,
           "maxCount": 5
         }
