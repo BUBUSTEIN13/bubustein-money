@@ -236,33 +236,43 @@ public class ModCommands {
                 player.sendSystemMessage(Component.literal("Invalid currency. Available currencies are: " + String.join(", ", ModItems.EXCHANGE_RATES.keySet())).withStyle(ChatFormatting.RED));
                 return 0;
             }
-            double amountInCardCurrency = convertCurrency(amount, depositCurrency, cardCurrency);
             double totalDeposited = 0;
             TreeMap<Double, Item> items = ModItems.CURRENCY_ITEMS.get(depositCurrency);
             if (items == null) {
                 player.sendSystemMessage(Component.literal("We don't have banknotes/coins for the currency " + depositCurrency).withStyle(ChatFormatting.RED));
                 return 0;
             }
+            Map<Item, Integer> availableItems = new HashMap<>();
+            for (Item item : items.values()) {
+                availableItems.put(item, player.getInventory().countItem(item));
+            }
+            double totalAvailable = 0;
+            for (Map.Entry<Double, Item> entry : items.entrySet()) {
+                totalAvailable += entry.getKey() * availableItems.get(entry.getValue());
+            }
+            if (totalAvailable < amount) {
+                player.sendSystemMessage(Component.literal("You don't have enough funds to make this deposit. Available: " + formatMoney(totalAvailable) + " " + depositCurrency).withStyle(ChatFormatting.RED));
+                return 0;
+            }
+            double remainingAmount = amount;
             for (Map.Entry<Double, Item> entry : items.descendingMap().entrySet()) {
                 double denomination = entry.getKey();
                 Item item = entry.getValue();
-                int countNeeded = (int) (amount / denomination);
+                int countAvailable = availableItems.get(item);
+                int countNeeded = (int) Math.min(remainingAmount / denomination, countAvailable);
                 if (countNeeded > 0) {
-                    int countAvailable = player.getInventory().countItem(item);
-                    int countToRemove = Math.min(countNeeded, countAvailable);
-                    if (countToRemove > 0) {
-                        double depositedAmount = denomination * countToRemove;
-                        totalDeposited += depositedAmount;
-                        removeItemsFromInventory(player, item, countToRemove);
-                        amount -= depositedAmount;
-                    }
+                    double depositedAmount = denomination * countNeeded;
+                    totalDeposited += depositedAmount;
+                    removeItemsFromInventory(player, item, countNeeded);
+                    remainingAmount -= depositedAmount;
                 }
+                if (remainingAmount < 0.01) break;
             }
             if (totalDeposited > 0) {
-                cardItem.addMoney(stack, amountInCardCurrency);
-                player.sendSystemMessage(Component.literal(String.format("You deposited %.2f %s into the card (%.2f %s). New balance: " + formatMoney(cardItem.getMoney(stack)) + " " + cardCurrency, totalDeposited, depositCurrency, amountInCardCurrency, cardCurrency)).withStyle(ChatFormatting.GREEN));
-                if (amount > 0) {
-                    player.sendSystemMessage(Component.literal(String.format("The exact amount couldn't be deposited. Uncovered difference: %.2f %s", amount, depositCurrency)).withStyle(ChatFormatting.YELLOW));
+                cardItem.addMoney(stack, convertCurrency(totalDeposited, depositCurrency, cardCurrency));
+                player.sendSystemMessage(Component.literal(String.format("You deposited %.2f %s into the card (%.2f %s). New balance: " + formatMoney(cardItem.getMoney(stack)) + " " + cardCurrency, totalDeposited, depositCurrency, convertCurrency(totalDeposited, depositCurrency, cardCurrency), cardCurrency)).withStyle(ChatFormatting.GREEN));
+                if (remainingAmount > 0.01) {
+                    player.sendSystemMessage(Component.literal(String.format("The exact amount couldn't be deposited. Uncovered difference: %.2f %s", remainingAmount, depositCurrency)).withStyle(ChatFormatting.YELLOW));
                 }
             } else {
                 player.sendSystemMessage(Component.literal("You don't have enough banknotes/coins to make the deposit.").withStyle(ChatFormatting.RED));
